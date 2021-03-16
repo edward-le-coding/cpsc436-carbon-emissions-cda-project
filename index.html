@@ -1,19 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Title</title>
+    <title>Canada's Carbon Emissions</title>
     <link rel="icon" href="data:;base64,iVBORwOKGO=" />
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Castoro:ital@1&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Title</h1>
+    <h1 class="title-text">Canada's Carbon Emissions</h1>
 
-    <!-- todo: add visualizations -->
+    Legend
+    <div name="metric-selector">
+        <input type="radio" name="metric-selector" id="absolute-emissions" value="absolute-emissions">
+        <label for="absolute-emissions">Absolute Emissions (total GHG)</label><br>
+        <input type="radio" name="metric-selector" id="emissions-intensity-capita" value="emissions-intensity-capita">
+        <label for="emissions-intensity-capita">Emissions Intensity (per capita)</label><br>
+        <input type="radio" name="metric-selector" id="emissions-intensity-gdp" value="emissions-intensity-gdp">
+        <label for="emissions-intensity-gdp">Emissions Intensity (by GDP)</label>
+    </div>
+    <div>
+        <svg id="heatmap" class="chart"></svg> 
+    </div>
+    <div>
+        <svg id="choropleth" class="chart"></svg>
+    </div>
+    <div>
+        <svg id="stacked-bar-chart" class="chart"></svg>
+    </div>
+
+    <div id="tooltip"></div>
     
     <script src="js/d3.v6.min.js"></script>
-    <script src="js/Heatmap.js.js"></script>
-    <script src="js/Choropleth.js.js"></script>
-    <script src="js/StackedBars.js.js"></script>
-    <script src="js/main.js"></script>
+
+    <script src="js/historical/main.js"></script>
+    <script src="js/historical/heatmap.js"></script>
+    <script src="js/historical/choroplethMap.js"></script>
+    <script src="js/historical/stackedBarChart.js"></script>
 </body>
 </html>

@@ -1,0 +1,3061 @@
+Year,Region,Source,CO2eq,GDP,Population
+1990,Alberta,Provincial Inventory Total,173.0523683,149568.0,2547788
+1990,Alberta,Oil and Gas,67.57525298,149568.0,2547788
+1990,Alberta,Transportation,17.00753866,149568.0,2547788
+1990,Alberta,Heavy Industry,12.58280942,149568.0,2547788
+1990,Alberta,Buildings,12.141905,149568.0,2547788
+1990,Alberta,Agriculture,16.5557841,149568.0,2547788
+1990,Alberta,Waste,1.213179438,149568.0,2547788
+1990,Alberta,"Light Manufacturing, Construction & Forest Resources",5.576539237,149568.0,2547788
+1991,Alberta,Provincial Inventory Total,174.1898501,150229.0,2592306
+1991,Alberta,Oil and Gas,68.62556228,150229.0,2592306
+1991,Alberta,Transportation,15.34544043,150229.0,2592306
+1991,Alberta,Heavy Industry,13.06961066,150229.0,2592306
+1991,Alberta,Buildings,11.90891006,150229.0,2592306
+1991,Alberta,Agriculture,16.77447485,150229.0,2592306
+1991,Alberta,Waste,1.251055599,150229.0,2592306
+1991,Alberta,"Light Manufacturing, Construction & Forest Resources",4.962092531,150229.0,2592306
+1992,Alberta,Provincial Inventory Total,182.370521,151229.0,2632672
+1992,Alberta,Oil and Gas,74.18996849,151229.0,2632672
+1992,Alberta,Transportation,15.34785592,151229.0,2632672
+1992,Alberta,Heavy Industry,12.83337419,151229.0,2632672
+1992,Alberta,Buildings,11.34210283,151229.0,2632672
+1992,Alberta,Agriculture,17.31510477,151229.0,2632672
+1992,Alberta,Waste,1.302356833,151229.0,2632672
+1992,Alberta,"Light Manufacturing, Construction & Forest Resources",4.638837096,151229.0,2632672
+1993,Alberta,Provincial Inventory Total,188.0595408,162978.0,2667292
+1993,Alberta,Oil and Gas,77.99828408,162978.0,2667292
+1993,Alberta,Transportation,15.19920572,162978.0,2667292
+1993,Alberta,Heavy Industry,12.98165766,162978.0,2667292
+1993,Alberta,Buildings,12.00596196,162978.0,2667292
+1993,Alberta,Agriculture,18.47445516,162978.0,2667292
+1993,Alberta,Waste,1.341904651,162978.0,2667292
+1993,Alberta,"Light Manufacturing, Construction & Forest Resources",3.928792727,162978.0,2667292
+1994,Alberta,Provincial Inventory Total,197.3835918,172000.0,2700606
+1994,Alberta,Oil and Gas,79.689071,172000.0,2700606
+1994,Alberta,Transportation,16.21149215,172000.0,2700606
+1994,Alberta,Heavy Industry,14.72210958,172000.0,2700606
+1994,Alberta,Buildings,12.75123893,172000.0,2700606
+1994,Alberta,Agriculture,19.59884624,172000.0,2700606
+1994,Alberta,Waste,1.426538851,172000.0,2700606
+1994,Alberta,"Light Manufacturing, Construction & Forest Resources",3.585289496,172000.0,2700606
+1995,Alberta,Provincial Inventory Total,202.2589198,177278.0,2734519
+1995,Alberta,Oil and Gas,81.70149083,177278.0,2734519
+1995,Alberta,Transportation,15.95793776,177278.0,2734519
+1995,Alberta,Heavy Industry,14.83162502,177278.0,2734519
+1995,Alberta,Buildings,14.01883836,177278.0,2734519
+1995,Alberta,Agriculture,20.68567157,177278.0,2734519
+1995,Alberta,Waste,1.526318747,177278.0,2734519
+1995,Alberta,"Light Manufacturing, Construction & Forest Resources",4.537458091,177278.0,2734519
+1996,Alberta,Provincial Inventory Total,208.8580807,181537.0,2775133
+1996,Alberta,Oil and Gas,85.43608697,181537.0,2775133
+1996,Alberta,Transportation,16.88629668,181537.0,2775133
+1996,Alberta,Heavy Industry,14.99515907,181537.0,2775133
+1996,Alberta,Buildings,15.32817968,181537.0,2775133
+1996,Alberta,Agriculture,21.14344319,181537.0,2775133
+1996,Alberta,Waste,1.516313616,181537.0,2775133
+1996,Alberta,"Light Manufacturing, Construction & Forest Resources",5.09096601,181537.0,2775133
+1997,Alberta,Provincial Inventory Total,213.0020218,193931.0,2829848
+1997,Alberta,Oil and Gas,85.40024867,193931.0,2829848
+1997,Alberta,Transportation,18.45530225,193931.0,2829848
+1997,Alberta,Heavy Industry,16.16066045,193931.0,2829848
+1997,Alberta,Buildings,14.78511576,193931.0,2829848
+1997,Alberta,Agriculture,21.27726652,193931.0,2829848
+1997,Alberta,Waste,1.243666876,193931.0,2829848
+1997,Alberta,"Light Manufacturing, Construction & Forest Resources",5.146369168,193931.0,2829848
+1998,Alberta,Provincial Inventory Total,214.2707536,203479.0,2899066
+1998,Alberta,Oil and Gas,87.07091433,203479.0,2899066
+1998,Alberta,Transportation,19.70712869,203479.0,2899066
+1998,Alberta,Heavy Industry,16.36691518,203479.0,2899066
+1998,Alberta,Buildings,14.01337727,203479.0,2899066
+1998,Alberta,Agriculture,21.65747882,203479.0,2899066
+1998,Alberta,Waste,1.367056294,203479.0,2899066
+1998,Alberta,"Light Manufacturing, Construction & Forest Resources",3.446474109,203479.0,2899066
+1999,Alberta,Provincial Inventory Total,222.2035998,206002.0,2952692
+1999,Alberta,Oil and Gas,95.55323419,206002.0,2952692
+1999,Alberta,Transportation,20.44031434,206002.0,2952692
+1999,Alberta,Heavy Industry,16.53970726,206002.0,2952692
+1999,Alberta,Buildings,13.67094893,206002.0,2952692
+1999,Alberta,Agriculture,21.95435717,206002.0,2952692
+1999,Alberta,Waste,1.40232711,206002.0,2952692
+1999,Alberta,"Light Manufacturing, Construction & Forest Resources",4.019421183,206002.0,2952692
+2000,Alberta,Provincial Inventory Total,229.9203523,218678.0,3004198
+2000,Alberta,Oil and Gas,98.44832208,218678.0,3004198
+2000,Alberta,Transportation,21.18075702,218678.0,3004198
+2000,Alberta,Heavy Industry,16.9922525,218678.0,3004198
+2000,Alberta,Buildings,15.56524103,218678.0,3004198
+2000,Alberta,Agriculture,22.5986771,218678.0,3004198
+2000,Alberta,Waste,1.441148061,218678.0,3004198
+2000,Alberta,"Light Manufacturing, Construction & Forest Resources",3.989567507,218678.0,3004198
+2001,Alberta,Provincial Inventory Total,229.0391826,222271.0,3058108
+2001,Alberta,Oil and Gas,99.31933783,222271.0,3058108
+2001,Alberta,Transportation,22.98593489,222271.0,3058108
+2001,Alberta,Heavy Industry,16.80771259,222271.0,3058108
+2001,Alberta,Buildings,13.62608781,222271.0,3058108
+2001,Alberta,Agriculture,22.12158886,222271.0,3058108
+2001,Alberta,Waste,1.490586252,222271.0,3058108
+2001,Alberta,"Light Manufacturing, Construction & Forest Resources",2.941994034,222271.0,3058108
+2002,Alberta,Provincial Inventory Total,228.6249589,227363.0,3128429
+2002,Alberta,Oil and Gas,99.41344184,227363.0,3128429
+2002,Alberta,Transportation,22.20223931,227363.0,3128429
+2002,Alberta,Heavy Industry,16.82265374,227363.0,3128429
+2002,Alberta,Buildings,15.82299491,227363.0,3128429
+2002,Alberta,Agriculture,21.29214569,227363.0,3128429
+2002,Alberta,Waste,1.531759876,227363.0,3128429
+2002,Alberta,"Light Manufacturing, Construction & Forest Resources",2.835727039,227363.0,3128429
+2003,Alberta,Provincial Inventory Total,236.3906381,235234.0,3183065
+2003,Alberta,Oil and Gas,103.8373329,235234.0,3183065
+2003,Alberta,Transportation,22.91334773,235234.0,3183065
+2003,Alberta,Heavy Industry,16.62667456,235234.0,3183065
+2003,Alberta,Buildings,18.10877914,235234.0,3183065
+2003,Alberta,Agriculture,21.38298777,235234.0,3183065
+2003,Alberta,Waste,1.526931404,235234.0,3183065
+2003,Alberta,"Light Manufacturing, Construction & Forest Resources",2.514956461,235234.0,3183065
+2004,Alberta,Provincial Inventory Total,233.8053884,248322.0,3238668
+2004,Alberta,Oil and Gas,100.7626866,248322.0,3238668
+2004,Alberta,Transportation,24.01723417,248322.0,3238668
+2004,Alberta,Heavy Industry,17.65698278,248322.0,3238668
+2004,Alberta,Buildings,17.2918866,248322.0,3238668
+2004,Alberta,Agriculture,22.19155847,248322.0,3238668
+2004,Alberta,Waste,1.604949293,248322.0,3238668
+2004,Alberta,"Light Manufacturing, Construction & Forest Resources",2.410518812,248322.0,3238668
+2005,Alberta,Provincial Inventory Total,231.9582932,259282.0,3321768
+2005,Alberta,Oil and Gas,97.12388117,259282.0,3321768
+2005,Alberta,Transportation,25.06523633,259282.0,3321768
+2005,Alberta,Heavy Industry,17.71726611,259282.0,3321768
+2005,Alberta,Buildings,16.15400848,259282.0,3321768
+2005,Alberta,Agriculture,22.69508749,259282.0,3321768
+2005,Alberta,Waste,1.723232877,259282.0,3321768
+2005,Alberta,"Light Manufacturing, Construction & Forest Resources",2.203549517,259282.0,3321768
+2006,Alberta,Provincial Inventory Total,237.9544523,275756.0,3421434
+2006,Alberta,Oil and Gas,100.838177,275756.0,3421434
+2006,Alberta,Transportation,27.16137716,275756.0,3421434
+2006,Alberta,Heavy Industry,17.68382412,275756.0,3421434
+2006,Alberta,Buildings,16.37458324,275756.0,3421434
+2006,Alberta,Agriculture,21.88271082,275756.0,3421434
+2006,Alberta,Waste,1.693993322,275756.0,3421434
+2006,Alberta,"Light Manufacturing, Construction & Forest Resources",2.629495952,275756.0,3421434
+2007,Alberta,Provincial Inventory Total,247.5067223,280600.0,3514147
+2007,Alberta,Oil and Gas,106.7460032,280600.0,3514147
+2007,Alberta,Transportation,29.18919342,280600.0,3514147
+2007,Alberta,Heavy Industry,16.86875187,280600.0,3514147
+2007,Alberta,Buildings,18.4764814,280600.0,3514147
+2007,Alberta,Agriculture,21.85395248,280600.0,3514147
+2007,Alberta,Waste,1.751814026,280600.0,3514147
+2007,Alberta,"Light Manufacturing, Construction & Forest Resources",2.787644099,280600.0,3514147
+2008,Alberta,Provincial Inventory Total,242.0496839,285125.0,3595856
+2008,Alberta,Oil and Gas,101.2093709,285125.0,3595856
+2008,Alberta,Transportation,29.58500965,285125.0,3595856
+2008,Alberta,Heavy Industry,16.97834216,285125.0,3595856
+2008,Alberta,Buildings,18.25856515,285125.0,3595856
+2008,Alberta,Agriculture,21.9115485,285125.0,3595856
+2008,Alberta,Waste,1.62385249,285125.0,3595856
+2008,Alberta,"Light Manufacturing, Construction & Forest Resources",2.664195617,285125.0,3595856
+2009,Alberta,Provincial Inventory Total,234.6316227,269322.0,3678996
+2009,Alberta,Oil and Gas,100.7847238,269322.0,3678996
+2009,Alberta,Transportation,28.31897001,269322.0,3678996
+2009,Alberta,Heavy Industry,16.08974675,269322.0,3678996
+2009,Alberta,Buildings,18.18075573,269322.0,3678996
+2009,Alberta,Agriculture,20.62508782,269322.0,3678996
+2009,Alberta,Waste,1.593228013,269322.0,3678996
+2009,Alberta,"Light Manufacturing, Construction & Forest Resources",2.308030977,269322.0,3678996
+2010,Alberta,Provincial Inventory Total,240.2669701,282702.0,3732082
+2010,Alberta,Oil and Gas,103.0081866,282702.0,3732082
+2010,Alberta,Transportation,30.12488216,282702.0,3732082
+2010,Alberta,Heavy Industry,17.4234291,282702.0,3732082
+2010,Alberta,Buildings,17.93483132,282702.0,3732082
+2010,Alberta,Agriculture,20.77536468,282702.0,3732082
+2010,Alberta,Waste,1.608430132,282702.0,3732082
+2010,Alberta,"Light Manufacturing, Construction & Forest Resources",2.638459704,282702.0,3732082
+2011,Alberta,Provincial Inventory Total,249.3743889,300948.0,3789030
+2011,Alberta,Oil and Gas,109.3912456,300948.0,3789030
+2011,Alberta,Transportation,29.71769175,300948.0,3789030
+2011,Alberta,Heavy Industry,19.03724896,300948.0,3789030
+2011,Alberta,Buildings,19.11039591,300948.0,3789030
+2011,Alberta,Agriculture,20.78635685,300948.0,3789030
+2011,Alberta,Waste,1.637859394,300948.0,3789030
+2011,Alberta,"Light Manufacturing, Construction & Forest Resources",2.869177887,300948.0,3789030
+2012,Alberta,Provincial Inventory Total,262.2336829,312708.0,3874548
+2012,Alberta,Oil and Gas,119.5280861,312708.0,3874548
+2012,Alberta,Transportation,31.70203445,312708.0,3874548
+2012,Alberta,Heavy Industry,18.80754426,312708.0,3874548
+2012,Alberta,Buildings,22.74698037,312708.0,3874548
+2012,Alberta,Agriculture,21.00689439,312708.0,3874548
+2012,Alberta,Waste,1.737458769,312708.0,3874548
+2012,Alberta,"Light Manufacturing, Construction & Forest Resources",2.719393638,312708.0,3874548
+2013,Alberta,Provincial Inventory Total,272.3084032,330548.0,3981011
+2013,Alberta,Oil and Gas,127.2195474,330548.0,3981011
+2013,Alberta,Transportation,33.34234697,330548.0,3981011
+2013,Alberta,Heavy Industry,19.46125955,330548.0,3981011
+2013,Alberta,Buildings,20.32590112,330548.0,3981011
+2013,Alberta,Agriculture,21.5682533,330548.0,3981011
+2013,Alberta,Waste,1.822596818,330548.0,3981011
+2013,Alberta,"Light Manufacturing, Construction & Forest Resources",3.093201478,330548.0,3981011
+2014,Alberta,Provincial Inventory Total,276.7823375,350033.0,4083648
+2014,Alberta,Oil and Gas,130.9906165,350033.0,4083648
+2014,Alberta,Transportation,34.39031667,350033.0,4083648
+2014,Alberta,Heavy Industry,19.80326073,350033.0,4083648
+2014,Alberta,Buildings,19.39713768,350033.0,4083648
+2014,Alberta,Agriculture,21.46064136,350033.0,4083648
+2014,Alberta,Waste,1.87601779,350033.0,4083648
+2014,Alberta,"Light Manufacturing, Construction & Forest Resources",3.149732591,350033.0,4083648
+2015,Alberta,Provincial Inventory Total,276.1801386,337069.0,4144491
+2015,Alberta,Oil and Gas,131.4152657,337069.0,4144491
+2015,Alberta,Transportation,32.05748364,337069.0,4144491
+2015,Alberta,Heavy Industry,19.66062278,337069.0,4144491
+2015,Alberta,Buildings,18.79078041,337069.0,4144491
+2015,Alberta,Agriculture,21.33291032,337069.0,4144491
+2015,Alberta,Waste,1.892340919,337069.0,4144491
+2015,Alberta,"Light Manufacturing, Construction & Forest Resources",2.95406763,337069.0,4144491
+2016,Alberta,Provincial Inventory Total,265.1981718,325421.0,4196061
+2016,Alberta,Oil and Gas,130.1181911,325421.0,4196061
+2016,Alberta,Transportation,30.54470685,325421.0,4196061
+2016,Alberta,Heavy Industry,17.79708632,325421.0,4196061
+2016,Alberta,Buildings,17.67456458,325421.0,4196061
+2016,Alberta,Agriculture,20.84482018,325421.0,4196061
+2016,Alberta,Waste,1.947441321,325421.0,4196061
+2016,Alberta,"Light Manufacturing, Construction & Forest Resources",3.054943401,325421.0,4196061
+2017,Alberta,Provincial Inventory Total,272.1976286,340062.0,4241100
+2017,Alberta,Oil and Gas,133.7574928,340062.0,4241100
+2017,Alberta,Transportation,32.22771461,340062.0,4241100
+2017,Alberta,Heavy Industry,17.30301714,340062.0,4241100
+2017,Alberta,Buildings,19.95975396,340062.0,4241100
+2017,Alberta,Agriculture,20.24562852,340062.0,4241100
+2017,Alberta,Waste,1.935324932,340062.0,4241100
+2017,Alberta,"Light Manufacturing, Construction & Forest Resources",2.809354542,340062.0,4241100
+2018,Alberta,Provincial Inventory Total,272.554378,346611.0,4298275
+2018,Alberta,Oil and Gas,138.9194368,346611.0,4298275
+2018,Alberta,Transportation,33.53061589,346611.0,4298275
+2018,Alberta,Heavy Industry,19.39172969,346611.0,4298275
+2018,Alberta,Buildings,21.91047224,346611.0,4298275
+2018,Alberta,Agriculture,20.77460597,346611.0,4298275
+2018,Alberta,Waste,2.019823194,346611.0,4298275
+2018,Alberta,"Light Manufacturing, Construction & Forest Resources",2.794649629,346611.0,4298275
+1990,British Columbia,Provincial Inventory Total,51.63715489,126129.0,3292111
+1990,British Columbia,Oil and Gas,7.640877249,126129.0,3292111
+1990,British Columbia,Transportation,15.6166276,126129.0,3292111
+1990,British Columbia,Heavy Industry,8.697013236,126129.0,3292111
+1990,British Columbia,Buildings,7.653700367,126129.0,3292111
+1990,British Columbia,Agriculture,2.765739513,126129.0,3292111
+1990,British Columbia,Waste,4.086893732,126129.0,3292111
+1990,British Columbia,"Light Manufacturing, Construction & Forest Resources",2.56210253,126129.0,3292111
+1991,British Columbia,Provincial Inventory Total,50.43027927,126535.0,3373787
+1991,British Columbia,Oil and Gas,7.035688258,126535.0,3373787
+1991,British Columbia,Transportation,15.48573272,126535.0,3373787
+1991,British Columbia,Heavy Industry,8.95327341,126535.0,3373787
+1991,British Columbia,Buildings,7.776712338,126535.0,3373787
+1991,British Columbia,Agriculture,2.816347226,126535.0,3373787
+1991,British Columbia,Waste,4.009029694,126535.0,3373787
+1991,British Columbia,"Light Manufacturing, Construction & Forest Resources",1.994279863,126535.0,3373787
+1992,British Columbia,Provincial Inventory Total,49.71849338,130049.0,3468802
+1992,British Columbia,Oil and Gas,6.291209743,130049.0,3468802
+1992,British Columbia,Transportation,15.7262092,130049.0,3468802
+1992,British Columbia,Heavy Industry,8.103155661,130049.0,3468802
+1992,British Columbia,Buildings,7.80411884,130049.0,3468802
+1992,British Columbia,Agriculture,2.959237744,130049.0,3468802
+1992,British Columbia,Waste,4.112663827,130049.0,3468802
+1992,British Columbia,"Light Manufacturing, Construction & Forest Resources",2.20699408,130049.0,3468802
+1993,British Columbia,Provincial Inventory Total,52.60250958,136155.0,3567772
+1993,British Columbia,Oil and Gas,5.983401749,136155.0,3567772
+1993,British Columbia,Transportation,16.10588408,136155.0,3567772
+1993,British Columbia,Heavy Industry,8.164420023,136155.0,3567772
+1993,British Columbia,Buildings,8.710310769,136155.0,3567772
+1993,British Columbia,Agriculture,2.988550381,136155.0,3567772
+1993,British Columbia,Waste,4.202718237,136155.0,3567772
+1993,British Columbia,"Light Manufacturing, Construction & Forest Resources",2.500298305,136155.0,3567772
+1994,British Columbia,Provincial Inventory Total,55.44215548,139733.0,3676075
+1994,British Columbia,Oil and Gas,8.171956948,139733.0,3676075
+1994,British Columbia,Transportation,16.88746033,139733.0,3676075
+1994,British Columbia,Heavy Industry,8.366475383,139733.0,3676075
+1994,British Columbia,Buildings,8.296522674,139733.0,3676075
+1994,British Columbia,Agriculture,2.909150233,139733.0,3676075
+1994,British Columbia,Waste,4.283611748,139733.0,3676075
+1994,British Columbia,"Light Manufacturing, Construction & Forest Resources",2.697565113,139733.0,3676075
+1995,British Columbia,Provincial Inventory Total,59.32572214,143402.0,3777390
+1995,British Columbia,Oil and Gas,9.862713853,143402.0,3777390
+1995,British Columbia,Transportation,17.46076304,143402.0,3777390
+1995,British Columbia,Heavy Industry,8.476399204,143402.0,3777390
+1995,British Columbia,Buildings,8.39234887,143402.0,3777390
+1995,British Columbia,Agriculture,2.989233308,143402.0,3777390
+1995,British Columbia,Waste,4.383247565,143402.0,3777390
+1995,British Columbia,"Light Manufacturing, Construction & Forest Resources",3.728732315,143402.0,3777390
+1996,British Columbia,Provincial Inventory Total,61.18568808,147052.0,3874317
+1996,British Columbia,Oil and Gas,11.00918782,147052.0,3874317
+1996,British Columbia,Transportation,18.0379972,147052.0,3874317
+1996,British Columbia,Heavy Industry,8.985161182,147052.0,3874317
+1996,British Columbia,Buildings,9.011797048,147052.0,3874317
+1996,British Columbia,Agriculture,3.056921771,147052.0,3874317
+1996,British Columbia,Waste,4.481439264,147052.0,3874317
+1996,British Columbia,"Light Manufacturing, Construction & Forest Resources",4.020147987,147052.0,3874317
+1997,British Columbia,Provincial Inventory Total,60.15695799,151968.0,3948583
+1997,British Columbia,Oil and Gas,9.608366439,151968.0,3948583
+1997,British Columbia,Transportation,18.86503799,151968.0,3948583
+1997,British Columbia,Heavy Industry,9.121705796,151968.0,3948583
+1997,British Columbia,Buildings,8.524926669,151968.0,3948583
+1997,British Columbia,Agriculture,3.15292396,151968.0,3948583
+1997,British Columbia,Waste,4.326416018,151968.0,3948583
+1997,British Columbia,"Light Manufacturing, Construction & Forest Resources",3.623671714,151968.0,3948583
+1998,British Columbia,Provincial Inventory Total,61.29738261,153811.0,3983113
+1998,British Columbia,Oil and Gas,10.63778927,153811.0,3983113
+1998,British Columbia,Transportation,19.73409149,153811.0,3983113
+1998,British Columbia,Heavy Industry,8.822709447,153811.0,3983113
+1998,British Columbia,Buildings,7.995451574,153811.0,3983113
+1998,British Columbia,Agriculture,2.997018865,153811.0,3983113
+1998,British Columbia,Waste,4.421286322,153811.0,3983113
+1998,British Columbia,"Light Manufacturing, Construction & Forest Resources",3.376960426,153811.0,3983113
+1999,British Columbia,Provincial Inventory Total,62.82417818,159162.0,4011375
+1999,British Columbia,Oil and Gas,11.63263897,159162.0,4011375
+1999,British Columbia,Transportation,19.90978807,159162.0,4011375
+1999,British Columbia,Heavy Industry,9.220729558,159162.0,4011375
+1999,British Columbia,Buildings,8.432386065,159162.0,4011375
+1999,British Columbia,Agriculture,3.129843891,159162.0,4011375
+1999,British Columbia,Waste,4.408309481,159162.0,4011375
+1999,British Columbia,"Light Manufacturing, Construction & Forest Resources",3.469433566,159162.0,4011375
+2000,British Columbia,Provincial Inventory Total,63.80219101,166405.0,4039230
+2000,British Columbia,Oil and Gas,10.78024222,166405.0,4039230
+2000,British Columbia,Transportation,19.78742985,166405.0,4039230
+2000,British Columbia,Heavy Industry,9.186042258,166405.0,4039230
+2000,British Columbia,Buildings,8.717846945,166405.0,4039230
+2000,British Columbia,Agriculture,3.188768362,166405.0,4039230
+2000,British Columbia,Waste,4.476458736,166405.0,4039230
+2000,British Columbia,"Light Manufacturing, Construction & Forest Resources",4.082336683,166405.0,4039230
+2001,British Columbia,Provincial Inventory Total,65.11750829,167541.0,4076950
+2001,British Columbia,Oil and Gas,12.47205909,167541.0,4076950
+2001,British Columbia,Transportation,19.3959669,167541.0,4076950
+2001,British Columbia,Heavy Industry,8.144119126,167541.0,4076950
+2001,British Columbia,Buildings,8.673380445,167541.0,4076950
+2001,British Columbia,Agriculture,3.293675205,167541.0,4076950
+2001,British Columbia,Waste,4.278388102,167541.0,4076950
+2001,British Columbia,"Light Manufacturing, Construction & Forest Resources",4.500824414,167541.0,4076950
+2002,British Columbia,Provincial Inventory Total,61.99772374,174214.0,4100564
+2002,British Columbia,Oil and Gas,11.90291518,174214.0,4100564
+2002,British Columbia,Transportation,19.40095177,174214.0,4100564
+2002,British Columbia,Heavy Industry,7.75517316,174214.0,4100564
+2002,British Columbia,Buildings,9.158658662,174214.0,4100564
+2002,British Columbia,Agriculture,3.061610218,174214.0,4100564
+2002,British Columbia,Waste,4.262195479,174214.0,4100564
+2002,British Columbia,"Light Manufacturing, Construction & Forest Resources",3.83449039,174214.0,4100564
+2003,British Columbia,Provincial Inventory Total,62.02771671,178240.0,4124482
+2003,British Columbia,Oil and Gas,11.88685339,178240.0,4124482
+2003,British Columbia,Transportation,19.70750352,178240.0,4124482
+2003,British Columbia,Heavy Industry,7.95545893,178240.0,4124482
+2003,British Columbia,Buildings,8.217530884,178240.0,4124482
+2003,British Columbia,Agriculture,3.133502914,178240.0,4124482
+2003,British Columbia,Waste,4.326046333,178240.0,4124482
+2003,British Columbia,"Light Manufacturing, Construction & Forest Resources",4.145683808,178240.0,4124482
+2004,British Columbia,Provincial Inventory Total,63.92234762,185250.0,4155651
+2004,British Columbia,Oil and Gas,12.49505068,185250.0,4155651
+2004,British Columbia,Transportation,20.70354886,185250.0,4155651
+2004,British Columbia,Heavy Industry,7.996897534,185250.0,4155651
+2004,British Columbia,Buildings,8.275619989,185250.0,4155651
+2004,British Columbia,Agriculture,3.147543066,185250.0,4155651
+2004,British Columbia,Waste,4.201471417,185250.0,4155651
+2004,British Columbia,"Light Manufacturing, Construction & Forest Resources",4.109617653,185250.0,4155651
+2005,British Columbia,Provincial Inventory Total,62.03537,194460.0,4196062
+2005,British Columbia,Oil and Gas,11.91187499,194460.0,4196062
+2005,British Columbia,Transportation,20.23400786,194460.0,4196062
+2005,British Columbia,Heavy Industry,7.12003388,194460.0,4196062
+2005,British Columbia,Buildings,8.523493299,194460.0,4196062
+2005,British Columbia,Agriculture,3.071461838,194460.0,4196062
+2005,British Columbia,Waste,4.150653954,194460.0,4196062
+2005,British Columbia,"Light Manufacturing, Construction & Forest Resources",4.282001658,194460.0,4196062
+2006,British Columbia,Provincial Inventory Total,60.22809682,203053.0,4241794
+2006,British Columbia,Oil and Gas,12.53162421,203053.0,4241794
+2006,British Columbia,Transportation,20.10670494,203053.0,4241794
+2006,British Columbia,Heavy Industry,6.763552976,203053.0,4241794
+2006,British Columbia,Buildings,8.425066848,203053.0,4241794
+2006,British Columbia,Agriculture,2.804161485,203053.0,4241794
+2006,British Columbia,Waste,4.270994715,203053.0,4241794
+2006,British Columbia,"Light Manufacturing, Construction & Forest Resources",2.602532816,203053.0,4241794
+2007,British Columbia,Provincial Inventory Total,60.79883281,209419.0,4290984
+2007,British Columbia,Oil and Gas,12.82585108,209419.0,4290984
+2007,British Columbia,Transportation,20.35467195,209419.0,4290984
+2007,British Columbia,Heavy Industry,6.627638151,209419.0,4290984
+2007,British Columbia,Buildings,8.378603892,209419.0,4290984
+2007,British Columbia,Agriculture,2.752366124,209419.0,4290984
+2007,British Columbia,Waste,4.3150448,209419.0,4290984
+2007,British Columbia,"Light Manufacturing, Construction & Forest Resources",2.849213199,209419.0,4290984
+2008,British Columbia,Provincial Inventory Total,61.16533494,210903.0,4349336
+2008,British Columbia,Oil and Gas,13.33120926,210903.0,4349336
+2008,British Columbia,Transportation,20.73738832,210903.0,4349336
+2008,British Columbia,Heavy Industry,6.430010213,210903.0,4349336
+2008,British Columbia,Buildings,8.565391107,210903.0,4349336
+2008,British Columbia,Agriculture,2.653988188,210903.0,4349336
+2008,British Columbia,Waste,3.983145254,210903.0,4349336
+2008,British Columbia,"Light Manufacturing, Construction & Forest Resources",2.481534523,210903.0,4349336
+2009,British Columbia,Provincial Inventory Total,57.80695399,205878.0,4410506
+2009,British Columbia,Oil and Gas,13.05755783,205878.0,4410506
+2009,British Columbia,Transportation,19.1578488,205878.0,4410506
+2009,British Columbia,Heavy Industry,6.109984005,205878.0,4410506
+2009,British Columbia,Buildings,8.256599895,205878.0,4410506
+2009,British Columbia,Agriculture,2.429787342,205878.0,4410506
+2009,British Columbia,Waste,4.06226929,205878.0,4410506
+2009,British Columbia,"Light Manufacturing, Construction & Forest Resources",2.093646862,205878.0,4410506
+2010,British Columbia,Provincial Inventory Total,57.41291088,211749.0,4465546
+2010,British Columbia,Oil and Gas,12.97983535,211749.0,4465546
+2010,British Columbia,Transportation,19.40817438,211749.0,4465546
+2010,British Columbia,Heavy Industry,5.726479605,211749.0,4465546
+2010,British Columbia,Buildings,7.493401061,211749.0,4465546
+2010,British Columbia,Agriculture,2.658990731,211749.0,4465546
+2010,British Columbia,Waste,4.017769425,211749.0,4465546
+2010,British Columbia,"Light Manufacturing, Construction & Forest Resources",2.261252391,211749.0,4465546
+2011,British Columbia,Provincial Inventory Total,58.4457114,218203.0,4502104
+2011,British Columbia,Oil and Gas,14.36685876,218203.0,4502104
+2011,British Columbia,Transportation,18.9366125,218203.0,4502104
+2011,British Columbia,Heavy Industry,5.846768856,218203.0,4502104
+2011,British Columbia,Buildings,8.363932656,218203.0,4502104
+2011,British Columbia,Agriculture,2.609091323,218203.0,4502104
+2011,British Columbia,Waste,4.036295947,218203.0,4502104
+2011,British Columbia,"Light Manufacturing, Construction & Forest Resources",2.16149508,218203.0,4502104
+2012,British Columbia,Provincial Inventory Total,59.15109133,223329.0,4566769
+2012,British Columbia,Oil and Gas,14.20125762,223329.0,4566769
+2012,British Columbia,Transportation,19.98370827,223329.0,4566769
+2012,British Columbia,Heavy Industry,5.715928318,223329.0,4566769
+2012,British Columbia,Buildings,8.086449749,223329.0,4566769
+2012,British Columbia,Agriculture,2.732122083,223329.0,4566769
+2012,British Columbia,Waste,3.839768024,223329.0,4566769
+2012,British Columbia,"Light Manufacturing, Construction & Forest Resources",2.327410162,223329.0,4566769
+2013,British Columbia,Provincial Inventory Total,60.27206501,228310.0,4630077
+2013,British Columbia,Oil and Gas,14.39114252,228310.0,4630077
+2013,British Columbia,Transportation,20.99661194,228310.0,4630077
+2013,British Columbia,Heavy Industry,5.394591795,228310.0,4630077
+2013,British Columbia,Buildings,8.028752682,228310.0,4630077
+2013,British Columbia,Agriculture,2.83776676,228310.0,4630077
+2013,British Columbia,Waste,3.720160513,228310.0,4630077
+2013,British Columbia,"Light Manufacturing, Construction & Forest Resources",2.48872635,228310.0,4630077
+2014,British Columbia,Provincial Inventory Total,60.24144583,236696.0,4707103
+2014,British Columbia,Oil and Gas,14.48188925,236696.0,4707103
+2014,British Columbia,Transportation,21.26472249,236696.0,4707103
+2014,British Columbia,Heavy Industry,5.634832461,236696.0,4707103
+2014,British Columbia,Buildings,8.028454804,236696.0,4707103
+2014,British Columbia,Agriculture,2.777217365,236696.0,4707103
+2014,British Columbia,Waste,3.681249469,236696.0,4707103
+2014,British Columbia,"Light Manufacturing, Construction & Forest Resources",2.215112306,236696.0,4707103
+2015,British Columbia,Provincial Inventory Total,59.27011759,241509.0,4776388
+2015,British Columbia,Oil and Gas,13.41168545,241509.0,4776388
+2015,British Columbia,Transportation,21.89641592,241509.0,4776388
+2015,British Columbia,Heavy Industry,5.69110657,241509.0,4776388
+2015,British Columbia,Buildings,7.476099516,241509.0,4776388
+2015,British Columbia,Agriculture,2.864816231,241509.0,4776388
+2015,British Columbia,Waste,3.692187313,241509.0,4776388
+2015,British Columbia,"Light Manufacturing, Construction & Forest Resources",2.354276446,241509.0,4776388
+2016,British Columbia,Provincial Inventory Total,61.82579921,248262.0,4859250
+2016,British Columbia,Oil and Gas,13.63372449,248262.0,4859250
+2016,British Columbia,Transportation,23.16877632,248262.0,4859250
+2016,British Columbia,Heavy Industry,6.240184124,248262.0,4859250
+2016,British Columbia,Buildings,7.660303767,248262.0,4859250
+2016,British Columbia,Agriculture,3.102817807,248262.0,4859250
+2016,British Columbia,Waste,3.584354729,248262.0,4859250
+2016,British Columbia,"Light Manufacturing, Construction & Forest Resources",2.365919682,248262.0,4859250
+2017,British Columbia,Provincial Inventory Total,63.31809758,257724.0,4929384
+2017,British Columbia,Oil and Gas,13.66733804,257724.0,4929384
+2017,British Columbia,Transportation,23.83021825,257724.0,4929384
+2017,British Columbia,Heavy Industry,6.364519272,257724.0,4929384
+2017,British Columbia,Buildings,8.471709759,257724.0,4929384
+2017,British Columbia,Agriculture,3.079163613,257724.0,4929384
+2017,British Columbia,Waste,3.561902553,257724.0,4929384
+2017,British Columbia,"Light Manufacturing, Construction & Forest Resources",2.461398615,257724.0,4929384
+2018,British Columbia,Provincial Inventory Total,65.52479599,264765.0,5010476
+2018,British Columbia,Oil and Gas,13.87065623,264765.0,5010476
+2018,British Columbia,Transportation,24.89708238,264765.0,5010476
+2018,British Columbia,Heavy Industry,6.494133603,264765.0,5010476
+2018,British Columbia,Buildings,8.292841679,264765.0,5010476
+2018,British Columbia,Agriculture,3.254515805,264765.0,5010476
+2018,British Columbia,Waste,3.515206945,264765.0,5010476
+2018,British Columbia,"Light Manufacturing, Construction & Forest Resources",2.829310878,264765.0,5010476
+1990,Canada,National Inventory Total,603.2200911,1092141.0,27691138
+1990,Canada,Oil and Gas,106.0663935,1092141.0,27691138
+1990,Canada,Transportation,120.8382587,1092141.0,27691138
+1990,Canada,Heavy Industry,97.03693281,1092141.0,27691138
+1990,Canada,Buildings,74.07652431,1092141.0,27691138
+1990,Canada,Agriculture,57.48368086,1092141.0,27691138
+1990,Canada,Waste,20.70926259,1092141.0,27691138
+1990,Canada,"Light Manufacturing, Construction & Forest Resources",28.21890587,1092141.0,27691138
+1991,Canada,National Inventory Total,594.8725076,1069358.0,28037420
+1991,Canada,Oil and Gas,104.2339251,1069358.0,28037420
+1991,Canada,Transportation,114.8073812,1069358.0,28037420
+1991,Canada,Heavy Industry,97.01472284,1069358.0,28037420
+1991,Canada,Buildings,73.32983167,1069358.0,28037420
+1991,Canada,Agriculture,57.69483016,1069358.0,28037420
+1991,Canada,Waste,20.83824834,1069358.0,28037420
+1991,Canada,"Light Manufacturing, Construction & Forest Resources",26.6081688,1069358.0,28037420
+1992,Canada,National Inventory Total,612.4617661,1078985.0,28371264
+1992,Canada,Oil and Gas,114.1249303,1078985.0,28371264
+1992,Canada,Transportation,115.8194088,1078985.0,28371264
+1992,Canada,Heavy Industry,94.39583196,1078985.0,28371264
+1992,Canada,Buildings,74.82843517,1078985.0,28371264
+1992,Canada,Agriculture,59.99110985,1078985.0,28371264
+1992,Canada,Waste,20.86134747,1078985.0,28371264
+1992,Canada,"Light Manufacturing, Construction & Forest Resources",26.33548145,1078985.0,28371264
+1993,Canada,National Inventory Total,615.0478947,1107696.0,28684764
+1993,Canada,Oil and Gas,120.8074801,1107696.0,28684764
+1993,Canada,Transportation,117.3209112,1107696.0,28684764
+1993,Canada,Heavy Industry,93.89827412,1107696.0,28684764
+1993,Canada,Buildings,78.5965529,1107696.0,28684764
+1993,Canada,Agriculture,61.95661931,1107696.0,28684764
+1993,Canada,Waste,21.11692786,1107696.0,28684764
+1993,Canada,"Light Manufacturing, Construction & Forest Resources",24.03678068,1107696.0,28684764
+1994,Canada,National Inventory Total,636.3731323,1157481.0,29000663
+1994,Canada,Oil and Gas,125.6066157,1157481.0,29000663
+1994,Canada,Transportation,121.8536169,1157481.0,29000663
+1994,Canada,Heavy Industry,99.4726683,1157481.0,29000663
+1994,Canada,Buildings,79.07596175,1157481.0,29000663
+1994,Canada,Agriculture,64.79082048,1157481.0,29000663
+1994,Canada,Waste,21.38517169,1157481.0,29000663
+1994,Canada,"Light Manufacturing, Construction & Forest Resources",24.84786065,1157481.0,29000663
+1995,Canada,National Inventory Total,653.055777,1188663.0,29302311
+1995,Canada,Oil and Gas,131.5864171,1188663.0,29302311
+1995,Canada,Transportation,122.7032095,1188663.0,29302311
+1995,Canada,Heavy Industry,100.2204354,1188663.0,29302311
+1995,Canada,Buildings,79.79157105,1188663.0,29302311
+1995,Canada,Agriculture,67.96563494,1188663.0,29302311
+1995,Canada,Waste,21.22602624,1188663.0,29302311
+1995,Canada,"Light Manufacturing, Construction & Forest Resources",27.42864244,1188663.0,29302311
+1996,Canada,National Inventory Total,674.5698154,1207909.0,29610218
+1996,Canada,Oil and Gas,139.0796609,1207909.0,29610218
+1996,Canada,Transportation,126.3504047,1207909.0,29610218
+1996,Canada,Heavy Industry,102.9969348,1207909.0,29610218
+1996,Canada,Buildings,85.84502467,1207909.0,29610218
+1996,Canada,Agriculture,69.54547437,1207909.0,29610218
+1996,Canada,Waste,21.06704436,1207909.0,29610218
+1996,Canada,"Light Manufacturing, Construction & Forest Resources",27.40785568,1207909.0,29610218
+1997,Canada,National Inventory Total,686.1124429,1259608.0,29905948
+1997,Canada,Oil and Gas,139.5631369,1259608.0,29905948
+1997,Canada,Transportation,132.002274,1259608.0,29905948
+1997,Canada,Heavy Industry,102.4709131,1259608.0,29905948
+1997,Canada,Buildings,83.11132034,1259608.0,29905948
+1997,Canada,Agriculture,69.86503891,1259608.0,29905948
+1997,Canada,Waste,17.91444966,1259608.0,29905948
+1997,Canada,"Light Manufacturing, Construction & Forest Resources",27.66220057,1259608.0,29905948
+1998,Canada,National Inventory Total,693.0570722,1308685.0,30155173
+1998,Canada,Oil and Gas,145.0664303,1308685.0,30155173
+1998,Canada,Transportation,137.8375054,1308685.0,30155173
+1998,Canada,Heavy Industry,97.39677719,1308685.0,30155173
+1998,Canada,Buildings,75.50080215,1308685.0,30155173
+1998,Canada,Agriculture,69.58589004,1308685.0,30155173
+1998,Canada,Waste,17.59369428,1308685.0,30155173
+1998,Canada,"Light Manufacturing, Construction & Forest Resources",24.35895374,1308685.0,30155173
+1999,Canada,National Inventory Total,707.3624808,1376251.0,30401286
+1999,Canada,Oil and Gas,154.2256399,1376251.0,30401286
+1999,Canada,Transportation,143.7071926,1376251.0,30401286
+1999,Canada,Heavy Industry,94.60646559,1376251.0,30401286
+1999,Canada,Buildings,79.22725054,1376251.0,30401286
+1999,Canada,Agriculture,69.52603293,1376251.0,30401286
+1999,Canada,Waste,19.07091658,1376251.0,30401286
+1999,Canada,"Light Manufacturing, Construction & Forest Resources",24.50175327,1376251.0,30401286
+2000,Canada,National Inventory Total,730.6809002,1447508.0,30685730
+2000,Canada,Oil and Gas,157.1792913,1447508.0,30685730
+2000,Canada,Transportation,145.6379021,1447508.0,30685730
+2000,Canada,Heavy Industry,94.07868645,1447508.0,30685730
+2000,Canada,Buildings,85.67336458,1447508.0,30685730
+2000,Canada,Agriculture,70.12965913,1447508.0,30685730
+2000,Canada,Waste,19.62692049,1447508.0,30685730
+2000,Canada,"Light Manufacturing, Construction & Forest Resources",25.53212402,1447508.0,30685730
+2001,Canada,National Inventory Total,719.6965109,1473418.0,31020902
+2001,Canada,Oil and Gas,157.8808266,1473418.0,31020902
+2001,Canada,Transportation,147.3529067,1473418.0,31020902
+2001,Canada,Heavy Industry,88.34801103,1473418.0,31020902
+2001,Canada,Buildings,82.26518831,1473418.0,31020902
+2001,Canada,Agriculture,67.91679221,1473418.0,31020902
+2001,Canada,Waste,18.96052466,1473418.0,31020902
+2001,Canada,"Light Manufacturing, Construction & Forest Resources",23.76484933,1473418.0,31020902
+2002,Canada,National Inventory Total,723.9477487,1517887.0,31360079
+2002,Canada,Oil and Gas,161.175747,1517887.0,31360079
+2002,Canada,Transportation,148.4077276,1517887.0,31360079
+2002,Canada,Heavy Industry,89.40791417,1517887.0,31360079
+2002,Canada,Buildings,87.10924192,1517887.0,31360079
+2002,Canada,Agriculture,67.49160099,1517887.0,31360079
+2002,Canada,Waste,19.59851232,1517887.0,31360079
+2002,Canada,"Light Manufacturing, Construction & Forest Resources",24.0640544,1517887.0,31360079
+2003,Canada,National Inventory Total,740.2443574,1545232.0,31644028
+2003,Canada,Oil and Gas,163.1869169,1545232.0,31644028
+2003,Canada,Transportation,152.3707038,1545232.0,31644028
+2003,Canada,Heavy Industry,88.74410965,1545232.0,31644028
+2003,Canada,Buildings,91.89668964,1545232.0,31644028
+2003,Canada,Agriculture,70.18175133,1545232.0,31644028
+2003,Canada,Waste,19.49812518,1545232.0,31644028
+2003,Canada,"Light Manufacturing, Construction & Forest Resources",24.43305214,1545232.0,31644028
+2004,Canada,National Inventory Total,741.5848941,1592933.0,31940655
+2004,Canada,Oil and Gas,161.9123844,1592933.0,31940655
+2004,Canada,Transportation,156.7543486,1592933.0,31940655
+2004,Canada,Heavy Industry,92.54578879,1592933.0,31940655
+2004,Canada,Buildings,90.33056486,1592933.0,31940655
+2004,Canada,Agriculture,71.78373143,1592933.0,31940655
+2004,Canada,Waste,19.8472632,1592933.0,31940655
+2004,Canada,"Light Manufacturing, Construction & Forest Resources",25.29744926,1592933.0,31940655
+2005,Canada,National Inventory Total,729.7451202,1643973.0,32243753
+2005,Canada,Oil and Gas,157.6311777,1643973.0,32243753
+2005,Canada,Transportation,160.7089872,1643973.0,32243753
+2005,Canada,Heavy Industry,87.42870973,1643973.0,32243753
+2005,Canada,Buildings,86.20851424,1643973.0,32243753
+2005,Canada,Agriculture,72.12251219,1643973.0,32243753
+2005,Canada,Waste,19.89710153,1643973.0,32243753
+2005,Canada,"Light Manufacturing, Construction & Forest Resources",24.0752548,1643973.0,32243753
+2006,Canada,National Inventory Total,720.5119646,1687281.0,32571174
+2006,Canada,Oil and Gas,161.5952955,1687281.0,32571174
+2006,Canada,Transportation,161.8555603,1687281.0,32571174
+2006,Canada,Heavy Industry,87.3425401,1687281.0,32571174
+2006,Canada,Buildings,81.01061442,1687281.0,32571174
+2006,Canada,Agriculture,70.15813422,1687281.0,32571174
+2006,Canada,Waste,19.95168933,1687281.0,32571174
+2006,Canada,"Light Manufacturing, Construction & Forest Resources",22.65930872,1687281.0,32571174
+2007,Canada,National Inventory Total,742.3128462,1722238.0,32889025
+2007,Canada,Oil and Gas,167.9231246,1722238.0,32889025
+2007,Canada,Transportation,165.5595889,1722238.0,32889025
+2007,Canada,Heavy Industry,86.33594709,1722238.0,32889025
+2007,Canada,Buildings,86.63211798,1722238.0,32889025
+2007,Canada,Agriculture,70.71256102,1722238.0,32889025
+2007,Canada,Waste,19.7950991,1722238.0,32889025
+2007,Canada,"Light Manufacturing, Construction & Forest Resources",23.81372926,1722238.0,32889025
+2008,Canada,National Inventory Total,722.5667657,1739534.0,33247118
+2008,Canada,Oil and Gas,160.6998754,1739534.0,33247118
+2008,Canada,Transportation,165.5922748,1739534.0,33247118
+2008,Canada,Heavy Industry,85.15450759,1739534.0,33247118
+2008,Canada,Buildings,86.4364721,1739534.0,33247118
+2008,Canada,Agriculture,70.55916615,1739534.0,33247118
+2008,Canada,Waste,18.79701364,1739534.0,33247118
+2008,Canada,"Light Manufacturing, Construction & Forest Resources",22.7210927,1739534.0,33247118
+2009,Canada,National Inventory Total,680.4923561,1688636.0,33628895
+2009,Canada,Oil and Gas,157.8879015,1688636.0,33628895
+2009,Canada,Transportation,162.2760036,1688636.0,33628895
+2009,Canada,Heavy Industry,72.31088296,1688636.0,33628895
+2009,Canada,Buildings,84.67551946,1688636.0,33628895
+2009,Canada,Agriculture,67.91889336,1688636.0,33628895
+2009,Canada,Waste,17.75480287,1688636.0,33628895
+2009,Canada,"Light Manufacturing, Construction & Forest Resources",20.22901375,1688636.0,33628895
+2010,Canada,National Inventory Total,690.5305925,1740814.0,34004889
+2010,Canada,Oil and Gas,159.0069029,1740814.0,34004889
+2010,Canada,Transportation,168.1708717,1740814.0,34004889
+2010,Canada,Heavy Industry,75.49936234,1740814.0,34004889
+2010,Canada,Buildings,81.73451701,1740814.0,34004889
+2010,Canada,Agriculture,67.79248856,1740814.0,34004889
+2010,Canada,Waste,17.15986452,1740814.0,34004889
+2010,Canada,"Light Manufacturing, Construction & Forest Resources",21.78408667,1740814.0,34004889
+2011,Canada,National Inventory Total,702.4119428,1795582.0,34339328
+2011,Canada,Oil and Gas,165.0198452,1795582.0,34339328
+2011,Canada,Transportation,169.1622395,1795582.0,34339328
+2011,Canada,Heavy Industry,81.97680374,1795582.0,34339328
+2011,Canada,Buildings,87.16606849,1795582.0,34339328
+2011,Canada,Agriculture,68.46563717,1795582.0,34339328
+2011,Canada,Waste,17.1779782,1795582.0,34339328
+2011,Canada,"Light Manufacturing, Construction & Forest Resources",22.58472394,1795582.0,34339328
+2012,Canada,National Inventory Total,710.1071314,1827201.0,34714222
+2012,Canada,Oil and Gas,176.078602,1827201.0,34714222
+2012,Canada,Transportation,171.1222138,1827201.0,34714222
+2012,Canada,Heavy Industry,81.28576081,1827201.0,34714222
+2012,Canada,Buildings,85.44441817,1827201.0,34714222
+2012,Canada,Agriculture,70.00266099,1827201.0,34714222
+2012,Canada,Waste,17.22353667,1827201.0,34714222
+2012,Canada,"Light Manufacturing, Construction & Forest Resources",21.91651702,1827201.0,34714222
+2013,Canada,National Inventory Total,720.8770134,1869759.0,35082954
+2013,Canada,Oil and Gas,184.8138997,1869759.0,35082954
+2013,Canada,Transportation,174.2674618,1869759.0,35082954
+2013,Canada,Heavy Industry,79.09475634,1869759.0,35082954
+2013,Canada,Buildings,86.20788268,1869759.0,35082954
+2013,Canada,Agriculture,72.55518434,1869759.0,35082954
+2013,Canada,Waste,17.466825,1869759.0,35082954
+2013,Canada,"Light Manufacturing, Construction & Forest Resources",22.22408633,1869759.0,35082954
+2014,Canada,National Inventory Total,721.3523896,1923422.0,35437435
+2014,Canada,Oil and Gas,191.3947982,1923422.0,35437435
+2014,Canada,Transportation,171.6996182,1923422.0,35437435
+2014,Canada,Heavy Industry,80.27184246,1923422.0,35437435
+2014,Canada,Buildings,88.87783999,1923422.0,35437435
+2014,Canada,Agriculture,70.94427818,1923422.0,35437435
+2014,Canada,Waste,17.47980836,1923422.0,35437435
+2014,Canada,"Light Manufacturing, Construction & Forest Resources",20.94174757,1923422.0,35437435
+2015,Canada,National Inventory Total,720.3782632,1936100.0,35702908
+2015,Canada,Oil and Gas,190.6078089,1936100.0,35702908
+2015,Canada,Transportation,172.1923653,1936100.0,35702908
+2015,Canada,Heavy Industry,78.66770273,1936100.0,35702908
+2015,Canada,Buildings,85.7369326,1936100.0,35702908
+2015,Canada,Agriculture,71.18434939,1936100.0,35702908
+2015,Canada,Waste,17.95339349,1936100.0,35702908
+2015,Canada,"Light Manufacturing, Construction & Forest Resources",21.15216474,1936100.0,35702908
+2016,Canada,National Inventory Total,706.1943091,1955488.0,36109487
+2016,Canada,Oil and Gas,186.5251306,1955488.0,36109487
+2016,Canada,Transportation,173.5496253,1955488.0,36109487
+2016,Canada,Heavy Industry,76.56128378,1955488.0,36109487
+2016,Canada,Buildings,81.7350408,1955488.0,36109487
+2016,Canada,Agriculture,71.84702296,1955488.0,36109487
+2016,Canada,Waste,17.9567761,1955488.0,36109487
+2016,Canada,"Light Manufacturing, Construction & Forest Resources",20.6502581,1955488.0,36109487
+2017,Canada,National Inventory Total,713.8350356,2014933.0,36545295
+2017,Canada,Oil and Gas,187.9666196,2014933.0,36545295
+2017,Canada,Transportation,178.6285223,2014933.0,36545295
+2017,Canada,Heavy Industry,75.77247778,2014933.0,36545295
+2017,Canada,Buildings,85.38642909,2014933.0,36545295
+2017,Canada,Agriculture,71.23324991,2014933.0,36545295
+2017,Canada,Waste,17.93439882,2014933.0,36545295
+2017,Canada,"Light Manufacturing, Construction & Forest Resources",21.32110557,2014933.0,36545295
+2018,Canada,National Inventory Total,729.347197,2063887.0,37065178
+2018,Canada,Oil and Gas,193.1899792,2063887.0,37065178
+2018,Canada,Transportation,185.9235275,2063887.0,37065178
+2018,Canada,Heavy Industry,78.25388078,2063887.0,37065178
+2018,Canada,Buildings,92.45212038,2063887.0,37065178
+2018,Canada,Agriculture,73.08997288,2063887.0,37065178
+2018,Canada,Waste,17.65188597,2063887.0,37065178
+2018,Canada,"Light Manufacturing, Construction & Forest Resources",21.99309721,2063887.0,37065178
+1990,Manitoba,Provincial Inventory Total,18.30727684,38284.0,1105421
+1990,Manitoba,Oil and Gas,1.321979552,38284.0,1105421
+1990,Manitoba,Transportation,5.01303816,38284.0,1105421
+1990,Manitoba,Heavy Industry,1.332781772,38284.0,1105421
+1990,Manitoba,Buildings,3.124799402,38284.0,1105421
+1990,Manitoba,Agriculture,5.789150411,38284.0,1105421
+1990,Manitoba,Waste,0.610160045,38284.0,1105421
+1990,Manitoba,"Light Manufacturing, Construction & Forest Resources",0.591748099,38284.0,1105421
+1991,Manitoba,Provincial Inventory Total,17.9149923,37004.0,1109604
+1991,Manitoba,Oil and Gas,1.459747828,37004.0,1109604
+1991,Manitoba,Transportation,4.808483875,37004.0,1109604
+1991,Manitoba,Heavy Industry,1.220020803,37004.0,1109604
+1991,Manitoba,Buildings,3.051076257,37004.0,1109604
+1991,Manitoba,Agriculture,5.834282351,37004.0,1109604
+1991,Manitoba,Waste,0.620223134,37004.0,1109604
+1991,Manitoba,"Light Manufacturing, Construction & Forest Resources",0.531327855,37004.0,1109604
+1992,Manitoba,Provincial Inventory Total,18.20164606,37272.0,1112689
+1992,Manitoba,Oil and Gas,1.719896139,37272.0,1112689
+1992,Manitoba,Transportation,4.816516807,37272.0,1112689
+1992,Manitoba,Heavy Industry,1.065815888,37272.0,1112689
+1992,Manitoba,Buildings,3.011117154,37272.0,1112689
+1992,Manitoba,Agriculture,6.144334066,37272.0,1112689
+1992,Manitoba,Waste,0.631436325,37272.0,1112689
+1992,Manitoba,"Light Manufacturing, Construction & Forest Resources",0.419259976,37272.0,1112689
+1993,Manitoba,Provincial Inventory Total,18.23423863,37304.0,1117618
+1993,Manitoba,Oil and Gas,1.772967506,37304.0,1117618
+1993,Manitoba,Transportation,4.725227284,37304.0,1117618
+1993,Manitoba,Heavy Industry,1.048986701,37304.0,1117618
+1993,Manitoba,Buildings,3.086460331,37304.0,1117618
+1993,Manitoba,Agriculture,6.261199213,37304.0,1117618
+1993,Manitoba,Waste,0.64353843,37304.0,1117618
+1993,Manitoba,"Light Manufacturing, Construction & Forest Resources",0.391774947,37304.0,1117618
+1994,Manitoba,Provincial Inventory Total,18.6883915,38774.0,1123230
+1994,Manitoba,Oil and Gas,1.735612102,38774.0,1123230
+1994,Manitoba,Transportation,4.899411361,38774.0,1123230
+1994,Manitoba,Heavy Industry,0.943597143,38774.0,1123230
+1994,Manitoba,Buildings,2.932782212,38774.0,1123230
+1994,Manitoba,Agriculture,6.675997461,38774.0,1123230
+1994,Manitoba,Waste,0.6564548,38774.0,1123230
+1994,Manitoba,"Light Manufacturing, Construction & Forest Resources",0.528457555,38774.0,1123230
+1995,Manitoba,Provincial Inventory Total,19.46460001,38795.0,1129150
+1995,Manitoba,Oil and Gas,1.839423532,38795.0,1129150
+1995,Manitoba,Transportation,5.048421527,38795.0,1129150
+1995,Manitoba,Heavy Industry,0.996173867,38795.0,1129150
+1995,Manitoba,Buildings,3.128284969,38795.0,1129150
+1995,Manitoba,Agriculture,7.001733272,38795.0,1129150
+1995,Manitoba,Waste,0.670158471,38795.0,1129150
+1995,Manitoba,"Light Manufacturing, Construction & Forest Resources",0.577573012,38795.0,1129150
+1996,Manitoba,Provincial Inventory Total,20.26753149,39800.0,1134196
+1996,Manitoba,Oil and Gas,1.869867152,39800.0,1134196
+1996,Manitoba,Transportation,5.085278498,39800.0,1134196
+1996,Manitoba,Heavy Industry,1.135023954,39800.0,1134196
+1996,Manitoba,Buildings,3.379847322,39800.0,1134196
+1996,Manitoba,Agriculture,7.291394326,39800.0,1134196
+1996,Manitoba,Waste,0.684580293,39800.0,1134196
+1996,Manitoba,"Light Manufacturing, Construction & Forest Resources",0.514170186,39800.0,1134196
+1997,Manitoba,Provincial Inventory Total,19.92283629,41525.0,1136128
+1997,Manitoba,Oil and Gas,1.794263487,41525.0,1136128
+1997,Manitoba,Transportation,5.06258491,41525.0,1136128
+1997,Manitoba,Heavy Industry,1.0279716,41525.0,1136128
+1997,Manitoba,Buildings,3.187035057,41525.0,1136128
+1997,Manitoba,Agriculture,7.322991845,41525.0,1136128
+1997,Manitoba,Waste,0.699439129,41525.0,1136128
+1997,Manitoba,"Light Manufacturing, Construction & Forest Resources",0.552263976,41525.0,1136128
+1998,Manitoba,Provincial Inventory Total,20.45345283,43381.0,1137489
+1998,Manitoba,Oil and Gas,1.553311523,43381.0,1137489
+1998,Manitoba,Transportation,5.036533495,43381.0,1137489
+1998,Manitoba,Heavy Industry,1.26575721,43381.0,1137489
+1998,Manitoba,Buildings,2.889816429,43381.0,1137489
+1998,Manitoba,Agriculture,7.452207229,43381.0,1137489
+1998,Manitoba,Waste,0.714128139,43381.0,1137489
+1998,Manitoba,"Light Manufacturing, Construction & Forest Resources",0.525595908,43381.0,1137489
+1999,Manitoba,Provincial Inventory Total,20.19766893,43990.0,1142448
+1999,Manitoba,Oil and Gas,1.652123763,43990.0,1142448
+1999,Manitoba,Transportation,5.19559323,43990.0,1142448
+1999,Manitoba,Heavy Industry,1.326216133,43990.0,1142448
+1999,Manitoba,Buildings,2.897777674,43990.0,1142448
+1999,Manitoba,Agriculture,7.196345289,43990.0,1142448
+1999,Manitoba,Waste,0.728641926,43990.0,1142448
+1999,Manitoba,"Light Manufacturing, Construction & Forest Resources",0.591561662,43990.0,1142448
+2000,Manitoba,Provincial Inventory Total,20.70827768,45856.0,1147313
+2000,Manitoba,Oil and Gas,1.250105034,45856.0,1147313
+2000,Manitoba,Transportation,5.187271823,45856.0,1147313
+2000,Manitoba,Heavy Industry,1.334650337,45856.0,1147313
+2000,Manitoba,Buildings,3.191702006,45856.0,1147313
+2000,Manitoba,Agriculture,7.325700615,45856.0,1147313
+2000,Manitoba,Waste,0.742078061,45856.0,1147313
+2000,Manitoba,"Light Manufacturing, Construction & Forest Resources",0.600543039,45856.0,1147313
+2001,Manitoba,Provincial Inventory Total,19.33910319,46346.0,1151454
+2001,Manitoba,Oil and Gas,0.880401865,46346.0,1151454
+2001,Manitoba,Transportation,5.133567647,46346.0,1151454
+2001,Manitoba,Heavy Industry,1.295312589,46346.0,1151454
+2001,Manitoba,Buildings,2.968542586,46346.0,1151454
+2001,Manitoba,Agriculture,7.124849024,46346.0,1151454
+2001,Manitoba,Waste,0.755473786,46346.0,1151454
+2001,Manitoba,"Light Manufacturing, Construction & Forest Resources",0.624246253,46346.0,1151454
+2002,Manitoba,Provincial Inventory Total,19.86291097,47142.0,1156680
+2002,Manitoba,Oil and Gas,0.920813511,47142.0,1156680
+2002,Manitoba,Transportation,5.079413126,47142.0,1156680
+2002,Manitoba,Heavy Industry,1.310230673,47142.0,1156680
+2002,Manitoba,Buildings,3.167589411,47142.0,1156680
+2002,Manitoba,Agriculture,7.37747588,47142.0,1156680
+2002,Manitoba,Waste,0.768406376,47142.0,1156680
+2002,Manitoba,"Light Manufacturing, Construction & Forest Resources",0.776329548,47142.0,1156680
+2003,Manitoba,Provincial Inventory Total,20.3827938,47766.0,1163596
+2003,Manitoba,Oil and Gas,0.674178506,47766.0,1163596
+2003,Manitoba,Transportation,5.324933831,47766.0,1163596
+2003,Manitoba,Heavy Industry,1.29123324,47766.0,1163596
+2003,Manitoba,Buildings,2.990327421,47766.0,1163596
+2003,Manitoba,Agriculture,7.845713868,47766.0,1163596
+2003,Manitoba,Waste,0.780607609,47766.0,1163596
+2003,Manitoba,"Light Manufacturing, Construction & Forest Resources",0.657084347,47766.0,1163596
+2004,Manitoba,Provincial Inventory Total,20.66004481,48948.0,1173238
+2004,Manitoba,Oil and Gas,0.610417376,48948.0,1173238
+2004,Manitoba,Transportation,5.6375547,48948.0,1173238
+2004,Manitoba,Heavy Industry,1.408621859,48948.0,1173238
+2004,Manitoba,Buildings,2.988776115,48948.0,1173238
+2004,Manitoba,Agriculture,7.892457465,48948.0,1173238
+2004,Manitoba,Waste,0.793093339,48948.0,1173238
+2004,Manitoba,"Light Manufacturing, Construction & Forest Resources",0.713627631,48948.0,1173238
+2005,Manitoba,Provincial Inventory Total,20.14176115,50322.0,1178264
+2005,Manitoba,Oil and Gas,0.819213215,50322.0,1178264
+2005,Manitoba,Transportation,5.450495644,50322.0,1178264
+2005,Manitoba,Heavy Industry,1.5506617,50322.0,1178264
+2005,Manitoba,Buildings,2.714252988,50322.0,1178264
+2005,Manitoba,Agriculture,7.666840746,50322.0,1178264
+2005,Manitoba,Waste,0.80517949,50322.0,1178264
+2005,Manitoba,"Light Manufacturing, Construction & Forest Resources",0.773561543,50322.0,1178264
+2006,Manitoba,Provincial Inventory Total,20.32787295,52166.0,1183562
+2006,Manitoba,Oil and Gas,0.800742611,52166.0,1183562
+2006,Manitoba,Transportation,5.596043764,52166.0,1183562
+2006,Manitoba,Heavy Industry,1.615381942,52166.0,1183562
+2006,Manitoba,Buildings,2.405432769,52166.0,1183562
+2006,Manitoba,Agriculture,7.883626595,52166.0,1183562
+2006,Manitoba,Waste,0.817147605,52166.0,1183562
+2006,Manitoba,"Light Manufacturing, Construction & Forest Resources",0.783773542,52166.0,1183562
+2007,Manitoba,Provincial Inventory Total,20.81888868,53501.0,1189451
+2007,Manitoba,Oil and Gas,0.680537085,53501.0,1189451
+2007,Manitoba,Transportation,5.861761208,53501.0,1189451
+2007,Manitoba,Heavy Industry,1.65195725,53501.0,1189451
+2007,Manitoba,Buildings,2.64173704,53501.0,1189451
+2007,Manitoba,Agriculture,7.735461423,53501.0,1189451
+2007,Manitoba,Waste,0.832038377,53501.0,1189451
+2007,Manitoba,"Light Manufacturing, Construction & Forest Resources",0.916847433,53501.0,1189451
+2008,Manitoba,Provincial Inventory Total,20.59863707,55454.0,1197775
+2008,Manitoba,Oil and Gas,0.534074662,55454.0,1197775
+2008,Manitoba,Transportation,5.546827167,55454.0,1197775
+2008,Manitoba,Heavy Industry,1.71784519,55454.0,1197775
+2008,Manitoba,Buildings,2.809028801,55454.0,1197775
+2008,Manitoba,Agriculture,7.870614285,55454.0,1197775
+2008,Manitoba,Waste,0.767359682,55454.0,1197775
+2008,Manitoba,"Light Manufacturing, Construction & Forest Resources",0.905729845,55454.0,1197775
+2009,Manitoba,Provincial Inventory Total,19.37515268,55370.0,1208556
+2009,Manitoba,Oil and Gas,0.419271167,55370.0,1208556
+2009,Manitoba,Transportation,5.54392135,55370.0,1208556
+2009,Manitoba,Heavy Industry,1.616058107,55370.0,1208556
+2009,Manitoba,Buildings,2.669236491,55370.0,1208556
+2009,Manitoba,Agriculture,7.312946917,55370.0,1208556
+2009,Manitoba,Waste,0.781021044,55370.0,1208556
+2009,Manitoba,"Light Manufacturing, Construction & Forest Resources",0.828531042,55370.0,1208556
+2010,Manitoba,Provincial Inventory Total,19.13673908,56727.0,1220780
+2010,Manitoba,Oil and Gas,0.335089031,56727.0,1220780
+2010,Manitoba,Transportation,5.985669395,56727.0,1220780
+2010,Manitoba,Heavy Industry,1.33405274,56727.0,1220780
+2010,Manitoba,Buildings,2.631052198,56727.0,1220780
+2010,Manitoba,Agriculture,7.143993974,56727.0,1220780
+2010,Manitoba,Waste,0.795277214,56727.0,1220780
+2010,Manitoba,"Light Manufacturing, Construction & Forest Resources",0.817038115,56727.0,1220780
+2011,Manitoba,Provincial Inventory Total,18.89654283,58087.0,1233649
+2011,Manitoba,Oil and Gas,0.422162824,58087.0,1233649
+2011,Manitoba,Transportation,6.085892805,58087.0,1233649
+2011,Manitoba,Heavy Industry,1.297015209,58087.0,1233649
+2011,Manitoba,Buildings,2.668557395,58087.0,1233649
+2011,Manitoba,Agriculture,6.683735848,58087.0,1233649
+2011,Manitoba,Waste,0.8102173,58087.0,1233649
+2011,Manitoba,"Light Manufacturing, Construction & Forest Resources",0.800643165,58087.0,1233649
+2012,Manitoba,Provincial Inventory Total,20.21438987,59846.0,1249975
+2012,Manitoba,Oil and Gas,0.464522055,59846.0,1249975
+2012,Manitoba,Transportation,7.115362109,59846.0,1249975
+2012,Manitoba,Heavy Industry,1.188388845,59846.0,1249975
+2012,Manitoba,Buildings,2.506506553,59846.0,1249975
+2012,Manitoba,Agriculture,7.047637548,59846.0,1249975
+2012,Manitoba,Waste,0.824111342,59846.0,1249975
+2012,Manitoba,"Light Manufacturing, Construction & Forest Resources",0.954511162,59846.0,1249975
+2013,Manitoba,Provincial Inventory Total,20.94824268,61583.0,1264620
+2013,Manitoba,Oil and Gas,0.56731424,61583.0,1264620
+2013,Manitoba,Transportation,6.94888483,61583.0,1264620
+2013,Manitoba,Heavy Industry,1.381162045,61583.0,1264620
+2013,Manitoba,Buildings,2.890089252,61583.0,1264620
+2013,Manitoba,Agriculture,7.463612908,61583.0,1264620
+2013,Manitoba,Waste,0.793048189,61583.0,1264620
+2013,Manitoba,"Light Manufacturing, Construction & Forest Resources",0.782789873,61583.0,1264620
+2014,Manitoba,Provincial Inventory Total,20.87767793,62853.0,1279014
+2014,Manitoba,Oil and Gas,0.725071406,62853.0,1279014
+2014,Manitoba,Transportation,7.142185358,62853.0,1279014
+2014,Manitoba,Heavy Industry,1.215419689,62853.0,1279014
+2014,Manitoba,Buildings,2.982635337,62853.0,1279014
+2014,Manitoba,Agriculture,7.108761339,62853.0,1279014
+2014,Manitoba,Waste,0.75733889,62853.0,1279014
+2014,Manitoba,"Light Manufacturing, Construction & Forest Resources",0.818822763,62853.0,1279014
+2015,Manitoba,Provincial Inventory Total,20.63416569,63628.0,1292227
+2015,Manitoba,Oil and Gas,0.733685299,63628.0,1292227
+2015,Manitoba,Transportation,6.826431299,63628.0,1292227
+2015,Manitoba,Heavy Industry,1.256066043,63628.0,1292227
+2015,Manitoba,Buildings,2.634405751,63628.0,1292227
+2015,Manitoba,Agriculture,7.263259193,63628.0,1292227
+2015,Manitoba,Waste,0.765238959,63628.0,1292227
+2015,Manitoba,"Light Manufacturing, Construction & Forest Resources",1.030262666,63628.0,1292227
+2016,Manitoba,Provincial Inventory Total,20.88854798,64549.0,1314139
+2016,Manitoba,Oil and Gas,0.644840471,64549.0,1314139
+2016,Manitoba,Transportation,7.055493746,64549.0,1314139
+2016,Manitoba,Heavy Industry,1.327344718,64549.0,1314139
+2016,Manitoba,Buildings,2.609110198,64549.0,1314139
+2016,Manitoba,Agriculture,7.423812802,64549.0,1314139
+2016,Manitoba,Waste,0.697758421,64549.0,1314139
+2016,Manitoba,"Light Manufacturing, Construction & Forest Resources",1.058726388,64549.0,1314139
+2017,Manitoba,Provincial Inventory Total,20.77923931,66670.0,1334790
+2017,Manitoba,Oil and Gas,0.536092955,66670.0,1334790
+2017,Manitoba,Transportation,7.362839402,66670.0,1334790
+2017,Manitoba,Heavy Industry,1.217152892,66670.0,1334790
+2017,Manitoba,Buildings,2.105092449,66670.0,1334790
+2017,Manitoba,Agriculture,7.569770611,66670.0,1334790
+2017,Manitoba,Waste,0.706933333,66670.0,1334790
+2017,Manitoba,"Light Manufacturing, Construction & Forest Resources",1.210772228,66670.0,1334790
+2018,Manitoba,Provincial Inventory Total,21.80629613,67670.0,1352825
+2018,Manitoba,Oil and Gas,0.69793095,67670.0,1352825
+2018,Manitoba,Transportation,7.867245338,67670.0,1352825
+2018,Manitoba,Heavy Industry,1.330104493,67670.0,1352825
+2018,Manitoba,Buildings,2.236719159,67670.0,1352825
+2018,Manitoba,Agriculture,7.668647853,67670.0,1352825
+2018,Manitoba,Waste,0.716134939,67670.0,1352825
+2018,Manitoba,"Light Manufacturing, Construction & Forest Resources",1.24601782,67670.0,1352825
+1990,New Brunswick,Provincial Inventory Total,16.17360574,21610.0,740156
+1990,New Brunswick,Oil and Gas,1.219620677,21610.0,740156
+1990,New Brunswick,Transportation,3.836533811,21610.0,740156
+1990,New Brunswick,Heavy Industry,1.777650134,21610.0,740156
+1990,New Brunswick,Buildings,1.751403015,21610.0,740156
+1990,New Brunswick,Agriculture,0.601041958,21610.0,740156
+1990,New Brunswick,Waste,0.553089423,21610.0,740156
+1990,New Brunswick,"Light Manufacturing, Construction & Forest Resources",0.407002597,21610.0,740156
+1991,New Brunswick,Provincial Inventory Total,15.50198069,21546.0,745567
+1991,New Brunswick,Oil and Gas,1.157914081,21546.0,745567
+1991,New Brunswick,Transportation,3.738646209,21546.0,745567
+1991,New Brunswick,Heavy Industry,1.723011358,21546.0,745567
+1991,New Brunswick,Buildings,1.820851389,21546.0,745567
+1991,New Brunswick,Agriculture,0.606681799,21546.0,745567
+1991,New Brunswick,Waste,0.561474474,21546.0,745567
+1991,New Brunswick,"Light Manufacturing, Construction & Forest Resources",0.440393356,21546.0,745567
+1992,New Brunswick,Provincial Inventory Total,16.23391648,21842.0,748121
+1992,New Brunswick,Oil and Gas,1.254498635,21842.0,748121
+1992,New Brunswick,Transportation,3.774197873,21842.0,748121
+1992,New Brunswick,Heavy Industry,1.651458106,21842.0,748121
+1992,New Brunswick,Buildings,1.669983821,21842.0,748121
+1992,New Brunswick,Agriculture,0.64860685,21842.0,748121
+1992,New Brunswick,Waste,0.569620845,21842.0,748121
+1992,New Brunswick,"Light Manufacturing, Construction & Forest Resources",0.477964675,21842.0,748121
+1993,New Brunswick,Provincial Inventory Total,15.46537132,22523.0,748812
+1993,New Brunswick,Oil and Gas,1.455546033,22523.0,748812
+1993,New Brunswick,Transportation,3.804433596,22523.0,748812
+1993,New Brunswick,Heavy Industry,1.714530129,22523.0,748812
+1993,New Brunswick,Buildings,1.596874082,22523.0,748812
+1993,New Brunswick,Agriculture,0.652581049,22523.0,748812
+1993,New Brunswick,Waste,0.577366446,22523.0,748812
+1993,New Brunswick,"Light Manufacturing, Construction & Forest Resources",0.469521164,22523.0,748812
+1994,New Brunswick,Provincial Inventory Total,16.87763694,22983.0,750185
+1994,New Brunswick,Oil and Gas,1.486651595,22983.0,750185
+1994,New Brunswick,Transportation,3.947610686,22983.0,750185
+1994,New Brunswick,Heavy Industry,1.673626193,22983.0,750185
+1994,New Brunswick,Buildings,1.533683187,22983.0,750185
+1994,New Brunswick,Agriculture,0.661680444,22983.0,750185
+1994,New Brunswick,Waste,0.585034338,22983.0,750185
+1994,New Brunswick,"Light Manufacturing, Construction & Forest Resources",0.61390733,22983.0,750185
+1995,New Brunswick,Provincial Inventory Total,17.41878146,23762.0,750943
+1995,New Brunswick,Oil and Gas,1.301314635,23762.0,750943
+1995,New Brunswick,Transportation,3.887610151,23762.0,750943
+1995,New Brunswick,Heavy Industry,1.781039022,23762.0,750943
+1995,New Brunswick,Buildings,1.480969079,23762.0,750943
+1995,New Brunswick,Agriculture,0.726505393,23762.0,750943
+1995,New Brunswick,Waste,0.592554414,23762.0,750943
+1995,New Brunswick,"Light Manufacturing, Construction & Forest Resources",0.667597125,23762.0,750943
+1996,New Brunswick,Provincial Inventory Total,16.96421162,24010.0,752268
+1996,New Brunswick,Oil and Gas,1.500565852,24010.0,752268
+1996,New Brunswick,Transportation,4.052635865,24010.0,752268
+1996,New Brunswick,Heavy Industry,1.86360335,24010.0,752268
+1996,New Brunswick,Buildings,1.42869463,24010.0,752268
+1996,New Brunswick,Agriculture,0.69716367,24010.0,752268
+1996,New Brunswick,Waste,0.600026656,24010.0,752268
+1996,New Brunswick,"Light Manufacturing, Construction & Forest Resources",0.63612761,24010.0,752268
+1997,New Brunswick,Provincial Inventory Total,19.53102862,24232.0,752511
+1997,New Brunswick,Oil and Gas,1.542944972,24232.0,752511
+1997,New Brunswick,Transportation,4.170211816,24232.0,752511
+1997,New Brunswick,Heavy Industry,1.673644881,24232.0,752511
+1997,New Brunswick,Buildings,1.553205451,24232.0,752511
+1997,New Brunswick,Agriculture,0.708724589,24232.0,752511
+1997,New Brunswick,Waste,0.607276964,24232.0,752511
+1997,New Brunswick,"Light Manufacturing, Construction & Forest Resources",0.653517225,24232.0,752511
+1998,New Brunswick,Provincial Inventory Total,20.41522639,25060.0,750530
+1998,New Brunswick,Oil and Gas,1.332546695,25060.0,750530
+1998,New Brunswick,Transportation,4.385322527,25060.0,750530
+1998,New Brunswick,Heavy Industry,1.523226418,25060.0,750530
+1998,New Brunswick,Buildings,1.382099229,25060.0,750530
+1998,New Brunswick,Agriculture,0.720586264,25060.0,750530
+1998,New Brunswick,Waste,0.61250233,25060.0,750530
+1998,New Brunswick,"Light Manufacturing, Construction & Forest Resources",0.5982818,25060.0,750530
+1999,New Brunswick,Provincial Inventory Total,19.4525521,26629.0,750601
+1999,New Brunswick,Oil and Gas,1.443596866,26629.0,750601
+1999,New Brunswick,Transportation,4.635250377,26629.0,750601
+1999,New Brunswick,Heavy Industry,1.557390185,26629.0,750601
+1999,New Brunswick,Buildings,1.341409692,26629.0,750601
+1999,New Brunswick,Agriculture,0.724542089,26629.0,750601
+1999,New Brunswick,Waste,0.619873448,26629.0,750601
+1999,New Brunswick,"Light Manufacturing, Construction & Forest Resources",0.590169825,26629.0,750601
+2000,New Brunswick,Provincial Inventory Total,20.72548028,27184.0,750517
+2000,New Brunswick,Oil and Gas,1.818425515,27184.0,750517
+2000,New Brunswick,Transportation,4.807349322,27184.0,750517
+2000,New Brunswick,Heavy Industry,1.614136337,27184.0,750517
+2000,New Brunswick,Buildings,1.589249476,27184.0,750517
+2000,New Brunswick,Agriculture,0.691655211,27184.0,750517
+2000,New Brunswick,Waste,0.624293258,27184.0,750517
+2000,New Brunswick,"Light Manufacturing, Construction & Forest Resources",0.600265546,27184.0,750517
+2001,New Brunswick,Provincial Inventory Total,22.55464833,27683.0,749820
+2001,New Brunswick,Oil and Gas,2.415879049,27683.0,749820
+2001,New Brunswick,Transportation,4.780120877,27683.0,749820
+2001,New Brunswick,Heavy Industry,1.709505405,27683.0,749820
+2001,New Brunswick,Buildings,1.326110612,27683.0,749820
+2001,New Brunswick,Agriculture,0.618690982,27683.0,749820
+2001,New Brunswick,Waste,0.626519438,27683.0,749820
+2001,New Brunswick,"Light Manufacturing, Construction & Forest Resources",0.595453519,27683.0,749820
+2002,New Brunswick,Provincial Inventory Total,21.21114925,28999.0,749372
+2002,New Brunswick,Oil and Gas,2.707178535,28999.0,749372
+2002,New Brunswick,Transportation,4.849246084,28999.0,749372
+2002,New Brunswick,Heavy Industry,1.604445722,28999.0,749372
+2002,New Brunswick,Buildings,1.299058248,28999.0,749372
+2002,New Brunswick,Agriculture,0.646487141,28999.0,749372
+2002,New Brunswick,Waste,0.627952678,28999.0,749372
+2002,New Brunswick,"Light Manufacturing, Construction & Forest Resources",0.53005108,28999.0,749372
+2003,New Brunswick,Provincial Inventory Total,20.9364254,29722.0,749441
+2003,New Brunswick,Oil and Gas,2.513221341,29722.0,749441
+2003,New Brunswick,Transportation,4.791282729,29722.0,749441
+2003,New Brunswick,Heavy Industry,1.550125535,29722.0,749441
+2003,New Brunswick,Buildings,1.497691126,29722.0,749441
+2003,New Brunswick,Agriculture,0.662245882,29722.0,749441
+2003,New Brunswick,Waste,0.632268656,29722.0,749441
+2003,New Brunswick,"Light Manufacturing, Construction & Forest Resources",0.551164129,29722.0,749441
+2004,New Brunswick,Provincial Inventory Total,21.84767143,30475.0,749419
+2004,New Brunswick,Oil and Gas,2.742094604,30475.0,749419
+2004,New Brunswick,Transportation,4.847223469,30475.0,749419
+2004,New Brunswick,Heavy Industry,1.531286661,30475.0,749419
+2004,New Brunswick,Buildings,1.728453189,30475.0,749419
+2004,New Brunswick,Agriculture,0.664448614,30475.0,749419
+2004,New Brunswick,Waste,0.63631237,30475.0,749419
+2004,New Brunswick,"Light Manufacturing, Construction & Forest Resources",0.569651268,30475.0,749419
+2005,New Brunswick,Provincial Inventory Total,19.95265035,30716.0,748057
+2005,New Brunswick,Oil and Gas,2.751855548,30716.0,748057
+2005,New Brunswick,Transportation,4.836800669,30716.0,748057
+2005,New Brunswick,Heavy Industry,1.21560785,30716.0,748057
+2005,New Brunswick,Buildings,1.53278823,30716.0,748057
+2005,New Brunswick,Agriculture,0.642879409,30716.0,748057
+2005,New Brunswick,Waste,0.639956157,30716.0,748057
+2005,New Brunswick,"Light Manufacturing, Construction & Forest Resources",0.527941613,30716.0,748057
+2006,New Brunswick,Provincial Inventory Total,19.58781608,31348.0,745621
+2006,New Brunswick,Oil and Gas,3.000473205,31348.0,745621
+2006,New Brunswick,Transportation,4.784841091,31348.0,745621
+2006,New Brunswick,Heavy Industry,1.042423128,31348.0,745621
+2006,New Brunswick,Buildings,1.525608534,31348.0,745621
+2006,New Brunswick,Agriculture,0.625852287,31348.0,745621
+2006,New Brunswick,Waste,0.644877325,31348.0,745621
+2006,New Brunswick,"Light Manufacturing, Construction & Forest Resources",0.637497435,31348.0,745621
+2007,New Brunswick,Provincial Inventory Total,19.66548464,31644.0,745433
+2007,New Brunswick,Oil and Gas,2.986996274,31644.0,745433
+2007,New Brunswick,Transportation,4.697101733,31644.0,745433
+2007,New Brunswick,Heavy Industry,1.349712619,31644.0,745433
+2007,New Brunswick,Buildings,1.623442272,31644.0,745433
+2007,New Brunswick,Agriculture,0.587977598,31644.0,745433
+2007,New Brunswick,Waste,0.600284266,31644.0,745433
+2007,New Brunswick,"Light Manufacturing, Construction & Forest Resources",0.634705693,31644.0,745433
+2008,New Brunswick,Provincial Inventory Total,18.55071076,31887.0,746877
+2008,New Brunswick,Oil and Gas,3.04315408,31887.0,746877
+2008,New Brunswick,Transportation,4.51755551,31887.0,746877
+2008,New Brunswick,Heavy Industry,0.973955075,31887.0,746877
+2008,New Brunswick,Buildings,1.642438589,31887.0,746877
+2008,New Brunswick,Agriculture,0.552362448,31887.0,746877
+2008,New Brunswick,Waste,0.601257003,31887.0,746877
+2008,New Brunswick,"Light Manufacturing, Construction & Forest Resources",0.522954541,31887.0,746877
+2009,New Brunswick,Provincial Inventory Total,18.1895265,31425.0,749956
+2009,New Brunswick,Oil and Gas,3.373680657,31425.0,749956
+2009,New Brunswick,Transportation,4.21481024,31425.0,749956
+2009,New Brunswick,Heavy Industry,0.980542481,31425.0,749956
+2009,New Brunswick,Buildings,1.3477971,31425.0,749956
+2009,New Brunswick,Agriculture,0.587340902,31425.0,749956
+2009,New Brunswick,Waste,0.544760387,31425.0,749956
+2009,New Brunswick,"Light Manufacturing, Construction & Forest Resources",0.488469391,31425.0,749956
+2010,New Brunswick,Provincial Inventory Total,18.15634722,32050.0,753035
+2010,New Brunswick,Oil and Gas,4.205153304,32050.0,753035
+2010,New Brunswick,Transportation,4.681038745,32050.0,753035
+2010,New Brunswick,Heavy Industry,1.038106894,32050.0,753035
+2010,New Brunswick,Buildings,1.53718252,32050.0,753035
+2010,New Brunswick,Agriculture,0.645166504,32050.0,753035
+2010,New Brunswick,Waste,0.522612028,32050.0,753035
+2010,New Brunswick,"Light Manufacturing, Construction & Forest Resources",0.529805929,32050.0,753035
+2011,New Brunswick,Provincial Inventory Total,18.2560265,32136.0,755705
+2011,New Brunswick,Oil and Gas,3.633376288,32136.0,755705
+2011,New Brunswick,Transportation,5.287912253,32136.0,755705
+2011,New Brunswick,Heavy Industry,1.19870714,32136.0,755705
+2011,New Brunswick,Buildings,1.92755982,32136.0,755705
+2011,New Brunswick,Agriculture,0.629539765,32136.0,755705
+2011,New Brunswick,Waste,0.515382471,32136.0,755705
+2011,New Brunswick,"Light Manufacturing, Construction & Forest Resources",0.488829909,32136.0,755705
+2012,New Brunswick,Provincial Inventory Total,16.55758035,31796.0,758378
+2012,New Brunswick,Oil and Gas,3.622817489,31796.0,758378
+2012,New Brunswick,Transportation,4.763791684,31796.0,758378
+2012,New Brunswick,Heavy Industry,1.079051767,31796.0,758378
+2012,New Brunswick,Buildings,1.871173752,31796.0,758378
+2012,New Brunswick,Agriculture,0.622911246,31796.0,758378
+2012,New Brunswick,Waste,0.495350858,31796.0,758378
+2012,New Brunswick,"Light Manufacturing, Construction & Forest Resources",0.390844375,31796.0,758378
+2013,New Brunswick,Provincial Inventory Total,14.71930512,31710.0,758544
+2013,New Brunswick,Oil and Gas,3.573906958,31710.0,758544
+2013,New Brunswick,Transportation,3.897537521,31710.0,758544
+2013,New Brunswick,Heavy Industry,0.90686073,31710.0,758544
+2013,New Brunswick,Buildings,1.082604882,31710.0,758544
+2013,New Brunswick,Agriculture,0.574800473,31710.0,758544
+2013,New Brunswick,Waste,0.504870024,31710.0,758544
+2013,New Brunswick,"Light Manufacturing, Construction & Forest Resources",0.421576401,31710.0,758544
+2014,New Brunswick,Provincial Inventory Total,13.58253325,31747.0,758976
+2014,New Brunswick,Oil and Gas,3.178863605,31747.0,758976
+2014,New Brunswick,Transportation,3.563686975,31747.0,758976
+2014,New Brunswick,Heavy Industry,0.770199758,31747.0,758976
+2014,New Brunswick,Buildings,1.193765103,31747.0,758976
+2014,New Brunswick,Agriculture,0.582409713,31747.0,758976
+2014,New Brunswick,Waste,0.5205923,31747.0,758976
+2014,New Brunswick,"Light Manufacturing, Construction & Forest Resources",0.334198401,31747.0,758976
+2015,New Brunswick,Provincial Inventory Total,13.85479772,31954.0,758842
+2015,New Brunswick,Oil and Gas,3.000174822,31954.0,758842
+2015,New Brunswick,Transportation,3.818848545,31954.0,758842
+2015,New Brunswick,Heavy Industry,0.874174231,31954.0,758842
+2015,New Brunswick,Buildings,1.347328772,31954.0,758842
+2015,New Brunswick,Agriculture,0.489496681,31954.0,758842
+2015,New Brunswick,Waste,0.515686463,31954.0,758842
+2015,New Brunswick,"Light Manufacturing, Construction & Forest Resources",0.348913723,31954.0,758842
+2016,New Brunswick,Provincial Inventory Total,14.46214058,32213.0,763350
+2016,New Brunswick,Oil and Gas,3.270056749,32213.0,763350
+2016,New Brunswick,Transportation,4.169532631,32213.0,763350
+2016,New Brunswick,Heavy Industry,0.764848459,32213.0,763350
+2016,New Brunswick,Buildings,1.244246473,32213.0,763350
+2016,New Brunswick,Agriculture,0.543051793,32213.0,763350
+2016,New Brunswick,Waste,0.497655628,32213.0,763350
+2016,New Brunswick,"Light Manufacturing, Construction & Forest Resources",0.314344639,32213.0,763350
+2017,New Brunswick,Provincial Inventory Total,13.5330196,33014.0,766621
+2017,New Brunswick,Oil and Gas,3.504432837,33014.0,766621
+2017,New Brunswick,Transportation,3.734486494,33014.0,766621
+2017,New Brunswick,Heavy Industry,0.7601715,33014.0,766621
+2017,New Brunswick,Buildings,1.13809045,33014.0,766621
+2017,New Brunswick,Agriculture,0.526447086,33014.0,766621
+2017,New Brunswick,Waste,0.507150967,33014.0,766621
+2017,New Brunswick,"Light Manufacturing, Construction & Forest Resources",0.345631317,33014.0,766621
+2018,New Brunswick,Provincial Inventory Total,13.24319337,33176.0,770301
+2018,New Brunswick,Oil and Gas,2.985756837,33176.0,770301
+2018,New Brunswick,Transportation,3.707930135,33176.0,770301
+2018,New Brunswick,Heavy Industry,0.811600159,33176.0,770301
+2018,New Brunswick,Buildings,1.184885529,33176.0,770301
+2018,New Brunswick,Agriculture,0.52143366,33176.0,770301
+2018,New Brunswick,Waste,0.523326172,33176.0,770301
+2018,New Brunswick,"Light Manufacturing, Construction & Forest Resources",0.337184377,33176.0,770301
+1990,Newfoundland and Labrador,Provincial Inventory Total,9.776926252,19281.0,577368
+1990,Newfoundland and Labrador,Oil and Gas,1.074323076,19281.0,577368
+1990,Newfoundland and Labrador,Transportation,3.109918767,19281.0,577368
+1990,Newfoundland and Labrador,Heavy Industry,1.811247493,19281.0,577368
+1990,Newfoundland and Labrador,Buildings,1.157821958,19281.0,577368
+1990,Newfoundland and Labrador,Agriculture,0.085379234,19281.0,577368
+1990,Newfoundland and Labrador,Waste,0.688971231,19281.0,577368
+1990,Newfoundland and Labrador,"Light Manufacturing, Construction & Forest Resources",0.207141038,19281.0,577368
+1991,Newfoundland and Labrador,Provincial Inventory Total,8.694445575,19372.0,579644
+1991,Newfoundland and Labrador,Oil and Gas,1.04188776,19372.0,579644
+1991,Newfoundland and Labrador,Transportation,2.971093557,19372.0,579644
+1991,Newfoundland and Labrador,Heavy Industry,1.295604288,19372.0,579644
+1991,Newfoundland and Labrador,Buildings,1.119242416,19372.0,579644
+1991,Newfoundland and Labrador,Agriculture,0.097738334,19372.0,579644
+1991,Newfoundland and Labrador,Waste,0.686173249,19372.0,579644
+1991,Newfoundland and Labrador,"Light Manufacturing, Construction & Forest Resources",0.181107987,19372.0,579644
+1992,Newfoundland and Labrador,Provincial Inventory Total,8.598447132,18987.0,580109
+1992,Newfoundland and Labrador,Oil and Gas,0.875305433,18987.0,580109
+1992,Newfoundland and Labrador,Transportation,2.946015377,18987.0,580109
+1992,Newfoundland and Labrador,Heavy Industry,1.184684049,18987.0,580109
+1992,Newfoundland and Labrador,Buildings,1.120385168,18987.0,580109
+1992,Newfoundland and Labrador,Agriculture,0.119965112,18987.0,580109
+1992,Newfoundland and Labrador,Waste,0.690861823,18987.0,580109
+1992,Newfoundland and Labrador,"Light Manufacturing, Construction & Forest Resources",0.156144977,18987.0,580109
+1993,Newfoundland and Labrador,Provincial Inventory Total,8.745283642,19257.0,579977
+1993,Newfoundland and Labrador,Oil and Gas,1.059010558,19257.0,579977
+1993,Newfoundland and Labrador,Transportation,3.011586796,19257.0,579977
+1993,Newfoundland and Labrador,Heavy Industry,1.185524898,19257.0,579977
+1993,Newfoundland and Labrador,Buildings,1.150281718,19257.0,579977
+1993,Newfoundland and Labrador,Agriculture,0.114851235,19257.0,579977
+1993,Newfoundland and Labrador,Waste,0.687519258,19257.0,579977
+1993,Newfoundland and Labrador,"Light Manufacturing, Construction & Forest Resources",0.170555908,19257.0,579977
+1994,Newfoundland and Labrador,Provincial Inventory Total,7.78956237,20012.0,574466
+1994,Newfoundland and Labrador,Oil and Gas,0.473547685,20012.0,574466
+1994,Newfoundland and Labrador,Transportation,3.010212837,20012.0,574466
+1994,Newfoundland and Labrador,Heavy Industry,1.495408228,20012.0,574466
+1994,Newfoundland and Labrador,Buildings,1.101433158,20012.0,574466
+1994,Newfoundland and Labrador,Agriculture,0.115967283,20012.0,574466
+1994,Newfoundland and Labrador,Waste,0.681801388,20012.0,574466
+1994,Newfoundland and Labrador,"Light Manufacturing, Construction & Forest Resources",0.183363875,20012.0,574466
+1995,Newfoundland and Labrador,Provincial Inventory Total,8.712267456,20656.0,567397
+1995,Newfoundland and Labrador,Oil and Gas,0.96890078,20656.0,567397
+1995,Newfoundland and Labrador,Transportation,2.966505074,20656.0,567397
+1995,Newfoundland and Labrador,Heavy Industry,1.50916331,20656.0,567397
+1995,Newfoundland and Labrador,Buildings,1.033172546,20656.0,567397
+1995,Newfoundland and Labrador,Agriculture,0.119467238,20656.0,567397
+1995,Newfoundland and Labrador,Waste,0.669113674,20656.0,567397
+1995,Newfoundland and Labrador,"Light Manufacturing, Construction & Forest Resources",0.169418665,20656.0,567397
+1996,Newfoundland and Labrador,Provincial Inventory Total,8.808001993,19682.0,559698
+1996,Newfoundland and Labrador,Oil and Gas,1.136662269,19682.0,559698
+1996,Newfoundland and Labrador,Transportation,3.008378424,19682.0,559698
+1996,Newfoundland and Labrador,Heavy Industry,1.507339617,19682.0,559698
+1996,Newfoundland and Labrador,Buildings,1.007671207,19682.0,559698
+1996,Newfoundland and Labrador,Agriculture,0.118991051,19682.0,559698
+1996,Newfoundland and Labrador,Waste,0.666957798,19682.0,559698
+1996,Newfoundland and Labrador,"Light Manufacturing, Construction & Forest Resources",0.17559138,19682.0,559698
+1997,Newfoundland and Labrador,Provincial Inventory Total,9.342970709,19908.0,550911
+1997,Newfoundland and Labrador,Oil and Gas,1.292062856,19908.0,550911
+1997,Newfoundland and Labrador,Transportation,3.062741507,19908.0,550911
+1997,Newfoundland and Labrador,Heavy Industry,1.680113276,19908.0,550911
+1997,Newfoundland and Labrador,Buildings,1.079164206,19908.0,550911
+1997,Newfoundland and Labrador,Agriculture,0.135364401,19908.0,550911
+1997,Newfoundland and Labrador,Waste,0.656528477,19908.0,550911
+1997,Newfoundland and Labrador,"Light Manufacturing, Construction & Forest Resources",0.193680934,19908.0,550911
+1998,Newfoundland and Labrador,Provincial Inventory Total,10.65784384,20895.0,539843
+1998,Newfoundland and Labrador,Oil and Gas,3.194315302,20895.0,539843
+1998,Newfoundland and Labrador,Transportation,3.126922911,20895.0,539843
+1998,Newfoundland and Labrador,Heavy Industry,1.400142954,20895.0,539843
+1998,Newfoundland and Labrador,Buildings,0.935934682,20895.0,539843
+1998,Newfoundland and Labrador,Agriculture,0.143625966,20895.0,539843
+1998,Newfoundland and Labrador,Waste,0.646375493,20895.0,539843
+1998,Newfoundland and Labrador,"Light Manufacturing, Construction & Forest Resources",0.159388492,20895.0,539843
+1999,Newfoundland and Labrador,Provincial Inventory Total,9.702520314,22144.0,533329
+1999,Newfoundland and Labrador,Oil and Gas,2.627224736,22144.0,533329
+1999,Newfoundland and Labrador,Transportation,3.242284143,22144.0,533329
+1999,Newfoundland and Labrador,Heavy Industry,1.166454316,22144.0,533329
+1999,Newfoundland and Labrador,Buildings,0.919810016,22144.0,533329
+1999,Newfoundland and Labrador,Agriculture,0.130519118,22144.0,533329
+1999,Newfoundland and Labrador,Waste,0.643504323,22144.0,533329
+1999,Newfoundland and Labrador,"Light Manufacturing, Construction & Forest Resources",0.143942631,22144.0,533329
+2000,Newfoundland and Labrador,Provincial Inventory Total,9.25937978,23334.0,527966
+2000,Newfoundland and Labrador,Oil and Gas,1.847055726,23334.0,527966
+2000,Newfoundland and Labrador,Transportation,3.359343395,23334.0,527966
+2000,Newfoundland and Labrador,Heavy Industry,1.365264602,23334.0,527966
+2000,Newfoundland and Labrador,Buildings,0.959523368,23334.0,527966
+2000,Newfoundland and Labrador,Agriculture,0.119527683,23334.0,527966
+2000,Newfoundland and Labrador,Waste,0.641285802,23334.0,527966
+2000,Newfoundland and Labrador,"Light Manufacturing, Construction & Forest Resources",0.144740089,23334.0,527966
+2001,Newfoundland and Labrador,Provincial Inventory Total,9.994963722,23894.0,522046
+2001,Newfoundland and Labrador,Oil and Gas,1.744032539,23894.0,522046
+2001,Newfoundland and Labrador,Transportation,3.430508019,23894.0,522046
+2001,Newfoundland and Labrador,Heavy Industry,1.190907229,23894.0,522046
+2001,Newfoundland and Labrador,Buildings,1.037378542,23894.0,522046
+2001,Newfoundland and Labrador,Agriculture,0.073565487,23894.0,522046
+2001,Newfoundland and Labrador,Waste,0.639442407,23894.0,522046
+2001,Newfoundland and Labrador,"Light Manufacturing, Construction & Forest Resources",0.167078035,23894.0,522046
+2002,Newfoundland and Labrador,Provincial Inventory Total,11.98918948,27746.0,519481
+2002,Newfoundland and Labrador,Oil and Gas,3.385615576,27746.0,519481
+2002,Newfoundland and Labrador,Transportation,3.503079824,27746.0,519481
+2002,Newfoundland and Labrador,Heavy Industry,1.201989199,27746.0,519481
+2002,Newfoundland and Labrador,Buildings,1.121494672,27746.0,519481
+2002,Newfoundland and Labrador,Agriculture,0.076314278,27746.0,519481
+2002,Newfoundland and Labrador,Waste,0.640390701,27746.0,519481
+2002,Newfoundland and Labrador,"Light Manufacturing, Construction & Forest Resources",0.161900575,27746.0,519481
+2003,Newfoundland and Labrador,Provincial Inventory Total,11.77292034,29562.0,518459
+2003,Newfoundland and Labrador,Oil and Gas,2.919003137,29562.0,518459
+2003,Newfoundland and Labrador,Transportation,3.679323615,29562.0,518459
+2003,Newfoundland and Labrador,Heavy Industry,1.467937915,29562.0,518459
+2003,Newfoundland and Labrador,Buildings,1.211084543,29562.0,518459
+2003,Newfoundland and Labrador,Agriculture,0.101694639,29562.0,518459
+2003,Newfoundland and Labrador,Waste,0.637564007,29562.0,518459
+2003,Newfoundland and Labrador,"Light Manufacturing, Construction & Forest Resources",0.166913798,29562.0,518459
+2004,Newfoundland and Labrador,Provincial Inventory Total,11.06237162,29354.0,517423
+2004,Newfoundland and Labrador,Oil and Gas,2.705438804,29354.0,517423
+2004,Newfoundland and Labrador,Transportation,3.521048116,29354.0,517423
+2004,Newfoundland and Labrador,Heavy Industry,1.430806995,29354.0,517423
+2004,Newfoundland and Labrador,Buildings,1.216612433,29354.0,517423
+2004,Newfoundland and Labrador,Agriculture,0.08717272,29354.0,517423
+2004,Newfoundland and Labrador,Waste,0.62697722,29354.0,517423
+2004,Newfoundland and Labrador,"Light Manufacturing, Construction & Forest Resources",0.184222524,29354.0,517423
+2005,Newfoundland and Labrador,Provincial Inventory Total,10.45266259,30187.0,514332
+2005,Newfoundland and Labrador,Oil and Gas,2.637829435,30187.0,514332
+2005,Newfoundland and Labrador,Transportation,3.67788073,30187.0,514332
+2005,Newfoundland and Labrador,Heavy Industry,1.582532576,30187.0,514332
+2005,Newfoundland and Labrador,Buildings,0.883678149,30187.0,514332
+2005,Newfoundland and Labrador,Agriculture,0.082248041,30187.0,514332
+2005,Newfoundland and Labrador,Waste,0.599134017,30187.0,514332
+2005,Newfoundland and Labrador,"Light Manufacturing, Construction & Forest Resources",0.169614049,30187.0,514332
+2006,Newfoundland and Labrador,Provincial Inventory Total,10.10718209,31391.0,510592
+2006,Newfoundland and Labrador,Oil and Gas,2.94578155,31391.0,510592
+2006,Newfoundland and Labrador,Transportation,3.587530429,31391.0,510592
+2006,Newfoundland and Labrador,Heavy Industry,1.318248317,31391.0,510592
+2006,Newfoundland and Labrador,Buildings,0.779165092,31391.0,510592
+2006,Newfoundland and Labrador,Agriculture,0.085665496,31391.0,510592
+2006,Newfoundland and Labrador,Waste,0.596835365,31391.0,510592
+2006,Newfoundland and Labrador,"Light Manufacturing, Construction & Forest Resources",0.153490237,31391.0,510592
+2007,Newfoundland and Labrador,Provincial Inventory Total,11.07319749,34929.0,509055
+2007,Newfoundland and Labrador,Oil and Gas,3.114407061,34929.0,509055
+2007,Newfoundland and Labrador,Transportation,3.861801007,34929.0,509055
+2007,Newfoundland and Labrador,Heavy Industry,1.210816063,34929.0,509055
+2007,Newfoundland and Labrador,Buildings,0.971050556,34929.0,509055
+2007,Newfoundland and Labrador,Agriculture,0.087844609,34929.0,509055
+2007,Newfoundland and Labrador,Waste,0.604370628,34929.0,509055
+2007,Newfoundland and Labrador,"Light Manufacturing, Construction & Forest Resources",0.181700505,34929.0,509055
+2008,Newfoundland and Labrador,Provincial Inventory Total,10.62761009,34404.0,511581
+2008,Newfoundland and Labrador,Oil and Gas,2.650383789,34404.0,511581
+2008,Newfoundland and Labrador,Transportation,3.989122433,34404.0,511581
+2008,Newfoundland and Labrador,Heavy Industry,1.252814023,34404.0,511581
+2008,Newfoundland and Labrador,Buildings,0.989877579,34404.0,511581
+2008,Newfoundland and Labrador,Agriculture,0.091678133,34404.0,511581
+2008,Newfoundland and Labrador,Waste,0.6112932,34404.0,511581
+2008,Newfoundland and Labrador,"Light Manufacturing, Construction & Forest Resources",0.165718966,34404.0,511581
+2009,Newfoundland and Labrador,Provincial Inventory Total,10.07735729,30954.0,516751
+2009,Newfoundland and Labrador,Oil and Gas,2.720580818,30954.0,516751
+2009,Newfoundland and Labrador,Transportation,3.786086749,30954.0,516751
+2009,Newfoundland and Labrador,Heavy Industry,1.197837271,30954.0,516751
+2009,Newfoundland and Labrador,Buildings,0.831045838,30954.0,516751
+2009,Newfoundland and Labrador,Agriculture,0.091737968,30954.0,516751
+2009,Newfoundland and Labrador,Waste,0.51793979,30954.0,516751
+2009,Newfoundland and Labrador,"Light Manufacturing, Construction & Forest Resources",0.154321462,30954.0,516751
+2010,Newfoundland and Labrador,Provincial Inventory Total,10.0166397,32639.0,522009
+2010,Newfoundland and Labrador,Oil and Gas,2.628185336,32639.0,522009
+2010,Newfoundland and Labrador,Transportation,3.837036001,32639.0,522009
+2010,Newfoundland and Labrador,Heavy Industry,1.140017418,32639.0,522009
+2010,Newfoundland and Labrador,Buildings,0.883319166,32639.0,522009
+2010,Newfoundland and Labrador,Agriculture,0.110561043,32639.0,522009
+2010,Newfoundland and Labrador,Waste,0.499348867,32639.0,522009
+2010,Newfoundland and Labrador,"Light Manufacturing, Construction & Forest Resources",0.227211434,32639.0,522009
+2011,Newfoundland and Labrador,Provincial Inventory Total,10.2711853,33531.0,524999
+2011,Newfoundland and Labrador,Oil and Gas,2.362029876,33531.0,524999
+2011,Newfoundland and Labrador,Transportation,4.139870564,33531.0,524999
+2011,Newfoundland and Labrador,Heavy Industry,1.03607553,33531.0,524999
+2011,Newfoundland and Labrador,Buildings,0.989298622,33531.0,524999
+2011,Newfoundland and Labrador,Agriculture,0.132766103,33531.0,524999
+2011,Newfoundland and Labrador,Waste,0.500941192,33531.0,524999
+2011,Newfoundland and Labrador,"Light Manufacturing, Construction & Forest Resources",0.318959397,33531.0,524999
+2012,Newfoundland and Labrador,Provincial Inventory Total,9.870826012,32064.0,526345
+2012,Newfoundland and Labrador,Oil and Gas,2.394897021,32064.0,526345
+2012,Newfoundland and Labrador,Transportation,4.11858929,32064.0,526345
+2012,Newfoundland and Labrador,Heavy Industry,0.882443385,32064.0,526345
+2012,Newfoundland and Labrador,Buildings,0.79125319,32064.0,526345
+2012,Newfoundland and Labrador,Agriculture,0.154562357,32064.0,526345
+2012,Newfoundland and Labrador,Waste,0.522815568,32064.0,526345
+2012,Newfoundland and Labrador,"Light Manufacturing, Construction & Forest Resources",0.236660484,32064.0,526345
+2013,Newfoundland and Labrador,Provincial Inventory Total,9.960232312,33748.0,527114
+2013,Newfoundland and Labrador,Oil and Gas,2.587662866,33748.0,527114
+2013,Newfoundland and Labrador,Transportation,3.787880004,33748.0,527114
+2013,Newfoundland and Labrador,Heavy Industry,0.824509052,33748.0,527114
+2013,Newfoundland and Labrador,Buildings,1.053811806,33748.0,527114
+2013,Newfoundland and Labrador,Agriculture,0.112014698,33748.0,527114
+2013,Newfoundland and Labrador,Waste,0.529851041,33748.0,527114
+2013,Newfoundland and Labrador,"Light Manufacturing, Construction & Forest Resources",0.196517837,33748.0,527114
+2014,Newfoundland and Labrador,Provincial Inventory Total,10.87793596,33355.0,528159
+2014,Newfoundland and Labrador,Oil and Gas,2.708498144,33355.0,528159
+2014,Newfoundland and Labrador,Transportation,4.055455497,33355.0,528159
+2014,Newfoundland and Labrador,Heavy Industry,0.853671903,33355.0,528159
+2014,Newfoundland and Labrador,Buildings,1.188054532,33355.0,528159
+2014,Newfoundland and Labrador,Agriculture,0.11223095,33355.0,528159
+2014,Newfoundland and Labrador,Waste,0.537258216,33355.0,528159
+2014,Newfoundland and Labrador,"Light Manufacturing, Construction & Forest Resources",0.215883185,33355.0,528159
+2015,Newfoundland and Labrador,Provincial Inventory Total,10.92921618,32965.0,528117
+2015,Newfoundland and Labrador,Oil and Gas,2.647451558,32965.0,528117
+2015,Newfoundland and Labrador,Transportation,4.117574474,32965.0,528117
+2015,Newfoundland and Labrador,Heavy Industry,0.785987053,32965.0,528117
+2015,Newfoundland and Labrador,Buildings,1.086375161,32965.0,528117
+2015,Newfoundland and Labrador,Agriculture,0.104054568,32965.0,528117
+2015,Newfoundland and Labrador,Waste,0.542546854,32965.0,528117
+2015,Newfoundland and Labrador,"Light Manufacturing, Construction & Forest Resources",0.302199635,32965.0,528117
+2016,Newfoundland and Labrador,Provincial Inventory Total,11.14267218,33461.0,529426
+2016,Newfoundland and Labrador,Oil and Gas,2.936535183,33461.0,529426
+2016,Newfoundland and Labrador,Transportation,4.095748991,33461.0,529426
+2016,Newfoundland and Labrador,Heavy Industry,0.472512923,33461.0,529426
+2016,Newfoundland and Labrador,Buildings,1.132996555,33461.0,529426
+2016,Newfoundland and Labrador,Agriculture,0.104080676,33461.0,529426
+2016,Newfoundland and Labrador,Waste,0.555942722,33461.0,529426
+2016,Newfoundland and Labrador,"Light Manufacturing, Construction & Forest Resources",0.317962614,33461.0,529426
+2017,Newfoundland and Labrador,Provincial Inventory Total,11.03704956,33953.0,528249
+2017,Newfoundland and Labrador,Oil and Gas,2.861079539,33953.0,528249
+2017,Newfoundland and Labrador,Transportation,3.993419726,33953.0,528249
+2017,Newfoundland and Labrador,Heavy Industry,0.584967206,33953.0,528249
+2017,Newfoundland and Labrador,Buildings,1.141501054,33953.0,528249
+2017,Newfoundland and Labrador,Agriculture,0.100175798,33953.0,528249
+2017,Newfoundland and Labrador,Waste,0.561817673,33953.0,528249
+2017,Newfoundland and Labrador,"Light Manufacturing, Construction & Forest Resources",0.263121018,33953.0,528249
+2018,Newfoundland and Labrador,Provincial Inventory Total,11.00937753,32763.0,525560
+2018,Newfoundland and Labrador,Oil and Gas,3.132611924,32763.0,525560
+2018,Newfoundland and Labrador,Transportation,4.0301578,32763.0,525560
+2018,Newfoundland and Labrador,Heavy Industry,0.771756122,32763.0,525560
+2018,Newfoundland and Labrador,Buildings,0.963209331,32763.0,525560
+2018,Newfoundland and Labrador,Agriculture,0.097533324,32763.0,525560
+2018,Newfoundland and Labrador,Waste,0.559774345,32763.0,525560
+2018,Newfoundland and Labrador,"Light Manufacturing, Construction & Forest Resources",0.324421085,32763.0,525560
+1999,Northwest Territories,Territories Inventory Total,1.223169413,3369.0,40638
+1999,Northwest Territories,Oil and Gas,0.150669935,3369.0,40638
+1999,Northwest Territories,Transportation,0.462336593,3369.0,40638
+1999,Northwest Territories,Heavy Industry,0.222279963,3369.0,40638
+1999,Northwest Territories,Buildings,0.281272696,3369.0,40638
+1999,Northwest Territories,Agriculture,2.01E-05,3369.0,40638
+1999,Northwest Territories,Waste,0.007666474,3369.0,40638
+1999,Northwest Territories,"Light Manufacturing, Construction & Forest Resources",0.011153674,3369.0,40638
+2000,Northwest Territories,Territories Inventory Total,1.497214596,3594.0,40480
+2000,Northwest Territories,Oil and Gas,0.375711182,3594.0,40480
+2000,Northwest Territories,Transportation,0.505197902,3594.0,40480
+2000,Northwest Territories,Heavy Industry,0.205929757,3594.0,40480
+2000,Northwest Territories,Buildings,0.288207765,3594.0,40480
+2000,Northwest Territories,Agriculture,0.000126918,3594.0,40480
+2000,Northwest Territories,Waste,0.007856389,3594.0,40480
+2000,Northwest Territories,"Light Manufacturing, Construction & Forest Resources",0.008019883,3594.0,40480
+2001,Northwest Territories,Territories Inventory Total,1.878766765,4350.0,40845
+2001,Northwest Territories,Oil and Gas,0.498056441,4350.0,40845
+2001,Northwest Territories,Transportation,0.603092319,4350.0,40845
+2001,Northwest Territories,Heavy Industry,0.321162026,4350.0,40845
+2001,Northwest Territories,Buildings,0.284413853,4350.0,40845
+2001,Northwest Territories,Agriculture,0.02071626,4350.0,40845
+2001,Northwest Territories,Waste,0.008038216,4350.0,40845
+2001,Northwest Territories,"Light Manufacturing, Construction & Forest Resources",0.009448949,4350.0,40845
+2002,Northwest Territories,Territories Inventory Total,1.556547478,4654.0,41699
+2002,Northwest Territories,Oil and Gas,0.467159895,4654.0,41699
+2002,Northwest Territories,Transportation,0.505971631,4654.0,41699
+2002,Northwest Territories,Heavy Industry,0.206990858,4654.0,41699
+2002,Northwest Territories,Buildings,0.258515772,4654.0,41699
+2002,Northwest Territories,Agriculture,0.024263126,4654.0,41699
+2002,Northwest Territories,Waste,0.008239794,4654.0,41699
+2002,Northwest Territories,"Light Manufacturing, Construction & Forest Resources",0.007064807,4654.0,41699
+2003,Northwest Territories,Territories Inventory Total,1.429441481,5265.0,42600
+2003,Northwest Territories,Oil and Gas,0.360894385,5265.0,42600
+2003,Northwest Territories,Transportation,0.474660175,5265.0,42600
+2003,Northwest Territories,Heavy Industry,0.226467248,5265.0,42600
+2003,Northwest Territories,Buildings,0.280784171,5265.0,42600
+2003,Northwest Territories,Agriculture,0.015974462,5265.0,42600
+2003,Northwest Territories,Waste,0.008433947,5265.0,42600
+2003,Northwest Territories,"Light Manufacturing, Construction & Forest Resources",0.007316815,5265.0,42600
+2004,Northwest Territories,Territories Inventory Total,1.36353445,5401.0,43306
+2004,Northwest Territories,Oil and Gas,0.322231838,5401.0,43306
+2004,Northwest Territories,Transportation,0.480323045,5401.0,43306
+2004,Northwest Territories,Heavy Industry,0.211849377,5401.0,43306
+2004,Northwest Territories,Buildings,0.271000917,5401.0,43306
+2004,Northwest Territories,Agriculture,0.001798712,5401.0,43306
+2004,Northwest Territories,Waste,0.008660106,5401.0,43306
+2004,Northwest Territories,"Light Manufacturing, Construction & Forest Resources",0.008342828,5401.0,43306
+2005,Northwest Territories,Territories Inventory Total,1.585555037,5346.0,43400
+2005,Northwest Territories,Oil and Gas,0.242156499,5346.0,43400
+2005,Northwest Territories,Transportation,0.705663477,5346.0,43400
+2005,Northwest Territories,Heavy Industry,0.270996079,5346.0,43400
+2005,Northwest Territories,Buildings,0.249882023,5346.0,43400
+2005,Northwest Territories,Agriculture,0.001541753,5346.0,43400
+2005,Northwest Territories,Waste,0.008865841,5346.0,43400
+2005,Northwest Territories,"Light Manufacturing, Construction & Forest Resources",x,5346.0,43400
+2006,Northwest Territories,Territories Inventory Total,1.582420225,5352.0,43179
+2006,Northwest Territories,Oil and Gas,0.195997089,5352.0,43179
+2006,Northwest Territories,Transportation,0.765784579,5352.0,43179
+2006,Northwest Territories,Heavy Industry,0.278373971,5352.0,43179
+2006,Northwest Territories,Buildings,0.240857771,5352.0,43179
+2006,Northwest Territories,Waste,0.009051812,5352.0,43179
+2006,Northwest Territories,"Light Manufacturing, Construction & Forest Resources",x,5352.0,43179
+2007,Northwest Territories,Territories Inventory Total,2.039812931,5841.0,43372
+2007,Northwest Territories,Oil and Gas,0.196742002,5841.0,43372
+2007,Northwest Territories,Transportation,1.102069967,5841.0,43372
+2007,Northwest Territories,Heavy Industry,0.350440527,5841.0,43372
+2007,Northwest Territories,Buildings,0.274508505,5841.0,43372
+2007,Northwest Territories,Agriculture,0.000256959,5841.0,43372
+2007,Northwest Territories,Waste,0.009331012,5841.0,43372
+2007,Northwest Territories,"Light Manufacturing, Construction & Forest Resources",x,5841.0,43372
+2008,Northwest Territories,Territories Inventory Total,1.775185555,5293.0,43360
+2008,Northwest Territories,Oil and Gas,0.101587498,5293.0,43360
+2008,Northwest Territories,Transportation,0.919790013,5293.0,43360
+2008,Northwest Territories,Heavy Industry,0.306932979,5293.0,43360
+2008,Northwest Territories,Buildings,0.348304057,5293.0,43360
+2008,Northwest Territories,Waste,0.008880944,5293.0,43360
+2008,Northwest Territories,"Light Manufacturing, Construction & Forest Resources",x,5293.0,43360
+2009,Northwest Territories,Territories Inventory Total,1.253304837,4722.0,43156
+2009,Northwest Territories,Oil and Gas,0.037729162,4722.0,43156
+2009,Northwest Territories,Transportation,0.538785913,4722.0,43156
+2009,Northwest Territories,Heavy Industry,0.231336771,4722.0,43156
+2009,Northwest Territories,Buildings,0.36304936,4722.0,43156
+2009,Northwest Territories,Waste,0.008969687,4722.0,43156
+2009,Northwest Territories,"Light Manufacturing, Construction & Forest Resources",x,4722.0,43156
+2010,Northwest Territories,Territories Inventory Total,1.436004732,4843.0,43285
+2010,Northwest Territories,Oil and Gas,0.115714331,4843.0,43285
+2010,Northwest Territories,Transportation,0.637432774,4843.0,43285
+2010,Northwest Territories,Heavy Industry,0.277325967,4843.0,43285
+2010,Northwest Territories,Buildings,0.321362125,4843.0,43285
+2010,Northwest Territories,Waste,0.009131894,4843.0,43285
+2010,Northwest Territories,"Light Manufacturing, Construction & Forest Resources",x,4843.0,43285
+2011,Northwest Territories,Territories Inventory Total,1.487500139,4408.0,43504
+2011,Northwest Territories,Oil and Gas,0.083986909,4408.0,43504
+2011,Northwest Territories,Transportation,0.701847273,4408.0,43504
+2011,Northwest Territories,Heavy Industry,0.280880466,4408.0,43504
+2011,Northwest Territories,Buildings,0.323532933,4408.0,43504
+2011,Northwest Territories,Waste,0.009344341,4408.0,43504
+2011,Northwest Territories,"Light Manufacturing, Construction & Forest Resources",x,4408.0,43504
+2012,Northwest Territories,Territories Inventory Total,1.510749224,4394.0,43648
+2012,Northwest Territories,Oil and Gas,0.104522069,4394.0,43648
+2012,Northwest Territories,Transportation,0.680282003,4394.0,43648
+2012,Northwest Territories,Heavy Industry,0.35768154,4394.0,43648
+2012,Northwest Territories,Buildings,0.280909885,4394.0,43648
+2012,Northwest Territories,Waste,0.009513112,4394.0,43648
+2012,Northwest Territories,"Light Manufacturing, Construction & Forest Resources",x,4394.0,43648
+2013,Northwest Territories,Territories Inventory Total,1.331013142,4521.0,43805
+2013,Northwest Territories,Oil and Gas,0.02848834,4521.0,43805
+2013,Northwest Territories,Transportation,0.63166954,4521.0,43805
+2013,Northwest Territories,Heavy Industry,0.296471731,4521.0,43805
+2013,Northwest Territories,Buildings,0.289098584,4521.0,43805
+2013,Northwest Territories,Waste,0.009692704,4521.0,43805
+2013,Northwest Territories,"Light Manufacturing, Construction & Forest Resources",x,4521.0,43805
+2014,Northwest Territories,Territories Inventory Total,1.500351126,4735.0,43884
+2014,Northwest Territories,Oil and Gas,0.027491139,4735.0,43884
+2014,Northwest Territories,Transportation,0.743618298,4735.0,43884
+2014,Northwest Territories,Heavy Industry,0.317436249,4735.0,43884
+2014,Northwest Territories,Buildings,0.299120505,4735.0,43884
+2014,Northwest Territories,Waste,0.009897469,4735.0,43884
+2014,Northwest Territories,"Light Manufacturing, Construction & Forest Resources",x,4735.0,43884
+2015,Northwest Territories,Territories Inventory Total,1.692975187,4779.0,44237
+2015,Northwest Territories,Oil and Gas,0.019857805,4779.0,44237
+2015,Northwest Territories,Transportation,0.855319044,4779.0,44237
+2015,Northwest Territories,Heavy Industry,0.359767372,4779.0,44237
+2015,Northwest Territories,Buildings,0.302230812,4779.0,44237
+2015,Northwest Territories,Waste,0.010120739,4779.0,44237
+2015,Northwest Territories,"Light Manufacturing, Construction & Forest Resources",x,4779.0,44237
+2016,Northwest Territories,Territories Inventory Total,1.586892121,4712.0,44649
+2016,Northwest Territories,Oil and Gas,0.025639059,4712.0,44649
+2016,Northwest Territories,Transportation,0.839909718,4712.0,44649
+2016,Northwest Territories,Heavy Industry,0.338669918,4712.0,44649
+2016,Northwest Territories,Buildings,0.282470727,4712.0,44649
+2016,Northwest Territories,Waste,0.010382197,4712.0,44649
+2016,Northwest Territories,"Light Manufacturing, Construction & Forest Resources",x,4712.0,44649
+2017,Northwest Territories,Territories Inventory Total,1.280066377,4873.0,44891
+2017,Northwest Territories,Oil and Gas,0.019817762,4873.0,44891
+2017,Northwest Territories,Transportation,0.751940484,4873.0,44891
+2017,Northwest Territories,Heavy Industry,0.293791179,4873.0,44891
+2017,Northwest Territories,Buildings,0.127868752,4873.0,44891
+2017,Northwest Territories,Waste,0.010645047,4873.0,44891
+2017,Northwest Territories,"Light Manufacturing, Construction & Forest Resources",x,4873.0,44891
+2018,Northwest Territories,Territories Inventory Total,1.230484742,4911.0,44981
+2018,Northwest Territories,Oil and Gas,0.017542644,4911.0,44981
+2018,Northwest Territories,Transportation,0.67526164,4911.0,44981
+2018,Northwest Territories,Heavy Industry,0.258631458,4911.0,44981
+2018,Northwest Territories,Buildings,0.191165981,4911.0,44981
+2018,Northwest Territories,Waste,0.01082454,4911.0,44981
+2018,Northwest Territories,"Light Manufacturing, Construction & Forest Resources",x,4911.0,44981
+1990,Nova Scotia,Provincial Inventory Total,19.59430993,26925.0,910451
+1990,Nova Scotia,Oil and Gas,0.717285706,26925.0,910451
+1990,Nova Scotia,Transportation,4.576566556,26925.0,910451
+1990,Nova Scotia,Heavy Industry,0.968407209,26925.0,910451
+1990,Nova Scotia,Buildings,3.064933658,26925.0,910451
+1990,Nova Scotia,Agriculture,0.629651107,26925.0,910451
+1990,Nova Scotia,Waste,0.694196211,26925.0,910451
+1990,Nova Scotia,"Light Manufacturing, Construction & Forest Resources",0.389456481,26925.0,910451
+1991,Nova Scotia,Provincial Inventory Total,19.23399445,26591.0,914969
+1991,Nova Scotia,Oil and Gas,0.793381539,26591.0,914969
+1991,Nova Scotia,Transportation,4.266831844,26591.0,914969
+1991,Nova Scotia,Heavy Industry,0.841586738,26591.0,914969
+1991,Nova Scotia,Buildings,2.80453646,26591.0,914969
+1991,Nova Scotia,Agriculture,0.703018507,26591.0,914969
+1991,Nova Scotia,Waste,0.699954829,26591.0,914969
+1991,Nova Scotia,"Light Manufacturing, Construction & Forest Resources",0.353533461,26591.0,914969
+1992,Nova Scotia,Provincial Inventory Total,19.59771479,26927.0,919451
+1992,Nova Scotia,Oil and Gas,0.750061432,26927.0,919451
+1992,Nova Scotia,Transportation,4.337577081,26927.0,919451
+1992,Nova Scotia,Heavy Industry,0.769921639,26927.0,919451
+1992,Nova Scotia,Buildings,3.053213407,26927.0,919451
+1992,Nova Scotia,Agriculture,0.772470439,26927.0,919451
+1992,Nova Scotia,Waste,0.704986307,26927.0,919451
+1992,Nova Scotia,"Light Manufacturing, Construction & Forest Resources",0.376650431,26927.0,919451
+1993,Nova Scotia,Provincial Inventory Total,19.6259694,27073.0,923925
+1993,Nova Scotia,Oil and Gas,0.89792841,27073.0,923925
+1993,Nova Scotia,Transportation,4.409951131,27073.0,923925
+1993,Nova Scotia,Heavy Industry,0.781920982,27073.0,923925
+1993,Nova Scotia,Buildings,2.929948311,27073.0,923925
+1993,Nova Scotia,Agriculture,0.690588045,27073.0,923925
+1993,Nova Scotia,Waste,0.710711795,27073.0,923925
+1993,Nova Scotia,"Light Manufacturing, Construction & Forest Resources",0.363850626,27073.0,923925
+1994,Nova Scotia,Provincial Inventory Total,19.08025883,27040.0,926871
+1994,Nova Scotia,Oil and Gas,0.588434795,27040.0,926871
+1994,Nova Scotia,Transportation,4.515187119,27040.0,926871
+1994,Nova Scotia,Heavy Industry,0.893188453,27040.0,926871
+1994,Nova Scotia,Buildings,2.739333312,27040.0,926871
+1994,Nova Scotia,Agriculture,0.704912426,27040.0,926871
+1994,Nova Scotia,Waste,0.715322845,27040.0,926871
+1994,Nova Scotia,"Light Manufacturing, Construction & Forest Resources",0.421723628,27040.0,926871
+1995,Nova Scotia,Provincial Inventory Total,18.95567316,27365.0,928120
+1995,Nova Scotia,Oil and Gas,0.680342937,27365.0,928120
+1995,Nova Scotia,Transportation,4.597953839,27365.0,928120
+1995,Nova Scotia,Heavy Industry,1.092304089,27365.0,928120
+1995,Nova Scotia,Buildings,2.565768444,27365.0,928120
+1995,Nova Scotia,Agriculture,0.756110087,27365.0,928120
+1995,Nova Scotia,Waste,0.718895774,27365.0,928120
+1995,Nova Scotia,"Light Manufacturing, Construction & Forest Resources",0.500347552,27365.0,928120
+1996,Nova Scotia,Provincial Inventory Total,18.92417945,27388.0,931327
+1996,Nova Scotia,Oil and Gas,0.710485942,27388.0,931327
+1996,Nova Scotia,Transportation,4.547924394,27388.0,931327
+1996,Nova Scotia,Heavy Industry,0.91140689,27388.0,931327
+1996,Nova Scotia,Buildings,2.686581791,27388.0,931327
+1996,Nova Scotia,Agriculture,0.758981305,27388.0,931327
+1996,Nova Scotia,Waste,0.720083437,27388.0,931327
+1996,Nova Scotia,"Light Manufacturing, Construction & Forest Resources",0.49008527,27388.0,931327
+1997,Nova Scotia,Provincial Inventory Total,19.70520233,28496.0,932402
+1997,Nova Scotia,Oil and Gas,0.635000711,28496.0,932402
+1997,Nova Scotia,Transportation,4.667811935,28496.0,932402
+1997,Nova Scotia,Heavy Industry,0.771662557,28496.0,932402
+1997,Nova Scotia,Buildings,2.929476524,28496.0,932402
+1997,Nova Scotia,Agriculture,0.801306121,28496.0,932402
+1997,Nova Scotia,Waste,0.693281473,28496.0,932402
+1997,Nova Scotia,"Light Manufacturing, Construction & Forest Resources",0.527948052,28496.0,932402
+1998,Nova Scotia,Provincial Inventory Total,19.91039781,29558.0,931836
+1998,Nova Scotia,Oil and Gas,0.611682644,29558.0,931836
+1998,Nova Scotia,Transportation,4.85454628,29558.0,931836
+1998,Nova Scotia,Heavy Industry,0.926437833,29558.0,931836
+1998,Nova Scotia,Buildings,2.663298414,29558.0,931836
+1998,Nova Scotia,Agriculture,0.75491584,29558.0,931836
+1998,Nova Scotia,Waste,0.722831287,29558.0,931836
+1998,Nova Scotia,"Light Manufacturing, Construction & Forest Resources",0.494328644,29558.0,931836
+1999,Nova Scotia,Provincial Inventory Total,20.56802684,31116.0,933784
+1999,Nova Scotia,Oil and Gas,0.60696982,31116.0,933784
+1999,Nova Scotia,Transportation,5.208000084,31116.0,933784
+1999,Nova Scotia,Heavy Industry,0.91916138,31116.0,933784
+1999,Nova Scotia,Buildings,2.834149031,31116.0,933784
+1999,Nova Scotia,Agriculture,0.735345795,31116.0,933784
+1999,Nova Scotia,Waste,0.695254519,31116.0,933784
+1999,Nova Scotia,"Light Manufacturing, Construction & Forest Resources",0.447364211,31116.0,933784
+2000,Nova Scotia,Provincial Inventory Total,22.22234539,32041.0,933821
+2000,Nova Scotia,Oil and Gas,1.082468953,32041.0,933821
+2000,Nova Scotia,Transportation,5.208818249,32041.0,933821
+2000,Nova Scotia,Heavy Industry,0.911413031,32041.0,933821
+2000,Nova Scotia,Buildings,2.884538441,32041.0,933821
+2000,Nova Scotia,Agriculture,0.776253641,32041.0,933821
+2000,Nova Scotia,Waste,0.71720625,32041.0,933821
+2000,Nova Scotia,"Light Manufacturing, Construction & Forest Resources",0.439655742,32041.0,933821
+2001,Nova Scotia,Provincial Inventory Total,21.41704533,33008.0,932494
+2001,Nova Scotia,Oil and Gas,0.94707617,33008.0,932494
+2001,Nova Scotia,Transportation,5.159428902,33008.0,932494
+2001,Nova Scotia,Heavy Industry,0.659274197,33008.0,932494
+2001,Nova Scotia,Buildings,3.115680552,33008.0,932494
+2001,Nova Scotia,Agriculture,0.655072698,33008.0,932494
+2001,Nova Scotia,Waste,0.678950696,33008.0,932494
+2001,Nova Scotia,"Light Manufacturing, Construction & Forest Resources",0.419920744,33008.0,932494
+2002,Nova Scotia,Provincial Inventory Total,20.63303912,34432.0,935179
+2002,Nova Scotia,Oil and Gas,1.287814272,34432.0,935179
+2002,Nova Scotia,Transportation,5.27681082,34432.0,935179
+2002,Nova Scotia,Heavy Industry,0.853301725,34432.0,935179
+2002,Nova Scotia,Buildings,3.071984291,34432.0,935179
+2002,Nova Scotia,Agriculture,0.646534306,34432.0,935179
+2002,Nova Scotia,Waste,0.695938076,34432.0,935179
+2002,Nova Scotia,"Light Manufacturing, Construction & Forest Resources",0.498538807,34432.0,935179
+2003,Nova Scotia,Provincial Inventory Total,22.18444917,34803.0,937717
+2003,Nova Scotia,Oil and Gas,1.605345206,34803.0,937717
+2003,Nova Scotia,Transportation,5.571410753,34803.0,937717
+2003,Nova Scotia,Heavy Industry,0.897115781,34803.0,937717
+2003,Nova Scotia,Buildings,3.400165403,34803.0,937717
+2003,Nova Scotia,Agriculture,0.6101292,34803.0,937717
+2003,Nova Scotia,Waste,0.639696979,34803.0,937717
+2003,Nova Scotia,"Light Manufacturing, Construction & Forest Resources",0.442280432,34803.0,937717
+2004,Nova Scotia,Provincial Inventory Total,23.8406943,35071.0,939664
+2004,Nova Scotia,Oil and Gas,1.289592547,35071.0,939664
+2004,Nova Scotia,Transportation,5.546806511,35071.0,939664
+2004,Nova Scotia,Heavy Industry,0.862685955,35071.0,939664
+2004,Nova Scotia,Buildings,3.066237812,35071.0,939664
+2004,Nova Scotia,Agriculture,0.610905181,35071.0,939664
+2004,Nova Scotia,Waste,0.606238213,35071.0,939664
+2004,Nova Scotia,"Light Manufacturing, Construction & Forest Resources",0.489606014,35071.0,939664
+2005,Nova Scotia,Provincial Inventory Total,23.10268594,35469.0,937926
+2005,Nova Scotia,Oil and Gas,1.547458057,35469.0,937926
+2005,Nova Scotia,Transportation,5.525174869,35469.0,937926
+2005,Nova Scotia,Heavy Industry,0.83350589,35469.0,937926
+2005,Nova Scotia,Buildings,2.784001953,35469.0,937926
+2005,Nova Scotia,Agriculture,0.596670361,35469.0,937926
+2005,Nova Scotia,Waste,0.535039544,35469.0,937926
+2005,Nova Scotia,"Light Manufacturing, Construction & Forest Resources",0.361700757,35469.0,937926
+2006,Nova Scotia,Provincial Inventory Total,21.81515223,35741.0,937882
+2006,Nova Scotia,Oil and Gas,1.392152313,35741.0,937882
+2006,Nova Scotia,Transportation,5.389486214,35741.0,937882
+2006,Nova Scotia,Heavy Industry,0.667566597,35741.0,937882
+2006,Nova Scotia,Buildings,2.56963809,35741.0,937882
+2006,Nova Scotia,Agriculture,0.545456219,35741.0,937882
+2006,Nova Scotia,Waste,0.489765877,35741.0,937882
+2006,Nova Scotia,"Light Manufacturing, Construction & Forest Resources",0.464811844,35741.0,937882
+2007,Nova Scotia,Provincial Inventory Total,23.45193911,36199.0,935115
+2007,Nova Scotia,Oil and Gas,1.280298805,36199.0,935115
+2007,Nova Scotia,Transportation,5.26515473,36199.0,935115
+2007,Nova Scotia,Heavy Industry,0.652164779,36199.0,935115
+2007,Nova Scotia,Buildings,2.939411798,36199.0,935115
+2007,Nova Scotia,Agriculture,0.560322207,36199.0,935115
+2007,Nova Scotia,Waste,0.467022416,36199.0,935115
+2007,Nova Scotia,"Light Manufacturing, Construction & Forest Resources",0.512492379,36199.0,935115
+2008,Nova Scotia,Provincial Inventory Total,21.30890222,36915.0,935897
+2008,Nova Scotia,Oil and Gas,1.388460336,36915.0,935897
+2008,Nova Scotia,Transportation,5.251797755,36915.0,935897
+2008,Nova Scotia,Heavy Industry,0.713668622,36915.0,935897
+2008,Nova Scotia,Buildings,2.791846716,36915.0,935897
+2008,Nova Scotia,Agriculture,0.537527042,36915.0,935897
+2008,Nova Scotia,Waste,0.507042182,36915.0,935897
+2008,Nova Scotia,"Light Manufacturing, Construction & Forest Resources",0.475109353,36915.0,935897
+2009,Nova Scotia,Provincial Inventory Total,20.71925995,37047.0,938208
+2009,Nova Scotia,Oil and Gas,1.445900358,37047.0,938208
+2009,Nova Scotia,Transportation,4.953030942,37047.0,938208
+2009,Nova Scotia,Heavy Industry,0.572302119,37047.0,938208
+2009,Nova Scotia,Buildings,2.726582123,37047.0,938208
+2009,Nova Scotia,Agriculture,0.520060692,37047.0,938208
+2009,Nova Scotia,Waste,0.473896968,37047.0,938208
+2009,Nova Scotia,"Light Manufacturing, Construction & Forest Resources",0.464925353,37047.0,938208
+2010,Nova Scotia,Provincial Inventory Total,20.43354386,38052.0,942107
+2010,Nova Scotia,Oil and Gas,1.427722051,38052.0,942107
+2010,Nova Scotia,Transportation,5.186400815,38052.0,942107
+2010,Nova Scotia,Heavy Industry,0.662932234,38052.0,942107
+2010,Nova Scotia,Buildings,2.718413649,38052.0,942107
+2010,Nova Scotia,Agriculture,0.525063724,38052.0,942107
+2010,Nova Scotia,Waste,0.465628616,38052.0,942107
+2010,Nova Scotia,"Light Manufacturing, Construction & Forest Resources",0.473844206,38052.0,942107
+2011,Nova Scotia,Provincial Inventory Total,21.08050257,38303.0,944274
+2011,Nova Scotia,Oil and Gas,1.545538735,38303.0,944274
+2011,Nova Scotia,Transportation,5.652834283,38303.0,944274
+2011,Nova Scotia,Heavy Industry,0.657773328,38303.0,944274
+2011,Nova Scotia,Buildings,3.088456233,38303.0,944274
+2011,Nova Scotia,Agriculture,0.561618212,38303.0,944274
+2011,Nova Scotia,Waste,0.449119965,38303.0,944274
+2011,Nova Scotia,"Light Manufacturing, Construction & Forest Resources",0.46829122,38303.0,944274
+2012,Nova Scotia,Provincial Inventory Total,19.41435832,37933.0,943635
+2012,Nova Scotia,Oil and Gas,1.569328187,37933.0,943635
+2012,Nova Scotia,Transportation,5.386221453,37933.0,943635
+2012,Nova Scotia,Heavy Industry,0.633606439,37933.0,943635
+2012,Nova Scotia,Buildings,2.63628389,37933.0,943635
+2012,Nova Scotia,Agriculture,0.516760945,37933.0,943635
+2012,Nova Scotia,Waste,0.45671827,37933.0,943635
+2012,Nova Scotia,"Light Manufacturing, Construction & Forest Resources",0.412146693,37933.0,943635
+2013,Nova Scotia,Provincial Inventory Total,18.43176402,37806.0,940434
+2013,Nova Scotia,Oil and Gas,1.433570118,37806.0,940434
+2013,Nova Scotia,Transportation,4.921162314,37806.0,940434
+2013,Nova Scotia,Heavy Industry,0.508376517,37806.0,940434
+2013,Nova Scotia,Buildings,2.481555099,37806.0,940434
+2013,Nova Scotia,Agriculture,0.483283186,37806.0,940434
+2013,Nova Scotia,Waste,0.469035664,37806.0,940434
+2013,Nova Scotia,"Light Manufacturing, Construction & Forest Resources",0.392588463,37806.0,940434
+2014,Nova Scotia,Provincial Inventory Total,16.58607185,38173.0,938545
+2014,Nova Scotia,Oil and Gas,0.81549717,38173.0,938545
+2014,Nova Scotia,Transportation,4.465706109,38173.0,938545
+2014,Nova Scotia,Heavy Industry,0.457556557,38173.0,938545
+2014,Nova Scotia,Buildings,2.19253834,38173.0,938545
+2014,Nova Scotia,Agriculture,0.474815524,38173.0,938545
+2014,Nova Scotia,Waste,0.482834638,38173.0,938545
+2014,Nova Scotia,"Light Manufacturing, Construction & Forest Resources",0.400086132,38173.0,938545
+2015,Nova Scotia,Provincial Inventory Total,16.72809058,38429.0,936525
+2015,Nova Scotia,Oil and Gas,0.626577305,38429.0,936525
+2015,Nova Scotia,Transportation,4.947857814,38429.0,936525
+2015,Nova Scotia,Heavy Industry,0.518691537,38429.0,936525
+2015,Nova Scotia,Buildings,2.327865493,38429.0,936525
+2015,Nova Scotia,Agriculture,0.450494595,38429.0,936525
+2015,Nova Scotia,Waste,0.448046167,38429.0,936525
+2015,Nova Scotia,"Light Manufacturing, Construction & Forest Resources",0.341374827,38429.0,936525
+2016,Nova Scotia,Provincial Inventory Total,15.62414423,39038.0,942790
+2016,Nova Scotia,Oil and Gas,0.470272307,39038.0,942790
+2016,Nova Scotia,Transportation,4.959114706,39038.0,942790
+2016,Nova Scotia,Heavy Industry,0.484457144,39038.0,942790
+2016,Nova Scotia,Buildings,1.992252902,39038.0,942790
+2016,Nova Scotia,Agriculture,0.440442133,39038.0,942790
+2016,Nova Scotia,Waste,0.488673305,39038.0,942790
+2016,Nova Scotia,"Light Manufacturing, Construction & Forest Resources",0.338569188,39038.0,942790
+2017,Nova Scotia,Provincial Inventory Total,16.2306694,39757.0,950108
+2017,Nova Scotia,Oil and Gas,0.323386802,39757.0,950108
+2017,Nova Scotia,Transportation,5.168933323,39757.0,950108
+2017,Nova Scotia,Heavy Industry,0.52671173,39757.0,950108
+2017,Nova Scotia,Buildings,2.078047164,39757.0,950108
+2017,Nova Scotia,Agriculture,0.444334898,39757.0,950108
+2017,Nova Scotia,Waste,0.494375758,39757.0,950108
+2017,Nova Scotia,"Light Manufacturing, Construction & Forest Resources",0.37069203,39757.0,950108
+2018,Nova Scotia,Provincial Inventory Total,17.008755,40496.0,958406
+2018,Nova Scotia,Oil and Gas,0.211500315,40496.0,958406
+2018,Nova Scotia,Transportation,5.51870988,40496.0,958406
+2018,Nova Scotia,Heavy Industry,0.539310012,40496.0,958406
+2018,Nova Scotia,Buildings,2.25634009,40496.0,958406
+2018,Nova Scotia,Agriculture,0.444895084,40496.0,958406
+2018,Nova Scotia,Waste,0.499712038,40496.0,958406
+2018,Nova Scotia,"Light Manufacturing, Construction & Forest Resources",0.38322015,40496.0,958406
+1999,Nunavut,Territory Inventory Total,0.393328984,1255.0,26820
+1999,Nunavut,Oil and Gas,2.98E-05,1255.0,26820
+1999,Nunavut,Transportation,0.272991877,1255.0,26820
+1999,Nunavut,Heavy Industry,0.086715617,1255.0,26820
+1999,Nunavut,Buildings,0.001946817,1255.0,26820
+1999,Nunavut,Waste,0.004232278,1255.0,26820
+1999,Nunavut,"Light Manufacturing, Construction & Forest Resources",0.010084686,1255.0,26820
+2000,Nunavut,Territory Inventory Total,0.502654209,1310.0,27498
+2000,Nunavut,Oil and Gas,7.81E-05,1310.0,27498
+2000,Nunavut,Transportation,0.35395559,1310.0,27498
+2000,Nunavut,Heavy Industry,0.090281416,1310.0,27498
+2000,Nunavut,Buildings,0.013989523,1310.0,27498
+2000,Nunavut,Waste,0.004402946,1310.0,27498
+2000,Nunavut,"Light Manufacturing, Construction & Forest Resources",0.005519307,1310.0,27498
+2001,Nunavut,Territory Inventory Total,0.608755307,1392.0,28133
+2001,Nunavut,Oil and Gas,0.000121223,1392.0,28133
+2001,Nunavut,Transportation,0.424467452,1392.0,28133
+2001,Nunavut,Heavy Industry,0.103422432,1392.0,28133
+2001,Nunavut,Buildings,0.013151319,1392.0,28133
+2001,Nunavut,Waste,0.00455307,1392.0,28133
+2001,Nunavut,"Light Manufacturing, Construction & Forest Resources",0.008418033,1392.0,28133
+2002,Nunavut,Territory Inventory Total,0.660777876,1423.0,28822
+2002,Nunavut,Oil and Gas,5.28E-05,1423.0,28822
+2002,Nunavut,Transportation,0.440757585,1423.0,28822
+2002,Nunavut,Heavy Industry,0.124393621,1423.0,28822
+2002,Nunavut,Buildings,0.015648416,1423.0,28822
+2002,Nunavut,Waste,0.004704179,1423.0,28822
+2002,Nunavut,"Light Manufacturing, Construction & Forest Resources",0.008329521,1423.0,28822
+2003,Nunavut,Territory Inventory Total,0.702579353,1423.0,29322
+2003,Nunavut,Oil and Gas,6.45E-05,1423.0,29322
+2003,Nunavut,Transportation,0.463932272,1423.0,29322
+2003,Nunavut,Heavy Industry,0.087903538,1423.0,29322
+2003,Nunavut,Buildings,0.014281157,1423.0,29322
+2003,Nunavut,Waste,0.004839044,1423.0,29322
+2003,Nunavut,"Light Manufacturing, Construction & Forest Resources",0.011701807,1423.0,29322
+2004,Nunavut,Territory Inventory Total,0.739792079,1487.0,29857
+2004,Nunavut,Oil and Gas,7.08E-05,1487.0,29857
+2004,Nunavut,Transportation,0.477355763,1487.0,29857
+2004,Nunavut,Heavy Industry,0.090251068,1487.0,29857
+2004,Nunavut,Buildings,0.015478869,1487.0,29857
+2004,Nunavut,Waste,0.004982143,1487.0,29857
+2004,Nunavut,"Light Manufacturing, Construction & Forest Resources",0.010211765,1487.0,29857
+2005,Nunavut,Territory Inventory Total,0.566084697,1481.0,30339
+2005,Nunavut,Oil and Gas,2.55E-06,1481.0,30339
+2005,Nunavut,Transportation,0.383703436,1481.0,30339
+2005,Nunavut,Heavy Industry,0.040692171,1481.0,30339
+2005,Nunavut,Buildings,0.012714435,1481.0,30339
+2005,Nunavut,Waste,0.005153834,1481.0,30339
+2005,Nunavut,"Light Manufacturing, Construction & Forest Resources",x,1481.0,30339
+2006,Nunavut,Territory Inventory Total,0.650663082,1497.0,30813
+2006,Nunavut,Oil and Gas,7.39E-06,1497.0,30813
+2006,Nunavut,Transportation,0.477735641,1497.0,30813
+2006,Nunavut,Heavy Industry,0.057882762,1497.0,30813
+2006,Nunavut,Buildings,0.004792443,1497.0,30813
+2006,Nunavut,Waste,0.004693873,1497.0,30813
+2006,Nunavut,"Light Manufacturing, Construction & Forest Resources",x,1497.0,30813
+2007,Nunavut,Territory Inventory Total,0.721481451,1620.0,31395
+2007,Nunavut,Oil and Gas,1.24E-05,1620.0,31395
+2007,Nunavut,Transportation,0.540950593,1620.0,31395
+2007,Nunavut,Heavy Industry,0.061764521,1620.0,31395
+2007,Nunavut,Buildings,0.00514428,1620.0,31395
+2007,Nunavut,Waste,0.004840539,1620.0,31395
+2007,Nunavut,"Light Manufacturing, Construction & Forest Resources",x,1620.0,31395
+2008,Nunavut,Territory Inventory Total,0.744922327,1851.0,31892
+2008,Nunavut,Oil and Gas,1.89E-05,1851.0,31892
+2008,Nunavut,Transportation,0.551934512,1851.0,31892
+2008,Nunavut,Heavy Industry,0.051936803,1851.0,31892
+2008,Nunavut,Buildings,0.00550035,1851.0,31892
+2008,Nunavut,Waste,0.004701609,1851.0,31892
+2008,Nunavut,"Light Manufacturing, Construction & Forest Resources",x,1851.0,31892
+2009,Nunavut,Territory Inventory Total,0.758383508,1721.0,32597
+2009,Nunavut,Oil and Gas,1.91E-05,1721.0,32597
+2009,Nunavut,Transportation,0.572048804,1721.0,32597
+2009,Nunavut,Heavy Industry,0.049263397,1721.0,32597
+2009,Nunavut,Buildings,0.006062796,1721.0,32597
+2009,Nunavut,Waste,0.004763294,1721.0,32597
+2009,Nunavut,"Light Manufacturing, Construction & Forest Resources",x,1721.0,32597
+2010,Nunavut,Territory Inventory Total,0.809075961,2039.0,33352
+2010,Nunavut,Oil and Gas,2.04E-05,2039.0,33352
+2010,Nunavut,Transportation,0.615640041,2039.0,33352
+2010,Nunavut,Heavy Industry,0.055135274,2039.0,33352
+2010,Nunavut,Buildings,0.006504513,2039.0,33352
+2010,Nunavut,Waste,0.004878717,2039.0,33352
+2010,Nunavut,"Light Manufacturing, Construction & Forest Resources",x,2039.0,33352
+2011,Nunavut,Territory Inventory Total,0.787274274,2150.0,34192
+2011,Nunavut,Oil and Gas,2.43E-05,2150.0,34192
+2011,Nunavut,Transportation,0.629832015,2150.0,34192
+2011,Nunavut,Heavy Industry,0.063802398,2150.0,34192
+2011,Nunavut,Buildings,0.007470159,2150.0,34192
+2011,Nunavut,Waste,0.005048114,2150.0,34192
+2011,Nunavut,"Light Manufacturing, Construction & Forest Resources",x,2150.0,34192
+2012,Nunavut,Territory Inventory Total,0.783871953,2199.0,34672
+2012,Nunavut,Oil and Gas,2.59E-05,2199.0,34672
+2012,Nunavut,Transportation,0.627766442,2199.0,34672
+2012,Nunavut,Heavy Industry,0.061377959,2199.0,34672
+2012,Nunavut,Buildings,0.008084516,2199.0,34672
+2012,Nunavut,Waste,0.005214035,2199.0,34672
+2012,Nunavut,"Light Manufacturing, Construction & Forest Resources",x,2199.0,34672
+2013,Nunavut,Territory Inventory Total,0.762036924,2410.0,35337
+2013,Nunavut,Oil and Gas,2.98E-05,2410.0,35337
+2013,Nunavut,Transportation,0.605861343,2410.0,35337
+2013,Nunavut,Heavy Industry,0.064042441,2410.0,35337
+2013,Nunavut,Buildings,0.009433189,2410.0,35337
+2013,Nunavut,Waste,0.005390737,2410.0,35337
+2013,Nunavut,"Light Manufacturing, Construction & Forest Resources",x,2410.0,35337
+2014,Nunavut,Territory Inventory Total,0.705070037,2379.0,35971
+2014,Nunavut,Oil and Gas,3.12E-05,2379.0,35971
+2014,Nunavut,Transportation,0.515728835,2379.0,35971
+2014,Nunavut,Heavy Industry,0.048240348,2379.0,35971
+2014,Nunavut,Buildings,0.010990652,2379.0,35971
+2014,Nunavut,Waste,0.005586172,2379.0,35971
+2014,Nunavut,"Light Manufacturing, Construction & Forest Resources",x,2379.0,35971
+2015,Nunavut,Territory Inventory Total,0.595763662,2372.0,36488
+2015,Nunavut,Oil and Gas,3.60E-05,2372.0,36488
+2015,Nunavut,Transportation,0.422733143,2372.0,36488
+2015,Nunavut,Heavy Industry,0.037187667,2372.0,36488
+2015,Nunavut,Buildings,0.011607158,2372.0,36488
+2015,Nunavut,Waste,0.005768195,2372.0,36488
+2015,Nunavut,"Light Manufacturing, Construction & Forest Resources",x,2372.0,36488
+2016,Nunavut,Territory Inventory Total,0.694744795,2492.0,36975
+2016,Nunavut,Oil and Gas,3.52E-06,2492.0,36975
+2016,Nunavut,Transportation,0.48665118,2492.0,36975
+2016,Nunavut,Heavy Industry,0.051791142,2492.0,36975
+2016,Nunavut,Buildings,0.01241699,2492.0,36975
+2016,Nunavut,Waste,0.005976682,2492.0,36975
+2016,Nunavut,"Light Manufacturing, Construction & Forest Resources",x,2492.0,36975
+2017,Nunavut,Territory Inventory Total,0.703670679,2821.0,37546
+2017,Nunavut,Transportation,0.50960147,2821.0,37546
+2017,Nunavut,Heavy Industry,0.033896488,2821.0,37546
+2017,Nunavut,Buildings,0.014177579,2821.0,37546
+2017,Nunavut,Waste,0.006179002,2821.0,37546
+2017,Nunavut,"Light Manufacturing, Construction & Forest Resources",x,2821.0,37546
+2018,Nunavut,Territory Inventory Total,0.701592418,2968.0,38143
+2018,Nunavut,Transportation,0.491390368,2968.0,38143
+2018,Nunavut,Heavy Industry,0.021373136,2968.0,38143
+2018,Nunavut,Buildings,0.016514777,2968.0,38143
+2018,Nunavut,Waste,0.006381563,2968.0,38143
+2018,Nunavut,"Light Manufacturing, Construction & Forest Resources",x,2968.0,38143
+1990,Ontario,Provincial Inventory Total,179.3365048,414066.0,10295832
+1990,Ontario,Oil and Gas,10.30938196,414066.0,10295832
+1990,Ontario,Transportation,40.81960191,414066.0,10295832
+1990,Ontario,Heavy Industry,43.15337291,414066.0,10295832
+1990,Ontario,Buildings,27.96191348,414066.0,10295832
+1990,Ontario,Agriculture,12.36128736,414066.0,10295832
+1990,Ontario,Waste,6.327948958,414066.0,10295832
+1990,Ontario,"Light Manufacturing, Construction & Forest Resources",12.4151466,414066.0,10295832
+1991,Ontario,Provincial Inventory Total,178.4683199,400193.0,10431316
+1991,Ontario,Oil and Gas,9.686400072,400193.0,10431316
+1991,Ontario,Transportation,39.14699278,400193.0,10431316
+1991,Ontario,Heavy Industry,43.12345595,400193.0,10431316
+1991,Ontario,Buildings,28.1423799,400193.0,10431316
+1991,Ontario,Agriculture,12.14796645,400193.0,10431316
+1991,Ontario,Waste,6.425523334,400193.0,10431316
+1991,Ontario,"Light Manufacturing, Construction & Forest Resources",12.14266313,400193.0,10431316
+1992,Ontario,Provincial Inventory Total,181.5572648,405564.0,10572205
+1992,Ontario,Oil and Gas,11.20280092,405564.0,10572205
+1992,Ontario,Transportation,39.33906138,405564.0,10572205
+1992,Ontario,Heavy Industry,44.19706818,405564.0,10572205
+1992,Ontario,Buildings,29.77977825,405564.0,10572205
+1992,Ontario,Agriculture,12.45490652,405564.0,10572205
+1992,Ontario,Waste,6.2060094,405564.0,10572205
+1992,Ontario,"Light Manufacturing, Construction & Forest Resources",11.16185813,405564.0,10572205
+1993,Ontario,Provincial Inventory Total,171.7927349,411365.0,10690038
+1993,Ontario,Oil and Gas,11.59838517,411365.0,10690038
+1993,Ontario,Transportation,39.81857032,411365.0,10690038
+1993,Ontario,Heavy Industry,41.64163775,411365.0,10690038
+1993,Ontario,Buildings,31.10206137,411365.0,10690038
+1993,Ontario,Agriculture,12.45862812,411365.0,10690038
+1993,Ontario,Waste,6.247685655,411365.0,10690038
+1993,Ontario,"Light Manufacturing, Construction & Forest Resources",10.9942528,411365.0,10690038
+1994,Ontario,Provincial Inventory Total,173.7009824,433727.0,10819146
+1994,Ontario,Oil and Gas,11.13688615,433727.0,10819146
+1994,Ontario,Transportation,40.76407092,433727.0,10819146
+1994,Ontario,Heavy Industry,43.94070605,433727.0,10819146
+1994,Ontario,Buildings,31.91747294,433727.0,10819146
+1994,Ontario,Agriculture,12.74280295,433727.0,10819146
+1994,Ontario,Waste,6.232620799,433727.0,10819146
+1994,Ontario,"Light Manufacturing, Construction & Forest Resources",11.37112206,433727.0,10819146
+1995,Ontario,Provincial Inventory Total,178.6090017,447735.0,10950119
+1995,Ontario,Oil and Gas,11.6455028,447735.0,10950119
+1995,Ontario,Transportation,41.0435153,447735.0,10950119
+1995,Ontario,Heavy Industry,45.19596251,447735.0,10950119
+1995,Ontario,Buildings,31.46009184,447735.0,10950119
+1995,Ontario,Agriculture,13.48606053,447735.0,10950119
+1995,Ontario,Waste,6.25991511,447735.0,10950119
+1995,Ontario,"Light Manufacturing, Construction & Forest Resources",11.90628292,447735.0,10950119
+1996,Ontario,Provincial Inventory Total,187.3402958,455035.0,11082903
+1996,Ontario,Oil and Gas,13.15696844,455035.0,11082903
+1996,Ontario,Transportation,42.1538408,455035.0,11082903
+1996,Ontario,Heavy Industry,47.0354344,455035.0,11082903
+1996,Ontario,Buildings,34.37750812,455035.0,11082903
+1996,Ontario,Agriculture,13.3517636,455035.0,11082903
+1996,Ontario,Waste,6.017418978,455035.0,11082903
+1996,Ontario,"Light Manufacturing, Construction & Forest Resources",10.81046387,455035.0,11082903
+1997,Ontario,Provincial Inventory Total,192.0836228,477053.0,11227651
+1997,Ontario,Oil and Gas,12.99380323,477053.0,11227651
+1997,Ontario,Transportation,44.38272935,477053.0,11227651
+1997,Ontario,Heavy Industry,45.81299564,477053.0,11227651
+1997,Ontario,Buildings,33.46890587,477053.0,11227651
+1997,Ontario,Agriculture,13.17384889,477053.0,11227651
+1997,Ontario,Waste,5.606720381,477053.0,11227651
+1997,Ontario,"Light Manufacturing, Construction & Forest Resources",11.13914693,477053.0,11227651
+1998,Ontario,Provincial Inventory Total,192.8913458,498740.0,11365901
+1998,Ontario,Oil and Gas,13.21413111,498740.0,11365901
+1998,Ontario,Transportation,46.20655874,498740.0,11365901
+1998,Ontario,Heavy Industry,41.03524801,498740.0,11365901
+1998,Ontario,Buildings,29.21884419,498740.0,11365901
+1998,Ontario,Agriculture,13.1626062,498740.0,11365901
+1998,Ontario,Waste,5.602174233,498740.0,11365901
+1998,Ontario,"Light Manufacturing, Construction & Forest Resources",10.51468277,498740.0,11365901
+1999,Ontario,Provincial Inventory Total,197.8257047,533253.0,11504759
+1999,Ontario,Oil and Gas,13.00496508,533253.0,11504759
+1999,Ontario,Transportation,48.99177758,533253.0,11504759
+1999,Ontario,Heavy Industry,39.39617624,533253.0,11504759
+1999,Ontario,Buildings,31.88106491,533253.0,11504759
+1999,Ontario,Agriculture,13.11444057,533253.0,11504759
+1999,Ontario,Waste,5.507705574,533253.0,11504759
+1999,Ontario,"Light Manufacturing, Construction & Forest Resources",10.05156212,533253.0,11504759
+2000,Ontario,Provincial Inventory Total,207.5496064,567019.0,11683290
+2000,Ontario,Oil and Gas,12.30415427,567019.0,11683290
+2000,Ontario,Transportation,50.06907763,567019.0,11683290
+2000,Ontario,Heavy Industry,38.22690944,567019.0,11683290
+2000,Ontario,Buildings,34.61899389,567019.0,11683290
+2000,Ontario,Agriculture,12.8545869,567019.0,11683290
+2000,Ontario,Waste,5.729011292,567019.0,11683290
+2000,Ontario,"Light Manufacturing, Construction & Forest Resources",10.29429256,567019.0,11683290
+2001,Ontario,Provincial Inventory Total,198.8099777,577397.0,11897534
+2001,Ontario,Oil and Gas,10.98219547,577397.0,11897534
+2001,Ontario,Transportation,50.28283742,577397.0,11897534
+2001,Ontario,Heavy Industry,35.40672438,577397.0,11897534
+2001,Ontario,Buildings,33.72973368,577397.0,11897534
+2001,Ontario,Agriculture,12.30733608,577397.0,11897534
+2001,Ontario,Waste,5.510160835,577397.0,11897534
+2001,Ontario,"Light Manufacturing, Construction & Forest Resources",9.569342158,577397.0,11897534
+2002,Ontario,Provincial Inventory Total,203.6211869,597107.0,12094174
+2002,Ontario,Oil and Gas,12.00726542,597107.0,12094174
+2002,Ontario,Transportation,51.34207058,597107.0,12094174
+2002,Ontario,Heavy Industry,36.57800365,597107.0,12094174
+2002,Ontario,Buildings,34.509888,597107.0,12094174
+2002,Ontario,Agriculture,12.6093058,597107.0,12094174
+2002,Ontario,Waste,5.820662232,597107.0,12094174
+2002,Ontario,"Light Manufacturing, Construction & Forest Resources",10.33083168,597107.0,12094174
+2003,Ontario,Provincial Inventory Total,205.4015881,603720.0,12245039
+2003,Ontario,Oil and Gas,11.40674986,603720.0,12245039
+2003,Ontario,Transportation,51.94451496,603720.0,12245039
+2003,Ontario,Heavy Industry,35.29706412,603720.0,12245039
+2003,Ontario,Buildings,36.95304611,603720.0,12245039
+2003,Ontario,Agriculture,13.1632102,603720.0,12245039
+2003,Ontario,Waste,5.781011532,603720.0,12245039
+2003,Ontario,"Light Manufacturing, Construction & Forest Resources",11.01323856,603720.0,12245039
+2004,Ontario,Provincial Inventory Total,202.8776914,620670.0,12391421
+2004,Ontario,Oil and Gas,11.95655208,620670.0,12391421
+2004,Ontario,Transportation,53.40187785,620670.0,12391421
+2004,Ontario,Heavy Industry,38.85863028,620670.0,12391421
+2004,Ontario,Buildings,36.73831109,620670.0,12391421
+2004,Ontario,Agriculture,13.08801103,620670.0,12391421
+2004,Ontario,Waste,5.772425981,620670.0,12391421
+2004,Ontario,"Light Manufacturing, Construction & Forest Resources",11.49062865,620670.0,12391421
+2005,Ontario,Provincial Inventory Total,203.1807323,640614.0,12528663
+2005,Ontario,Oil and Gas,11.78805801,640614.0,12528663
+2005,Ontario,Transportation,56.45885154,640614.0,12528663
+2005,Ontario,Heavy Industry,35.27997186,640614.0,12528663
+2005,Ontario,Buildings,36.25496845,640614.0,12528663
+2005,Ontario,Agriculture,12.40246186,640614.0,12528663
+2005,Ontario,Waste,6.017288093,640614.0,12528663
+2005,Ontario,"Light Manufacturing, Construction & Forest Resources",11.06366574,640614.0,12528663
+2006,Ontario,Provincial Inventory Total,194.1837355,652625.0,12661878
+2006,Ontario,Oil and Gas,11.51595407,652625.0,12661878
+2006,Ontario,Transportation,55.10253721,652625.0,12661878
+2006,Ontario,Heavy Industry,36.23710359,652625.0,12661878
+2006,Ontario,Buildings,32.82468519,652625.0,12661878
+2006,Ontario,Agriculture,12.47134646,652625.0,12661878
+2006,Ontario,Waste,6.1600424,652625.0,12661878
+2006,Ontario,"Light Manufacturing, Construction & Forest Resources",10.25189526,652625.0,12661878
+2007,Ontario,Provincial Inventory Total,198.2103617,657733.0,12764806
+2007,Ontario,Oil and Gas,11.25381519,657733.0,12764806
+2007,Ontario,Transportation,54.1201683,657733.0,12764806
+2007,Ontario,Heavy Industry,35.42589338,657733.0,12764806
+2007,Ontario,Buildings,35.32393222,657733.0,12764806
+2007,Ontario,Agriculture,12.30848414,657733.0,12764806
+2007,Ontario,Waste,6.157060542,657733.0,12764806
+2007,Ontario,"Light Manufacturing, Construction & Forest Resources",10.86173571,657733.0,12764806
+2008,Ontario,Provincial Inventory Total,189.5701275,657720.0,12883583
+2008,Ontario,Oil and Gas,10.42757369,657720.0,12883583
+2008,Ontario,Transportation,53.21791464,657720.0,12883583
+2008,Ontario,Heavy Industry,34.78124414,657720.0,12883583
+2008,Ontario,Buildings,35.79655578,657720.0,12883583
+2008,Ontario,Agriculture,11.76432955,657720.0,12883583
+2008,Ontario,Waste,6.067343693,657720.0,12883583
+2008,Ontario,"Light Manufacturing, Construction & Forest Resources",10.51321166,657720.0,12883583
+2009,Ontario,Provincial Inventory Total,164.5220617,637298.0,12998345
+2009,Ontario,Oil and Gas,9.422140511,637298.0,12998345
+2009,Ontario,Transportation,53.60633299,637298.0,12998345
+2009,Ontario,Heavy Industry,26.1990199,637298.0,12998345
+2009,Ontario,Buildings,33.93607917,637298.0,12998345
+2009,Ontario,Agriculture,11.94995819,637298.0,12998345
+2009,Ontario,Waste,5.888574069,637298.0,12998345
+2009,Ontario,"Light Manufacturing, Construction & Forest Resources",9.097826556,637298.0,12998345
+2010,Ontario,Provincial Inventory Total,172.3291678,656103.0,13135778
+2010,Ontario,Oil and Gas,9.349492899,656103.0,13135778
+2010,Ontario,Transportation,55.37791416,656103.0,13135778
+2010,Ontario,Heavy Industry,28.69376169,656103.0,13135778
+2010,Ontario,Buildings,32.96198498,656103.0,13135778
+2010,Ontario,Agriculture,12.21628383,656103.0,13135778
+2010,Ontario,Waste,5.21608931,656103.0,13135778
+2010,Ontario,"Light Manufacturing, Construction & Forest Resources",9.511242688,656103.0,13135778
+2011,Ontario,Provincial Inventory Total,171.2891959,671942.0,13261381
+2011,Ontario,Oil and Gas,9.047841888,671942.0,13261381
+2011,Ontario,Transportation,55.22510844,671942.0,13261381
+2011,Ontario,Heavy Industry,30.88857489,671942.0,13261381
+2011,Ontario,Buildings,35.43917674,671942.0,13261381
+2011,Ontario,Agriculture,12.71589388,671942.0,13261381
+2011,Ontario,Waste,5.391861943,671942.0,13261381
+2011,Ontario,"Light Manufacturing, Construction & Forest Resources",9.714436169,671942.0,13261381
+2012,Ontario,Provincial Inventory Total,167.5939617,680792.0,13390632
+2012,Ontario,Oil and Gas,10.04696442,680792.0,13390632
+2012,Ontario,Transportation,53.07057014,680792.0,13390632
+2012,Ontario,Heavy Industry,31.5517006,680792.0,13390632
+2012,Ontario,Buildings,32.844892,680792.0,13390632
+2012,Ontario,Agriculture,12.53187401,680792.0,13390632
+2012,Ontario,Waste,5.433921881,680792.0,13390632
+2012,Ontario,"Light Manufacturing, Construction & Forest Resources",9.291100373,680792.0,13390632
+2013,Ontario,Provincial Inventory Total,167.2474854,690275.0,13510781
+2013,Ontario,Oil and Gas,10.28878188,690275.0,13510781
+2013,Ontario,Transportation,55.3207377,690275.0,13510781
+2013,Ontario,Heavy Industry,29.22463531,690275.0,13510781
+2013,Ontario,Buildings,35.92712445,690275.0,13510781
+2013,Ontario,Agriculture,12.83962844,690275.0,13510781
+2013,Ontario,Waste,5.462132873,690275.0,13510781
+2013,Ontario,"Light Manufacturing, Construction & Forest Resources",9.023703357,690275.0,13510781
+2014,Ontario,Provincial Inventory Total,164.7147449,707589.0,13617553
+2014,Ontario,Oil and Gas,10.77405484,707589.0,13617553
+2014,Ontario,Transportation,53.43603532,707589.0,13617553
+2014,Ontario,Heavy Industry,30.41746752,707589.0,13617553
+2014,Ontario,Buildings,39.05590475,707589.0,13617553
+2014,Ontario,Agriculture,12.21833964,707589.0,13617553
+2014,Ontario,Waste,5.199361056,707589.0,13617553
+2014,Ontario,"Light Manufacturing, Construction & Forest Resources",8.591265288,707589.0,13617553
+2015,Ontario,Provincial Inventory Total,162.5616943,724946.0,13707118
+2015,Ontario,Oil and Gas,10.16922149,724946.0,13707118
+2015,Ontario,Transportation,54.30260255,724946.0,13707118
+2015,Ontario,Heavy Industry,29.42691351,724946.0,13707118
+2015,Ontario,Buildings,37.27773707,724946.0,13707118
+2015,Ontario,Agriculture,12.00848228,724946.0,13707118
+2015,Ontario,Waste,5.249116995,724946.0,13707118
+2015,Ontario,"Light Manufacturing, Construction & Forest Resources",8.940957559,724946.0,13707118
+2016,Ontario,Provincial Inventory Total,159.6011355,740164.0,13875394
+2016,Ontario,Oil and Gas,9.661780424,740164.0,13875394
+2016,Ontario,Transportation,54.60705476,740164.0,13875394
+2016,Ontario,Heavy Industry,30.53924152,740164.0,13875394
+2016,Ontario,Buildings,34.41004439,740164.0,13875394
+2016,Ontario,Agriculture,12.42978834,740164.0,13875394
+2016,Ontario,Waste,4.755986902,740164.0,13875394
+2016,Ontario,"Light Manufacturing, Construction & Forest Resources",8.433897073,740164.0,13875394
+2017,Ontario,Provincial Inventory Total,155.369902,761025.0,14070141
+2017,Ontario,Oil and Gas,7.731435995,761025.0,14070141
+2017,Ontario,Transportation,55.31600502,761025.0,14070141
+2017,Ontario,Heavy Industry,28.90872554,761025.0,14070141
+2017,Ontario,Buildings,35.17528837,761025.0,14070141
+2017,Ontario,Agriculture,12.29653303,761025.0,14070141
+2017,Ontario,Waste,4.822636121,761025.0,14070141
+2017,Ontario,"Light Manufacturing, Construction & Forest Resources",8.948432438,761025.0,14070141
+2018,Ontario,Provincial Inventory Total,164.9789818,782115.0,14308697
+2018,Ontario,Oil and Gas,8.109048586,782115.0,14308697
+2018,Ontario,Transportation,57.36008665,782115.0,14308697
+2018,Ontario,Heavy Industry,29.5135146,782115.0,14308697
+2018,Ontario,Buildings,39.97310788,782115.0,14308697
+2018,Ontario,Agriculture,12.36082383,782115.0,14308697
+2018,Ontario,Waste,4.588456562,782115.0,14308697
+2018,Ontario,"Light Manufacturing, Construction & Forest Resources",9.237459991,782115.0,14308697
+1990,Prince Edward Island,Provincial Inventory Total,1.972008388,3348.0,130404
+1990,Prince Edward Island,Oil and Gas,0.000147097,3348.0,130404
+1990,Prince Edward Island,Transportation,0.677291463,3348.0,130404
+1990,Prince Edward Island,Heavy Industry,0.002095611,3348.0,130404
+1990,Prince Edward Island,Buildings,0.594153389,3348.0,130404
+1990,Prince Edward Island,Agriculture,0.437088679,3348.0,130404
+1990,Prince Edward Island,Waste,0.07575838,3348.0,130404
+1990,Prince Edward Island,"Light Manufacturing, Construction & Forest Resources",0.081799187,3348.0,130404
+1991,Prince Edward Island,Provincial Inventory Total,1.913126901,3340.0,130369
+1991,Prince Edward Island,Oil and Gas,0.000151095,3340.0,130369
+1991,Prince Edward Island,Transportation,0.652058412,3340.0,130369
+1991,Prince Edward Island,Heavy Industry,0.002298506,3340.0,130369
+1991,Prince Edward Island,Buildings,0.556850511,3340.0,130369
+1991,Prince Edward Island,Agriculture,0.435112112,3340.0,130369
+1991,Prince Edward Island,Waste,0.075684406,3340.0,130369
+1991,Prince Edward Island,"Light Manufacturing, Construction & Forest Resources",0.098140304,3340.0,130369
+1992,Prince Edward Island,Provincial Inventory Total,1.905162011,3445.0,130827
+1992,Prince Edward Island,Oil and Gas,0.000129131,3445.0,130827
+1992,Prince Edward Island,Transportation,0.637310027,3445.0,130827
+1992,Prince Edward Island,Heavy Industry,0.003686411,3445.0,130827
+1992,Prince Edward Island,Buildings,0.567319964,3445.0,130827
+1992,Prince Edward Island,Agriculture,0.466476989,3445.0,130827
+1992,Prince Edward Island,Waste,0.075343838,3445.0,130827
+1992,Prince Edward Island,"Light Manufacturing, Construction & Forest Resources",0.102877635,3445.0,130827
+1993,Prince Edward Island,Provincial Inventory Total,1.90176754,3495.0,132177
+1993,Prince Edward Island,Oil and Gas,0.000109354,3495.0,132177
+1993,Prince Edward Island,Transportation,0.640390949,3495.0,132177
+1993,Prince Edward Island,Heavy Industry,0.002522402,3495.0,132177
+1993,Prince Edward Island,Buildings,0.545969884,3495.0,132177
+1993,Prince Edward Island,Agriculture,0.457038663,3495.0,132177
+1993,Prince Edward Island,Waste,0.075120151,3495.0,132177
+1993,Prince Edward Island,"Light Manufacturing, Construction & Forest Resources",0.105737973,3495.0,132177
+1994,Prince Edward Island,Provincial Inventory Total,1.914777916,3683.0,133437
+1994,Prince Edward Island,Oil and Gas,2.92E-05,3683.0,133437
+1994,Prince Edward Island,Transportation,0.668321517,3683.0,133437
+1994,Prince Edward Island,Heavy Industry,0.002319119,3683.0,133437
+1994,Prince Edward Island,Buildings,0.529793418,3683.0,133437
+1994,Prince Edward Island,Agriculture,0.470194151,3683.0,133437
+1994,Prince Edward Island,Waste,0.075424636,3683.0,133437
+1994,Prince Edward Island,"Light Manufacturing, Construction & Forest Resources",0.109525487,3683.0,133437
+1995,Prince Edward Island,Provincial Inventory Total,1.917458094,3918.0,134415
+1995,Prince Edward Island,Oil and Gas,0.000130926,3918.0,134415
+1995,Prince Edward Island,Transportation,0.676526392,3918.0,134415
+1995,Prince Edward Island,Heavy Industry,0.003641497,3918.0,134415
+1995,Prince Edward Island,Buildings,0.519782885,3918.0,134415
+1995,Prince Edward Island,Agriculture,0.502771536,3918.0,134415
+1995,Prince Edward Island,Waste,0.077250577,3918.0,134415
+1995,Prince Edward Island,"Light Manufacturing, Construction & Forest Resources",0.097963158,3918.0,134415
+1996,Prince Edward Island,Provincial Inventory Total,1.99630129,4044.0,135737
+1996,Prince Edward Island,Oil and Gas,0.000172268,4044.0,135737
+1996,Prince Edward Island,Transportation,0.696679606,4044.0,135737
+1996,Prince Edward Island,Heavy Industry,0.004952054,4044.0,135737
+1996,Prince Edward Island,Buildings,0.551610962,4044.0,135737
+1996,Prince Edward Island,Agriculture,0.52118893,4044.0,135737
+1996,Prince Edward Island,Waste,0.07804939,4044.0,135737
+1996,Prince Edward Island,"Light Manufacturing, Construction & Forest Resources",0.116986019,4044.0,135737
+1997,Prince Edward Island,Provincial Inventory Total,2.059056633,4097.0,136095
+1997,Prince Edward Island,Oil and Gas,0.000193383,4097.0,136095
+1997,Prince Edward Island,Transportation,0.715887215,4097.0,136095
+1997,Prince Edward Island,Heavy Industry,0.003457023,4097.0,136095
+1997,Prince Edward Island,Buildings,0.567584034,4097.0,136095
+1997,Prince Edward Island,Agriculture,0.523265526,4097.0,136095
+1997,Prince Edward Island,Waste,0.077796777,4097.0,136095
+1997,Prince Edward Island,"Light Manufacturing, Construction & Forest Resources",0.137144214,4097.0,136095
+1998,Prince Edward Island,Provincial Inventory Total,2.039041233,4251.0,135804
+1998,Prince Edward Island,Oil and Gas,0.000235477,4251.0,135804
+1998,Prince Edward Island,Transportation,0.749951548,4251.0,135804
+1998,Prince Edward Island,Heavy Industry,0.003446068,4251.0,135804
+1998,Prince Edward Island,Buildings,0.535764697,4251.0,135804
+1998,Prince Edward Island,Agriculture,0.54196494,4251.0,135804
+1998,Prince Edward Island,Waste,0.078413698,4251.0,135804
+1998,Prince Edward Island,"Light Manufacturing, Construction & Forest Resources",0.120816073,4251.0,135804
+1999,Prince Edward Island,Provincial Inventory Total,2.028626446,4435.0,136281
+1999,Prince Edward Island,Oil and Gas,0.000313121,4435.0,136281
+1999,Prince Edward Island,Transportation,0.793834417,4435.0,136281
+1999,Prince Edward Island,Heavy Industry,0.004313745,4435.0,136281
+1999,Prince Edward Island,Buildings,0.522703592,4435.0,136281
+1999,Prince Edward Island,Agriculture,0.529527452,4435.0,136281
+1999,Prince Edward Island,Waste,0.078516955,4435.0,136281
+1999,Prince Edward Island,"Light Manufacturing, Construction & Forest Resources",0.083269887,4435.0,136281
+2000,Prince Edward Island,Provincial Inventory Total,2.160592358,4554.0,136470
+2000,Prince Edward Island,Oil and Gas,0.00011079,4554.0,136470
+2000,Prince Edward Island,Transportation,0.794980147,4554.0,136470
+2000,Prince Edward Island,Heavy Industry,0.008943468,4554.0,136470
+2000,Prince Edward Island,Buildings,0.545384049,4554.0,136470
+2000,Prince Edward Island,Agriculture,0.514745799,4554.0,136470
+2000,Prince Edward Island,Waste,0.079196128,4554.0,136470
+2000,Prince Edward Island,"Light Manufacturing, Construction & Forest Resources",0.164228261,4554.0,136470
+2001,Prince Edward Island,Provincial Inventory Total,2.058908668,4490.0,136665
+2001,Prince Edward Island,Oil and Gas,0.000199126,4490.0,136665
+2001,Prince Edward Island,Transportation,0.784624719,4490.0,136665
+2001,Prince Edward Island,Heavy Industry,0.006240575,4490.0,136665
+2001,Prince Edward Island,Buildings,0.524323683,4490.0,136665
+2001,Prince Edward Island,Agriculture,0.465312942,4490.0,136665
+2001,Prince Edward Island,Waste,0.079500606,4490.0,136665
+2001,Prince Edward Island,"Light Manufacturing, Construction & Forest Resources",0.152141181,4490.0,136665
+2002,Prince Edward Island,Provincial Inventory Total,2.070649989,4705.0,136880
+2002,Prince Edward Island,Oil and Gas,5.76E-06,4705.0,136880
+2002,Prince Edward Island,Transportation,0.7986459,4705.0,136880
+2002,Prince Edward Island,Heavy Industry,0.001033113,4705.0,136880
+2002,Prince Edward Island,Buildings,0.537846822,4705.0,136880
+2002,Prince Edward Island,Agriculture,0.482633599,4705.0,136880
+2002,Prince Edward Island,Waste,0.080229272,4705.0,136880
+2002,Prince Edward Island,"Light Manufacturing, Construction & Forest Resources",0.146353503,4705.0,136880
+2003,Prince Edward Island,Provincial Inventory Total,2.145347489,4794.0,137227
+2003,Prince Edward Island,Oil and Gas,6.00E-06,4794.0,137227
+2003,Prince Edward Island,Transportation,0.810480397,4794.0,137227
+2003,Prince Edward Island,Heavy Industry,0.001189741,4794.0,137227
+2003,Prince Edward Island,Buildings,0.540629007,4794.0,137227
+2003,Prince Edward Island,Agriculture,0.511142649,4794.0,137227
+2003,Prince Edward Island,Waste,0.080229238,4794.0,137227
+2003,Prince Edward Island,"Light Manufacturing, Construction & Forest Resources",0.164952777,4794.0,137227
+2004,Prince Edward Island,Provincial Inventory Total,2.165429497,4951.0,137680
+2004,Prince Edward Island,Oil and Gas,1.05E-05,4951.0,137680
+2004,Prince Edward Island,Transportation,0.826586601,4951.0,137680
+2004,Prince Edward Island,Heavy Industry,0.001236276,4951.0,137680
+2004,Prince Edward Island,Buildings,0.542566546,4951.0,137680
+2004,Prince Edward Island,Agriculture,0.533161157,4951.0,137680
+2004,Prince Edward Island,Waste,0.080819732,4951.0,137680
+2004,Prince Edward Island,"Light Manufacturing, Construction & Forest Resources",0.171191892,4951.0,137680
+2005,Prince Edward Island,Provincial Inventory Total,2.081790553,5122.0,138064
+2005,Prince Edward Island,Oil and Gas,1.46E-05,5122.0,138064
+2005,Prince Edward Island,Transportation,0.827646864,5122.0,138064
+2005,Prince Edward Island,Heavy Industry,0.001585762,5122.0,138064
+2005,Prince Edward Island,Buildings,0.482063362,5122.0,138064
+2005,Prince Edward Island,Agriculture,0.51334885,5122.0,138064
+2005,Prince Edward Island,Waste,0.079193236,5122.0,138064
+2005,Prince Edward Island,"Light Manufacturing, Construction & Forest Resources",0.173173981,5122.0,138064
+2006,Prince Edward Island,Provincial Inventory Total,2.012923338,5261.0,137867
+2006,Prince Edward Island,Oil and Gas,2.52E-05,5261.0,137867
+2006,Prince Edward Island,Transportation,0.814516166,5261.0,137867
+2006,Prince Edward Island,Heavy Industry,0.003095079,5261.0,137867
+2006,Prince Edward Island,Buildings,0.448103719,5261.0,137867
+2006,Prince Edward Island,Agriculture,0.475876859,5261.0,137867
+2006,Prince Edward Island,Waste,0.077249488,5261.0,137867
+2006,Prince Edward Island,"Light Manufacturing, Construction & Forest Resources",0.190540528,5261.0,137867
+2007,Prince Edward Island,Provincial Inventory Total,2.061040932,5228.0,137711
+2007,Prince Edward Island,Oil and Gas,4.77E-05,5228.0,137711
+2007,Prince Edward Island,Transportation,0.824088347,5228.0,137711
+2007,Prince Edward Island,Heavy Industry,0.005875665,5228.0,137711
+2007,Prince Edward Island,Buildings,0.514605863,5228.0,137711
+2007,Prince Edward Island,Agriculture,0.43254709,5228.0,137711
+2007,Prince Edward Island,Waste,0.075234879,5228.0,137711
+2007,Prince Edward Island,"Light Manufacturing, Construction & Forest Resources",0.204149499,5228.0,137711
+2008,Prince Edward Island,Provincial Inventory Total,1.982120151,5284.0,138749
+2008,Prince Edward Island,Oil and Gas,6.43E-05,5284.0,138749
+2008,Prince Edward Island,Transportation,0.811794325,5284.0,138749
+2008,Prince Edward Island,Heavy Industry,0.008047128,5284.0,138749
+2008,Prince Edward Island,Buildings,0.482711702,5284.0,138749
+2008,Prince Edward Island,Agriculture,0.415360631,5284.0,138749
+2008,Prince Edward Island,Waste,0.071859683,5284.0,138749
+2008,Prince Edward Island,"Light Manufacturing, Construction & Forest Resources",0.188153713,5284.0,138749
+2009,Prince Edward Island,Provincial Inventory Total,1.967487816,5305.0,139891
+2009,Prince Edward Island,Oil and Gas,7.38E-05,5305.0,139891
+2009,Prince Edward Island,Transportation,0.805306546,5305.0,139891
+2009,Prince Edward Island,Heavy Industry,0.005954492,5305.0,139891
+2009,Prince Edward Island,Buildings,0.513511429,5305.0,139891
+2009,Prince Edward Island,Agriculture,0.407732542,5305.0,139891
+2009,Prince Edward Island,Waste,0.070245701,5305.0,139891
+2009,Prince Edward Island,"Light Manufacturing, Construction & Forest Resources",0.158629096,5305.0,139891
+2010,Prince Edward Island,Provincial Inventory Total,2.000967925,5412.0,141654
+2010,Prince Edward Island,Oil and Gas,7.56E-05,5412.0,141654
+2010,Prince Edward Island,Transportation,0.832651611,5412.0,141654
+2010,Prince Edward Island,Heavy Industry,0.008651734,5412.0,141654
+2010,Prince Edward Island,Buildings,0.481753204,5412.0,141654
+2010,Prince Edward Island,Agriculture,0.394615308,5412.0,141654
+2010,Prince Edward Island,Waste,0.068942104,5412.0,141654
+2010,Prince Edward Island,"Light Manufacturing, Construction & Forest Resources",0.212690389,5412.0,141654
+2011,Prince Edward Island,Provincial Inventory Total,2.157488601,5527.0,143963
+2011,Prince Edward Island,Oil and Gas,9.21E-05,5527.0,143963
+2011,Prince Edward Island,Transportation,0.897004036,5527.0,143963
+2011,Prince Edward Island,Heavy Industry,0.008788061,5527.0,143963
+2011,Prince Edward Island,Buildings,0.599800121,5527.0,143963
+2011,Prince Edward Island,Agriculture,0.409652456,5527.0,143963
+2011,Prince Edward Island,Waste,0.067904151,5527.0,143963
+2011,Prince Edward Island,"Light Manufacturing, Construction & Forest Resources",0.173009519,5527.0,143963
+2012,Prince Edward Island,Provincial Inventory Total,2.069712075,5586.0,144530
+2012,Prince Edward Island,Oil and Gas,8.91E-05,5586.0,144530
+2012,Prince Edward Island,Transportation,0.853499413,5586.0,144530
+2012,Prince Edward Island,Heavy Industry,0.008301357,5586.0,144530
+2012,Prince Edward Island,Buildings,0.513243707,5586.0,144530
+2012,Prince Edward Island,Agriculture,0.410789937,5586.0,144530
+2012,Prince Edward Island,Waste,0.066822761,5586.0,144530
+2012,Prince Edward Island,"Light Manufacturing, Construction & Forest Resources",0.206169697,5586.0,144530
+2013,Prince Edward Island,Provincial Inventory Total,1.753610469,5684.0,144094
+2013,Prince Edward Island,Oil and Gas,8.16E-05,5684.0,144094
+2013,Prince Edward Island,Transportation,0.730136929,5684.0,144094
+2013,Prince Edward Island,Heavy Industry,0.008734861,5684.0,144094
+2013,Prince Edward Island,Buildings,0.462287463,5684.0,144094
+2013,Prince Edward Island,Agriculture,0.352727535,5684.0,144094
+2013,Prince Edward Island,Waste,0.065967022,5684.0,144094
+2013,Prince Edward Island,"Light Manufacturing, Construction & Forest Resources",0.129737283,5684.0,144094
+2014,Prince Edward Island,Provincial Inventory Total,1.697916266,5690.0,144283
+2014,Prince Edward Island,Oil and Gas,9.31E-05,5690.0,144283
+2014,Prince Edward Island,Transportation,0.715517432,5690.0,144283
+2014,Prince Edward Island,Heavy Industry,0.008525056,5690.0,144283
+2014,Prince Edward Island,Buildings,0.416875864,5690.0,144283
+2014,Prince Edward Island,Agriculture,0.398276718,5690.0,144283
+2014,Prince Edward Island,Waste,0.064422326,5690.0,144283
+2014,Prince Edward Island,"Light Manufacturing, Construction & Forest Resources",0.089854875,5690.0,144283
+2015,Prince Edward Island,Provincial Inventory Total,1.628713548,5770.0,144546
+2015,Prince Edward Island,Oil and Gas,0.00010422,5770.0,144546
+2015,Prince Edward Island,Transportation,0.716872457,5770.0,144546
+2015,Prince Edward Island,Heavy Industry,0.009711212,5770.0,144546
+2015,Prince Edward Island,Buildings,0.373826594,5770.0,144546
+2015,Prince Edward Island,Agriculture,0.372070558,5770.0,144546
+2015,Prince Edward Island,Waste,0.063675243,5770.0,144546
+2015,Prince Edward Island,"Light Manufacturing, Construction & Forest Resources",0.078580555,5770.0,144546
+2016,Prince Edward Island,Provincial Inventory Total,1.695694735,5894.0,146969
+2016,Prince Edward Island,Oil and Gas,9.76E-05,5894.0,146969
+2016,Prince Edward Island,Transportation,0.75170151,5894.0,146969
+2016,Prince Edward Island,Heavy Industry,0.009603986,5894.0,146969
+2016,Prince Edward Island,Buildings,0.347354446,5894.0,146969
+2016,Prince Edward Island,Agriculture,0.427620367,5894.0,146969
+2016,Prince Edward Island,Waste,0.062482078,5894.0,146969
+2016,Prince Edward Island,"Light Manufacturing, Construction & Forest Resources",0.092674849,5894.0,146969
+2017,Prince Edward Island,Provincial Inventory Total,1.703155542,6170.0,150402
+2017,Prince Edward Island,Oil and Gas,3.93E-07,6170.0,150402
+2017,Prince Edward Island,Transportation,0.761343119,6170.0,150402
+2017,Prince Edward Island,Heavy Industry,0.011078309,6170.0,150402
+2017,Prince Edward Island,Buildings,0.344422995,6170.0,150402
+2017,Prince Edward Island,Agriculture,0.410313908,6170.0,150402
+2017,Prince Edward Island,Waste,0.061456889,6170.0,150402
+2017,Prince Edward Island,"Light Manufacturing, Construction & Forest Resources",0.105902612,6170.0,150402
+2018,Prince Edward Island,Provincial Inventory Total,1.678245433,6324.0,153396
+2018,Prince Edward Island,Oil and Gas,3.77E-07,6324.0,153396
+2018,Prince Edward Island,Transportation,0.732081522,6324.0,153396
+2018,Prince Edward Island,Heavy Industry,0.012618697,6324.0,153396
+2018,Prince Edward Island,Buildings,0.341259618,6324.0,153396
+2018,Prince Edward Island,Agriculture,0.440235548,6324.0,153396
+2018,Prince Edward Island,Waste,0.061160059,6324.0,153396
+2018,Prince Edward Island,"Light Manufacturing, Construction & Forest Resources",0.088122873,6324.0,153396
+1990,Quebec,Provincial Inventory Total,86.69493393,230456.0,6996986
+1990,Quebec,Oil and Gas,3.92760975,230456.0,6996986
+1990,Quebec,Transportation,24.1197303,230456.0,6996986
+1990,Quebec,Heavy Industry,24.94216394,230456.0,6996986
+1990,Quebec,Buildings,12.95317933,230456.0,6996986
+1990,Quebec,Agriculture,8.070629131,230456.0,6996986
+1990,Quebec,Waste,5.862988192,230456.0,6996986
+1990,Quebec,"Light Manufacturing, Construction & Forest Resources",5.28953029,230456.0,6996986
+1991,Quebec,Provincial Inventory Total,82.33333606,224585.0,7067396
+1991,Quebec,Oil and Gas,3.407024225,224585.0,7067396
+1991,Quebec,Transportation,22.71640498,224585.0,7067396
+1991,Quebec,Heavy Industry,25.00316935,224585.0,7067396
+1991,Quebec,Buildings,12.21154978,224585.0,7067396
+1991,Quebec,Agriculture,7.864258306,224585.0,7067396
+1991,Quebec,Waste,5.901674472,224585.0,7067396
+1991,Quebec,"Light Manufacturing, Construction & Forest Resources",4.704612187,224585.0,7067396
+1992,Quebec,Provincial Inventory Total,82.32734677,225375.0,7110010
+1992,Quebec,Oil and Gas,3.439327494,225375.0,7110010
+1992,Quebec,Transportation,23.16509846,225375.0,7110010
+1992,Quebec,Heavy Industry,23.20045672,225375.0,7110010
+1992,Quebec,Buildings,12.77374048,225375.0,7110010
+1992,Quebec,Agriculture,8.023646021,225375.0,7110010
+1992,Quebec,Waste,5.948386878,225375.0,7110010
+1992,Quebec,"Light Manufacturing, Construction & Forest Resources",4.822402687,225375.0,7110010
+1993,Quebec,Provincial Inventory Total,83.62653392,230500.0,7156537
+1993,Quebec,Oil and Gas,3.648717893,230500.0,7156537
+1993,Quebec,Transportation,23.82635213,230500.0,7156537
+1993,Quebec,Heavy Industry,24.01830656,230500.0,7156537
+1993,Quebec,Buildings,13.15842512,230500.0,7156537
+1993,Quebec,Agriculture,8.131700597,230500.0,7156537
+1993,Quebec,Waste,5.998378683,230500.0,7156537
+1993,Quebec,"Light Manufacturing, Construction & Forest Resources",4.55526416,230500.0,7156537
+1994,Quebec,Provincial Inventory Total,85.82519525,241075.0,7192403
+1994,Quebec,Oil and Gas,4.023548818,241075.0,7192403
+1994,Quebec,Transportation,24.7694373,241075.0,7192403
+1994,Quebec,Heavy Industry,24.55595193,241075.0,7192403
+1994,Quebec,Buildings,13.12653481,241075.0,7192403
+1994,Quebec,Agriculture,8.254079411,241075.0,7192403
+1994,Quebec,Waste,6.083976311,241075.0,7192403
+1994,Quebec,"Light Manufacturing, Construction & Forest Resources",4.529657589,241075.0,7192403
+1995,Quebec,Provincial Inventory Total,84.44461006,246253.0,7219219
+1995,Quebec,Oil and Gas,3.81727904,246253.0,7219219
+1995,Quebec,Transportation,24.99778111,246253.0,7219219
+1995,Quebec,Heavy Industry,23.31623104,246253.0,7219219
+1995,Quebec,Buildings,13.10315889,246253.0,7219219
+1995,Quebec,Agriculture,8.523166719,246253.0,7219219
+1995,Quebec,Waste,5.671261056,246253.0,7219219
+1995,Quebec,"Light Manufacturing, Construction & Forest Resources",4.641966717,246253.0,7219219
+1996,Quebec,Provincial Inventory Total,85.82867515,249340.0,7246897
+1996,Quebec,Oil and Gas,4.023009727,249340.0,7246897
+1996,Quebec,Transportation,25.46216095,249340.0,7246897
+1996,Quebec,Heavy Industry,23.56515868,249340.0,7246897
+1996,Quebec,Buildings,13.54690549,249340.0,7246897
+1996,Quebec,Agriculture,8.590947057,249340.0,7246897
+1996,Quebec,Waste,5.631481272,249340.0,7246897
+1996,Quebec,"Light Manufacturing, Construction & Forest Resources",4.606958278,249340.0,7246897
+1997,Quebec,Provincial Inventory Total,83.61132578,256374.0,7274611
+1997,Quebec,Oil and Gas,3.741225876,256374.0,7274611
+1997,Quebec,Transportation,26.22182265,256374.0,7274611
+1997,Quebec,Heavy Industry,23.33828612,256374.0,7274611
+1997,Quebec,Buildings,13.10751158,256374.0,7274611
+1997,Quebec,Agriculture,8.627238935,256374.0,7274611
+1997,Quebec,Waste,3.319381321,256374.0,7274611
+1997,Quebec,"Light Manufacturing, Construction & Forest Resources",4.813919601,256374.0,7274611
+1998,Quebec,Provincial Inventory Total,84.25766583,264665.0,7295935
+1998,Quebec,Oil and Gas,3.846959849,264665.0,7295935
+1998,Quebec,Transportation,27.60641721,264665.0,7295935
+1998,Quebec,Heavy Industry,23.23675032,264665.0,7295935
+1998,Quebec,Buildings,12.31196441,264665.0,7295935
+1998,Quebec,Agriculture,8.632383093,264665.0,7295935
+1998,Quebec,Waste,2.732953846,264665.0,7295935
+1998,Quebec,"Light Manufacturing, Construction & Forest Resources",4.280238925,264665.0,7295935
+1999,Quebec,Provincial Inventory Total,85.17800265,280467.0,7323250
+1999,Quebec,Oil and Gas,3.712404712,280467.0,7323250
+1999,Quebec,Transportation,28.53169701,280467.0,7323250
+1999,Quebec,Heavy Industry,21.7541734,280467.0,7323250
+1999,Quebec,Buildings,12.79233071,280467.0,7323250
+1999,Quebec,Agriculture,8.571899601,280467.0,7323250
+1999,Quebec,Waste,4.282108128,280467.0,7323250
+1999,Quebec,"Light Manufacturing, Construction & Forest Resources",4.344534927,280467.0,7323250
+2000,Quebec,Provincial Inventory Total,85.29279122,292882.0,7356951
+2000,Quebec,Oil and Gas,3.861601571,292882.0,7356951
+2000,Quebec,Transportation,28.26517659,292882.0,7356951
+2000,Quebec,Heavy Industry,21.74716809,292882.0,7356951
+2000,Quebec,Buildings,13.50699565,292882.0,7356951
+2000,Quebec,Agriculture,8.389446147,292882.0,7356951
+2000,Quebec,Waste,4.463642875,292882.0,7356951
+2000,Quebec,"Light Manufacturing, Construction & Forest Resources",4.453203269,292882.0,7356951
+2001,Quebec,Provincial Inventory Total,82.97005042,297992.0,7396456
+2001,Quebec,Oil and Gas,3.811594724,297992.0,7396456
+2001,Quebec,Transportation,28.33310016,297992.0,7396456
+2001,Quebec,Heavy Industry,20.2789281,297992.0,7396456
+2001,Quebec,Buildings,13.34133217,297992.0,7396456
+2001,Quebec,Agriculture,8.28828827,297992.0,7396456
+2001,Quebec,Waste,4.18125366,297992.0,7396456
+2001,Quebec,"Light Manufacturing, Construction & Forest Resources",4.149155461,297992.0,7396456
+2002,Quebec,Provincial Inventory Total,85.0134513,306269.0,7441656
+2002,Quebec,Oil and Gas,3.833479661,306269.0,7441656
+2002,Quebec,Transportation,28.88509979,306269.0,7441656
+2002,Quebec,Heavy Industry,20.56138626,306269.0,7441656
+2002,Quebec,Buildings,14.04873205,306269.0,7441656
+2002,Quebec,Agriculture,8.430070072,306269.0,7441656
+2002,Quebec,Waste,4.443219433,306269.0,7441656
+2002,Quebec,"Light Manufacturing, Construction & Forest Resources",4.364264305,306269.0,7441656
+2003,Quebec,Provincial Inventory Total,89.51817665,309948.0,7485753
+2003,Quebec,Oil and Gas,3.963360029,309948.0,7485753
+2003,Quebec,Transportation,30.43081391,309948.0,7485753
+2003,Quebec,Heavy Industry,20.96227946,309948.0,7485753
+2003,Quebec,Buildings,14.95113226,309948.0,7485753
+2003,Quebec,Agriculture,8.462488843,309948.0,7485753
+2003,Quebec,Waste,4.360946447,309948.0,7485753
+2003,Quebec,"Light Manufacturing, Construction & Forest Resources",4.4135207,309948.0,7485753
+2004,Quebec,Provincial Inventory Total,90.12973129,317700.0,7535590
+2004,Quebec,Oil and Gas,4.458636908,317700.0,7535590
+2004,Quebec,Transportation,30.9541982,317700.0,7535590
+2004,Quebec,Heavy Industry,20.09201967,317700.0,7535590
+2004,Quebec,Buildings,14.649958,317700.0,7535590
+2004,Quebec,Agriculture,8.667335422,317700.0,7535590
+2004,Quebec,Waste,4.787107378,317700.0,7535590
+2004,Quebec,"Light Manufacturing, Construction & Forest Resources",4.78151286,317700.0,7535590
+2005,Quebec,Provincial Inventory Total,86.07232575,322404.0,7581476
+2005,Quebec,Oil and Gas,4.400214388,322404.0,7581476
+2005,Quebec,Transportation,31.02054939,322404.0,7581476
+2005,Quebec,Heavy Industry,19.57527268,322404.0,7581476
+2005,Quebec,Buildings,13.23548229,322404.0,7581476
+2005,Quebec,Agriculture,8.48811886,322404.0,7581476
+2005,Quebec,Waste,4.601658107,322404.0,7581476
+2005,Quebec,"Light Manufacturing, Construction & Forest Resources",4.100511471,322404.0,7581476
+2006,Quebec,Provincial Inventory Total,84.26626983,326298.0,7631966
+2006,Quebec,Oil and Gas,4.4178682,326298.0,7631966
+2006,Quebec,Transportation,31.0755473,326298.0,7631966
+2006,Quebec,Heavy Industry,19.30803331,326298.0,7631966
+2006,Quebec,Buildings,12.0982946,326298.0,7631966
+2006,Quebec,Agriculture,8.151117738,326298.0,7631966
+2006,Quebec,Waste,4.446986482,326298.0,7631966
+2006,Quebec,"Light Manufacturing, Construction & Forest Resources",4.250169208,326298.0,7631966
+2007,Quebec,Provincial Inventory Total,86.00898879,334273.0,7692916
+2007,Quebec,Oil and Gas,4.479929182,334273.0,7692916
+2007,Quebec,Transportation,32.42233808,334273.0,7692916
+2007,Quebec,Heavy Industry,19.17146769,334273.0,7692916
+2007,Quebec,Buildings,12.33197994,334273.0,7692916
+2007,Quebec,Agriculture,8.630953434,334273.0,7692916
+2007,Quebec,Waste,4.251040378,334273.0,7692916
+2007,Quebec,"Light Manufacturing, Construction & Forest Resources",4.144589684,334273.0,7692916
+2008,Quebec,Provincial Inventory Total,83.50876712,340867.0,7761725
+2008,Quebec,Oil and Gas,4.267166135,340867.0,7761725
+2008,Quebec,Transportation,32.41273939,340867.0,7761725
+2008,Quebec,Heavy Industry,18.59683081,340867.0,7761725
+2008,Quebec,Buildings,11.39935344,340867.0,7761725
+2008,Quebec,Agriculture,8.501177655,340867.0,7761725
+2008,Quebec,Waste,3.847097178,340867.0,7761725
+2008,Quebec,"Light Manufacturing, Construction & Forest Resources",3.993204374,340867.0,7761725
+2009,Quebec,Provincial Inventory Total,81.57829735,338180.0,7843383
+2009,Quebec,Oil and Gas,4.151099446,338180.0,7843383
+2009,Quebec,Transportation,32.35143541,338180.0,7843383
+2009,Quebec,Heavy Industry,16.79867433,338180.0,7843383
+2009,Quebec,Buildings,12.16065785,338180.0,7843383
+2009,Quebec,Agriculture,8.363009472,338180.0,7843383
+2009,Quebec,Waste,3.097785941,338180.0,7843383
+2009,Quebec,"Light Manufacturing, Construction & Forest Resources",3.971591456,338180.0,7843383
+2010,Quebec,Provincial Inventory Total,79.10975707,344934.0,7929222
+2010,Quebec,Oil and Gas,3.081412173,344934.0,7929222
+2010,Quebec,Transportation,32.18272339,344934.0,7929222
+2010,Quebec,Heavy Industry,16.17380233,344934.0,7929222
+2010,Quebec,Buildings,11.15711501,344934.0,7929222
+2010,Quebec,Agriculture,8.397775339,344934.0,7929222
+2010,Quebec,Waste,3.228968853,344934.0,7929222
+2010,Quebec,"Light Manufacturing, Construction & Forest Resources",4.430809174,344934.0,7929222
+2011,Quebec,Provincial Inventory Total,81.4822009,351401.0,8005090
+2011,Quebec,Oil and Gas,2.748285248,351401.0,8005090
+2011,Quebec,Transportation,33.06744818,351401.0,8005090
+2011,Quebec,Heavy Industry,17.52659149,351401.0,8005090
+2011,Quebec,Buildings,11.24891312,351401.0,8005090
+2011,Quebec,Agriculture,8.627660403,351401.0,8005090
+2011,Quebec,Waste,3.018916028,351401.0,8005090
+2011,Quebec,"Light Manufacturing, Construction & Forest Resources",4.813749914,351401.0,8005090
+2012,Quebec,Provincial Inventory Total,80.00468182,355254.0,8061101
+2012,Quebec,Oil and Gas,2.732633504,355254.0,8061101
+2012,Quebec,Transportation,33.06629851,355254.0,8061101
+2012,Quebec,Heavy Industry,17.10392991,355254.0,8061101
+2012,Quebec,Buildings,9.964733582,355254.0,8061101
+2012,Quebec,Agriculture,8.855797603,355254.0,8061101
+2012,Quebec,Waste,3.086842756,355254.0,8061101
+2012,Quebec,"Light Manufacturing, Construction & Forest Resources",4.65621423,355254.0,8061101
+2013,Quebec,Provincial Inventory Total,80.32826706,359993.0,8110880
+2013,Quebec,Oil and Gas,2.652606577,359993.0,8110880
+2013,Quebec,Transportation,32.45077347,359993.0,8110880
+2013,Quebec,Heavy Industry,17.46962905,359993.0,8110880
+2013,Quebec,Buildings,10.27350851,359993.0,8110880
+2013,Quebec,Agriculture,8.691628704,359993.0,8110880
+2013,Quebec,Waste,3.367490848,359993.0,8110880
+2013,Quebec,"Light Manufacturing, Construction & Forest Resources",4.9882106,359993.0,8110880
+2014,Quebec,Provincial Inventory Total,78.33446339,365719.0,8150183
+2014,Quebec,Oil and Gas,2.630653217,365719.0,8150183
+2014,Quebec,Transportation,30.82637329,365719.0,8150183
+2014,Quebec,Heavy Industry,17.41357174,365719.0,8150183
+2014,Quebec,Buildings,10.75957519,365719.0,8150183
+2014,Quebec,Agriculture,8.617873259,365719.0,8150183
+2014,Quebec,Waste,3.628764915,365719.0,8150183
+2014,Quebec,"Light Manufacturing, Construction & Forest Resources",4.195689007,365719.0,8150183
+2015,Quebec,Provincial Inventory Total,78.6024694,368982.0,8175272
+2015,Quebec,Oil and Gas,2.786356269,368982.0,8175272
+2015,Quebec,Transportation,31.13113745,368982.0,8175272
+2015,Quebec,Heavy Industry,16.66220415,368982.0,8175272
+2015,Quebec,Buildings,10.93482602,368982.0,8175272
+2015,Quebec,Agriculture,8.828982531,368982.0,8175272
+2015,Quebec,Waste,4.054764872,368982.0,8175272
+2015,Quebec,"Light Manufacturing, Construction & Forest Resources",3.925130508,368982.0,8175272
+2016,Quebec,Provincial Inventory Total,78.46179423,374899.0,8225950
+2016,Quebec,Oil and Gas,2.407565431,374899.0,8225950
+2016,Quebec,Transportation,31.80796079,374899.0,8225950
+2016,Quebec,Heavy Industry,15.29186073,374899.0,8225950
+2016,Quebec,Buildings,11.06724971,374899.0,8225950
+2016,Quebec,Agriculture,8.969255769,374899.0,8225950
+2016,Quebec,Waste,4.63571436,374899.0,8225950
+2016,Quebec,"Light Manufacturing, Construction & Forest Resources",3.96835018,374899.0,8225950
+2017,Quebec,Provincial Inventory Total,80.42407621,385620.0,8302063
+2017,Quebec,Oil and Gas,2.089355964,385620.0,8302063
+2017,Quebec,Transportation,33.33481362,385620.0,8302063
+2017,Quebec,Heavy Industry,16.37617994,385620.0,8302063
+2017,Quebec,Buildings,11.20213241,385620.0,8302063
+2017,Quebec,Agriculture,8.49730393,385620.0,8302063
+2017,Quebec,Waste,4.538798201,385620.0,8302063
+2017,Quebec,"Light Manufacturing, Construction & Forest Resources",4.124955491,385620.0,8302063
+2018,Quebec,Provincial Inventory Total,82.55014228,396838.0,8401738
+2018,Quebec,Oil and Gas,2.535695151,396838.0,8401738
+2018,Quebec,Transportation,35.18771695,396838.0,8401738
+2018,Quebec,Heavy Industry,15.86896096,396838.0,8401738
+2018,Quebec,Buildings,11.12326657,396838.0,8401738
+2018,Quebec,Agriculture,9.028483753,396838.0,8401738
+2018,Quebec,Waste,4.413196907,396838.0,8401738
+2018,Quebec,"Light Manufacturing, Construction & Forest Resources",4.079665523,396838.0,8401738
+1990,Saskatchewan,Provincial Inventory Total,44.49714983,49630.0,1007727
+1990,Saskatchewan,Oil and Gas,11.89379091,49630.0,1007727
+1990,Saskatchewan,Transportation,5.28964873,49630.0,1007727
+1990,Saskatchewan,Heavy Industry,1.606725816,49630.0,1007727
+1990,Saskatchewan,Buildings,3.155665289,49630.0,1007727
+1990,Saskatchewan,Agriculture,10.18470702,49630.0,1007727
+1990,Saskatchewan,Waste,0.583260186,49630.0,1007727
+1990,Saskatchewan,"Light Manufacturing, Construction & Forest Resources",0.620773947,49630.0,1007727
+1991,Saskatchewan,Provincial Inventory Total,44.08731346,50010.0,1002713
+1991,Saskatchewan,Oil and Gas,10.71477136,50010.0,1002713
+1991,Saskatchewan,Transportation,4.990188707,50010.0,1002713
+1991,Saskatchewan,Heavy Industry,1.638338882,50010.0,1002713
+1991,Saskatchewan,Buildings,3.269986139,50010.0,1002713
+1991,Saskatchewan,Agriculture,10.40165741,50010.0,1002713
+1991,Saskatchewan,Waste,0.594137142,50010.0,1002713
+1991,Saskatchewan,"Light Manufacturing, Construction & Forest Resources",1.142144806,50010.0,1002713
+1992,Saskatchewan,Provincial Inventory Total,49.93904395,47799.0,1003995
+1992,Saskatchewan,Oil and Gas,14.07159858,47799.0,1003995
+1992,Saskatchewan,Transportation,5.043153933,47799.0,1003995
+1992,Saskatchewan,Heavy Industry,1.294410734,47799.0,1003995
+1992,Saskatchewan,Buildings,3.068427337,47799.0,1003995
+1992,Saskatchewan,Agriculture,11.06577767,47799.0,1003995
+1992,Saskatchewan,Waste,0.605805821,47799.0,1003995
+1992,Saskatchewan,"Light Manufacturing, Construction & Forest Resources",1.918000067,47799.0,1003995
+1993,Saskatchewan,Provincial Inventory Total,52.81619228,50849.0,1006900
+1993,Saskatchewan,Oil and Gas,16.07101832,50849.0,1006900
+1993,Saskatchewan,Transportation,5.052287374,50849.0,1006900
+1993,Saskatchewan,Heavy Industry,2.207586117,50849.0,1006900
+1993,Saskatchewan,Buildings,3.567485043,50849.0,1006900
+1993,Saskatchewan,Agriculture,11.71973251,50849.0,1006900
+1993,Saskatchewan,Waste,0.61766486,50849.0,1006900
+1993,Saskatchewan,"Light Manufacturing, Construction & Forest Resources",0.509626588,50849.0,1006900
+1994,Saskatchewan,Provincial Inventory Total,57.33415713,52840.0,1009575
+1994,Saskatchewan,Oil and Gas,18.00902858,52840.0,1009575
+1994,Saskatchewan,Transportation,5.429242048,52840.0,1009575
+1994,Saskatchewan,Heavy Industry,2.615031515,52840.0,1009575
+1994,Saskatchewan,Buildings,3.349494343,52840.0,1009575
+1994,Saskatchewan,Agriculture,12.64947533,52840.0,1009575
+1994,Saskatchewan,Waste,0.629682978,52840.0,1009575
+1994,Saskatchewan,"Light Manufacturing, Construction & Forest Resources",0.764011566,52840.0,1009575
+1995,Saskatchewan,Provincial Inventory Total,59.49036866,53426.0,1014187
+1995,Saskatchewan,Oil and Gas,19.42652812,53426.0,1014187
+1995,Saskatchewan,Transportation,5.358407832,53426.0,1014187
+1995,Saskatchewan,Heavy Industry,2.663705539,53426.0,1014187
+1995,Saskatchewan,Buildings,3.326658427,53426.0,1014187
+1995,Saskatchewan,Agriculture,13.16639314,53426.0,1014187
+1995,Saskatchewan,Waste,0.642006268,53426.0,1014187
+1995,Saskatchewan,"Light Manufacturing, Construction & Forest Resources",0.540167568,53426.0,1014187
+1996,Saskatchewan,Provincial Inventory Total,61.97395772,55034.0,1018945
+1996,Saskatchewan,Oil and Gas,19.93362668,55034.0,1018945
+1996,Saskatchewan,Transportation,5.628604265,55034.0,1018945
+1996,Saskatchewan,Heavy Industry,2.605502824,55034.0,1018945
+1996,Saskatchewan,Buildings,3.849550658,55034.0,1018945
+1996,Saskatchewan,Agriculture,14.0085742,55034.0,1018945
+1996,Saskatchewan,Waste,0.654596079,55034.0,1018945
+1996,Saskatchewan,"Light Manufacturing, Construction & Forest Resources",0.920495604,55034.0,1018945
+1997,Saskatchewan,Provincial Inventory Total,64.45224408,57399.0,1017902
+1997,Saskatchewan,Oil and Gas,22.30385094,57399.0,1017902
+1997,Saskatchewan,Transportation,5.617381597,57399.0,1017902
+1997,Saskatchewan,Heavy Industry,2.545239685,57399.0,1017902
+1997,Saskatchewan,Buildings,3.288926834,57399.0,1017902
+1997,Saskatchewan,Agriculture,14.13645644,57399.0,1017902
+1997,Saskatchewan,Waste,0.667268597,57399.0,1017902
+1997,Saskatchewan,"Light Manufacturing, Construction & Forest Resources",0.851327153,57399.0,1017902
+1998,Saskatchewan,Provincial Inventory Total,64.83067989,59879.0,1017332
+1998,Saskatchewan,Oil and Gas,23.35366756,59879.0,1017332
+1998,Saskatchewan,Transportation,5.600381391,59879.0,1017332
+1998,Saskatchewan,Heavy Industry,2.483060864,59879.0,1017332
+1998,Saskatchewan,Buildings,3.185989665,59879.0,1017332
+1998,Saskatchewan,Agriculture,13.51568285,59879.0,1017332
+1998,Saskatchewan,Waste,0.678930462,59879.0,1017332
+1998,Saskatchewan,"Light Manufacturing, Construction & Forest Resources",0.819309916,59879.0,1017332
+1999,Saskatchewan,Provincial Inventory Total,65.19390067,59943.0,1014524
+1999,Saskatchewan,Oil and Gas,23.68001797,59943.0,1014524
+1999,Saskatchewan,Transportation,5.760618064,59943.0,1014524
+1999,Saskatchewan,Heavy Industry,2.402109307,59943.0,1014524
+1999,Saskatchewan,Buildings,3.567538422,59943.0,1014524
+1999,Saskatchewan,Agriculture,13.42826019,59943.0,1014524
+1999,Saskatchewan,Waste,0.687206838,59943.0,1014524
+1999,Saskatchewan,"Light Manufacturing, Construction & Forest Resources",0.732739246,59943.0,1014524
+2000,Saskatchewan,Provincial Inventory Total,66.52838202,61503.0,1007565
+2000,Saskatchewan,Oil and Gas,25.27585702,61503.0,1007565
+2000,Saskatchewan,Transportation,5.888509885,61503.0,1007565
+2000,Saskatchewan,Heavy Industry,2.375821771,61503.0,1007565
+2000,Saskatchewan,Buildings,3.699942477,61503.0,1007565
+2000,Saskatchewan,Agriculture,13.66905707,61503.0,1007565
+2000,Saskatchewan,Waste,0.694724445,61503.0,1007565
+2000,Saskatchewan,"Light Manufacturing, Construction & Forest Resources",0.742971734,61503.0,1007565
+2001,Saskatchewan,Provincial Inventory Total,65.40052075,60993.0,1000239
+2001,Saskatchewan,Oil and Gas,24.70641236,60993.0,1000239
+2001,Saskatchewan,Transportation,5.794495884,60993.0,1000239
+2001,Saskatchewan,Heavy Industry,2.403024099,60993.0,1000239
+2001,Saskatchewan,Buildings,3.537281264,60993.0,1000239
+2001,Saskatchewan,Agriculture,12.93310953,60993.0,1000239
+2001,Saskatchewan,Waste,0.702005379,60993.0,1000239
+2001,Saskatchewan,"Light Manufacturing, Construction & Forest Resources",0.619457168,60993.0,1000239
+2002,Saskatchewan,Provincial Inventory Total,66.20863027,60789.0,996807
+2002,Saskatchewan,Oil and Gas,25.16692377,60789.0,996807
+2002,Saskatchewan,Transportation,5.869233466,60789.0,996807
+2002,Saskatchewan,Heavy Industry,2.367064178,60789.0,996807
+2002,Saskatchewan,Buildings,4.01135142,60789.0,996807
+2002,Saskatchewan,Agriculture,12.82879412,60789.0,996807
+2002,Saskatchewan,Waste,0.709014095,60789.0,996807
+2002,Saskatchewan,"Light Manufacturing, Construction & Forest Resources",0.562862417,60789.0,996807
+2003,Saskatchewan,Provincial Inventory Total,66.85904098,63564.0,996386
+2003,Saskatchewan,Oil and Gas,23.9531429,63564.0,996386
+2003,Saskatchewan,Transportation,6.016492899,63564.0,996386
+2003,Saskatchewan,Heavy Industry,2.356398144,63564.0,996386
+2003,Saskatchewan,Buildings,3.626188372,63564.0,996386
+2003,Saskatchewan,Agriculture,14.26949131,63564.0,996386
+2003,Saskatchewan,Waste,0.713608735,63564.0,996386
+2003,Saskatchewan,"Light Manufacturing, Construction & Forest Resources",0.337857477,63564.0,996386
+2004,Saskatchewan,Provincial Inventory Total,68.69071251,66605.0,997283
+2004,Saskatchewan,Oil and Gas,24.51662966,66605.0,997283
+2004,Saskatchewan,Transportation,6.096857305,66605.0,997283
+2004,Saskatchewan,Heavy Industry,2.376996701,66605.0,997283
+2004,Saskatchewan,Buildings,3.437214901,66605.0,997283
+2004,Saskatchewan,Agriculture,14.88280092,66605.0,997283
+2004,Saskatchewan,Waste,0.718157895,66605.0,997283
+2004,Saskatchewan,"Light Manufacturing, Construction & Forest Resources",0.35186498,66605.0,997283
+2005,Saskatchewan,Provincial Inventory Total,68.07024335,68360.0,993500
+2005,Saskatchewan,Oil and Gas,24.33122541,68360.0,993500
+2005,Saskatchewan,Transportation,6.210787625,68360.0,993500
+2005,Saskatchewan,Heavy Industry,2.219873058,68360.0,993500
+2005,Saskatchewan,Buildings,3.290106205,68360.0,993500
+2005,Saskatchewan,Agriculture,15.95358365,68360.0,993500
+2005,Saskatchewan,Waste,0.725576455,68360.0,993500
+2005,Saskatchewan,"Light Manufacturing, Construction & Forest Resources",0.397043347,68360.0,993500
+2006,Saskatchewan,Provincial Inventory Total,67.2081132,67347.0,992314
+2006,Saskatchewan,Oil and Gas,23.86511992,67347.0,992314
+2006,Saskatchewan,Transportation,6.653342682,67347.0,992314
+2006,Saskatchewan,Heavy Industry,2.344490162,67347.0,992314
+2006,Saskatchewan,Buildings,3.220823524,67347.0,992314
+2006,Saskatchewan,Agriculture,15.2262419,67347.0,992314
+2006,Saskatchewan,Waste,0.733793027,67347.0,992314
+2006,Saskatchewan,"Light Manufacturing, Construction & Forest Resources",0.668461348,67347.0,992314
+2007,Saskatchewan,Provincial Inventory Total,69.34827573,69855.0,1002086
+2007,Saskatchewan,Oil and Gas,24.25989012,69855.0,1002086
+2007,Saskatchewan,Transportation,6.965756482,69855.0,1002086
+2007,Saskatchewan,Heavy Industry,2.93569227,69855.0,1002086
+2007,Saskatchewan,Buildings,3.054338875,69855.0,1002086
+2007,Saskatchewan,Agriculture,15.76239495,69855.0,1002086
+2007,Saskatchewan,Waste,0.720645037,69855.0,1002086
+2007,Saskatchewan,"Light Manufacturing, Construction & Forest Resources",0.688896797,69855.0,1002086
+2008,Saskatchewan,Provincial Inventory Total,70.07735221,73518.0,1017404
+2008,Saskatchewan,Oil and Gas,23.69005207,73518.0,1017404
+2008,Saskatchewan,Transportation,7.688249226,73518.0,1017404
+2008,Saskatchewan,Heavy Industry,3.31920112,73518.0,1017404
+2008,Saskatchewan,Buildings,3.2395144,73518.0,1017404
+2008,Saskatchewan,Agriculture,16.26057972,73518.0,1017404
+2008,Saskatchewan,Waste,0.695249156,73518.0,1017404
+2008,Saskatchewan,"Light Manufacturing, Construction & Forest Resources",0.76229127,73518.0,1017404
+2009,Saskatchewan,Provincial Inventory Total,69.04767085,69597.0,1034819
+2009,Saskatchewan,Oil and Gas,22.45333353,69597.0,1034819
+2009,Saskatchewan,Transportation,8.038076277,69597.0,1034819
+2009,Saskatchewan,Heavy Industry,2.4447342,69597.0,1034819
+2009,Saskatchewan,Buildings,3.596384873,69597.0,1034819
+2009,Saskatchewan,Agriculture,15.63123151,69597.0,1034819
+2009,Saskatchewan,Waste,0.703204244,69597.0,1034819
+2009,Saskatchewan,"Light Manufacturing, Construction & Forest Resources",0.623928581,69597.0,1034819
+2010,Saskatchewan,Provincial Inventory Total,68.78668524,72851.0,1051443
+2010,Saskatchewan,Oil and Gas,21.84591501,72851.0,1051443
+2010,Saskatchewan,Transportation,8.850456755,72851.0,1051443
+2010,Saskatchewan,Heavy Industry,2.942659361,72851.0,1051443
+2010,Saskatchewan,Buildings,3.52502289,72851.0,1051443
+2010,Saskatchewan,Agriculture,14.92467344,72851.0,1051443
+2010,Saskatchewan,Waste,0.714411304,72851.0,1051443
+2010,Saskatchewan,"Light Manufacturing, Construction & Forest Resources",0.641471573,72851.0,1051443
+2011,Saskatchewan,Provincial Inventory Total,68.21325818,76697.0,1066026
+2011,Saskatchewan,Oil and Gas,21.39508908,76697.0,1066026
+2011,Saskatchewan,Transportation,8.352191586,76697.0,1066026
+2011,Saskatchewan,Heavy Industry,4.110108731,76697.0,1066026
+2011,Saskatchewan,Buildings,3.299595025,76697.0,1066026
+2011,Saskatchewan,Agriculture,15.30932233,76697.0,1066026
+2011,Saskatchewan,Waste,0.726537013,76697.0,1066026
+2011,Saskatchewan,"Light Manufacturing, Construction & Forest Resources",0.723109887,76697.0,1066026
+2012,Saskatchewan,Provincial Inventory Total,70.04260454,78007.0,1083755
+2012,Saskatchewan,Oil and Gas,21.38806561,78007.0,1083755
+2012,Saskatchewan,Transportation,9.28690728,78007.0,1083755
+2012,Saskatchewan,Heavy Industry,3.873957583,78007.0,1083755
+2012,Saskatchewan,Buildings,3.093950757,78007.0,1083755
+2012,Saskatchewan,Agriculture,16.12331087,78007.0,1083755
+2012,Saskatchewan,Waste,0.736330942,78007.0,1083755
+2012,Saskatchewan,"Light Manufacturing, Construction & Forest Resources",0.679767014,78007.0,1083755
+2013,Saskatchewan,Provincial Inventory Total,72.23601968,83111.0,1099736
+2013,Saskatchewan,Oil and Gas,22.07045655,83111.0,1099736
+2013,Saskatchewan,Transportation,10.20896603,83111.0,1099736
+2013,Saskatchewan,Heavy Industry,3.535609996,83111.0,1099736
+2013,Saskatchewan,Buildings,3.293973231,83111.0,1099736
+2013,Saskatchewan,Agriculture,17.63146833,83111.0,1099736
+2013,Saskatchewan,Waste,0.707771257,83111.0,1099736
+2013,Saskatchewan,"Light Manufacturing, Construction & Forest Resources",0.667907682,83111.0,1099736
+2014,Saskatchewan,Provincial Inventory Total,74.97807399,84786.0,1112979
+2014,Saskatchewan,Oil and Gas,25.06178145,84786.0,1112979
+2014,Saskatchewan,Transportation,10.2083453,84786.0,1112979
+2014,Saskatchewan,Heavy Industry,3.31578546,84786.0,1112979
+2014,Saskatchewan,Buildings,3.309633238,84786.0,1112979
+2014,Saskatchewan,Agriculture,17.19371231,84786.0,1112979
+2014,Saskatchewan,Waste,0.707436342,84786.0,1112979
+2014,Saskatchewan,"Light Manufacturing, Construction & Forest Resources",0.887567828,84786.0,1112979
+2015,Saskatchewan,Provincial Inventory Total,77.20042639,84072.0,1120967
+2015,Saskatchewan,Oil and Gas,25.7971286,84072.0,1120967
+2015,Saskatchewan,Transportation,10.70452439,84072.0,1120967
+2015,Saskatchewan,Heavy Industry,3.368011484,84072.0,1120967
+2015,Saskatchewan,Buildings,3.131307492,84072.0,1120967
+2015,Saskatchewan,Agriculture,17.46978243,84072.0,1120967
+2015,Saskatchewan,Waste,0.704573689,84072.0,1120967
+2015,Saskatchewan,"Light Manufacturing, Construction & Forest Resources",0.826310868,84072.0,1120967
+2016,Saskatchewan,Provincial Inventory Total,74.51058875,84006.0,1135987
+2016,Saskatchewan,Oil and Gas,23.35619988,84006.0,1135987
+2016,Saskatchewan,Transportation,10.6633156,84006.0,1135987
+2016,Saskatchewan,Heavy Industry,3.22882941,84006.0,1135987
+2016,Saskatchewan,Buildings,3.262532252,84006.0,1135987
+2016,Saskatchewan,Agriculture,17.56053114,84006.0,1135987
+2016,Saskatchewan,Waste,0.70484707,84006.0,1135987
+2016,Saskatchewan,"Light Manufacturing, Construction & Forest Resources",0.662287753,84006.0,1135987
+2017,Saskatchewan,Provincial Inventory Total,76.71984014,86180.0,1150331
+2017,Saskatchewan,Oil and Gas,23.4761601,86180.0,1150331
+2017,Saskatchewan,Transportation,11.20520867,86180.0,1150331
+2017,Saskatchewan,Heavy Industry,3.375872312,86180.0,1150331
+2017,Saskatchewan,Buildings,3.590774294,86180.0,1150331
+2017,Saskatchewan,Agriculture,18.06357852,86180.0,1150331
+2017,Saskatchewan,Waste,0.71737253,86180.0,1150331
+2017,Saskatchewan,"Light Manufacturing, Construction & Forest Resources",0.645162756,86180.0,1150331
+2018,Saskatchewan,Provincial Inventory Total,76.44233529,87232.0,1161767
+2018,Saskatchewan,Oil and Gas,22.70977298,87232.0,1161767
+2018,Saskatchewan,Transportation,11.43666925,87232.0,1161767
+2018,Saskatchewan,Heavy Industry,3.220031789,87232.0,1161767
+2018,Saskatchewan,Buildings,3.916195749,87232.0,1161767
+2018,Saskatchewan,Agriculture,18.49796919,87232.0,1161767
+2018,Saskatchewan,Waste,0.727857577,87232.0,1161767
+2018,Saskatchewan,"Light Manufacturing, Construction & Forest Resources",0.641729623,87232.0,1161767
+1990,Yukon,Territory Inventory Total,0.533958806,1495.0,27957
+1990,Yukon,Oil and Gas,0.000338651,1495.0,27957
+1990,Yukon,Transportation,0.281402745,1495.0,27957
+1990,Yukon,Heavy Industry,0.030865825,1495.0,27957
+1990,Yukon,Buildings,0.109272685,1495.0,27957
+1990,Yukon,Agriculture,0.001105398,1495.0,27957
+1990,Yukon,Waste,0.004522082,1495.0,27957
+1990,Yukon,"Light Manufacturing, Construction & Forest Resources",0.016218976,1495.0,27957
+1991,Yukon,Territory Inventory Total,0.498670174,1448.0,28871
+1991,Yukon,Oil and Gas,0.003978002,1448.0,28871
+1991,Yukon,Transportation,0.279685311,1448.0,28871
+1991,Yukon,Heavy Industry,0.033535898,1448.0,28871
+1991,Yukon,Buildings,0.101100958,1448.0,28871
+1991,Yukon,Agriculture,0.004417515,1448.0,28871
+1991,Yukon,Waste,0.004683414,1448.0,28871
+1991,Yukon,"Light Manufacturing, Construction & Forest Resources",0.016042719,1448.0,28871
+1992,Yukon,Territory Inventory Total,0.601441102,1731.0,30084
+1992,Yukon,Oil and Gas,0.118312216,1731.0,30084
+1992,Yukon,Transportation,0.294760649,1731.0,30084
+1992,Yukon,Heavy Industry,0.022244332,1731.0,30084
+1992,Yukon,Buildings,0.086974581,1731.0,30084
+1992,Yukon,Agriculture,0.008582241,1731.0,30084
+1992,Yukon,Waste,0.004892115,1731.0,30084
+1992,Yukon,"Light Manufacturing, Construction & Forest Resources",0.015076983,1731.0,30084
+1993,Yukon,Territory Inventory Total,0.498452734,1385.0,30337
+1993,Yukon,Oil and Gas,0.081903497,1385.0,30337
+1993,Yukon,Transportation,0.250216336,1385.0,30337
+1993,Yukon,Heavy Industry,0.013310334,1385.0,30337
+1993,Yukon,Buildings,0.10009254,1385.0,30337
+1993,Yukon,Agriculture,0.005281163,1385.0,30337
+1993,Yukon,Waste,0.004977123,1385.0,30337
+1993,Yukon,"Light Manufacturing, Construction & Forest Resources",0.013328622,1385.0,30337
+1994,Yukon,Territory Inventory Total,0.498460245,1384.0,29684
+1994,Yukon,Oil and Gas,0.070982945,1384.0,29684
+1994,Yukon,Transportation,0.253009487,1384.0,29684
+1994,Yukon,Heavy Industry,0.014908804,1384.0,29684
+1994,Yukon,Buildings,0.105334746,1384.0,29684
+1994,Yukon,Agriculture,0.005530415,1384.0,29684
+1994,Yukon,Waste,0.004944516,1384.0,29684
+1994,Yukon,"Light Manufacturing, Construction & Forest Resources",0.017077951,1384.0,29684
+1995,Yukon,Territory Inventory Total,0.565331588,1575.0,30442
+1995,Yukon,Oil and Gas,0.118286488,1575.0,30442
+1995,Yukon,Transportation,0.261182409,1575.0,30442
+1995,Yukon,Heavy Industry,0.022476705,1575.0,30442
+1995,Yukon,Buildings,0.085832516,1575.0,30442
+1995,Yukon,Agriculture,0.008247179,1575.0,30442
+1995,Yukon,Waste,0.005104368,1575.0,30442
+1995,Yukon,"Light Manufacturing, Construction & Forest Resources",0.012789619,1575.0,30442
+1996,Yukon,Territory Inventory Total,0.528714373,1741.0,31387
+1996,Yukon,Oil and Gas,0.088251263,1741.0,31387
+1996,Yukon,Transportation,0.228351533,1741.0,31387
+1996,Yukon,Heavy Industry,0.022624236,1741.0,31387
+1996,Yukon,Buildings,0.072954623,1741.0,31387
+1996,Yukon,Agriculture,0.006105276,1741.0,31387
+1996,Yukon,Waste,0.005448437,1741.0,31387
+1996,Yukon,"Light Manufacturing, Construction & Forest Resources",0.00688708,1741.0,31387
+1997,Yukon,Territory Inventory Total,0.529143639,1620.0,31797
+1997,Yukon,Oil and Gas,0.105964786,1620.0,31797
+1997,Yukon,Transportation,0.241705481,1620.0,31797
+1997,Yukon,Heavy Industry,0.014022953,1620.0,31797
+1997,Yukon,Buildings,0.064620075,1620.0,31797
+1997,Yukon,Agriculture,0.005643977,1620.0,31797
+1997,Yukon,Waste,0.005577327,1620.0,31797
+1997,Yukon,"Light Manufacturing, Construction & Forest Resources",0.007747011,1620.0,31797
+1998,Yukon,Territory Inventory Total,0.480967559,1544.0,31149
+1998,Yukon,Oil and Gas,0.112540853,1544.0,31149
+1998,Yukon,Transportation,0.238742786,1544.0,31149
+1998,Yukon,Heavy Industry,0.012221754,1544.0,31149
+1998,Yukon,Buildings,0.067621788,1544.0,31149
+1998,Yukon,Agriculture,0.007404493,1544.0,31149
+1998,Yukon,Waste,0.005554554,1544.0,31149
+1998,Yukon,"Light Manufacturing, Construction & Forest Resources",0.005602813,1544.0,31149
+1999,Yukon,Territory Inventory Total,0.571201743,1537.0,30785
+1999,Yukon,Oil and Gas,0.161450958,1537.0,30785
+1999,Yukon,Transportation,0.262706789,1537.0,30785
+1999,Yukon,Heavy Industry,0.011038493,1537.0,30785
+1999,Yukon,Buildings,0.083911997,1537.0,30785
+1999,Yukon,Agriculture,0.010931644,1537.0,30785
+1999,Yukon,Waste,0.005569521,1537.0,30785
+1999,Yukon,"Light Manufacturing, Construction & Forest Resources",0.006515652,1537.0,30785
+2000,Yukon,Territory Inventory Total,0.511632956,1589.0,30431
+2000,Yukon,Oil and Gas,0.135158839,1589.0,30431
+2000,Yukon,Transportation,0.230034688,1589.0,30431
+2000,Yukon,Heavy Industry,0.019873453,1589.0,30431
+2000,Yukon,Buildings,0.091749951,1589.0,30431
+2000,Yukon,Agriculture,0.001113685,1589.0,30431
+2000,Yukon,Waste,0.005616244,1589.0,30431
+2000,Yukon,"Light Manufacturing, Construction & Forest Resources",0.006780401,1589.0,30431
+2001,Yukon,Territory Inventory Total,0.507079885,1662.0,30158
+2001,Yukon,Oil and Gas,0.103460733,1662.0,30158
+2001,Yukon,Transportation,0.244761521,1662.0,30158
+2001,Yukon,Heavy Industry,0.021678282,1662.0,30158
+2001,Yukon,Buildings,0.087771787,1662.0,30158
+2001,Yukon,Agriculture,0.014586864,1662.0,30158
+2001,Yukon,Waste,0.005652214,1662.0,30158
+2001,Yukon,"Light Manufacturing, Construction & Forest Resources",0.007369379,1662.0,30158
+2002,Yukon,Territory Inventory Total,0.497533385,1643.0,30336
+2002,Yukon,Oil and Gas,0.083080766,1643.0,30336
+2002,Yukon,Transportation,0.254207697,1643.0,30336
+2002,Yukon,Heavy Industry,0.021248269,1643.0,30336
+2002,Yukon,Buildings,0.08547926,1643.0,30336
+2002,Yukon,Agriculture,0.01596676,1643.0,30336
+2002,Yukon,Waste,0.005800125,1643.0,30336
+2002,Yukon,"Light Manufacturing, Construction & Forest Resources",0.007310723,1643.0,30336
+2003,Yukon,Territory Inventory Total,0.493239823,1625.0,30941
+2003,Yukon,Oil and Gas,0.066764759,1625.0,30941
+2003,Yukon,Transportation,0.242007002,1625.0,30941
+2003,Yukon,Heavy Industry,0.024261437,1625.0,30941
+2003,Yukon,Buildings,0.105050048,1625.0,30941
+2003,Yukon,Agriculture,0.023169599,1625.0,30941
+2003,Yukon,Waste,0.005941254,1625.0,30941
+2003,Yukon,"Light Manufacturing, Construction & Forest Resources",0.006381023,1625.0,30941
+2004,Yukon,Territory Inventory Total,0.479484623,1707.0,31455
+2004,Yukon,Oil and Gas,0.052972019,1707.0,31455
+2004,Yukon,Transportation,0.243733977,1707.0,31455
+2004,Yukon,Heavy Industry,0.027523631,1707.0,31455
+2004,Yukon,Buildings,0.108448393,1707.0,31455
+2004,Yukon,Agriculture,0.016538668,1707.0,31455
+2004,Yukon,Waste,0.006068111,1707.0,31455
+2004,Yukon,"Light Manufacturing, Construction & Forest Resources",0.006452385,1707.0,31455
+2005,Yukon,Territory Inventory Total,0.544965329,1744.0,31902
+2005,Yukon,Oil and Gas,0.077393804,1744.0,31902
+2005,Yukon,Transportation,0.312188751,1744.0,31902
+2005,Yukon,Heavy Industry,0.020710116,1744.0,31902
+2005,Yukon,Buildings,0.091074383,1744.0,31902
+2005,Yukon,Agriculture,0.008269334,1744.0,31902
+2005,Yukon,Waste,0.006169925,1744.0,31902
+2005,Yukon,"Light Manufacturing, Construction & Forest Resources",0.007109166,1744.0,31902
+2006,Yukon,Territory Inventory Total,0.587266861,1826.0,32272
+2006,Yukon,Oil and Gas,0.091372745,1826.0,32272
+2006,Yukon,Transportation,0.340113128,1826.0,32272
+2006,Yukon,Heavy Industry,0.022564141,1826.0,32272
+2006,Yukon,Buildings,0.093562597,1826.0,32272
+2006,Yukon,Agriculture,0.006078354,1826.0,32272
+2006,Yukon,Waste,0.006258037,1826.0,32272
+2006,Yukon,"Light Manufacturing, Construction & Forest Resources",0.009839319,1826.0,32272
+2007,Yukon,Territory Inventory Total,0.607819672,1919.0,32554
+2007,Yukon,Oil and Gas,0.098594487,1919.0,32554
+2007,Yukon,Transportation,0.354533101,1919.0,32554
+2007,Yukon,Heavy Industry,0.023772312,1919.0,32554
+2007,Yukon,Buildings,0.096881327,1919.0,32554
+2007,Yukon,Waste,0.006372198,1919.0,32554
+2007,Yukon,"Light Manufacturing, Construction & Forest Resources",0.010456609,1919.0,32554
+2008,Yukon,Territory Inventory Total,0.60741188,2113.0,33083
+2008,Yukon,Oil and Gas,0.056759841,2113.0,33083
+2008,Yukon,Transportation,0.362151824,2113.0,33083
+2008,Yukon,Heavy Industry,0.023679323,2113.0,33083
+2008,Yukon,Buildings,0.107384426,2113.0,33083
+2008,Yukon,Waste,0.007931566,2113.0,33083
+2008,Yukon,"Light Manufacturing, Construction & Forest Resources",0.032026362,2113.0,33083
+2009,Yukon,Territory Inventory Total,0.56527689,2253.0,33731
+2009,Yukon,Oil and Gas,0.021791426,2253.0,33731
+2009,Yukon,Transportation,0.38934956,2253.0,33731
+2009,Yukon,Heavy Industry,0.015429135,2253.0,33731
+2009,Yukon,Buildings,0.08775681,2253.0,33731
+2009,Yukon,Waste,0.008144442,2253.0,33731
+2009,Yukon,"Light Manufacturing, Construction & Forest Resources",0.026402579,2253.0,33731
+2010,Yukon,Territory Inventory Total,0.635783061,2343.0,34596
+2010,Yukon,Oil and Gas,0.030100784,2343.0,34596
+2010,Yukon,Transportation,0.450851503,2343.0,34596
+2010,Yukon,Heavy Industry,0.02300798,2343.0,34596
+2010,Yukon,Buildings,0.082574379,2343.0,34596
+2010,Yukon,Waste,0.00837605,2343.0,34596
+2010,Yukon,"Light Manufacturing, Construction & Forest Resources",0.022856024,2343.0,34596
+2011,Yukon,Territory Inventory Total,0.670667222,2460.0,35411
+2011,Yukon,Oil and Gas,0.023313484,2460.0,35411
+2011,Yukon,Transportation,0.467993854,2460.0,35411
+2011,Yukon,Heavy Industry,0.024468692,2460.0,35411
+2011,Yukon,Buildings,0.099379751,2460.0,35411
+2011,Yukon,Waste,0.008550336,2460.0,35411
+2011,Yukon,"Light Manufacturing, Construction & Forest Resources",0.020339947,2460.0,35411
+2012,Yukon,Territory Inventory Total,0.659621265,2558.0,36234
+2012,Yukon,Oil and Gas,0.025392901,2558.0,36234
+2012,Yukon,Transportation,0.467182764,2558.0,36234
+2012,Yukon,Heavy Industry,0.021848847,2558.0,36234
+2012,Yukon,Buildings,0.099956219,2558.0,36234
+2012,Yukon,Waste,0.008668353,2558.0,36234
+2012,Yukon,"Light Manufacturing, Construction & Forest Resources",0.018824739,2558.0,36234
+2013,Yukon,Territory Inventory Total,0.578568411,2595.0,36521
+2013,Yukon,Oil and Gas,0.000310969,2595.0,36521
+2013,Yukon,Transportation,0.424893198,2595.0,36521
+2013,Yukon,Heavy Industry,0.018873261,2595.0,36521
+2013,Yukon,Buildings,0.089742416,2595.0,36521
+2013,Yukon,Waste,0.008817309,2595.0,36521
+2013,Yukon,"Light Manufacturing, Construction & Forest Resources",0.018990521,2595.0,36521
+2014,Yukon,Territory Inventory Total,0.473767603,2614.0,37137
+2014,Yukon,Oil and Gas,0.000257212,2614.0,37137
+2014,Yukon,Transportation,0.371926646,2614.0,37137
+2014,Yukon,Heavy Industry,0.015874985,2614.0,37137
+2014,Yukon,Buildings,0.043153984,2614.0,37137
+2014,Yukon,Waste,0.009048785,2614.0,37137
+2014,Yukon,"Light Manufacturing, Construction & Forest Resources",0.017103055,2614.0,37137
+2015,Yukon,Territory Inventory Total,0.499694421,2409.0,37690
+2015,Yukon,Oil and Gas,0.000264416,2409.0,37690
+2015,Yukon,Transportation,0.39456458,2409.0,37690
+2015,Yukon,Heavy Industry,0.017259113,2409.0,37690
+2015,Yukon,Buildings,0.042542358,2409.0,37690
+2015,Yukon,Waste,0.009327085,2409.0,37690
+2015,Yukon,"Light Manufacturing, Construction & Forest Resources",0.017487189,2409.0,37690
+2016,Yukon,Territory Inventory Total,0.501983013,2588.0,38547
+2016,Yukon,Oil and Gas,0.000224359,2588.0,38547
+2016,Yukon,Transportation,0.399658538,2588.0,38547
+2016,Yukon,Heavy Industry,0.014853384,2588.0,38547
+2016,Yukon,Buildings,0.039497801,2588.0,38547
+2016,Yukon,Agriculture,0.000801959,2588.0,38547
+2016,Yukon,Waste,0.009560681,2588.0,38547
+2016,Yukon,"Light Manufacturing, Construction & Forest Resources",0.018058685,2588.0,38547
+2017,Yukon,Territory Inventory Total,0.538620552,2634.0,39669
+2017,Yukon,Oil and Gas,0.000026366,2634.0,39669
+2017,Yukon,Transportation,0.431998126,2634.0,39669
+2017,Yukon,Heavy Industry,0.016394264,2634.0,39669
+2017,Yukon,Buildings,0.037569857,2634.0,39669
+2017,Yukon,Waste,0.009805813,2634.0,39669
+2017,Yukon,"Light Manufacturing, Construction & Forest Resources",0.018762963,2634.0,39669
+2018,Yukon,Territory Inventory Total,0.618619042,2734.0,40613
+2018,Yukon,Oil and Gas,0.000026366,2734.0,40613
+2018,Yukon,Transportation,0.488579679,2734.0,40613
+2018,Yukon,Heavy Industry,0.020116057,2734.0,40613
+2018,Yukon,Buildings,0.046141764,2734.0,40613
+2018,Yukon,Agriculture,0.000828866,2734.0,40613
+2018,Yukon,Waste,0.010031129,2734.0,40613
+2018,Yukon,"Light Manufacturing, Construction & Forest Resources",0.019400921,2734.0,40613

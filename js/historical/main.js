@@ -1,8 +1,8 @@
 /**
  * Load data from CSV file asynchronously and render charts
  */
-d3.csv('data/leaderlist.csv').then(data => {
-  
+d3.csv('data/historical/historical_dataset.csv').then(data => {
+  console.log('historical data', data)
   // Convert columns to numerical values
   data.forEach(d => {
     Object.keys(d).forEach(attr => {

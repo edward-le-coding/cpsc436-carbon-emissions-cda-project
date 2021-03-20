@@ -9,7 +9,26 @@
 <body>
     <h1 class="title-text">Canada's Carbon Emissions</h1>
 
-    Legend
+    <div class="page">
+        <!-- <h1>A Hiker's Journal</h1> -->
+
+        <p>This scrollytelling example is based on the JS libraries D3 and Waypoints.</p>
+
+        <div class="container">
+            <div id="vis"></div>
+            <div id="prose">
+                <div class="step" id="step0">You have completed <span class="count" id="hikes-count"></span> hikes.</div>
+                <div class="step" id="step1"><span class="count" id="easy-hikes-count"></span> hikes are rated as easy.</div>
+                <div class="step" id="step2"><span class="count" id="difficult-hikes-count"></span> hikes are rated as difficult.</div>
+                <div class="step" id="step3">The longest hike was <i><span id="max-duration-trail"></span></i><br>(<span class="count" id="max-duration"></span> hours).</div>
+                <div class="step" id="step4">The top 10 trails with the longest distance.</div>
+            </div>
+        </div>
+    </div>
+
+    <svg id="stackedBarChart"></svg>
+
+    <!-- Legend
     <div name="metric-selector">
         <input type="radio" name="metric-selector" id="absolute-emissions" value="absolute-emissions">
         <label for="absolute-emissions">Absolute Emissions (total GHG)</label><br>
@@ -32,14 +51,17 @@
         <svg id="timeline" class="chart"></svg>
     </div>
 
-    <div id="tooltip"></div>
+    <div id="tooltip"></div> -->
     
     <script src="js/d3.v6.min.js"></script>
+    <script src="js/noframework.waypoints.min.js"></script>
+    <script src="js/scrollerVis.js"></script>
+    <script src="js/main.js"></script>
 
     <script src="js/historical/main.js"></script>
     <script src="js/historical/heatmap.js"></script>
     <script src="js/historical/choroplethMap.js"></script>
-    <script src="js/historical/stackedBarChart.js"></script>
+    <script src="js/stackedBarChart.js"></script>
 
     <script src="js/policy/main.js"></script>
     <script src="js/policy/timeline.js"></script>

@@ -39,17 +39,15 @@ class Choropleth{
         if(_data != null) {
             vis.data = _data;
         }
-        // Convert data to topoJson
-        const provinces = topojson.feature(vis.geoData, vis.geoData.objects.provinces);
-        // Defines the scale of the projection so that the geometry fits within the SVG area
-        vis.config.projection.fitSize([vis.width, vis.height], provinces);
-
         vis.renderVis(_plottedVar)
     }
     // Render visualization
     renderVis(_plottedVar = 'CO2eq') {
         let vis = this;
-
+        // Convert data to topoJson
+        const provinces = topojson.feature(vis.data, vis.data.objects.provinces);
+        // Defines the scale of the projection so that the geometry fits within the SVG area
+        vis.config.projection.fitSize([vis.width, vis.height], provinces);
         // Append shapes of Canadian provinces
         const geoPath = vis.chart.selectAll('.geo-path')
             .data(provinces.features)
@@ -59,7 +57,7 @@ class Choropleth{
 
         // Add an additional layer on top of the map to show the province borders more clearly based on tutorial suggestions
         const geoBoundaryPath = vis.chart.selectAll('.geo-boundary-path')
-            .data([topojson.mesh(vis.geoData, vis.geoData.objects.provinces)])
+            .data([topojson.mesh(vis.data, vis.data.objects.provinces)])
             .join('path')
             .attr('class', 'geo-boundary-path')
             .attr('d', vis.geoPath);

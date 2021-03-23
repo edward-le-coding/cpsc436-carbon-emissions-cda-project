@@ -28,7 +28,10 @@ Promise.all([
   // Prepare default data
   subsetHistData =  masterHistData.filter(d => d.Year == 2018);
   subsetGeoChoropleth = prepareGeoData(subsetHistData, masterGeoData);
-  let histChoropleth = new Choropleth(_data = subsetGeoChoropleth);
+  let histChoropleth = new Choropleth({
+    parentElement: '#choropleth',
+    containerHeight: 149.6,
+    containerWidth: 300},_data = subsetGeoChoropleth);
 });
 
 /*

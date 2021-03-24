@@ -34,12 +34,10 @@ Promise.all([
     containerWidth: 300},_data = subsetGeoChoropleth);
 });
 
-/*
- * Todo:
- * - initialize views
- * - filter data
- * - listen to events and update views
- */
+//Todo:
+//- initialize views
+//- filter data
+//- listen to events and update views
 function prepareGeoData (histSubset, geoData){
   geoData.objects.provinces.geometries.forEach(d => {
     for (let i = 0; i < histSubset.length; i++) {

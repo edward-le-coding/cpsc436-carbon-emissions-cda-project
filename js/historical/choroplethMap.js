@@ -1,6 +1,7 @@
 class Choropleth{
     // Basic constructor
     constructor(_config, _data) {
+        // Define settings for object (e.g. where it belongs, margins, width, height, etc).
         this.config = {
             parentElement: _config.parentElement,
             containerWidth: _config.containerWidth || 640,
@@ -8,6 +9,7 @@ class Choropleth{
             margin: _config.margin || {top: 0, right: 0, bottom: 0, left: 0},
             projection: _config.projection || d3.geoConicConformal()
         }
+        // Update data
         this.data = _data;
         this.initVis();
     }
@@ -31,6 +33,7 @@ class Choropleth{
         // Add geographical projection
         vis.geoPath = d3.geoPath().projection(vis.config.projection);
 
+        // Update view
         vis.updateVis();
     }
     updateVis(_data = null, _plottedVar = 'CO2eq'){
@@ -39,6 +42,7 @@ class Choropleth{
         if(_data != null) {
             vis.data = _data;
         }
+        // Render data
         vis.renderVis(_plottedVar)
     }
     // Render visualization
@@ -46,7 +50,7 @@ class Choropleth{
         let vis = this;
         // Convert data to topoJson
         const provinces = topojson.feature(vis.data, vis.data.objects.provinces);
-        // Defines the scale of the projection so that the geometry fits within the SVG area
+        // Defines the projection scale so that the geometry fits within the SVG
         vis.config.projection.fitSize([vis.width, vis.height], provinces);
         // Append shapes of Canadian provinces
         const geoPath = vis.chart.selectAll('.geo-path')

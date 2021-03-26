@@ -74,6 +74,7 @@
     barChartData = _data;
     barChartData.forEach(d => {
       d.CO2eq = +d.CO2eq;
+      d.Year = +d.Year;
     });
 
     // Initialize bar chart

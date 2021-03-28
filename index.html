@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Castoro:ital@1&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-        <header id="landingPage">
+        <!-- <header id="landingPage">
             <h1>
                 Canada's Climate is Changing.
             </h1>
@@ -18,23 +18,30 @@
             <button id="readMore" style="border: 0; background: transparent">
                 <img id="readMoreImage" src="assets/arrow-down-circle-fill.svg" width="90" height="50"/>
             </button>
-        </header>
+        </header> -->
         <section id="charts">
-            Legend
-            <div name="metric-selector">
+            <!-- Legend -->
+            <!-- <div name="metric-selector">
                 <input type="radio" name="metric-selector" id="absolute-emissions" value="absolute-emissions">
                 <label for="absolute-emissions">Absolute Emissions (total GHG)</label><br>
                 <input type="radio" name="metric-selector" id="emissions-intensity-capita" value="emissions-intensity-capita">
                 <label for="emissions-intensity-capita">Emissions Intensity (per capita)</label><br>
                 <input type="radio" name="metric-selector" id="emissions-intensity-gdp" value="emissions-intensity-gdp">
                 <label for="emissions-intensity-gdp">Emissions Intensity (by GDP)</label>
+            </div> -->
+            <div id="heatmap" class="chart">
+                <div class="caption">
+                    The heat map below shows different metrics for different regions.
+                    Sort regions 
+                    <select id="sort-control">
+                        <option value="alphabetically">alphabetically</option>
+                        <option value="value">by metric</option>
+                    </select>
+                </div>
             </div>
-            <div>
-                <svg id="heatmap" class="chart"></svg>
-            </div>
-            <div>
+            <!-- <div>
                 <svg id="choropleth" class="chart"></svg>
-            </div>
+            </div> -->
             <div>
                 <svg id="stacked-bar-chart" class="chart"></svg>
             </div>

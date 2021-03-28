@@ -20,3 +20,8 @@ Data manipulation/pre-processing
 - https://stackoverflow.com/questions/11285613/selecting-multiple-columns-in-a-pandas-dataframe
 - https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.merge.html
 - https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.to_csv.html
+
+
+Heatmap:
+- https://github.com/UBC-InfoVis/2021-436V-case-studies/tree/master/case-study_measles-and-vaccines
+- https://www.d3-graph-gallery.com/graph/heatmap_style.html

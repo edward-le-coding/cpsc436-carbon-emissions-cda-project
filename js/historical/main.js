@@ -6,6 +6,7 @@ let subsetGeoChoropleth;
 let subsetHistData;
 let masterGeoData;
 let masterHistData;
+let heatmap;
 Promise.all([
     d3.json('data/canada_provinces.topo.json'),
     d3.csv('data/historical/historical_dataset.csv')
@@ -27,6 +28,11 @@ Promise.all([
     });
   // Prepare default data
   subsetHistData =  masterHistData.filter(d => d.Year == 2018);
+  
+  heatmap = new Heatmap({
+    parentElement: '#heatmap'
+  }, masterHistData);
+
   subsetGeoChoropleth = prepareGeoData(subsetHistData, masterGeoData);
   let histChoropleth = new Choropleth({
     parentElement: '#choropleth',
@@ -55,3 +61,8 @@ function prepareGeoData (histSubset, geoData){
   return geoData
 }
 
+
+d3.select("#sort-control").on("change", function () {
+  heatmap.config.sortOption = d3.select(this).property("value");
+  heatmap.updateVis();
+});

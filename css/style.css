@@ -44,7 +44,10 @@ body {
   }
 
 
-
+  .axis-label {
+    font-size: .9rem;
+    fill: #6b6b6b;
+  }
 
   .axis text {
     font-size: .7rem;
@@ -55,14 +58,7 @@ body {
     stroke: #888;
   }
   
-  
   rect {
     shape-rendering: crispEdges;
   }
   
-  .cat-milk rect {
-    fill: #6080b5;
-  }
-  .cat-water rect {
-    fill: #d4c32d;
-  }

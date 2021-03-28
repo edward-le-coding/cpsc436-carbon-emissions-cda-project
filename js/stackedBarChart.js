@@ -10,7 +10,7 @@ class StackedBarChart {
       parentElement: _config.parentElement,
       containerWidth: 1000,
       containerHeight: 400,
-      margin: {top: 10, right: 10, bottom: 30, left: 30},
+      margin: {top: 50, right: 10, bottom: 50, left: 100},
     }
     this.data = _data;
     this.initVis();
@@ -60,6 +60,21 @@ class StackedBarChart {
     // Append y-axis group
     vis.yAxisG = vis.chart.append('g')
         .attr('class', 'axis y-axis');
+
+    vis.chart.append('text')
+        .attr('class', 'axis-label')
+        .attr('transform', `translate(${vis.width/2}, ${vis.height + 40})`)
+        .style('text-anchor', 'middle')
+        .text('Year');
+    
+    vis.chart.append('text')
+        .attr('class', 'axis-label')
+        .attr('transform', 'rotate(-90)')
+        .attr('x', 0 - vis.height/2)
+        .attr('y', - 70)
+        .style('text-anchor', 'middle')
+        .attr('dy', '1em')
+        .text('Tonnes of CO2 equivalent');
     
     vis.updateVis();
   }
@@ -114,7 +129,6 @@ class StackedBarChart {
     let maxYValue = d3.max(vis.stackedData[vis.stackedData.length - 1], d => {
         return d3.max(d);
     })
-    console.log("maximum is " + maxYValue);
 
     // set domain of scales
     vis.xScale.domain([ ...vis.rolledUpData.keys()]);
@@ -139,20 +153,15 @@ class StackedBarChart {
     vis.chart.selectAll('category')
         .data(vis.stackedData)
       .join('g')
-        .attr('class', d => {
-          console.log("d.key is " + d.key);
-          return `category cat-${d.key}`
-        })
-        .style('fill', d => {
-          console.log("key is " + d.key);
-          return vis.colorScale(d.key);
-        })
+        .attr('class', d => `category cat-${d.key}`)
+        .style('fill', d => vis.colorScale(d.key))
       .selectAll('rect')
         .data(d => d)
       .join('rect')
         .attr('x', d => vis.xScale(vis.xValue(d)))
         .attr('y', d => vis.yScale(vis.yValue(d)))
         .attr('height', d => {
+          // TODO: need to deal with cases where d[1] is null
           if (!d[0]) {
             console.log("!d[0]");
           }

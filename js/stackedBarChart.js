@@ -143,6 +143,10 @@ class StackedBarChart {
           console.log("d.key is " + d.key);
           return `category cat-${d.key}`
         })
+        .style('fill', d => {
+          console.log("key is " + d.key);
+          return vis.colorScale(d.key);
+        })
       .selectAll('rect')
         .data(d => d)
       .join('rect')

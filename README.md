@@ -14,7 +14,11 @@ Data manipulation/pre-processing
 
 
 
-Flo's useful links: https://observablehq.com/@d3/stacked-bar-chart
+Flo's useful links: 
+- https://observablehq.com/@d3/stacked-bar-chart
+- scrollytelling: https://bl.ocks.org/baronwatts/2a50ae537d7c46670aa5eb30254ef751
+- srollytelling: https://towardsdatascience.com/how-i-created-an-interactive-scrolling-visualisation-with-d3-js-and-how-you-can-too-e116372e2c73
+
 Flo's sources: 
 - for finding max in 2D matrix: https://stackoverflow.com/questions/31249419/how-to-find-max-value-from-a-2d-matrix-using-d3-js
 - for rotating and placing y-axis label: https://bl.ocks.org/d3noob/23e42c8f67210ac6c678db2cd07a747e

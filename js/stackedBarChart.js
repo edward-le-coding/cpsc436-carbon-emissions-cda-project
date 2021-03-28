@@ -106,9 +106,9 @@ class StackedBarChart {
 
     // Initialize stack generator and specify the categories or layers
     // that we want to show in the chart
-    let sources = [...new Set(vis.data.map(d => d.Source))];
+    vis.sources = [...new Set(vis.data.map(d => d.Source))];
     vis.stackGen = d3.stack()
-          .keys(sources);
+          .keys(vis.sources);
 
     // Call stack generator on the dataset
     vis.stackedData = vis.stackGen(vis.flattenedData);
@@ -123,7 +123,7 @@ class StackedBarChart {
     console.log([ ...vis.rolledUpData.keys()]);
 
     console.log("sources");
-    console.log(sources);
+    console.log(vis.sources);
 
     // because the data is stacked we know highest val is in last element of stacked data
     let maxYValue = d3.max(vis.stackedData[vis.stackedData.length - 1], d => {
@@ -136,9 +136,10 @@ class StackedBarChart {
     vis.yScale.domain([0, maxYValue]);
 
     vis.colorScale
-    .domain(sources);
+    .domain(vis.sources);
 
 
+    vis.renderLegend();
     vis.renderVis();
   }
 
@@ -175,5 +176,34 @@ class StackedBarChart {
     // Update the axes
     vis.xAxisG.call(vis.xAxis);
     vis.yAxisG.call(vis.yAxis);
+  }
+
+  // Adds a legend to the chart area
+  renderLegend() {
+    let vis = this;
+
+    // Append group element that will contain our legend
+    vis.legend = vis.svg.append('g')
+        .attr('transform', `translate(${vis.width - 50}, 0)`);
+
+    let size = 20;
+    vis.legend.selectAll('legendSquares')
+        .data(vis.sources)
+        .join('rect')
+          .attr('x', 100)
+          .attr('y', i => 100 + i * 25)
+          .attr('width', 25)
+          .attr('height', 25)
+          .style('fill', d => vis.colorScale(d));
+
+    vis.legend.selectAll('legendText')
+        .data(vis.sources)
+        .join('text')
+          .attr('x', 100 + size*1.2)
+          .attr('y', i => 100 + i*(size+5) + (size/2)) // 100 is where the first dot appears. 25 is the distance between dots
+          .style('fill', d => vis.colorScale(d))
+          .text(d => d)
+          .attr('text-anchor', 'left');
+
   }
 }

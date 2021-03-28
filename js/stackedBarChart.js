@@ -35,7 +35,8 @@ class StackedBarChart {
     vis.yScale = d3.scaleLinear()
         .range([vis.height, 0]);
 
-    vis.colorScale = d3.scaleOrdinal();
+    vis.colorScale = d3.scaleOrdinal()
+        .range(d3.schemeCategory10);
 
     
     // Initialize axes
@@ -77,52 +78,50 @@ class StackedBarChart {
     // roll up the data to get nested map of year, source and sum of CO2eq for each source
     vis.rolledUpData = d3.rollup(vis.data, v => d3.sum(v, d => d.CO2eq), d => d.Year, d => d.Source);
     
-    console.log("rolled up by year and source");
-    console.log(vis.rolledUpData);
-
-
-    // create a flattened array of the nested object so we can feed it to vis.stack() below
-    vis.entries = []
+    // create a flattened array of the nested object so we can feed it to the stack generator
+    vis.flattenedData = []
     vis.rolledUpData.forEach((sources, year) => {
       let obj = {};
       obj.year = year;
       sources.forEach((amnt, source) => {
         obj[`${source}`] = amnt;
       });
-      vis.entries.push(obj);
+      vis.flattenedData.push(obj);
     });
-
-    // console.log(vis.entries);
-
 
     // Initialize stack generator and specify the categories or layers
     // that we want to show in the chart
     let sources = [...new Set(vis.data.map(d => d.Source))];
-    vis.stack = d3.stack()
+    vis.stackGen = d3.stack()
           .keys(sources);
 
     // Call stack generator on the dataset
-    vis.stackedData = vis.stack(vis.entries);
+    vis.stackedData = vis.stackGen(vis.flattenedData);
+
+    console.log("rolled up by year and source");
+    console.log(vis.rolledUpData);
 
     console.log("stacked data");
     console.log(vis.stackedData);
 
+    console.log("keys of rolled up data");
+    console.log([ ...vis.rolledUpData.keys()]);
+
+    console.log("sources");
+    console.log(sources);
+
+    // set domain of scales
     vis.xScale.domain([ ...vis.rolledUpData.keys()]);
+
     vis.yScale.domain(0, () => {
-      // because the data is stacked we know highest val is in last element
-      d3.max(vis.stackedData[vis.stackedData - 1], d => {
-        let m = d3.max( ...d);
-        console.log("max is");
-        console.log(m);
-        return m;
+      // because the data is stacked we know highest val is in last element of stacked data
+      d3.max(vis.stackedData[vis.stackedData.length - 1], d => {
+        return d3.max(d);
       })   
     });
 
-    vis.colorScale.domain(vis.rolledUpData.forEach(d => {
-      console.log("inside color domain")
-      console.log(d);
-
-    }));
+    vis.colorScale
+    .domain(sources);
 
 
     vis.renderVis();
@@ -139,7 +138,10 @@ class StackedBarChart {
     vis.chart.selectAll('category')
         .data(vis.stackedData)
       .join('g')
-        .attr('class', d => `category cat-${d.key}`)
+        .attr('class', d => {
+          console.log("d.key is " + d.key);
+          return `category cat-${d.key}`
+        })
       .selectAll('rect')
         .data(d => d)
       .join('rect')

@@ -29,9 +29,11 @@ Promise.all([
   // Prepare default data
   subsetHistData =  masterHistData.filter(d => d.Year == 2018);
   
+// Prepare heatmap data: only use data with 'Source' column == Total
+  let heatmapData = masterHistData.filter(d=>d.Source=='Total'&&d.Region!='Canada') // TODO: remove filtering of Canada
   heatmap = new Heatmap({
     parentElement: '#heatmap'
-  }, masterHistData);
+  }, heatmapData);
 
   subsetGeoChoropleth = prepareGeoData(subsetHistData, masterGeoData);
   let histChoropleth = new Choropleth({
@@ -40,10 +42,6 @@ Promise.all([
     containerWidth: 300},_data = subsetGeoChoropleth);
 });
 
-//Todo:
-//- initialize views
-//- filter data
-//- listen to events and update views
 function prepareGeoData (histSubset, geoData){
   geoData.objects.provinces.geometries.forEach(d => {
     for (let i = 0; i < histSubset.length; i++) {

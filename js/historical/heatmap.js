@@ -6,7 +6,7 @@ class Heatmap{
             containerHeight: _config.containerHeight || 800,
             tooltipPadding: 15,
             margin: _config.margin || {top: 60, right: 20, bottom: 20, left: 120},
-            sortOption: _config.sortOption || 'value',
+            sortOption: _config.sortOption || 'alphabetically',
             legendWidth: 160,
         }
         this.data = _data;
@@ -87,21 +87,26 @@ class Heatmap{
         // Group data per region (we get a nested array)
         vis.groupedData = d3.groups(vis.data, d => d.Region);
 
-        // TODO: sort data
-        // // Sort states by total case numbers (if the option is selected by the user)
-        // if (vis.config.sortOption == 'region') {
-        //   // Sum the case numbers for each state
-        //   // d[0] is the state name, d[1] contains an array of yearly values
-        //   vis.groupedData.forEach(d => {
-        //     d[3] = d3.sum(d[1], k => k.value);
-        //   });
+        console.log('vis.groupedData', vis.groupedData)
+        // Labels of row and columns -> unique identifier of the column called 'group' and 'variable'
+        vis.groups = d3.map(vis.data, function(d){return d.Region;}).keys()
+        vis.vars = d3.map(vis.data, function(d){return d.Population;}).keys()
 
-        //   // Descending order
-        //   vis.groupedData.sort((a,b) => b[3] - a[3]);
-        // }
+
+        // TODO: sort data
+        // Sort regions by alphabetical order
+        if (vis.config.sortOption == 'alphabetically') {
+          vis.groupedData.sort((a,b) => {
+            console.log(a)
+            return a[0].localeCompare(b[0]);
+          })
+        }
 
         // Specificy accessor functions
-        vis.yValue = d => d[0];
+        vis.yValue = d => {
+            return d[0]
+        }
+        // d[0];
         vis.colorValue = d => d.Population; //FIXME: just population for now
         vis.xValue = d => d.Year;
     

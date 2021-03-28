@@ -71,8 +71,8 @@ class StackedBarChart {
     let vis = this;
 
     // Specify accessor functions
-    vis.xValue = d => d[1].Year;
-    vis.yValue = d => d[1].CO2eq;
+    vis.xValue = d => d.data.year;
+    vis.yValue = d => d[1];
 
 
     // roll up the data to get nested map of year, source and sum of CO2eq for each source
@@ -110,15 +110,16 @@ class StackedBarChart {
     console.log("sources");
     console.log(sources);
 
+    // because the data is stacked we know highest val is in last element of stacked data
+    let maxYValue = d3.max(vis.stackedData[vis.stackedData.length - 1], d => {
+        return d3.max(d);
+    })
+    console.log("maximum is " + maxYValue);
+
     // set domain of scales
     vis.xScale.domain([ ...vis.rolledUpData.keys()]);
 
-    vis.yScale.domain(0, () => {
-      // because the data is stacked we know highest val is in last element of stacked data
-      d3.max(vis.stackedData[vis.stackedData.length - 1], d => {
-        return d3.max(d);
-      })   
-    });
+    vis.yScale.domain([0, maxYValue]);
 
     vis.colorScale
     .domain(sources);
@@ -145,9 +146,17 @@ class StackedBarChart {
       .selectAll('rect')
         .data(d => d)
       .join('rect')
-        .attr('x', d => vis.xScale(d.data.year))
-        .attr('y', d => vis.yScale(d[1]))
-        .attr('height', d => vis.yScale(d[0]) - vis.yScale(d[1]))
+        .attr('x', d => vis.xScale(vis.xValue(d)))
+        .attr('y', d => vis.yScale(vis.yValue(d)))
+        .attr('height', d => {
+          if (!d[0]) {
+            console.log("!d[0]");
+          }
+          if (!d[1]) {
+            console.log("!d[1]");
+          }
+          return vis.yScale(d[0]) - vis.yScale(d[1])
+        })
         .attr('width', vis.xScale.bandwidth());
 
     // Update the axes

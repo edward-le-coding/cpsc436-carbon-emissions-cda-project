@@ -13,7 +13,8 @@ class StackedBarChart {
       margin: {top: 250, right: 10, bottom: 50, left: 100},
       legendWidth: 200,
       legendHeight: 10,
-      legendSquareSize: 15
+      legendSquareSize: 15,
+      steps: ['step0', 'step1', 'step2', 'step3', 'step4']
     }
     this.province = _province;
     this.data = _data;
@@ -148,15 +149,34 @@ class StackedBarChart {
     .domain(vis.sources);
 
 
+    // Render the bar chart, the legend and the title
     vis.renderVis();
     vis.renderLegend();
     vis.renderTitle();
+
+    // Call first step
+    vis.step0();
+  }
+
+  step0() {
+    let vis = this;
+
+    vis.chart.transition()
+  }
+
+  step1() {
+    let vis = this;
+
+    // Change the colour of some rectangles to highlight them
+    vis.chart.transition()
+      .style('opacity', d => {
+        // fix opacity
+        return 1;
+      });
   }
 
   /**
    * This function contains the D3 code for binding data to visual elements
-   * Important: the chart is not interactive yet and renderVis() is intended
-   * to be called only once; otherwise new paths would be added on top
    */
   renderVis() {
     let vis = this;
@@ -220,9 +240,6 @@ class StackedBarChart {
         .join('text')
           .attr('class', 'stackedBarChart title')
           .attr('text-anchor', 'middle')
-          .text(d => {
-            console.log(d);
-            return `Sources of emissions over the years in ${d}`
-          });
+          .text(d => `Sources of emissions over the years in ${d}`);
   }
 }

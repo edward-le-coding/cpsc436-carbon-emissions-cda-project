@@ -77,9 +77,13 @@
       d.Year = +d.Year;
     });
 
-    // Initialize bar chart
-    stackedBarChart = new StackedBarChart({ parentElement: '#stackedBarChart'}, barChartData);
+    // Initialize bar chart with default Canada
+    let defaultProvince = ['Canada'];
 
+    // TODO: implement listeners to change province
+    let province = defaultProvince;
+    stackedBarChart = new StackedBarChart({ parentElement: '#stackedBarChart'}, barChartData, province);
+    stackedBarChart.updateVis();
 
 
 })

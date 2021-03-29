@@ -22,9 +22,11 @@ Flo's useful links:
 Flo's sources: 
 - for finding max in 2D matrix: https://stackoverflow.com/questions/31249419/how-to-find-max-value-from-a-2d-matrix-using-d3-js
 - for rotating and placing y-axis label: https://bl.ocks.org/d3noob/23e42c8f67210ac6c678db2cd07a747e
+- for color schemes: https://observablehq.com/@d3/color-schemes
 
 Flo's TODOs:
 - use better colors for stacked bar chart
+- rollup the data where there is literally 0
 - remove last tick (maybe remove axis line altogether)
 - need to deal with cases where d[1] is null
 - ask Francis why I have to use .axis-label instead of attr('class', 'axis)

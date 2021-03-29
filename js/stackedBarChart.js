@@ -5,16 +5,17 @@ class StackedBarChart {
    * @param {Object}
    * @param {Array}
    */
-  constructor(_config, _data) {
+  constructor(_config, _data, _province) {
     this.config = {
       parentElement: _config.parentElement,
       containerWidth: 1000,
-      containerHeight: 400,
-      margin: {top: 50, right: 10, bottom: 50, left: 100},
+      containerHeight: 600,
+      margin: {top: 250, right: 10, bottom: 50, left: 100},
       legendWidth: 200,
       legendHeight: 10,
       legendSquareSize: 15
     }
+    this.province = _province;
     this.data = _data;
     this.initVis();
   }
@@ -39,7 +40,7 @@ class StackedBarChart {
         .range([vis.height, 0]);
 
     vis.colorScale = d3.scaleOrdinal()
-        .range(d3.schemeCategory10);
+        .range(d3.schemePaired);
 
     
     // Initialize axes
@@ -57,7 +58,11 @@ class StackedBarChart {
 
     // Add group for legend
     vis.legend = vis.svg.append('g')
-        .attr('transform', `translate(${vis.config.margin.left},20)`);
+        .attr('transform', `translate(${vis.config.margin.left}, 100)`);
+
+    // Add group for title
+    vis.title = vis.svg.append('g')
+        .attr('transform', `translate(${vis.width/2}, 50)`);
 
     // Append empty x-axis group and move it to the bottom of the chart
     vis.xAxisG = vis.chart.append('g')
@@ -82,9 +87,6 @@ class StackedBarChart {
         .style('text-anchor', 'middle')
         .attr('dy', '1em')
         .text('Tonnes of CO2 equivalent');
-    
-
-    vis.updateVis();
   }
 
   /**
@@ -96,7 +98,6 @@ class StackedBarChart {
     // Specify accessor functions
     vis.xValue = d => d.data.year;
     vis.yValue = d => d[1];
-
 
     // roll up the data to get nested map of year, source and sum of CO2eq for each source
     vis.rolledUpData = d3.rollup(vis.data, v => d3.sum(v, d => d.CO2eq), d => d.Year, d => d.Source);
@@ -148,8 +149,8 @@ class StackedBarChart {
 
 
     vis.renderVis();
-    
     vis.renderLegend();
+    vis.renderTitle();
   }
 
   /**
@@ -187,7 +188,7 @@ class StackedBarChart {
     vis.yAxisG.call(vis.yAxis);
   }
 
-  // Adds a legend to the chart area
+  // Renders the legend
   renderLegend() {
     let vis = this;
 
@@ -208,5 +209,20 @@ class StackedBarChart {
           .attr('y', (d, i) =>  i % 2 === 0 ? i * vis.config.legendHeight + vis.config.legendSquareSize/2 : (i-1) * vis.config.legendHeight + vis.config.legendSquareSize)
           .text(d => d)
           .attr('text-anchor', 'left');
-        }
+  }
+
+  // Renders the title (not in index.html because title changes dynamically)
+  renderTitle() {
+    let vis = this;
+
+    vis.title.selectAll('text')
+        .data(vis.province)
+        .join('text')
+          .attr('class', 'stackedBarChart title')
+          .attr('text-anchor', 'middle')
+          .text(d => {
+            console.log(d);
+            return `Sources of emissions over the years in ${d}`
+          });
+  }
 }

@@ -60,4 +60,9 @@ body {
   rect {
     shape-rendering: crispEdges;
   }
+
+  .legendText {
+    font-size: .8rem;
+    fill: 'black';
+  }
   

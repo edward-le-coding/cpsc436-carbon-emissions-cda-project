@@ -28,3 +28,4 @@ Flo's TODOs:
 - remove last tick (maybe remove axis line altogether)
 - need to deal with cases where d[1] is null
 - ask Francis why I have to use .axis-label instead of attr('class', 'axis)
+- why do I need d and i for legend even though I don't use d?

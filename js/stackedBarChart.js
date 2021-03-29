@@ -14,7 +14,9 @@ class StackedBarChart {
       legendWidth: 200,
       legendHeight: 10,
       legendSquareSize: 15,
-      steps: ['step0', 'step1', 'step2', 'step3', 'step4']
+      steps: ['step0', 'step1', 'step2', 'step3', 'step4', 'step5', 'step6', 'step7', 'step8', 'step9', 'step10', 
+      'step11', 'step12', 'step13', 'step14', 'step15', 'step16', 'step17', 'step18', 'step19', 'step20', 'step21', 'step22', 
+      'step23', 'step24', 'step25', 'step26', 'step27', 'step28']
     }
     this.province = _province;
     this.data = _data;
@@ -145,8 +147,11 @@ class StackedBarChart {
 
     vis.yScale.domain([0, maxYValue]);
 
-    vis.colorScale
-    .domain(vis.sources);
+    vis.colorScale.domain(vis.sources);
+
+/*     // Bind data to rectangles but don't specify any attributes yet
+    vis.bars = vis.chart.selectAll('category')
+    .data(vis.stackedData) */
 
 
     // Render the bar chart, the legend and the title
@@ -158,22 +163,7 @@ class StackedBarChart {
     vis.step0();
   }
 
-  step0() {
-    let vis = this;
-
-    vis.chart.transition()
-  }
-
-  step1() {
-    let vis = this;
-
-    // Change the colour of some rectangles to highlight them
-    vis.chart.transition()
-      .style('opacity', d => {
-        // fix opacity
-        return 1;
-      });
-  }
+ 
 
   /**
    * This function contains the D3 code for binding data to visual elements
@@ -189,6 +179,7 @@ class StackedBarChart {
       .selectAll('rect')
         .data(d => d)
       .join('rect')
+        .attr('class', d => vis.xValue(d))
         .attr('x', d => vis.xScale(vis.xValue(d)))
         .attr('y', d => vis.yScale(vis.yValue(d)))
         .attr('height', d => {
@@ -241,5 +232,146 @@ class StackedBarChart {
           .attr('class', 'stackedBarChart title')
           .attr('text-anchor', 'middle')
           .text(d => `Sources of emissions over the years in ${d}`);
+  }
+
+  step0() {
+    let vis = this;
+
+    console.log("1990");
+
+  }
+
+  step1() {
+    let vis = this;
+
+    vis.chart.selectAll('.1991')
+      .style('opacity', d => {
+        console.log("in 1991");
+        return 0.2;
+      })
+
+    /* // Change the colour of some rectangles to highlight them
+    vis.chart.transition()
+      .style('opacity', d => {
+        // fix opacity
+        return 1;
+      }); */
+  }
+
+  step2() {
+    let vis = this;
+
+    console.log("1992");
+  }
+
+  step3() {
+    let vis = this;
+
+    console.log("1993");
+  }
+
+  step4() {
+    let vis = this;
+
+    console.log("1994");
+  }
+
+  step5() {
+    let vis = this;
+
+    console.log("1995");
+  }
+
+  step6() {
+    let vis = this;
+
+    console.log("1996");
+  }
+
+  step7() {
+    let vis = this;
+
+    console.log("1997");
+  }
+
+  step8() {
+    let vis = this;
+
+    console.log("1998");
+  }
+
+  step9() {
+    let vis = this;
+
+    console.log("1999");
+  }
+
+  step10() {
+    let vis = this;
+
+    console.log("2000");
+  }
+
+  step11() {
+    let vis = this;
+
+    console.log("2001");
+  }
+  step12() {
+    let vis = this;
+
+    console.log("2002");
+  }
+
+  step13() {
+    let vis = this;
+
+    console.log("2003");
+  }
+
+  step14() {
+    let vis = this;
+
+    console.log("2004");
+  }
+
+  step15() {
+    let vis = this;
+
+    console.log("2005");
+  }
+
+  step16() {
+    let vis = this;
+
+    console.log("2006");
+  }
+
+  step17() {
+    let vis = this;
+
+    console.log("2007");
+  }
+
+  step18() {
+    let vis = this;
+
+    console.log("2008");
+  }
+
+  step19() {
+    let vis = this;
+
+    console.log("2009");
+  }
+
+  step20() {
+    let vis = this;
+
+    console.log("2010");
+  }
+
+  goToStep(stepIndex) {
+    this[this.config.steps[stepIndex]]();
   }
 }

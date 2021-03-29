@@ -14,25 +14,18 @@ body {
     position: relative;
     margin-bottom: 100px;
   }
-  
-  #vis {
+
+  #stackedBarChart {
     position: fixed;
-    width: 400px;
+    left: 0%;
   }
+
   
   #prose {
-    margin-left: 400px;
+    margin-left: 900px;
   }
   #prose .step {
     height: 500px;
-  }
-  
-  .count {
-    padding: 0px 4px;
-    background: #efe9e9;
-    font-weight: 600;
-    border-radius: 8px;
-    margin: 0 4px;
   }
   
   .step {

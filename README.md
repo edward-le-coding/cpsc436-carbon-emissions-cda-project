@@ -31,3 +31,4 @@ Flo's TODOs:
 - need to deal with cases where d[1] is null
 - ask Francis why I have to use .axis-label instead of attr('class', 'axis)
 - why do I need d and i for legend even though I don't use d?
+- why is xValue d.data.year instead of just d.year?

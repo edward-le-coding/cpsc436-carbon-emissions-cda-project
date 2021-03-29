@@ -149,11 +149,6 @@ class StackedBarChart {
 
     vis.colorScale.domain(vis.sources);
 
-/*     // Bind data to rectangles but don't specify any attributes yet
-    vis.bars = vis.chart.selectAll('category')
-    .data(vis.stackedData) */
-
-
     // Render the bar chart, the legend and the title
     vis.renderVis();
     vis.renderLegend();
@@ -179,7 +174,7 @@ class StackedBarChart {
       .selectAll('rect')
         .data(d => d)
       .join('rect')
-        .attr('class', d => vis.xValue(d))
+        .attr('class', d => "year" + d.data.year)
         .attr('x', d => vis.xScale(vis.xValue(d)))
         .attr('y', d => vis.yScale(vis.yValue(d)))
         .attr('height', d => {
@@ -237,31 +232,44 @@ class StackedBarChart {
   step0() {
     let vis = this;
 
-    console.log("1990");
+    // set opactity of all bars to 0.2
+    vis.chart.selectAll('rect')
+    .transition()
+      .style('opacity', 0.2);
+    
+    // set opacity of the bar we're looking at to 1
+    vis.chart.selectAll('.year1990')
+      .transition()
+      .style('opacity', 1);
 
   }
 
   step1() {
     let vis = this;
 
-    vis.chart.selectAll('.1991')
-      .style('opacity', d => {
-        console.log("in 1991");
-        return 0.2;
-      })
-
-    /* // Change the colour of some rectangles to highlight them
-    vis.chart.transition()
-      .style('opacity', d => {
-        // fix opacity
-        return 1;
-      }); */
+    // set opactity of all bars to 0.2
+    vis.chart.selectAll('rect')
+     .transition()
+     .style('opacity', 0.2);
+   
+    // set opacity of the bar we're looking at to 1
+    vis.chart.selectAll('.year1991')
+      .transition()
+      .style('opacity', 1);   
   }
 
   step2() {
     let vis = this;
 
-    console.log("1992");
+    // set opactity of all bars to 0.2
+    vis.chart.selectAll('rect')
+      .transition()
+      .style('opacity', 0.2);
+   
+    // set opacity of the bar we're looking at to 1
+    vis.chart.selectAll('.year1992')
+      .transition()
+      .style('opacity', 1); 
   }
 
   step3() {

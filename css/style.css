@@ -3,65 +3,71 @@ body {
     font-size: 16px;
     font-weight: 400;
     background: #f7f7f7;
-  }
-  
-  .page {
-    margin: 2rem auto;
-    max-width: 50rem;
-  }
-  
-  .container {
-    position: relative;
-    margin-bottom: 100px;
-  }
+}
 
-  #stackedBarChart {
-    position: fixed;
-    left: 0%;
-  }
-
+h1 {
+  position: fixed;
+  margin-bottom: 50px;
+}
   
-  #prose {
-    margin-left: 900px;
-  }
-  #prose .step {
-    height: 500px;
-  }
+.page {
+  margin: 2rem;
+  max-width: 50rem;
+}
   
-  .step {
-    font-size: 1rem;
-  }
+.container {
+  position: relative;
+  margin-bottom: 100px;
+}
+
+#stackedBarChart {
+  position: fixed;
+  margin-top: 50px;
+}
+
+#prose {
+  margin-left: 1100px;
+  padding-top: 300px;
+}
+
+#prose .step {
+  height: 500px;
+}
   
-  .chart-label {
-    font-size: .7rem;
-  }
-
-  .axis-label {
-    font-size: .9rem;
-    fill: #6b6b6b;
-  }
-
-  .axis text {
-    font-size: .7rem;
-    fill: #6b6b6b;
-  }
+.step {
+  font-size: 1rem;
+}
   
-  .domain, .axis .tick line {
-    stroke: #888;
-  }
+.chart-label {
+  font-size: .7rem;
+}
+
+.axis-label {
+  font-size: .9rem;
+  fill: #6b6b6b;
+}
+
+.axis text {
+  font-size: .7rem;
+  fill: #6b6b6b;
+}
   
-  rect {
-    shape-rendering: crispEdges;
-  }
+.domain, .axis .tick line {
+  stroke: #888;
+}
+  
+rect {
+  shape-rendering: crispEdges;
+}
 
-  .legendText {
-    font-size: .8rem;
-    fill: black;
-  }
+.legendText {
+  font-size: .8rem;
+  fill: black;
+}
 
-  .stackedBarChart {
-    font-size: 1rem;
-    font-weight: bold;
-    fill: black;
-  }
+.stackedBarChart {
+  font-size: 1rem;
+  font-weight: bold;
+  fill: black;
+}
   

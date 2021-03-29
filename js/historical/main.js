@@ -64,3 +64,12 @@ d3.select("#sort-control").on("change", function () {
   heatmap.config.sortOption = d3.select(this).property("value");
   heatmap.updateVis();
 });
+
+
+
+
+d3.select("#metric-selector").on("change", function(d) {
+  let metricSelectorFilter = d3.select('input[name="metric-selector"]:checked').node().value
+  heatmap.metric = metricSelectorFilter
+  heatmap.updateVis();
+})

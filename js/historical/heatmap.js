@@ -1,5 +1,5 @@
 class Heatmap{
-    constructor(_config, _data) {
+    constructor(_config, _data, _metric) {
         this.config = {
             parentElement: _config.parentElement,
             containerWidth:  _config.containerWidth || 1000,
@@ -10,7 +10,7 @@ class Heatmap{
             legendWidth: 160,
         }
         this.data = _data;
-        console.log('data', this.data)
+        this.metric = _metric || 'CO2eq'
         this.initVis();
     }
 
@@ -33,9 +33,6 @@ class Heatmap{
         vis.chart = vis.chartArea.append('g');
 
         // Initialize scales
-        vis.colorScale = d3.scaleSequential()
-            .interpolator(d3.interpolateReds);
-
         vis.xScale = d3.scaleLinear()
             .range([0, vis.config.width]);
 
@@ -87,19 +84,22 @@ class Heatmap{
         // Group data per region (we get a nested array)
         vis.groupedData = d3.groups(vis.data, d => d.Region);
 
-        console.log('vis.groupedData', vis.groupedData)
         // Labels of row and columns -> unique identifier of the column called 'group' and 'variable'
         vis.groups = d3.map(vis.data, function(d){return d.Region;}).keys()
-        vis.vars = d3.map(vis.data, function(d){return d.Population;}).keys()
+        vis.vars = d3.map(vis.data, function(d){return d[vis.metric];}).keys()
 
-
-        // TODO: sort data
-        // Sort regions by alphabetical order
+        // Sort regions by alphabetical or value order
         if (vis.config.sortOption == 'alphabetically') {
           vis.groupedData.sort((a,b) => {
-            console.log(a)
             return a[0].localeCompare(b[0]);
           })
+        } else if (vis.config.sortOption == 'value') {
+            vis.groupedData.forEach((d) => {
+                d[3] = d3.sum(d[1], (k) => k[vis.metric]);
+            });
+        
+            // Descending order
+            vis.groupedData.sort((a, b) => b[3] - a[3]);
         }
 
         // Specificy accessor functions
@@ -107,9 +107,21 @@ class Heatmap{
             return d[0]
         }
         // d[0];
-        vis.colorValue = d => d.Population; //FIXME: just population for now
+        vis.colorValue = d => d[vis.metric]; //FIXME: just CO2eq_tn_per_person for now
         vis.xValue = d => d.Year;
     
+        // Set color scales on update
+        if (vis.metric == 'CO2eq') {
+            vis.colorScale = d3.scaleSequential()
+                .interpolator(d3.interpolateGreens);
+        } else if (vis.metric == 'CO2eq_tn_per_person') {
+            vis.colorScale = d3.scaleSequential()
+                .interpolator(d3.interpolateBlues);
+        } else {
+            vis.colorScale = d3.scaleSequential()
+                .interpolator(d3.interpolateReds);
+        }  
+
         // Set the scale input domains
         vis.colorScale.domain(d3.extent(vis.data, vis.colorValue));
         vis.xScale.domain(d3.extent(vis.data, vis.xValue));
@@ -172,7 +184,7 @@ class Heatmap{
               }
             })
             .on('mouseover', (event,d) => {
-              const value = (d.Population === null) ? 'No data available' : d.Population;
+              const value = (d.CO2eq_tn_per_person === null) ? 'No data available' : d.CO2eq_tn_per_person;
               d3.select('#tooltip')
                 .style('display', 'block')
                 .style('left', (event.pageX + vis.config.tooltipPadding) + 'px')   

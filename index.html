@@ -21,18 +21,15 @@
         </header> -->
         <section id="charts">
             <!-- Legend -->
-            <!-- <div name="metric-selector">
-                <input type="radio" name="metric-selector" id="absolute-emissions" value="absolute-emissions">
-                <label for="absolute-emissions">Absolute Emissions (total GHG)</label><br>
-                <input type="radio" name="metric-selector" id="emissions-intensity-capita" value="emissions-intensity-capita">
-                <label for="emissions-intensity-capita">Emissions Intensity (per capita)</label><br>
-                <input type="radio" name="metric-selector" id="emissions-intensity-gdp" value="emissions-intensity-gdp">
-                <label for="emissions-intensity-gdp">Emissions Intensity (by GDP)</label>
-            </div> -->
+            <div name="metric-selector" id="metric-selector">
+                <input type="radio" name="metric-selector" value="CO2eq" checked>Absolute Emissions (total GHG) - GREEN<br>
+                <input type="radio" name="metric-selector" value="CO2eq_tn_per_person">Emissions Intensity (per capita) - BLUE</br>
+                <input type="radio" name="metric-selector" value="CO2eq_tn_per_mil$GDP">Emissions Intensity (by GDP) - RED</br>
+            </div>
             <div id="heatmap" class="chart">
                 <div class="caption">
-                    The heat map below shows different metrics for different regions.
-                    Sort regions 
+                    <b>The heat map below shows different metrics for different regions.
+                        Sort regions </b>
                     <select id="sort-control">
                         <option value="alphabetically">alphabetically</option>
                         <option value="value">by metric</option>

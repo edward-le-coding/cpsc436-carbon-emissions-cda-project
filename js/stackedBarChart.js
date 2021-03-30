@@ -207,7 +207,7 @@ class StackedBarChart {
         .join('text')
           .attr('class', 'legendText')
           .attr('x', (d, i) => (i % 2) * (vis.config.legendWidth) + vis.config.legendSquareSize + 5)
-          .attr('y', (d, i) =>  i % 2 === 0 ? i * vis.config.legendHeight + vis.config.legendSquareSize/2 : (i-1) * vis.config.legendHeight + vis.config.legendSquareSize)
+          .attr('y', (d, i) =>  i % 2 === 0 ? i * vis.config.legendHeight + vis.config.legendSquareSize : (i-1) * vis.config.legendHeight + vis.config.legendSquareSize)
           .text(d => d)
           .attr('text-anchor', 'left');
   }

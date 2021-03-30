@@ -14,9 +14,6 @@ class StackedBarChart {
       legendWidth: 200,
       legendHeight: 10,
       legendSquareSize: 15,
-      steps: ['step0', 'step1', 'step2', 'step3', 'step4', 'step5', 'step6', 'step7', 'step8', 'step9', 'step10', 
-      'step11', 'step12', 'step13', 'step14', 'step15', 'step16', 'step17', 'step18', 'step19', 'step20', 'step21', 'step22', 
-      'step23', 'step24', 'step25', 'step26', 'step27', 'step28']
     }
     this.province = _province;
     this.data = _data;
@@ -154,8 +151,6 @@ class StackedBarChart {
     vis.renderLegend();
     vis.renderTitle();
 
-    // Call first step
-    vis.step0();
   }
 
  
@@ -229,157 +224,21 @@ class StackedBarChart {
           .text(d => `Sources of emissions over the years in ${d}`);
   }
 
-  step0() {
+  goToStep(stepIndex) {
     let vis = this;
+
+    let baseYear = 1990;
+    let className = `.year${baseYear + stepIndex}`;
 
     // set opactity of all bars to 0.2
     vis.chart.selectAll('rect')
-    .transition()
+      .transition()
       .style('opacity', 0.2);
     
     // set opacity of the bar we're looking at to 1
-    vis.chart.selectAll('.year1990')
+    vis.chart.selectAll(className)
       .transition()
       .style('opacity', 1);
-
   }
 
-  step1() {
-    let vis = this;
-
-    // set opactity of all bars to 0.2
-    vis.chart.selectAll('rect')
-     .transition()
-     .style('opacity', 0.2);
-   
-    // set opacity of the bar we're looking at to 1
-    vis.chart.selectAll('.year1991')
-      .transition()
-      .style('opacity', 1);   
-  }
-
-  step2() {
-    let vis = this;
-
-    // set opactity of all bars to 0.2
-    vis.chart.selectAll('rect')
-      .transition()
-      .style('opacity', 0.2);
-   
-    // set opacity of the bar we're looking at to 1
-    vis.chart.selectAll('.year1992')
-      .transition()
-      .style('opacity', 1); 
-  }
-
-  step3() {
-    let vis = this;
-
-    console.log("1993");
-  }
-
-  step4() {
-    let vis = this;
-
-    console.log("1994");
-  }
-
-  step5() {
-    let vis = this;
-
-    console.log("1995");
-  }
-
-  step6() {
-    let vis = this;
-
-    console.log("1996");
-  }
-
-  step7() {
-    let vis = this;
-
-    console.log("1997");
-  }
-
-  step8() {
-    let vis = this;
-
-    console.log("1998");
-  }
-
-  step9() {
-    let vis = this;
-
-    console.log("1999");
-  }
-
-  step10() {
-    let vis = this;
-
-    console.log("2000");
-  }
-
-  step11() {
-    let vis = this;
-
-    console.log("2001");
-  }
-  step12() {
-    let vis = this;
-
-    console.log("2002");
-  }
-
-  step13() {
-    let vis = this;
-
-    console.log("2003");
-  }
-
-  step14() {
-    let vis = this;
-
-    console.log("2004");
-  }
-
-  step15() {
-    let vis = this;
-
-    console.log("2005");
-  }
-
-  step16() {
-    let vis = this;
-
-    console.log("2006");
-  }
-
-  step17() {
-    let vis = this;
-
-    console.log("2007");
-  }
-
-  step18() {
-    let vis = this;
-
-    console.log("2008");
-  }
-
-  step19() {
-    let vis = this;
-
-    console.log("2009");
-  }
-
-  step20() {
-    let vis = this;
-
-    console.log("2010");
-  }
-
-  goToStep(stepIndex) {
-    this[this.config.steps[stepIndex]]();
-  }
 }

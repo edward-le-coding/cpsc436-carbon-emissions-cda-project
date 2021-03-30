@@ -31,6 +31,8 @@
     // helper function to update views
     function updateViews() {
       let selectedProvince = document.getElementById('provinces-selector').value;
+      console.log("selectedProvince = ")
+      console.log(selectedProvince);
       barChartData = origData.filter(d => d.Region === selectedProvince)
       stackedBarChart.data = barChartData;
       stackedBarChart.province = [selectedProvince];

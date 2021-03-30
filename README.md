@@ -24,6 +24,8 @@ Flo's sources:
 - for rotating and placing y-axis label: https://bl.ocks.org/d3noob/23e42c8f67210ac6c678db2cd07a747e
 - for color schemes: https://observablehq.com/@d3/color-schemes
 - for selecting classes when using numbers: https://stackoverflow.com/questions/17435838/how-to-use-d3-selectall-with-multiple-class-names/17436116
+- for basic outline of renderVis(): https://github.com/UBC-InfoVis/2021-436V-examples/tree/master/d3-stacked-bar-chart
+ 
 
 Flo's TODOs:
 - use better colors for stacked bar chart

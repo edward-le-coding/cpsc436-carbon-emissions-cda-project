@@ -17,6 +17,12 @@ class StackedBarChart {
     }
     this.province = _province;
     this.data = _data;
+
+    // need to hardcode the years here because otherwise domain changes when we don't have data for some provinces
+    this.allYears = [];
+    for (let i = 1990; i <= 2018; i++) {
+      this.allYears.push(i);
+    }
     this.initVis();
   }
   
@@ -32,6 +38,7 @@ class StackedBarChart {
 
     // Intialize the scales
     vis.xScale = d3.scaleBand()
+        .domain(vis.allYears)
         .range([0, vis.width])
         .paddingInner(0.2)
         .paddingOuter(0.2);
@@ -99,6 +106,9 @@ class StackedBarChart {
     vis.xValue = d => d.data.year;
     vis.yValue = d => d[1];
 
+    // Specify which sources we want to show
+    vis.sources = [...new Set(vis.data.map(d => d.Source))];
+
     // roll up the data to get nested map of year, source and sum of CO2eq for each source
     vis.rolledUpData = d3.rollup(vis.data, v => d3.sum(v, d => d.CO2eq), d => d.Year, d => d.Source);
     
@@ -113,9 +123,29 @@ class StackedBarChart {
       vis.flattenedData.push(obj);
     });
 
-    // Initialize stack generator and specify the categories or layers
-    // that we want to show in the chart
-    vis.sources = [...new Set(vis.data.map(d => d.Source))];
+    // add dummy values for all the years where we don't have data for that province
+    let yearsOfRolledUpData = [ ...vis.rolledUpData.keys()];
+    let difference = vis.allYears.filter(e => !yearsOfRolledUpData.includes(e));
+
+    for (let j = 0; j < difference.length; j++) {
+      let obj = {};
+      obj.year = difference[j];
+      for (let k = 0; k < vis.sources.length; k++) {
+        obj[`${vis.sources[k]}`] = 0;
+      }
+      vis.flattenedData.push(obj);
+    }
+
+    console.log("years of rolledUpData");
+    console.log(yearsOfRolledUpData);
+
+    console.log("difference");
+    console.log(difference);
+
+    console.log("flattened data");
+    console.log(vis.flattenedData);
+
+    // Initialize stack generator with the sources
     vis.stackGen = d3.stack()
           .keys(vis.sources);
 
@@ -139,8 +169,7 @@ class StackedBarChart {
         return d3.max(d);
     })
 
-    // set domain of scales
-    vis.xScale.domain([ ...vis.rolledUpData.keys()]);
+   
 
     vis.yScale.domain([0, maxYValue]);
 
@@ -169,7 +198,7 @@ class StackedBarChart {
       .selectAll('rect')
         .data(d => d)
       .join('rect')
-        .attr('class', d => "year" + d.data.year)
+        .attr('class', d => 'year' + d.data.year)
         .attr('x', d => vis.xScale(vis.xValue(d)))
         .attr('y', d => vis.yScale(vis.yValue(d)))
         .attr('height', d => {

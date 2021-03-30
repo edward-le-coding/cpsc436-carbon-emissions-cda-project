@@ -169,10 +169,8 @@ class StackedBarChart {
         return d3.max(d);
     })
 
-   
-
+    // set the dynamic domains
     vis.yScale.domain([0, maxYValue]);
-
     vis.colorScale.domain(vis.sources);
 
     // Render the bar chart, the legend and the title
@@ -196,20 +194,27 @@ class StackedBarChart {
         .attr('class', d => `category cat-${d.key}`)
         .style('fill', d => vis.colorScale(d.key))
       .selectAll('rect')
-        .data(d => d)
+        .data(d => {
+          console.log("data key is")
+          console.log(d);
+          return d;
+        })
       .join('rect')
         .attr('class', d => 'year' + d.data.year)
         .attr('x', d => vis.xScale(vis.xValue(d)))
         .attr('y', d => vis.yScale(vis.yValue(d)))
         .attr('height', d => {
-          // TODO: need to deal with cases where d[1] is null
+          // TODO: need to deal with cases where d[0] is null
           if (!d[0]) {
-            console.log("!d[0]");
+            console.log("!d[0], d is ");
+            console.log(d);
           }
-          if (!d[1]) {
-            console.log("!d[1]");
+          let yValue = !d[1]? 0 : vis.yScale(d[1]);
+          if (yValue == 0) {
+            console.log("!d[1], d is ");
+            console.log(d);
           }
-          return vis.yScale(d[0]) - vis.yScale(d[1])
+          return vis.yScale(d[0]) - yValue;
         })
         .attr('width', vis.xScale.bandwidth());
 

@@ -23,6 +23,7 @@ Flo's sources:
 - for finding max in 2D matrix: https://stackoverflow.com/questions/31249419/how-to-find-max-value-from-a-2d-matrix-using-d3-js
 - for rotating and placing y-axis label: https://bl.ocks.org/d3noob/23e42c8f67210ac6c678db2cd07a747e
 - for color schemes: https://observablehq.com/@d3/color-schemes
+- for selecting classes when using numbers: https://stackoverflow.com/questions/17435838/how-to-use-d3-selectall-with-multiple-class-names/17436116
 
 Flo's TODOs:
 - use better colors for stacked bar chart
@@ -31,4 +32,4 @@ Flo's TODOs:
 - need to deal with cases where d[1] is null
 - ask Francis why I have to use .axis-label instead of attr('class', 'axis)
 - why do I need d and i for legend even though I don't use d?
-- why is xValue d.data.year instead of just d.year?
+- why is xValue d.data.year instead of just d.year? where does d.data.year come from?

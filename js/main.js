@@ -1,3 +1,8 @@
+ // Global objects
+ let barChartData;
+ 
+ 
+ 
  /**
  * Load data from CSV file asynchronously and render stacked bar chart
  */
@@ -8,15 +13,29 @@
       d.Year = +d.Year;
     });
 
-    
+    console.log("barchart data)");
+    console.log(barChartData);
+
+    const origData = barChartData;
 
     // Initialize bar chart with default Canada
-    let defaultProvince = ['Canada'];
+    barChartData = origData.filter(d => d.Region === 'Canada');
+    let province = ['Canada'];
 
-    // TODO: implement listeners to change province
-    let province = defaultProvince;
     stackedBarChart = new StackedBarChart({ parentElement: '#stackedBarChart'}, barChartData, province);
     stackedBarChart.updateVis();
+
+    // add event listener
+    document.getElementById('provinces-selector').addEventListener('click', updateViews);
+
+    // helper function to update views
+    function updateViews() {
+      let selectedProvince = document.getElementById('provinces-selector').value;
+      barChartData = origData.filter(d => d.Region === selectedProvince)
+      stackedBarChart.data = barChartData;
+      stackedBarChart.province = [selectedProvince];
+      stackedBarChart.updateVis();
+    }
 
     // Create a waypoint for each `step` container
     const waypoints = d3.selectAll('.step').each( function(d, stepIndex) {

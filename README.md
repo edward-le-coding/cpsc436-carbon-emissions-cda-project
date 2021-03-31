@@ -44,3 +44,6 @@ Flo's TODOs:
 - ask Francis why I have to use .axis-label instead of attr('class', 'axis)
 - why do I need d and i for legend even though I don't use d?
 - why is xValue d.data.year instead of just d.year? where does d.data.year come from?
+Heatmap:
+- https://github.com/UBC-InfoVis/2021-436V-case-studies/tree/master/case-study_measles-and-vaccines
+- https://www.d3-graph-gallery.com/graph/heatmap_style.html

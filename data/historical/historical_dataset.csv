@@ -1,4 +1,4 @@
-Year,Region,Source,CO2eq,GDP,Population,CO2eq_tn_per_person,CO2eq_tn_per_mil$GDP
+Year,Region,Source,CO2eq,GDP,Population,CO2eq_tn_per_person,CO2eq_tn_per_mil_GDP
 2018,Prince Edward Island,Oil and Gas,3.7700000000000005e-07,6324.0,153396,2.4576912044642626e-06,
 2018,Prince Edward Island,Heavy Industry,0.012618697,6324.0,153396,0.08226222978434901,
 2018,Prince Edward Island,Waste,0.061160059,6324.0,153396,0.3987070001825341,

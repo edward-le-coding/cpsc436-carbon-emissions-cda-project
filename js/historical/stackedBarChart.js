@@ -16,8 +16,12 @@ class StackedBarChart {
       legendSquareSize: 15,
     }
     this.province = _province;
-    this.data = _data;
+    this.data = _data
 
+    // Specify which sources we want to show
+    this.sources = [...new Set(this.data.map(d => d.Source))];
+    console.log('vis.sources', this.sources)
+    
     // need to hardcode the years here because otherwise domain changes when we don't have data for some provinces
     this.allYears = [];
     for (let i = 1990; i <= 2018; i++) {
@@ -47,9 +51,8 @@ class StackedBarChart {
         .range([vis.height, 0]);
 
     vis.colorScale = d3.scaleOrdinal()
-        .range(d3.schemePaired);
+        .range(d3.schemeCategory10); // scheme paired implied relationship between unrelated economic sectors (sources)
 
-    
     // Initialize axes
     vis.xAxis = d3.axisBottom(vis.xScale);
     vis.yAxis = d3.axisLeft(vis.yScale).ticks(6);
@@ -106,9 +109,6 @@ class StackedBarChart {
     vis.xValue = d => d.data.year;
     vis.yValue = d => d[1];
 
-    // Specify which sources we want to show
-    vis.sources = [...new Set(vis.data.map(d => d.Source))];
-
     // roll up the data to get nested map of year, source and sum of CO2eq for each source
     vis.rolledUpData = d3.rollup(vis.data, v => d3.sum(v, d => d.CO2eq), d => d.Year, d => d.Source);
     
@@ -136,33 +136,23 @@ class StackedBarChart {
       vis.flattenedData.push(obj);
     }
 
-    console.log("years of rolledUpData");
-    console.log(yearsOfRolledUpData);
-
-    console.log("difference");
-    console.log(difference);
-
-    console.log("flattened data");
-    console.log(vis.flattenedData);
+    // console.log("years of rolledUpData", yearsOfRolledUpData);
+    // console.log("difference", difference);
+    // console.log("flattened data", vis.flattenedData);
 
     // Initialize stack generator with the sources
-    vis.stackGen = d3.stack()
-          .keys(vis.sources);
+    vis.stackGen = d3.stack().keys(vis.sources);
 
     // Call stack generator on the dataset
     vis.stackedData = vis.stackGen(vis.flattenedData);
 
-    console.log("rolled up by year and source");
-    console.log(vis.rolledUpData);
-
-    console.log("stacked data");
-    console.log(vis.stackedData);
-
-    console.log("keys of rolled up data");
-    console.log([ ...vis.rolledUpData.keys()]);
-
-    console.log("sources");
-    console.log(vis.sources);
+    console.log('vis.stackedData', vis.stackedData)
+    // console.log("rolled up by year and source", vis.rolledUpData);
+    // console.log("stacked data", vis.stackedData);
+    // console.log("keys of rolled up data", [ ...vis.rolledUpData.keys()]);
+    // console.log("sources", vis.sources);
+    // console.log('vis.stackedData.length', vis.stackedData.length)
+    // console.log('stackedData', vis.stackedData)
 
     // because the data is stacked we know highest val is in last element of stacked data
     let maxYValue = d3.max(vis.stackedData[vis.stackedData.length - 1], d => {
@@ -180,7 +170,6 @@ class StackedBarChart {
 
   }
 
- 
 
   /**
    * This function contains the D3 code for binding data to visual elements
@@ -194,11 +183,7 @@ class StackedBarChart {
         .attr('class', d => `category cat-${d.key}`)
         .style('fill', d => vis.colorScale(d.key))
       .selectAll('rect')
-        .data(d => {
-          console.log("data key is")
-          console.log(d);
-          return d;
-        })
+        .data(d => d)
       .join('rect')
         .attr('class', d => 'year' + d.data.year)
         .attr('x', d => vis.xScale(vis.xValue(d)))
@@ -206,13 +191,11 @@ class StackedBarChart {
         .attr('height', d => {
           // TODO: need to deal with cases where d[0] is null
           if (!d[0]) {
-            console.log("!d[0], d is ");
-            console.log(d);
+            // console.log(`!d[0], d is ${d}`);
           }
           let yValue = !d[1]? 0 : vis.yScale(d[1]);
           if (yValue == 0) {
-            console.log("!d[1], d is ");
-            console.log(d);
+            // console.log(`!d[1], d is ${d}`);
           }
           return vis.yScale(d[0]) - yValue;
         })

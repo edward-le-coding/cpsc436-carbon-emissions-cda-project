@@ -7,25 +7,56 @@
     <link href="https://fonts.googleapis.com/css2?family=Castoro:ital@1&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1 class="title-text">Canada's Carbon Emissions</h1>
+        <!-- <header id="landingPage">
+            <h1>
+                Canada's Climate is Changing.
+            </h1>
+            <h2>
+                Here's Canada's carbon emissions and what Canada is doing to cut them.
+            </h2>
+            <p>Click the button below or scroll to see Canada's carbon emissions.</p>
+            <button id="readMore" style="border: 0; background: transparent">
+                <img id="readMoreImage" src="assets/arrow-down-circle-fill.svg" width="90" height="50"/>
+            </button>
+        </header> -->
+        <section id="charts">
+            Legend
+            <div name="metric-selector">
+                <input type="radio" name="metric-selector" id="absolute-emissions" value="absolute-emissions">
+                <label for="absolute-emissions">Absolute Emissions (total GHG)</label><br>
+                <input type="radio" name="metric-selector" id="emissions-intensity-capita" value="emissions-intensity-capita">
+                <label for="emissions-intensity-capita">Emissions Intensity (per capita)</label><br>
+                <input type="radio" name="metric-selector" id="emissions-intensity-gdp" value="emissions-intensity-gdp">
+                <label for="emissions-intensity-gdp">Emissions Intensity (by GDP)</label>
+            </div>
+            Filter provinces and territories: 
+            <select id="provinces-selector">
+                <option value="Canada">Canada</option>
+                <option value="Alberta">Alberta</option>
+                <option value="British Columbia">British Columbia</option>
+                <option value="Manitoba">Manitoba</option>
+                <option value="New Brunswick">New Brunswick</option>
+                <option value="Newfoundland and Labrador">New Foundland and Labrador</option>
+                <option value="Northwest Territories">Northwest Territories</option>
+                <option value="Nova Dcotia">Nova Scotia</option>
+                <option value="Nunavut">Nunavut</option>
+                <option value="Ontario">Ontario</option>
+                <option value="Prince Edward Island">Prince Edward Island</option>
+                <option value="Quebec">Quebec</option>
+                <option value="Saskatchewan">Saskatchewan</option>
+                <option value="Yukon">Yukon</option>
+            </select>
 
-    Filter provinces and territories: 
-        <select id="provinces-selector">
-            <option value="Canada">Canada</option>
-            <option value="Alberta">Alberta</option>
-            <option value="British Columbia">British Columbia</option>
-            <option value="Manitoba">Manitoba</option>
-            <option value="New Brunswick">New Brunswick</option>
-            <option value="Newfoundland and Labrador">New Foundland and Labrador</option>
-            <option value="Northwest Territories">Northwest Territories</option>
-            <option value="Nova Dcotia">Nova Scotia</option>
-            <option value="Nunavut">Nunavut</option>
-            <option value="Ontario">Ontario</option>
-            <option value="Prince Edward Island">Prince Edward Island</option>
-            <option value="Quebec">Quebec</option>
-            <option value="Saskatchewan">Saskatchewan</option>
-            <option value="Yukon">Yukon</option>
-        </select>
+            <div>
+                <svg id="heatmap" class="chart"></svg>
+            </div>
+            <div>
+                <svg id="choropleth" class="chart"></svg>
+            </div>
+            <!-- <div>
+                <svg id="stacked-bar-chart" class="chart"></svg>
+            </div> -->
+        </section>
 
     <div class="page">
         <svg id="stackedBarChart"></svg>
@@ -64,34 +95,12 @@
         </div>
     </div>
 
-
-    <!-- Legend
-    <div name="metric-selector">
-        <input type="radio" name="metric-selector" id="absolute-emissions" value="absolute-emissions">
-        <label for="absolute-emissions">Absolute Emissions (total GHG)</label><br>
-        <input type="radio" name="metric-selector" id="emissions-intensity-capita" value="emissions-intensity-capita">
-        <label for="emissions-intensity-capita">Emissions Intensity (per capita)</label><br>
-        <input type="radio" name="metric-selector" id="emissions-intensity-gdp" value="emissions-intensity-gdp">
-        <label for="emissions-intensity-gdp">Emissions Intensity (by GDP)</label>
-    </div>
-    <div>
-        <svg id="heatmap" class="chart"></svg> 
-    </div>
-    <div>
-        <svg id="choropleth" class="chart"></svg>
-    </div>
-    <div>
-        <svg id="stacked-bar-chart" class="chart"></svg>
-    </div>
-
-    <div>
-        <svg id="timeline" class="chart"></svg>
-    </div>
-
-    <div id="tooltip"></div> -->
+    <div id="tooltip"></div>
     
     <script src="js/d3.v6.min.js"></script>
     <script src="js/noframework.waypoints.min.js"></script>
+    <script src="/js/sticky.min.js"></script>
+    <script src="js/topojson.v3.js"></script>
 
     <script src="js/historical/main.js"></script>
     <script src="js/historical/heatmap.js"></script>
@@ -100,6 +109,6 @@
 
     <script src="js/policy/main.js"></script>
     <script src="js/policy/timeline.js"></script>
-
+    
 </body>
 </html>

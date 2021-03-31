@@ -1,53 +1,57 @@
- // Global objects
- let barChartData;
+// Global objects
+let barChartData;
+let masterBarChartData;
  
- 
- 
- /**
- * Load data from CSV file asynchronously and render stacked bar chart
- */
-  d3.csv('data/historical/historical_dataset.csv').then(_data => {
-    barChartData = _data;
-    barChartData.forEach(d => {
-      d.CO2eq = +d.CO2eq;
-      d.Year = +d.Year;
+let uuid = 0;
+let subsetGeoChoropleth;
+let subsetHistData;
+let masterGeoData;
+let masterHistData;
+Promise.all([
+    d3.json('data/canada_provinces.topo.json'),
+    d3.csv('data/historical/historical_dataset.csv')
+]).then(_data => {
+  masterGeoData = _data[0];
+  masterHistData = _data[1];
+  // Convert columns to numerical values
+  masterHistData.forEach(d => {
+      Object.keys(d).forEach(attr => {
+        d.UUID = uuid;
+        d.Year = +d.Year;
+        d.CO2eq = +d.CO2eq;
+        d.GDP = +d.GDP;
+        d.Population = +d.Population;
+        d.CO2eq_tn_per_person = +d.CO2eq_tn_per_person;
+        d.CO2eq_tn_per_mil$GDP = +d.CO2eq_tn_per_mil$GDP;
+        uuid++;
+      });
     });
+  // Prepare default data
+  subsetHistData =  masterHistData.filter(d => d.Year == 2018);
+  subsetGeoChoropleth = prepareGeoData(subsetHistData, masterGeoData);
+  let histChoropleth = new Choropleth({
+    parentElement: '#choropleth',
+    containerHeight: 149.6,
+    containerWidth: 300}, subsetGeoChoropleth);
 
-    console.log("barchart data)");
-    console.log(barChartData);
 
-    const origData = barChartData;
+  // Initialize bar chart with default Canada
+  masterBarChartData = masterHistData.filter(d=>d.Source!='Total')
+  barChartData = masterBarChartData.filter(d => d.Region === 'Canada');
+  let province = ['Canada'];
 
-    // Initialize bar chart with default Canada
-    barChartData = origData.filter(d => d.Region === 'Canada');
-    let province = ['Canada'];
-
-    stackedBarChart = new StackedBarChart({ parentElement: '#stackedBarChart'}, barChartData, province);
-    stackedBarChart.updateVis();
-
-    // add event listener
-    document.getElementById('provinces-selector').addEventListener('click', updateViews);
-
-    // helper function to update views
-    function updateViews() {
-      let selectedProvince = document.getElementById('provinces-selector').value;
-      console.log("selectedProvince = ")
-      console.log(selectedProvince);
-      barChartData = origData.filter(d => d.Region === selectedProvince)
-      stackedBarChart.data = barChartData;
-      stackedBarChart.province = [selectedProvince];
-      stackedBarChart.updateVis();
-    }
-
-    // Create a waypoint for each `step` container
-    const waypoints = d3.selectAll('.step').each( function(d, stepIndex) {
+  stackedBarChart = new StackedBarChart({ parentElement: '#stackedBarChart'}, barChartData, province);
+  stackedBarChart.updateVis();
+  
+  // Create a waypoint for each `step` container
+  const waypoints = d3.selectAll('.step').each( function(d, stepIndex) {
     return new Waypoint({
       // `this` contains the current HTML element
       element: this,
       handler: function(direction) {
         // Check if the user is scrolling up or down
         const nextStep = direction === 'down' ? stepIndex : Math.max(0, stepIndex - 1)
-        
+
         // Update visualization based on the current step
         stackedBarChart.goToStep(nextStep);
       },
@@ -55,7 +59,42 @@
       offset: '50%',
     });
   });
+}).catch(error => console.error(error)); 
 
+//Todo:
+//- initialize views
+//- filter data
+//- listen to events and update views
+function prepareGeoData (histSubset, geoData){
+  geoData.objects.provinces.geometries.forEach(d => {
+    for (let i = 0; i < histSubset.length; i++) {
+      if (d.properties.PRNAME == histSubset[i].region) {
+        d.properties.UUID = histSubset[i].uuid;
+        d.properties.Year = histSubset[i].Year;
+        d.properties.CO2eq = histSubset[i].CO2eq;
+        d.properties.GDP = histSubset[i].GDP;
+        d.properties.Population = histSubset[i].Population;
+        d.properties.CO2eq_tn_per_person = histSubset[i].CO2eq_tn_per_person;
+        d.properties.CO2eq_tn_per_mil$GDP = histSubset[i].CO2eq_tn_per_mil$GDP;
+      }
+    }
+  });
+  return geoData
+}
 
-})
-.catch(error => console.error(error));
+// add event listener
+document.getElementById('provinces-selector').addEventListener('click', updateViews);
+  
+
+// helper function to update views
+function updateViews() {
+  console.log('masterHistData', masterHistData)
+  let selectedProvince = document.getElementById('provinces-selector').value;
+  console.log('selectedProvince', selectedProvince)
+  console.log('type of selectedProvince', typeof selectedProvince)
+  barChartData = masterBarChartData.filter(d => d.Region === selectedProvince)
+  console.log('barChartData', barChartData )
+  stackedBarChart.data = barChartData;
+  stackedBarChart.province = [selectedProvince];
+  stackedBarChart.updateVis();
+}

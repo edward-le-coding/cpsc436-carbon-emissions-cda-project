@@ -7,6 +7,12 @@ let subsetHistData;
 let masterGeoData;
 let masterHistData;
 let heatmap;
+
+const metricUnits = {
+  CO2eq: 'million tn CO2',
+  CO2eq_tn_per_person: 'tn CO2e emitted/person',
+  CO2eq_tn_per_mil_GDP: 'tn CO2e emitted/$1 million CAD' // TODO add note about 2012  inflation-adjusted dollars
+}
 Promise.all([
     d3.json('data/canada_provinces.topo.json'),
     d3.csv('data/historical/historical_dataset.csv')
@@ -22,7 +28,7 @@ Promise.all([
         d.GDP = +d.GDP;
         d.Population = +d.Population;
         d.CO2eq_tn_per_person = +d.CO2eq_tn_per_person;
-        d.CO2eq_tn_per_mil$GDP = +d.CO2eq_tn_per_mil$GDP;
+        d.CO2eq_tn_per_mil_GDP = +d.CO2eq_tn_per_mil_GDP;
         uuid++;
       });
     });
@@ -52,7 +58,7 @@ function prepareGeoData (histSubset, geoData){
         d.properties.GDP = histSubset[i].GDP;
         d.properties.Population = histSubset[i].Population;
         d.properties.CO2eq_tn_per_person = histSubset[i].CO2eq_tn_per_person;
-        d.properties.CO2eq_tn_per_mil$GDP = histSubset[i].CO2eq_tn_per_mil$GDP;
+        d.properties.CO2eq_tn_per_mil_GDP = histSubset[i].CO2eq_tn_per_mil_GDP;
       }
     }
   });
@@ -73,3 +79,31 @@ d3.select("#metric-selector").on("change", function(d) {
   heatmap.metric = metricSelectorFilter
   heatmap.updateVis();
 })
+
+
+/**
+ * Event listener: toggle filter categories
+ */
+ d3.selectAll('.legend-btn').on('change', function() {
+
+  property = d3.select(this).property("metric")
+
+
+  // Toggle 'active' class
+  d3.select(this).classed('active', !d3.select(this).classed('active'))
+
+  // Check which categories are active
+  let selectedMetricString = d3.select(this).attr('metric')
+  console.log('selectedCategoryString', selectedMetricString)
+
+  if (selectedMetricString != heatmap.metric) {
+
+    d3.select(this).classed('active', !d3.select(this).classed('active'))
+
+  }
+
+  heatmap.metric = selectedMetricString
+  heatmap.updateVis()
+
+});
+

@@ -185,13 +185,14 @@ class Heatmap{
             })
             .on('mouseover', (event,d) => {
               const value = (d.CO2eq_tn_per_person === null) ? 'No data available' : d.CO2eq_tn_per_person;
+              let units = metricUnits[vis.metric]
               d3.select('#tooltip')
                 .style('display', 'block')
                 .style('left', (event.pageX + vis.config.tooltipPadding) + 'px')   
                 .style('top', (event.pageY + vis.config.tooltipPadding) + 'px')
                 .html(`
                   <div class='tooltip-title'>${d.Region}</div>
-                  <div>${d.Year}: <strong>${value}</strong></div>
+                  <div>${d.Year}: <strong>${value.toFixed(0)} ${units}</strong></div>
                 `);
             })
             .on('mouseleave', () => {

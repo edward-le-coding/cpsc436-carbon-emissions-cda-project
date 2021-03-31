@@ -22,6 +22,11 @@ h1 {
 #choropleth {
     float:left;
 }
+.geo-boundary-path {
+    stroke: #fff;
+    fill: none;
+    stroke-width: 1;
+  }
 #stackedBarChart {
   position: fixed;
   margin-top: 50px;

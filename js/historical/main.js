@@ -43,10 +43,9 @@ Promise.all([
   }, heatmapData);
 
   subsetGeoChoropleth = prepareGeoData(subsetHistData, masterGeoData);
+  console.log('subsetGeoChoropleth', subsetGeoChoropleth)
   let histChoropleth = new Choropleth({
-    parentElement: '#choropleth',
-    containerHeight: 149.6,
-    containerWidth: 300}, subsetGeoChoropleth);
+    parentElement: '#choropleth'}, subsetGeoChoropleth);
 
 
   // Initialize bar chart with default Canada

@@ -8,7 +8,7 @@ class StackedBarChart {
   constructor(_config, _data, _province) {
     this.config = {
       parentElement: _config.parentElement,
-      containerWidth: 500,
+      containerWidth: 800,
       containerHeight: 500,
       margin: {top: 250, right: 10, bottom: 50, left: 100},
       legendWidth: 200,
@@ -20,7 +20,6 @@ class StackedBarChart {
 
     // Specify which sources we want to show
     this.sources = [...new Set(this.data.map(d => d.Source))];
-    console.log('vis.sources', this.sources)
     
     // need to hardcode the years here because otherwise domain changes when we don't have data for some provinces
     this.allYears = [];
@@ -146,7 +145,7 @@ class StackedBarChart {
     // Call stack generator on the dataset
     vis.stackedData = vis.stackGen(vis.flattenedData);
 
-    console.log('vis.stackedData', vis.stackedData)
+    // console.log('vis.stackedData', vis.stackedData)
     // console.log("rolled up by year and source", vis.rolledUpData);
     // console.log("stacked data", vis.stackedData);
     // console.log("keys of rolled up data", [ ...vis.rolledUpData.keys()]);

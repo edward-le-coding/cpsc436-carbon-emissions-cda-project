@@ -41,3 +41,5 @@ TODOs for final submission:
 - fix the heatmap not indicating what sturation of colors mean
 - make stacked bar chart and choropleth transition in like heatmap as well
 - ensure website is more or less responsive (currently margins hardcoded as pixels instead of vH)
+- fix temporary fix of position: sticky
+- hook up choropleth and heatmap to waypoints steps

@@ -56,7 +56,7 @@ body {
 /* choropleth view */
 #choropleth {
     position: sticky;
-    bottom: 0;
+    top: 400px;
     margin-top: 300px;
     float:left;
     margin-top: 300px;
@@ -71,8 +71,8 @@ body {
 /* stacked bar chart view */
 #stackedBarChart {
   position: sticky;
-  bottom: 0;
-  margin-left: 400px;
+  top: 400px;
+  margin-left: 350px;
   margin-top: 300px;
 }
 
@@ -113,6 +113,8 @@ rect {
 #heatmap {
   float:left;
   margin-top: 200px;
+  position: sticky;
+  top: 0;
 }
 
 #tooltip {

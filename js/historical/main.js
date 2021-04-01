@@ -92,7 +92,7 @@ function prepareGeoData (histSubset, geoData){
 }
 
 // add event listener
-document.getElementById('provinces-selector').addEventListener('click', updateViews);
+document.getElementById('provinces-selector').addEventListener('change', updateViews);
   
 
 // helper function to update views

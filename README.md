@@ -34,6 +34,10 @@ Heatmap:
 - https://github.com/UBC-InfoVis/2021-436V-case-studies/tree/master/case-study_measles-and-vaccines
 - https://www.d3-graph-gallery.com/graph/heatmap_style.html
 
+The following is to indicate what is still work in progress.
 TODOs for final submission:
 - fix layout
 - fix the css labels in regard to stacked bar chart (are too general at the moment, need to refer to stacked bar chart more clearly)
+- fix the heatmap not indicating what sturation of colors mean
+- make stacked bar chart and choropleth transition in like heatmap as well
+- ensure website is more or less responsive (currently margins hardcoded as pixels instead of vH)

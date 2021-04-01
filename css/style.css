@@ -5,30 +5,61 @@ body {
     font-weight: 400;
     background: #f7f7f7;
 }
-
-h1 {
-  position: fixed;
-  margin-bottom: 50px;
-}
-  
-.page {
-  margin: 2rem;
-  max-width: 50rem;
-}
   
 .container {
   position: relative;
+  margin-top: 500px;
   margin-bottom: 100px;
 }
 
-#charts {
-  /* position: fixed; */
+/* landing page */ 
+#landingPage{
+  background-image: url('../assets/edmonton-77798_1280.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(255,255,255,0.6);
+  background-blend-mode: lighten;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+}
+
+#landingPage h1{
+  font-size: 60px;
+}
+
+#landingPage p{
+  font-size: 24px;
+}
+
+#landingPage .button{
+  background-image: url('../assets/scroll button.png');
+  background-size: cover;
+}
+
+/* scrollwheel */
+#prose {
+  margin-left: 1250px;
+  padding-top: 300px;
+}
+
+#prose .step {
+  height: 500px;
+}
+  
+.step {
+  font-size: 1rem;
 }
 
 /* choropleth view */
 #choropleth {
+    position: sticky;
+    bottom: 0;
+    margin-top: 300px;
     float:left;
-    position: fixed;
+    margin-top: 300px;
 }
 
 .geo-boundary-path {
@@ -39,8 +70,10 @@ h1 {
 
 /* stacked bar chart view */
 #stackedBarChart {
-  position: fixed;
-  margin-top: 50px;
+  position: sticky;
+  bottom: 0;
+  margin-left: 400px;
+  margin-top: 300px;
 }
 
 .chart-label {
@@ -76,60 +109,10 @@ rect {
   fill: black;
 }
 
-
-/* scrollwheel */
-#prose {
-  margin-left: 1100px;
-  padding-top: 300px;
-}
-
-#prose .step {
-  height: 500px;
-}
-  
-.step {
-  font-size: 1rem;
-}
-  
-
-/* landing page */ 
-
-#landingPage{
-    background-image: url('../assets/edmonton-77798_1280.jpg');
-    height:100vh;
-    display: flex;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: rgba(255,255,255,0.6);
-    background-blend-mode: lighten;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0 10px;
-}
-#landingPage h1{
-    font-size: 60px;
-}
-#landingPage p{
-    font-size: 24px;
-}
-#landingPage .button{
-    background-image: url('../assets/scroll button.png');
-    background-size: cover;
-}
-#readMore{
-
-}
-
-#readMoreImage {
-    fill: green;
-}
-
 /* heatmap view */
 #heatmap {
   float:left;
-  position: fixed;
+  margin-top: 200px;
 }
 
 #tooltip {

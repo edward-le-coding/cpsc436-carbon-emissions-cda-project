@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Castoro:ital@1&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-        <!-- <header id="landingPage">
+       <header id="landingPage">
             <h1>
                 Canada's Climate is Changing.
             </h1>
@@ -18,7 +18,7 @@
             <button id="readMore" style="border: 0; background: transparent">
                 <img id="readMoreImage" src="assets/arrow-down-circle-fill.svg" width="90" height="50"/>
             </button>
-        </header> -->
+       </header>
         <section id="charts">
             <!-- Legend -->
             <div name="metric-selector" id="metric-selector">
@@ -34,15 +34,53 @@
                     <option value="alphabetically">alphabetically</option>
                     <option value="value">by metric</option>
                 </select>
-            </div>            
-
-            <div id="heatmap" class="chart">
             </div>
+
+            <div id="heatmap" class="chart"></div>
             
-            <div id="choropleth" class="chart">
+            <div id="choropleth" class="chart"></div>
+
+            <svg id="stackedBarChart"></svg>
+            
+            <div class="container">
+
+                <div id="prose">
+                    <div class="step" id="step0">1990</div>
+                    <div class="step" id="step1">1991</div>
+                    <div class="step" id="step2">1992</div>
+                    <div class="step" id="step3">1993</div>
+                    <div class="step" id="step4">1994</div>
+                    <div class="step" id="step5">1995</div>
+                    <div class="step" id="step6">1996</div>
+                    <div class="step" id="step7">1997</div>
+                    <div class="step" id="step8">1998</div>
+                    <div class="step" id="step9">1999</div>
+                    <div class="step" id="step10">2000</div>
+                    <div class="step" id="step11">2001</div>
+                    <div class="step" id="step12">2002</div>
+                    <div class="step" id="step13">2003</div>
+                    <div class="step" id="step14">2004</div>
+                    <div class="step" id="step15">2005</div>
+                    <div class="step" id="step16">2006</div>
+                    <div class="step" id="step17">2007</div>
+                    <div class="step" id="step18">2008</div>
+                    <div class="step" id="step19">2009</div>
+                    <div class="step" id="step20">2010</div>
+                    <div class="step" id="step21">2011</div>
+                    <div class="step" id="step22">2012</div>
+                    <div class="step" id="step23">2013</div>
+                    <div class="step" id="step24">2014</div>
+                    <div class="step" id="step25">2015</div>
+                    <div class="step" id="step26">2016</div>
+                    <div class="step" id="step27">2017</div>
+                    <div class="step" id="step28">2018</div>
+                </div>
+
+
             </div>
 
-            <!-- This is only for testing purposes until I have the linking work correctly -->
+
+            <!-- This is only for testing purposes until we have the linking work correctly -->
             Filter provinces and territories: 
             <select id="provinces-selector">
                 <option value="Canada">Canada</option>
@@ -63,43 +101,6 @@
             
             
         </section>
-
-    <div class="page">
-        <svg id="stackedBarChart"></svg>
-        <div class="container">
-            <div id="prose">
-                <div class="step" id="step0">1990</div>
-                <div class="step" id="step1">1991</div>
-                <div class="step" id="step2">1992</div>
-                <div class="step" id="step3">1993</div>
-                <div class="step" id="step4">1994</div>
-                <div class="step" id="step5">1995</div>
-                <div class="step" id="step6">1996</div>
-                <div class="step" id="step7">1997</div>
-                <div class="step" id="step8">1998</div>
-                <div class="step" id="step9">1999</div>
-                <div class="step" id="step10">2000</div>
-                <div class="step" id="step11">2001</div>
-                <div class="step" id="step12">2002</div>
-                <div class="step" id="step13">2003</div>
-                <div class="step" id="step14">2004</div>
-                <div class="step" id="step15">2005</div>
-                <div class="step" id="step16">2006</div>
-                <div class="step" id="step17">2007</div>
-                <div class="step" id="step18">2008</div>
-                <div class="step" id="step19">2009</div>
-                <div class="step" id="step20">2010</div>
-                <div class="step" id="step21">2011</div>
-                <div class="step" id="step22">2012</div>
-                <div class="step" id="step23">2013</div>
-                <div class="step" id="step24">2014</div>
-                <div class="step" id="step25">2015</div>
-                <div class="step" id="step26">2016</div>
-                <div class="step" id="step27">2017</div>
-                <div class="step" id="step28">2018</div>
-            </div>
-        </div>
-    </div>
 
     <div id="tooltip"></div>
     

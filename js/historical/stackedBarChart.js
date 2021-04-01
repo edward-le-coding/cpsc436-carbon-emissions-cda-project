@@ -8,8 +8,8 @@ class StackedBarChart {
   constructor(_config, _data, _province) {
     this.config = {
       parentElement: _config.parentElement,
-      containerWidth: 800,
-      containerHeight: 500,
+      containerWidth: 900,
+      containerHeight: 400,
       margin: {top: 250, right: 10, bottom: 50, left: 100},
       legendWidth: 200,
       legendHeight: 10,
@@ -176,7 +176,7 @@ class StackedBarChart {
   renderVis() {
     let vis = this;
 
-    vis.chart.selectAll('category')
+    vis.chart.selectAll('.category')
         .data(vis.stackedData)
       .join('g')
         .attr('class', d => `category cat-${d.key}`)

@@ -47,3 +47,19 @@ Flo's TODOs:
 Heatmap:
 - https://github.com/UBC-InfoVis/2021-436V-case-studies/tree/master/case-study_measles-and-vaccines
 - https://www.d3-graph-gallery.com/graph/heatmap_style.html
+
+Policy:
+- linking to another page https://www.homeandlearn.co.uk/WD/wds5pA.html
+Policy Dataset:
+1. needed to edit the start years of some to be just one year.
+2. needed to just have one word in 'status of implementation' column.
+below are links i used to find the start years
+- Ontario Emissions Reduction fund date 2021 https://www.nrcan.gc.ca/science-and-data/funding-partnerships/funding-opportunities/current-funding-opportunities/emissions-reduction-fund/22781
+- 'Alberta Coal-Fired Electricity Generation phaseout*' https://globalnews.ca/news/7502144/alberta-coal-power-ahead-of-schedule/
+- 'New Brunswick Output Based Pricing (OBPS) for Industry and Electricity* ' https://www2.gnb.ca/content/dam/gnb/Departments/env/pdf/Climate-Climatiques/MadeInNBRegulatoryApproachForLargeIndustrialEmitters.pdf
+- 'British Columbia Promoting Use of Low Carbon and Renewable Materials in Infrastructure' https://www2.gov.bc.ca/assets/gov/environment/climate-change/cng/resources/lcm-public-sector-guide.pdf
+- 'Ontario Greenhouse Gas Emissions Performance Standards Regulation' https://www.ontario.ca/page/emissions-performance-standards-program#:~:text=Related-,Overview,and%20circumstances%20of%20our%20province.
+- 'Prince Edward Island Alternative Land Use Services Program' https://www.princeedwardisland.ca/en/service/alternative-land-use-services-alus-program 
+
+Policy dataset stretch goal: in 'estimate of mitigation 2020/2030' columns, add legend from page 125 of the policy pdf to match up NE vs NA and the subletters a,b,c,etc.
+- remove * and ** from first column: DONE https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll

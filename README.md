@@ -63,3 +63,8 @@ below are links i used to find the start years
 
 Policy dataset stretch goal: in 'estimate of mitigation 2020/2030' columns, add legend from page 125 of the policy pdf to match up NE vs NA and the subletters a,b,c,etc.
 - remove * and ** from first column: DONE https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll
+
+Policy implementation timeline
+- P2 melissa's bar chart
+- http://bl.ocks.org/mstanaland/6100713
+- https://observablehq.com/@d3/stacked-bar-chart

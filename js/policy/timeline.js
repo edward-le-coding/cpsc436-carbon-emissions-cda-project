@@ -22,6 +22,8 @@ class Timeline {
 
         this.sectors = [...new Set(this.filteredData.map(d => d.Sector_Affected))];
 
+        this.selectedSectors = this.sectors
+
         this.initVis();
     }
     
@@ -121,17 +123,23 @@ class Timeline {
             .attr('x', d => vis.xScale(vis.xValue(d)))
             .attr('width', vis.xScale.bandwidth())
             .attr('height', d => {
-              console.log('vis.yValue(d)', vis.yValue(d))
-              console.log('vis.yScale(vis.yValue(d))', vis.yScale(vis.yValue(d)))
+              // console.log('vis.yValue(d)', vis.yValue(d))
+              // console.log('vis.yScale(vis.yValue(d))', vis.yScale(vis.yValue(d)))
               return vis.yScale(vis.yValue(d))
             })
             .attr('y', d => {
-              console.log('vis.yScale(vis.yValue(d))', vis.yScale(vis.yValue(d)))
+              // console.log('vis.yScale(vis.yValue(d))', vis.yScale(vis.yValue(d)))
               // return vis.yScale(vis.yValue(d))
               return 0
             })
             .style('fill', d => vis.colorScale(d.Sector_Affected))
-            .style('opacity', 0.5)
+            .style('opacity', d => {
+              if (vis.selectedSectors.includes(d.Sector_Affected)) {
+                return 0.5
+              } else {
+                return 0.2
+              }
+            })
     
             // Tooltip event listeners
     bars
@@ -165,7 +173,34 @@ class Timeline {
             .attr('width', vis.config.legendSquareSize)
             .attr('height', vis.config.legendSquareSize)
             .style('fill', d => vis.colorScale(d))
-            .style('opacity', 0.5); // TODO: remove
+            .on('click', d => {
+              let sectorSelected = d.srcElement.__data__
+              console.log('sectorSelected', sectorSelected)
+              console.log('vis.selectedSectors before', vis.selectedSectors)
+              if (vis.selectedSectors==vis.sectors) {
+                vis.selectedSectors = [sectorSelected]
+              } else if (vis.selectedSectors.includes(sectorSelected)) {
+                // remove sector
+                // source: https://stackoverflow.com/questions/5767325/how-can-i-remove-a-specific-item-from-an-array
+                const index = vis.selectedSectors.indexOf(sectorSelected);
+                if (index > -1) {
+                  vis.selectedSectors.splice(index, 1);
+                }
+              } else {
+                vis.selectedSectors.push(sectorSelected)
+              }
+              console.log('vis.selectedSectors after', vis.selectedSectors)
+              vis.updateVis()
+            })
+            .style('opacity', d => {
+              console.log('opacity d', d)
+              if (vis.selectedSectors.includes(d)) {
+                return 1
+              } else {
+                return 0.2
+              }
+            })
+
 
       vis.legend.selectAll('text')
           .data(sortedColorScaleDomain)

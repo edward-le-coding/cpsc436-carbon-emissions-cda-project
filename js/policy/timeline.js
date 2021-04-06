@@ -11,7 +11,10 @@ class Timeline {
           containerHeight: 500,
           margin: {top: 250, right: 10, bottom: 50, left: 100},
           mitigation_estimate_year: _config.mitigation_estimate_year || 2020,
-          tooltipPadding: _config.tooltipPadding || 15
+          tooltipPadding: _config.tooltipPadding || 15,
+          legendWidth: 200,
+          legendHeight: 10,
+          legendSquareSize: 15,
         }
         this.data = _data
 
@@ -37,37 +40,41 @@ class Timeline {
             .attr('width', vis.config.containerWidth)
             .attr('height', vis.config.containerHeight);
       
-        vis.chartArea = vis.svg.append('g')
+        vis.chart = vis.svg.append('g')
             .attr('transform', `translate(${vis.config.margin.left},${vis.config.margin.top})`);
 
-        vis.chart = vis.chartArea.append('g');
-
+        // Add group for legend
+        vis.legend = vis.svg.append('g')
+            .attr('transform', `translate(${vis.config.margin.left}, 100)`);
       
         // Intialize the scales
         vis.xScale = d3.scaleBand()
-            .domain(vis.data.map(d => d.Start_year_of_Implementation)) // todo consider setting this later. also is this ok? should i be a range [min, max]?
             .range([0, vis.config.width])
-            .paddingInner(0.2)
-            .paddingOuter(0.2);
-    
+            .paddingInner(0.05)
+            .paddingOuter(0.05);
+
         vis.yScale = d3.scaleLinear()
-            .range([vis.config.height, 0]);
+            .range([0, vis.config.height]);
     
         vis.colorScale = d3.scaleOrdinal()
             .range(d3.schemeCategory10);
     
         // Initialize axes
-        vis.xAxis = d3.axisBottom(vis.xScale);
+        vis.xAxis = d3.axisTop(vis.xScale)
+          .ticks(41)
+          .tickSizeOuter(0)
+          .tickSize(0)
+
         vis.yAxis = d3.axisLeft(vis.yScale);
     
         // Append empty x-axis group and move it to the bottom of the chart
         vis.xAxisG = vis.chart.append('g')
             .attr('class', 'axis x-axis')
-            .attr('transform', `translate(0,${vis.config.height})`);
+            // .attr('transform', `translate(0,${vis.config.height})`);
         
         // Append y-axis group
         vis.yAxisG = vis.chart.append('g')
-            .attr('class', 'axis y-axis');
+            .attr('class', 'axis y-axis') 
     
         vis.updateVis();
     }
@@ -82,18 +89,22 @@ class Timeline {
         vis.xValue = d => d.Start_year_of_Implementation;
         vis.yValue = d => d.Estimate_of_Mitigation_Impact_in_2020_Kt_CO2_eq;
     
-    
-        // because the data is stacked we know highest val is in last element of stacked data
+        
+        // TODO: why cant vis.xScale.domain be set to extent? 
+        console.log('d3 extent', d3.extent(vis.filteredData, vis.xValue))
+        // vis.xScale.domain(d3.extent(vis.filteredData, vis.xValue)) 
+        
+        vis.xScale.domain(vis.filteredData.map(vis.xValue)) 
+        
         let maxYValue = d3.max(vis.filteredData, d=>d.Estimate_of_Mitigation_Impact_in_2020_Kt_CO2_eq)
-        console.log('maxYValue', maxYValue)
-    
+        console.log('maxYValue',maxYValue)
         // set the dynamic domains
         vis.yScale.domain([0, maxYValue]);
         vis.colorScale.domain(vis.sectors);
     
         // Render the bar chart, the legend and the title
         vis.renderVis();
-  
+        vis.renderLegend();
     }
   
   
@@ -105,14 +116,22 @@ class Timeline {
   
       const bars = vis.chart.selectAll('.bar')
           .data(vis.filteredData, vis.xValue)
-        .join('rect')
+          .join('rect')
             .attr('class', d => `bar ${d.Sector_Affected}`)
             .attr('x', d => vis.xScale(vis.xValue(d)))
             .attr('width', vis.xScale.bandwidth())
-            .attr('height', d => vis.yScale(vis.yValue(d)))
-            .attr('y', d => vis.yScale(vis.yValue(d)))
-            .attr('fill', '#b19cd9')
-            // .style('fill', d => vis.colorScale(d.key))
+            .attr('height', d => {
+              console.log('vis.yValue(d)', vis.yValue(d))
+              console.log('vis.yScale(vis.yValue(d))', vis.yScale(vis.yValue(d)))
+              return vis.yScale(vis.yValue(d))
+            })
+            .attr('y', d => {
+              console.log('vis.yScale(vis.yValue(d))', vis.yScale(vis.yValue(d)))
+              // return vis.yScale(vis.yValue(d))
+              return 0
+            })
+            .style('fill', d => vis.colorScale(d.Sector_Affected))
+            .style('opacity', 0.5)
     
             // Tooltip event listeners
     bars
@@ -133,8 +152,34 @@ class Timeline {
       vis.yAxisG.call(vis.yAxis);
     }
   
+    // Renders the legend
+    renderLegend() {
+      let vis = this;
+
+      let sortedColorScaleDomain = vis.colorScale.domain().sort()
+      vis.legend.selectAll('rect')
+          .data(sortedColorScaleDomain)
+          .join('rect')
+            .attr('x', (d, i) => (i % 2) * (vis.config.legendWidth))
+            .attr('y', (d, i) => i % 2 === 0? i * vis.config.legendHeight : (i-1) * vis.config.legendHeight)
+            .attr('width', vis.config.legendSquareSize)
+            .attr('height', vis.config.legendSquareSize)
+            .style('fill', d => vis.colorScale(d))
+            .style('opacity', 0.5); // TODO: remove
+
+      vis.legend.selectAll('text')
+          .data(sortedColorScaleDomain)
+          .join('text')
+            .attr('class', 'legendText')
+            .attr('x', (d, i) => (i % 2) * (vis.config.legendWidth) + vis.config.legendSquareSize + 5)
+            .attr('y', (d, i) =>  i % 2 === 0 ? i * vis.config.legendHeight + vis.config.legendSquareSize : (i-1) * vis.config.legendHeight + vis.config.legendSquareSize)
+            .text(d => d)
+            .attr('text-anchor', 'left');
+    }
   
   }
+
+    
 
   // Html tooltip helper functions
 function getTooltipHtml(d) {

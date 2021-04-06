@@ -7,7 +7,7 @@ d3.csv('data/policy/Biennial_Report_Raw_Data.csv').then(_data => {
   masterPolicyData = _data
   masterPolicyData.forEach(d => {
    d.Name_of_Mitigation_Action = d.Name_of_Mitigation_Action.replaceAll('*', ''); // STRING
-   d.Sector_Affected = d.Sector_Affected == 'LULUCF'? 'Land Use, Land-Use Change and Forestry': d.Sector_Affected; // STRING
+   d.Sector_Affected = d.Sector_Affected == 'LULUCF'? 'Land Use, Land-Use Change, and Forestry': d.Sector_Affected; // STRING
    d.GHGs_Affected = typeof d.GHGs_Affected == 'undefined' ? console.log('GHG is undefined', d.Name_of_Mitigation_Action) :  d.GHGs_Affected.replaceAll(' ', '').split(',') // ARRAY of STRINGS
    // d.Objective_andor_Activity_Affected = d.Objective_andor_Activity_Affected // STRING
    d.Type_of_Instrument = d.Type_of_Instrument.replaceAll(' ', '').split(',') // ARRAY of STRINGS

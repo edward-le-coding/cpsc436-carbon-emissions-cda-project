@@ -93,13 +93,12 @@ class Timeline {
     
         
         // TODO: why cant vis.xScale.domain be set to extent? 
-        console.log('d3 extent', d3.extent(vis.filteredData, vis.xValue))
+        // console.log('d3 extent', d3.extent(vis.filteredData, vis.xValue))
         // vis.xScale.domain(d3.extent(vis.filteredData, vis.xValue)) 
         
         vis.xScale.domain(vis.filteredData.map(vis.xValue)) 
         
         let maxYValue = d3.max(vis.filteredData, d=>d.Estimate_of_Mitigation_Impact_in_2020_Kt_CO2_eq)
-        console.log('maxYValue',maxYValue)
         // set the dynamic domains
         vis.yScale.domain([0, maxYValue]);
         vis.colorScale.domain(vis.sectors);
@@ -121,9 +120,6 @@ class Timeline {
     renderVis() {
       let vis = this;
   
-      console.log('vis.filteredData', vis.filteredData)
-
-
       let previousy0 = 0
       let yearsSeen = new Set()
       let stackedData = vis.filteredData.map(d => {
@@ -199,21 +195,20 @@ class Timeline {
             .style('fill', d => vis.colorScale(d))
             .on('click', d => {
               let sectorSelected = d.srcElement.__data__
-              console.log('sectorSelected', sectorSelected)
-              console.log('vis.selectedSectors before', vis.selectedSectors)
               if (vis.selectedSectors==vis.sectors) {
                 vis.selectedSectors = [sectorSelected]
               } else if (vis.selectedSectors.includes(sectorSelected)) {
                 // remove sector
-                // source: https://stackoverflow.com/questions/5767325/how-can-i-remove-a-specific-item-from-an-array
                 const index = vis.selectedSectors.indexOf(sectorSelected);
                 if (index > -1) {
                   vis.selectedSectors.splice(index, 1);
                 }
+                if (vis.selectedSectors.length==0) {
+                  vis.selectedSectors = this.sectors
+                }
               } else {
                 vis.selectedSectors.push(sectorSelected)
               }
-              console.log('vis.selectedSectors after', vis.selectedSectors)
               vis.updateVis()
             })
             .style('opacity', d => {

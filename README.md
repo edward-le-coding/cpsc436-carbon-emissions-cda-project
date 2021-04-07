@@ -68,3 +68,13 @@ Policy implementation timeline
 - P2 melissa's bar chart
 - http://bl.ocks.org/mstanaland/6100713
 - https://observablehq.com/@d3/stacked-bar-chart
+
+removing an element from an array
+// source: https://stackoverflow.com/questions/5767325/how-can-i-remove-a-specific-item-from-an-array
+
+For the policy stacked bar chart, I (Melissa) had to add custom attributes y0 and y1 to allow the data to be stacked.
+I tried using the d3 stack generator but it did not work because the d3.stack.keys were not keys in the data object.
+My keys were values of the 'Sector_Affected' attribute.
+I also took some inspiration from a tip in the 'Data Sketch|es: A Visualization A Month - Shirley Wu and Nadieh Bremer' video from Week 13: https://www.youtube.com/watch?v=4EOG7KwFspk&feature=youtu.be In it, they recommend doing some data preprocessing on datasets to help with styling. 
+I thought that creating y0 and y1 key-value pairs could be useful.
+To style the height and y value in the d3 'rect' data join, I followed the class example 'stackedBarChart' here https://github.com/UBC-InfoVis/2021-436V-examples/tree/master/d3-stacked-bar-chart.

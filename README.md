@@ -78,3 +78,7 @@ My keys were values of the 'Sector_Affected' attribute.
 I also took some inspiration from a tip in the 'Data Sketch|es: A Visualization A Month - Shirley Wu and Nadieh Bremer' video from Week 13: https://www.youtube.com/watch?v=4EOG7KwFspk&feature=youtu.be In it, they recommend doing some data preprocessing on datasets to help with styling. 
 I thought that creating y0 and y1 key-value pairs could be useful.
 To style the height and y value in the d3 'rect' data join, I followed the class example 'stackedBarChart' here https://github.com/UBC-InfoVis/2021-436V-examples/tree/master/d3-stacked-bar-chart.
+
+Formatting tooltip on policy timeline/stacked bar chart
+formatting the thousand place comma
+https://stackoverflow.com/questions/15211488/formatting-numbers-with-commas-in-d3 user 'ericsoco'

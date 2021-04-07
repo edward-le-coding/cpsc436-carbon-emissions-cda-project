@@ -14,13 +14,12 @@ d3.csv('data/policy/Biennial_Report_Raw_Data.csv').then(_data => {
    d.Start_year_of_Implementation = +d.Start_year_of_Implementation // NUMBER (integer)
    d.Implementation_Entity = d.Implementation_Entity.split(',' ) // ARRAY of STRINGS
   
-   d.Estimate_of_Mitigation_Impact_in_2020_Kt_CO2_eq = d.Estimate_of_Mitigation_Impact_in_2020_Kt_CO2_eq.includes('N') ? d.Estimate_of_Mitigation_Impact_in_2020_Kt_CO2_eq : +d.Estimate_of_Mitigation_Impact_in_2020_Kt_CO2_eq; // STRING OR NUMBER
-   d.Estimate_of_Mitigation_Impact_in_2030_Kt_CO2_eq = d.Estimate_of_Mitigation_Impact_in_2030_Kt_CO2_eq.includes('N') ? d.Estimate_of_Mitigation_Impact_in_2030_Kt_CO2_eq : +d.Estimate_of_Mitigation_Impact_in_2030_Kt_CO2_eq; // STRING OR NUMBER
+   d.Estimate_of_Mitigation_Impact_in_2020_Kt_CO2_eq = d.Estimate_of_Mitigation_Impact_in_2020_Kt_CO2_eq.includes('N') ? d.Estimate_of_Mitigation_Impact_in_2020_Kt_CO2_eq : -d.Estimate_of_Mitigation_Impact_in_2020_Kt_CO2_eq; // STRING OR NUMBER
+   d.Estimate_of_Mitigation_Impact_in_2030_Kt_CO2_eq = d.Estimate_of_Mitigation_Impact_in_2030_Kt_CO2_eq.includes('N') ? d.Estimate_of_Mitigation_Impact_in_2030_Kt_CO2_eq : -d.Estimate_of_Mitigation_Impact_in_2030_Kt_CO2_eq; // STRING OR NUMBER
    // d.Brief_Description = d.Brief_Description // STRING
   });
   // Sort by start year of implementation
   masterPolicyData.sort((a,b) => a.Start_year_of_Implementation - b.Start_year_of_Implementation);
-  console.log('masterPolicyData', masterPolicyData)
 
   timeline = new Timeline({
     parentElement: '#timeline'

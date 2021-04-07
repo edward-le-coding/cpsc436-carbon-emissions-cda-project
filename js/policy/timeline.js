@@ -18,7 +18,7 @@ class Timeline {
         }
         this.data = _data
 
-        this.filteredData = this.data.filter(d => d.Estimate_of_Mitigation_Impact_in_2020_Kt_CO2_eq>0)
+        this.filteredData = this.data.filter(d => d.Estimate_of_Mitigation_Impact_in_2020_Kt_CO2_eq<0)
 
         this.sectors = [...new Set(this.filteredData.map(d => d.Sector_Affected))];
 
@@ -98,16 +98,11 @@ class Timeline {
         
         vis.xScale.domain(vis.filteredData.map(vis.xValue)) 
         
-        let maxYValue = d3.max(vis.filteredData, d=>d.Estimate_of_Mitigation_Impact_in_2020_Kt_CO2_eq)
+        let minYValue = d3.min(vis.filteredData, d=>d.Estimate_of_Mitigation_Impact_in_2020_Kt_CO2_eq)
         // set the dynamic domains
-        vis.yScale.domain([0, maxYValue]);
+        vis.yScale.domain([0, minYValue]);
         vis.colorScale.domain(vis.sectors);
     
-
-        // TODO: try filtering data sector affected to match key
-
-
-
         // Render the bar chart, the legend and the title
         vis.renderVis();
         vis.renderLegend();
@@ -236,9 +231,12 @@ class Timeline {
 
   // Html tooltip helper functions
 function getTooltipHtml(d) {
+    let format = d3.format(",");
+    let C02estimate = 0-d.Estimate_of_Mitigation_Impact_in_2020_Kt_CO2_eq
+    C02estimate = format(C02estimate)
     return `
       <div class="tooltip-title">${d.Name_of_Mitigation_Action}</div>
       <div><i>${d.Sector_Affected}, ${d.Start_year_of_Implementation}</i></div>
-      <div>${d.Estimate_of_Mitigation_Impact_in_2020_Kt_CO2_eq}<div>`
+      <div>${C02estimate}<div>`
 
   }

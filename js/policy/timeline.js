@@ -77,13 +77,6 @@ class Timeline {
         // Append y-axis group
         vis.yAxisG = vis.chart.append('g')
             .attr('class', 'axis y-axis') 
-    
-        vis.stack = d3.stack()
-            .keys(vis.sectors) // this kinda works but not really
-            .value((d, key) => d.Estimate_of_Mitigation_Impact_in_2020_Kt_CO2_eq) // i think this will work !
-            // .x(d => d.Start_year_of_Implementation)
-            // .y(d => d.Estimate_of_Mitigation_Impact_in_2020_Kt_CO2_eq);
-
         
         vis.updateVis();
     }
@@ -111,11 +104,8 @@ class Timeline {
         vis.yScale.domain([0, maxYValue]);
         vis.colorScale.domain(vis.sectors);
     
-        // make stacked data
-        vis.stackedData = vis.stack(vis.filteredData);
-        console.log('vis.stackedData', vis.stackedData)
 
-            // TODO: try filtering data sector affected to match key
+        // TODO: try filtering data sector affected to match key
 
 
 
@@ -134,11 +124,9 @@ class Timeline {
       console.log('vis.filteredData', vis.filteredData)
 
 
-      // let stacked2007 = vis.stack(vis.filteredData.filter(d=>d.Start_year_of_Implementation == 2007))
-      // console.log('2007 stacked', stacked2007)
       let previousy0 = 0
       let yearsSeen = new Set()
-      let stackedDataTemp = vis.filteredData.map(d => {
+      let stackedData = vis.filteredData.map(d => {
         let returnValue = d
         if (!yearsSeen.has(d.Start_year_of_Implementation)){
           previousy0 = d.Estimate_of_Mitigation_Impact_in_2020_Kt_CO2_eq
@@ -151,13 +139,10 @@ class Timeline {
         }
         return returnValue
       })
-      console.log('stackedDataTemp', stackedDataTemp)
 
       const bars = vis.chart.selectAll('.bar')
-      .data(vis.filteredData, vis.xValue)
-      // .data(vis.stackedData)
-      // .data(stacked2007)
-      .join('rect')
+          .data(stackedData)
+        .join('rect')
             .attr('class', d => `bar '${d.key}'`)
             .attr('x', d => {
               // console.log('d', d)
@@ -166,25 +151,21 @@ class Timeline {
             )
             .attr('width', vis.xScale.bandwidth())
             .attr('height', d => {
-              // console.log('vis.yValue(d)', vis.yValue(d))
-              // console.log('vis.yScale(vis.yValue(d))', vis.yScale(vis.yValue(d)))
-              return vis.yScale(vis.yValue(d))
+              return vis.yScale(d.y1) - vis.yScale(d.y0)
             })
             .attr('y', d => {
-              // console.log('vis.yScale(vis.yValue(d))', vis.yScale(vis.yValue(d)))
-              // return vis.yScale(vis.yValue(d))
-              return 0
+              return vis.yScale(d.y0)
             })
             .style('fill', d => vis.colorScale(d.Sector_Affected))
             .style('opacity', d => {
               if (vis.selectedSectors.includes(d.Sector_Affected)) {
-                return 0.5
+                return 1
               } else {
-                return 0.2
+                return 0.5
               }
             })
     
-            // Tooltip event listeners
+    // Tooltip event listeners
     bars
     .on('mouseover', (event,d) => {
       d3.select('#tooltip')

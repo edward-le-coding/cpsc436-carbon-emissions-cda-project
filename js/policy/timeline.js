@@ -16,11 +16,9 @@ class Timeline {
           legendHeight: 10,
           legendSquareSize: 15,
         }
-        this.data = _data
+        this.data = _data.filter(d => d.Estimate_of_Mitigation_Impact_in_2020_Kt_CO2_eq<0)
 
-        this.filteredData = this.data.filter(d => d.Estimate_of_Mitigation_Impact_in_2020_Kt_CO2_eq<0)
-
-        this.sectors = [...new Set(this.filteredData.map(d => d.Sector_Affected))];
+        this.sectors = [...new Set(this.data.map(d => d.Sector_Affected))];
 
         this.selectedSectors = this.sectors
 
@@ -32,6 +30,11 @@ class Timeline {
      */
     initVis() {
         let vis = this;
+
+        // Specify accessor functions
+        vis.xValue = d => d.Start_year_of_Implementation;
+        vis.yValue = d => d.Estimate_of_Mitigation_Impact_in_2020_Kt_CO2_eq;
+    
     
         // Calculate inner chart size. Margin specifies the space around the actual chart.
         vis.config.width = vis.config.containerWidth - vis.config.margin.left - vis.config.margin.right;
@@ -51,14 +54,19 @@ class Timeline {
       
         // Intialize the scales
         vis.xScale = d3.scaleBand()
+            .domain(vis.data.map(vis.xValue)) 
             .range([0, vis.config.width])
             .paddingInner(0.05)
             .paddingOuter(0.05);
 
+        let minYValue = d3.min(vis.data, d=>d.Estimate_of_Mitigation_Impact_in_2020_Kt_CO2_eq)
+
         vis.yScale = d3.scaleLinear()
+            .domain([0, minYValue])
             .range([0, vis.config.height]);
     
         vis.colorScale = d3.scaleOrdinal()
+            .domain(vis.sectors)
             .range(d3.schemeCategory10);
     
         // Initialize axes
@@ -86,23 +94,10 @@ class Timeline {
      */
     updateVis() {
         let vis = this;
-    
-        // Specify accessor functions
-        vis.xValue = d => d.Start_year_of_Implementation;
-        vis.yValue = d => d.Estimate_of_Mitigation_Impact_in_2020_Kt_CO2_eq;
-    
-        
-        // TODO: why cant vis.xScale.domain be set to extent? 
-        // console.log('d3 extent', d3.extent(vis.filteredData, vis.xValue))
-        // vis.xScale.domain(d3.extent(vis.filteredData, vis.xValue)) 
-        
-        vis.xScale.domain(vis.filteredData.map(vis.xValue)) 
-        
-        let minYValue = d3.min(vis.filteredData, d=>d.Estimate_of_Mitigation_Impact_in_2020_Kt_CO2_eq)
-        // set the dynamic domains
-        vis.yScale.domain([0, minYValue]);
-        vis.colorScale.domain(vis.sectors);
-    
+  
+        // Filtering to only show selectedsectors
+        vis.filteredData = vis.data.filter(d=>vis.selectedSectors.includes(d.Sector_Affected))
+
         // Render the bar chart, the legend and the title
         vis.renderVis();
         vis.renderLegend();
@@ -148,13 +143,6 @@ class Timeline {
               return vis.yScale(d.y0)
             })
             .style('fill', d => vis.colorScale(d.Sector_Affected))
-            .style('opacity', d => {
-              if (vis.selectedSectors.includes(d.Sector_Affected)) {
-                return 1
-              } else {
-                return 0.5
-              }
-            })
     
     // Tooltip event listeners
     bars

@@ -6,17 +6,17 @@ body {
 }
 
 h1 {
-  position: fixed; /*TODO: fix this */
-  margin-bottom: 50px;
+    font-size: 48px;
+    margin-bottom: 50px;
 }
   
 .page {
-  margin: 2rem;
-  max-width: 50rem;
+    position: relative;
+    margin: 2rem;
+    max-width: 50rem;
 }
   
 .container {
-  position: relative;
   margin-bottom: 100px;
 }
 #choropleth {
@@ -30,10 +30,6 @@ h1 {
 #stackedBarChart {
   position: fixed;
   margin-top: 50px;
-}
-
-#charts {
-    /* position: fixed; */
 }
 
 #prose {
@@ -86,43 +82,12 @@ rect {
 body{
     font-family: lato, sans-serif;
 }
-#landingPage{
-    background-image: url('../assets/edmonton-77798_1280.jpg');
-    height:100vh;
-    display: flex;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: rgba(255,255,255,0.6);
-    background-blend-mode: lighten;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0 10px;
-}
-#landingPage h1{
-    font-size: 60px;
-}
-#landingPage p{
-    font-size: 24px;
-}
-#landingPage .button{
-    background-image: url('../assets/scroll button.png');
-    background-size: cover;
-}
-#readMore{
-
-}
-#readMoreImage {
-    fill: green;
-}
-
 /* Tooltip: heatmap*/
 #tooltip {
   position: absolute;
   display: none;
   background: #fff;
-  box-shadow: 3px 3px 3px 0px rgb(92 92 92 / 0.5);
+  box-shadow: 3px 3px 3px 0px rgb(92 92 46);
   border: 1px solid #ddd;
   font-size: 12px;
   font-weight: 500;
@@ -134,4 +99,90 @@ body{
   color: #000;
   font-size: 14px;
   font-weight: 600;
+}
+
+.vis{
+    position: fixed;
+}
+
+.landingPage{
+    position: relative;
+    height:100vh;
+    display: flex;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: lighten;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+}
+.landingPage p{
+    font-size: 24px;
+}
+
+.readMoreImage {
+    fill: green;
+}
+#overallLandingPage{
+    background-image: url('../assets/edmonton-77798_1280.jpg');
+    background-color: rgba(255,255,255,0.85);
+}
+#historicalLandingPage{
+    background-image: url('../assets/Saskatchewan_Wheat.jpg');
+    background-color: rgba(255,255,255,0.85);
+}
+#policyLandingPage{
+    background-image: url('../assets/Algonquin_Cache_Lake_Lookout.jpg');
+    background-color: rgba(255,255,255,0.85);
+}
+#endPage{
+    position: relative;
+    background-image: url('../assets/Marche_Bonsecours_Winter.jpg');
+    height:100vh;
+    display: flex;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(255,255,255,0.85);
+    background-blend-mode: lighten;
+    flex-direction: column;
+    padding: 0 10px;
+}
+#end-title{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.pictureCaption{
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+    font-size: 18px;
+}
+.visTitle{
+    position: absolute;
+    top: 8px;
+    left: 16px;
+}
+.visWriteUp{
+    font-size: 24px;
+    text-align: center;
+}
+.buttonArray{
+    float: left;
+    padding: 10px;
+}
+.button {
+    background-color: #4CAF50;
+    border: black;
+    border-radius: 25px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
 }

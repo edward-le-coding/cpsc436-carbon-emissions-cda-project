@@ -36,17 +36,17 @@ class Choropleth{
         // Update view
         vis.updateVis();
     }
-    updateVis(_data = null, _plottedVar = 'CO2eq'){
+    updateVis(_data = null, _plottedVar = 'CO2eq', _yearSelected = null, _selectedProvince = null){
         let vis = this;
         // Update data (if provided)
         if(_data != null) {
             vis.data = _data;
         }
         // Render data
-        vis.renderVis(_plottedVar)
+        vis.renderVis(_plottedVar, _yearSelected, _selectedProvince)
     }
     // Render visualization
-    renderVis(_plottedVar = 'CO2eq') {
+    renderVis(_plottedVar = 'CO2eq', _yearSelected = 2018, selectedProvince = null) {
         let vis = this;
         // Convert data to topoJson
         const provinces = topojson.feature(vis.data, vis.data.objects.provinces);
@@ -67,5 +67,11 @@ class Choropleth{
             .join('path')
             .attr('class', 'geo-boundary-path')
             .attr('d', vis.geoPath);
+    }
+
+    // Render new year's worth of data as a result of a trigger
+    goToStep(stepIndex, yearData, plottedVar, yearSelected = 2018, selectedProvince = null) {
+        let vis = this;
+        vis.renderVis(yearData, plottedVar, yearSelected, selectedProvince)
     }
 }

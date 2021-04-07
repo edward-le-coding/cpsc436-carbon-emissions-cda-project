@@ -7,99 +7,203 @@
     <link href="https://fonts.googleapis.com/css2?family=Castoro:ital@1&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-        <!-- <header id="landingPage">
-            <h1>
-                Canada's Climate is Changing.
-            </h1>
-            <h2>
-                Here's Canada's carbon emissions and what Canada is doing to cut them.
-            </h2>
+        <div id="overallLandingPage" class="landingPage">
+            <h1>Canada's Climate is Changing.</h1>
+            <h2>Here's Canada's carbon emissions and what Canada is doing to cut them.</h2>
             <p>Click the button below or scroll to see Canada's carbon emissions.</p>
-            <button id="readMore" style="border: 0; background: transparent">
-                <img id="readMoreImage" src="assets/arrow-down-circle-fill.svg" width="90" height="50"/>
-            </button>
-        </header> -->
-        <section id="charts">
-            <!-- Legend -->
-            <div name="metric-selector" id="metric-selector">
-                <input type="radio" name="metric-selector" value="CO2eq" checked>Absolute Emissions (total GHG)<br>
-                <input type="radio" name="metric-selector" value="CO2eq_tn_per_person">Emissions Intensity (per capita)</br>
-                <input type="radio" name="metric-selector" value="CO2eq_tn_per_mil_GDP">Emissions Intensity (by GDP)</br>
+            <div class="buttonArray">
+                <a href="#historicalLandingPage" class="button">Canadian Historical<br>Carbon Emissions</a>
+                <a href="#policyLandingPage" class="button">Canadian Climate<br>Policy Projections</a>
             </div>
-            
-            <div class="caption">
-                <b>The heat map below shows different metrics for different regions.
-                    Sort regions </b>
-                <select id="sort-control">
-                    <option value="alphabetically">alphabetically</option>
-                    <option value="value">by metric</option>
-                </select>
-            </div>            
-
-            <div id="heatmap" class="chart">
+            <div class="buttonArray">
+                <a href="#endPage" class="button">Methodology and Sources</a>
             </div>
-            
-            <div id="choropleth" class="chart">
-            </div>
-
-            Filter provinces and territories: 
-            <select id="provinces-selector">
-                <option value="Canada">Canada</option>
-                <option value="Alberta">Alberta</option>
-                <option value="British Columbia">British Columbia</option>
-                <option value="Manitoba">Manitoba</option>
-                <option value="New Brunswick">New Brunswick</option>
-                <option value="Newfoundland and Labrador">New Foundland and Labrador</option>
-                <option value="Northwest Territories">Northwest Territories</option>
-                <option value="Nova Dcotia">Nova Scotia</option>
-                <option value="Nunavut">Nunavut</option>
-                <option value="Ontario">Ontario</option>
-                <option value="Prince Edward Island">Prince Edward Island</option>
-                <option value="Quebec">Quebec</option>
-                <option value="Saskatchewan">Saskatchewan</option>
-                <option value="Yukon">Yukon</option>
-            </select>
-            
-            
-        </section>
-
-    <div class="page">
-        <svg id="stackedBarChart"></svg>
-        <div class="container">
-            <div id="prose">
-                <div class="step" id="step0">1990</div>
-                <div class="step" id="step1">1991</div>
-                <div class="step" id="step2">1992</div>
-                <div class="step" id="step3">1993</div>
-                <div class="step" id="step4">1994</div>
-                <div class="step" id="step5">1995</div>
-                <div class="step" id="step6">1996</div>
-                <div class="step" id="step7">1997</div>
-                <div class="step" id="step8">1998</div>
-                <div class="step" id="step9">1999</div>
-                <div class="step" id="step10">2000</div>
-                <div class="step" id="step11">2001</div>
-                <div class="step" id="step12">2002</div>
-                <div class="step" id="step13">2003</div>
-                <div class="step" id="step14">2004</div>
-                <div class="step" id="step15">2005</div>
-                <div class="step" id="step16">2006</div>
-                <div class="step" id="step17">2007</div>
-                <div class="step" id="step18">2008</div>
-                <div class="step" id="step19">2009</div>
-                <div class="step" id="step20">2010</div>
-                <div class="step" id="step21">2011</div>
-                <div class="step" id="step22">2012</div>
-                <div class="step" id="step23">2013</div>
-                <div class="step" id="step24">2014</div>
-                <div class="step" id="step25">2015</div>
-                <div class="step" id="step26">2016</div>
-                <div class="step" id="step27">2017</div>
-                <div class="step" id="step28">2018</div>
+            <a id="gotoHistorical" href="#historicalLandingPage" style="border: 0; background: transparent">
+                <img class="readMoreImage" src="assets/arrow-down-circle-fill.svg" width="90" height="50"/>
+            </a>
+            <div id= "landingPageCaption" class="pictureCaption">
+                Pictured: Edmonton, Alberta <br>
+                Source: <a href="https://pixabay.com/photos/edmonton-canada-city-cities-77798/" target="_blank">
+                Pixabay (2013)</a>
             </div>
         </div>
-    </div>
+        <div id ="historicalLandingPage" class="landingPage">
+            <h1 class="visTitle">Canada's Carbon Emissions (1990-2018)</h1>
+            <p class="visWriteUp">
+                Canada is one of the world's largest nations.. not just by land mass!<br><br>
+                We are the world's 10th largest economy (out of 205)
+                <a href="https://datacatalog.worldbank.org/dataset/gdp-ranking" target="_blank">
+                    (World Bank, 2020)</a>.<br><br>
+                We are also the world's 10th largest emitter of greenhouse gasses (GHGs)
+                <a href="https://www.climatewatchdata.org/ghg-emissions?end_year=2018&start_year=1990" target="_blank">
+                    (Climate Watch, 2021)</a>.<br><br>
+                We make quite the impact for a nation of only about 38 million people
+                <a href="https://www150.statcan.gc.ca/t1/tbl1/en/cv.action?pid=1710000501" target="_blank">
+                    (Statistics Canada, 2020)</a>.
+            </p>
+            <a id="gotoHistoricalVis" href="#historicalVis" style="border: 0; background: transparent">
+                <img class="readMoreImage" src="assets/arrow-down-circle-fill.svg" width="90" height="50"/>
+            </a>
+            <h2></h2>
+            <div id="historicalCaption" class="pictureCaption">
+                Pictured: Fields of Wheat (Saskatchewan)<br>
+                Source: <a href="https://pixabay.com/photos/edmonton-canada-city-cities-77798/" target="_blank">
+                Pixabay (2013)</a>
+            </div>
+        </div>
+        <div id="historicalVis" class="page">
+            <h1 class="visTitle">Canada's Carbon Emissions (1990-2018)</h1>
+            <div id="container">
+                <!-- Legend -->
+                <div id = 'selectors'>
+                    <div name="metric-selector" id="metric-selector">
+                        <input type="radio" name="metric-selector" value="CO2eq" checked>Absolute Emissions (total GHG)<br>
+                        <input type="radio" name="metric-selector" value="CO2eq_tn_per_person">Emissions Intensity (per capita)</br>
+                        <input type="radio" name="metric-selector" value="CO2eq_tn_per_mil_GDP">Emissions Intensity (by GDP)</br>
+                    </div>
+                    <div class="caption">
+                        <b>The heat map below shows different metrics for different regions.
+                            Sort regions </b>
+                        <select id="sort-control">
+                            <option value="alphabetically">alphabetically</option>
+                            <option value="value">by metric</option>
+                        </select>
+                    </div>
+                    Filter provinces and territories:
+                    <select id="provinces-selector">
+                        <option value="Canada">Canada</option>
+                        <option value="Alberta">Alberta</option>
+                        <option value="British Columbia">British Columbia</option>
+                        <option value="Manitoba">Manitoba</option>
+                        <option value="New Brunswick">New Brunswick</option>
+                        <option value="Newfoundland and Labrador">Newfoundland and Labrador</option>
+                        <option value="Northwest Territories">Northwest Territories</option>
+                        <option value="Nova Scotia">Nova Scotia</option>
+                        <option value="Nunavut">Nunavut</option>
+                        <option value="Ontario">Ontario</option>
+                        <option value="Prince Edward Island">Prince Edward Island</option>
+                        <option value="Quebec">Quebec</option>
+                        <option value="Saskatchewan">Saskatchewan</option>
+                        <option value="Yukon">Yukon</option>
+                    </select>
+                </div> <div id="heatmap" class="chart"></div>
+                <div id="choropleth" class="chart"></div>
+                <div id="stackedBarChart" class='chart'></div>
+                <div id="prose">
+                    <div class="step" id="step0">1990</div>
+                    <div class="step" id="step1">1991</div>
+                    <div class="step" id="step2">1992</div>
+                    <div class="step" id="step3">1993</div>
+                    <div class="step" id="step4">1994</div>
+                    <div class="step" id="step5">1995</div>
+                    <div class="step" id="step6">1996</div>
+                    <div class="step" id="step7">1997</div>
+                    <div class="step" id="step8">1998</div>
+                    <div class="step" id="step9">1999</div>
+                    <div class="step" id="step10">2000</div>
+                    <div class="step" id="step11">2001</div>
+                    <div class="step" id="step12">2002</div>
+                    <div class="step" id="step13">2003</div>
+                    <div class="step" id="step14">2004</div>
+                    <div class="step" id="step15">2005</div>
+                    <div class="step" id="step16">2006</div>
+                    <div class="step" id="step17">2007</div>
+                    <div class="step" id="step18">2008</div>
+                    <div class="step" id="step19">2009</div>
+                    <div class="step" id="step20">2010</div>
+                    <div class="step" id="step21">2011</div>
+                    <div class="step" id="step22">2012</div>
+                    <div class="step" id="step23">2013</div>
+                    <div class="step" id="step24">2014</div>
+                    <div class="step" id="step25">2015</div>
+                    <div class="step" id="step26">2016</div>
+                    <div class="step" id="step27">2017</div>
+                    <div class="step" id="step28">2018</div>
+                </div>
+            </div>
+        </div>
+        <div id="policyLandingPage" class="landingPage">
+            <h1 class="visTitle">Canadian Climate Policy (to 2030)</h1>
+            <p class="visWriteUp">
+                Canada has made a few promises on climate change <a href="https://www.oag-bvg.gc.ca/internet/English/sds_fs_e_41101.html" target="_blank">
+                (Office of the Auditor General, n.d.)</a>.<br><br>
+                Our current goals were made in 2015<a href="https://www.oag-bvg.gc.ca/internet/English/sds_fs_e_41101.html" target="_blank">
+                (Office of the Auditor General, n.d.)</a> and have expanded in 2020 <a href="https://www.canada.ca/en/services/environment/weather/climatechange/climate-plan/net-zero-emissions-2050.html" target ="_blank">
+                (Environment and Climate Change Canada, 2021)</a>.
+            </p>
+            <h2>Overall, Canada wants to reduce emissions to 30% below 2005 levels by 2030 and eventually reach net-zero emissions by 2050</h2>
+            <a id="gotoPolicyVis" href="#policyVis" style="border: 0; background: transparent">
+                <img class="readMoreImage" src="assets/arrow-down-circle-fill.svg" width="90" height="50"/>
+            </a>
+            <div id="policyLandPageCaption" class="pictureCaption">
+                Pictured: Fields of Wheat (Saskatchewan)<br>
+                Source: <a href="https://pixabay.com/photos/edmonton-canada-city-cities-77798/" target="_blank">
+                Pixabay (2013)</a>
+            </div>
+        </div>
+        <div id="policyVis" class="page">
+            <h1 class="visTitle">Canada's Carbon Emissions (1990-2018)</h1>
+        </div>
+        <div id="endPage">
+            <div id="end-title">
+                <h1>Methodology and Sources</h1>
+                <h2>Thank you for exploring our visualization!</h2>
+            </div>
+            <h2>Methodology:</h2>
+            <p>Our methodology, background information, and credits are provided <a href="" target="_blank">here</a>.</p>
+            <h2>Sources:</h2>
+            Data Sources:
+                    <ol>
+                        <li> Canadian Historical Emissions Visualization
+                            <ul>
+                                <li>Greenhouse Gas Emissions Data:
+                                    <a href="https://open.canada.ca/data/en/dataset/779c7bcf-4982-47eb-af1b-a33618a05e5b" target="_blank">
+                                        Environment and Climate Change Canada, Canada's National Inventory Report (2020)
+                                    </a>
+                                </li>
+                                <li>Canadian Population Data:
+                                    <a href="https://www150.statcan.gc.ca/t1/tbl1/en/cv.action?pid=1710000501"
+                                                                target="_blank">
+                                    Statistics Canada, Population Estimates on July 1st, by Age and Sex (2020)
+                                    </a>
+                                </li>
+                                <li>Canadian Economic Data:
+                                    <a href="https://www150.statcan.gc.ca/t1/tbl1/en/cv.action?pid=3610022201" target="_blank">
+                                        Statistics Canada, Gross Domestic Product, Expenditure-Based, Provincial and Territorial, Annual (2020)
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li> Canadian Policy Impact Visualization
+                            <ul>
+                                <li>
+                                    Canadian Policy Impact Projections:
+                                    <a href="https://unfccc.int/documents/209928" target="_blank">
+                                        Environment and Climate Change Canada, Canada's Biennial Report to United Nations Framework Convention on Climate Change (2019)
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ol>
+            Picture Sources:
+                    <ul>
+                        <li>Edmonton, Alberta: <a href="https://pixabay.com/photos/edmonton-canada-city-cities-77798/" target="_blank">
+                            Pixabay (2013)
+                        </a></li>
+                        <li>Dirt road through wheat fields, Saskatchewan: <a href="" target="_blank">
+                            Nu Artiztika (2010)
+                        </a>
+                        </li>
+                        <li>
 
+                        </li>
+                    </ul>
+            <div id="endPageCaption" class="pictureCaption">
+                Pictured: Fields of Wheat (Saskatchewan)<br>
+                Source: <a href="https://pixabay.com/photos/edmonton-canada-city-cities-77798/" target="_blank">
+                Pixabay (2013)</a>
+            </div>
+        </div>
     <div id="tooltip"></div>
     
     <script src="js/d3.v6.min.js"></script>

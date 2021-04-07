@@ -78,6 +78,13 @@ class Timeline {
         vis.yAxisG = vis.chart.append('g')
             .attr('class', 'axis y-axis') 
     
+        vis.stack = d3.stack()
+            .keys(vis.sectors) // this kinda works but not really
+            .value((d, key) => d.Estimate_of_Mitigation_Impact_in_2020_Kt_CO2_eq) // i think this will work !
+            // .x(d => d.Start_year_of_Implementation)
+            // .y(d => d.Estimate_of_Mitigation_Impact_in_2020_Kt_CO2_eq);
+
+        
         vis.updateVis();
     }
   
@@ -104,6 +111,14 @@ class Timeline {
         vis.yScale.domain([0, maxYValue]);
         vis.colorScale.domain(vis.sectors);
     
+        // make stacked data
+        vis.stackedData = vis.stack(vis.filteredData);
+        console.log('vis.stackedData', vis.stackedData)
+
+            // TODO: try filtering data sector affected to match key
+
+
+
         // Render the bar chart, the legend and the title
         vis.renderVis();
         vis.renderLegend();
@@ -116,11 +131,39 @@ class Timeline {
     renderVis() {
       let vis = this;
   
+      console.log('vis.filteredData', vis.filteredData)
+
+
+      // let stacked2007 = vis.stack(vis.filteredData.filter(d=>d.Start_year_of_Implementation == 2007))
+      // console.log('2007 stacked', stacked2007)
+      let previousy0 = 0
+      let yearsSeen = new Set()
+      let stackedDataTemp = vis.filteredData.map(d => {
+        let returnValue = d
+        if (!yearsSeen.has(d.Start_year_of_Implementation)){
+          previousy0 = d.Estimate_of_Mitigation_Impact_in_2020_Kt_CO2_eq
+          yearsSeen.add(d.Start_year_of_Implementation)
+          returnValue = {...d, y0: 0, y1: previousy0}
+        } else {
+          let newy1 = d.Estimate_of_Mitigation_Impact_in_2020_Kt_CO2_eq+previousy0
+          returnValue = {...d, y0: previousy0, y1: newy1}
+          previousy0 = newy1
+        }
+        return returnValue
+      })
+      console.log('stackedDataTemp', stackedDataTemp)
+
       const bars = vis.chart.selectAll('.bar')
-          .data(vis.filteredData, vis.xValue)
-          .join('rect')
-            .attr('class', d => `bar ${d.Sector_Affected}`)
-            .attr('x', d => vis.xScale(vis.xValue(d)))
+      .data(vis.filteredData, vis.xValue)
+      // .data(vis.stackedData)
+      // .data(stacked2007)
+      .join('rect')
+            .attr('class', d => `bar '${d.key}'`)
+            .attr('x', d => {
+              // console.log('d', d)
+              return vis.xScale(vis.xValue(d))
+            }
+            )
             .attr('width', vis.xScale.bandwidth())
             .attr('height', d => {
               // console.log('vis.yValue(d)', vis.yValue(d))
@@ -193,7 +236,6 @@ class Timeline {
               vis.updateVis()
             })
             .style('opacity', d => {
-              console.log('opacity d', d)
               if (vis.selectedSectors.includes(d)) {
                 return 1
               } else {

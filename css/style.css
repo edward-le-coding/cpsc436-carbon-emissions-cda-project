@@ -135,3 +135,10 @@ body{
   font-size: 14px;
   font-weight: 600;
 }
+
+/*Timeline*/
+.x-axis{
+  stroke: black;
+  fill: black;
+  stroke-width: 0.1;
+}

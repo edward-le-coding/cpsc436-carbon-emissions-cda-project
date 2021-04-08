@@ -82,3 +82,8 @@ To style the height and y value in the d3 'rect' data join, I followed the class
 Formatting tooltip on policy timeline/stacked bar chart
 formatting the thousand place comma
 https://stackoverflow.com/questions/15211488/formatting-numbers-with-commas-in-d3 user 'ericsoco'
+
+Adding in the historical dataset
+- used promise.all in main, like in the historical main
+- had to change the domains of the axis
+- had to move the xaxis from the top to yscale(0), following this source http://bl.ocks.org/maaquib/6e989956b99b819d69e9

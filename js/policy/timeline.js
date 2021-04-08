@@ -4,21 +4,23 @@ class Timeline {
      * @param {Object}
      * @param {Array}
      */
-    constructor(_config, _data) {
+    constructor(_config, _policyData, _canadaHistoricalData) {
         this.config = {
           parentElement: _config.parentElement,
           containerWidth: 800,
           containerHeight: 500,
-          margin: {top: 250, right: 10, bottom: 50, left: 100},
+          margin: {top: 250, right: 10, bottom: 50, left: 50},
           mitigation_estimate_year: _config.mitigation_estimate_year || 2020,
           tooltipPadding: _config.tooltipPadding || 15,
           legendWidth: 200,
           legendHeight: 10,
           legendSquareSize: 15,
         }
-        this.data = _data.filter(d => d.Estimate_of_Mitigation_Impact_in_2020_Kt_CO2_eq<0)
+        this.policyData = _policyData.filter(d => d.Estimate_of_Mitigation_Impact_in_2020_Kt_CO2_eq<0)
 
-        this.sectors = [...new Set(this.data.map(d => d.Sector_Affected))];
+        console.log('this.policyData', this.policyData)
+        this.canadaHistoricalData = _canadaHistoricalData
+        this.sectors = [...new Set(this.policyData.map(d => d.Sector_Affected))];
 
         this.selectedSectors = this.sectors
 
@@ -45,45 +47,57 @@ class Timeline {
             .attr('width', vis.config.containerWidth)
             .attr('height', vis.config.containerHeight);
       
-        vis.chart = vis.svg.append('g')
-            .attr('transform', `translate(${vis.config.margin.left},${vis.config.margin.top})`);
-
         // Add group for legend
         vis.legend = vis.svg.append('g')
-            .attr('transform', `translate(${vis.config.margin.left}, 100)`);
+            .attr('transform', `translate(100, 100)`);
       
+        vis.chartArea = vis.svg.append('g')
+            .attr('transform', `translate(${vis.config.margin.left},${vis.config.margin.top})`);
+
+        vis.chart = vis.chartArea.append('g')
+
+        // set range to be 1990-2025, but need to create an array to work with scaleband
+        let xScaleDomain = []
+        for(let i = 1990; i<=2025; i++){
+          xScaleDomain.push(i)
+        } 
         // Intialize the scales
         vis.xScale = d3.scaleBand()
-            .domain(vis.data.map(vis.xValue)) 
+            .domain(xScaleDomain) 
+            // .domain([1990, 2025]) 
             .range([0, vis.config.width])
             .paddingInner(0.05)
             .paddingOuter(0.05);
 
-        let minYValue = d3.min(vis.data, d=>d.Estimate_of_Mitigation_Impact_in_2020_Kt_CO2_eq)
+        let maxYValue = d3.max(vis.canadaHistoricalData, d=>d.CO2eq)
+        let minYValue = d3.min(vis.policyData, d=>d.Estimate_of_Mitigation_Impact_in_2020_Kt_CO2_eq)
 
+        console.log('vis.config.height', vis.config.height)
         vis.yScale = d3.scaleLinear()
-            .domain([0, minYValue])
-            .range([0, vis.config.height]);
+            .domain([minYValue, maxYValue])
+            .range([vis.config.height,0])
+            .nice();
     
         vis.colorScale = d3.scaleOrdinal()
             .domain(vis.sectors)
             .range(d3.schemeCategory10);
     
         // Initialize axes
-        vis.xAxis = d3.axisTop(vis.xScale)
-          .ticks(41)
+        vis.xAxis = d3.axisTop(vis.xScale) // FIXME: maybe this shouldnt be axis top? this example has no xaxis http://bl.ocks.org/maaquib/6e989956b99b819d69e9
+          .tickValues([1990, 1995, 2000, 2005, 2010, 2015, 2020, 2025])
           .tickSizeOuter(0)
           .tickSize(0)
 
         vis.yAxis = d3.axisLeft(vis.yScale);
     
         // Append empty x-axis group and move it to the bottom of the chart
-        vis.xAxisG = vis.chart.append('g')
+        vis.xAxisG = vis.chartArea.append('g')
             .attr('class', 'axis x-axis')
-            // .attr('transform', `translate(0,${vis.config.height})`);
+            .attr('transform', `translate(0,${vis.yScale(0)})`)
+            // .attr('y', 20);
         
         // Append y-axis group
-        vis.yAxisG = vis.chart.append('g')
+        vis.yAxisG = vis.chartArea.append('g')
             .attr('class', 'axis y-axis') 
         
         vis.updateVis();
@@ -96,7 +110,7 @@ class Timeline {
         let vis = this;
   
         // Filtering to only show selectedsectors
-        vis.filteredData = vis.data.filter(d=>vis.selectedSectors.includes(d.Sector_Affected))
+        vis.filteredData = vis.policyData.filter(d=>vis.selectedSectors.includes(d.Sector_Affected))
 
         // Render the bar chart, the legend and the title
         vis.renderVis();
@@ -129,12 +143,10 @@ class Timeline {
       const bars = vis.chart.selectAll('.bar')
           .data(stackedData)
         .join('rect')
-            .attr('class', d => `bar '${d.key}'`)
+            .attr('class', d => `bar policy '${d.key}'`) //FIXME: key is undefined
             .attr('x', d => {
-              // console.log('d', d)
               return vis.xScale(vis.xValue(d))
-            }
-            )
+            })
             .attr('width', vis.xScale.bandwidth())
             .attr('height', d => {
               return vis.yScale(d.y1) - vis.yScale(d.y0)
@@ -144,20 +156,42 @@ class Timeline {
             })
             .style('fill', d => vis.colorScale(d.Sector_Affected))
     
-    // Tooltip event listeners
-    bars
-    .on('mouseover', (event,d) => {
-      d3.select('#tooltip')
-        .style('display', 'block')
-        .style('left', (event.pageX + vis.config.tooltipPadding) + 'px')   
-        .style('top', (event.pageY + vis.config.tooltipPadding) + 'px')
-        .html(getTooltipHtml(d));
-      
-    })
-    .on('mouseleave', () => {
-      d3.select('#tooltip').style('display', 'none');
-    });
-        
+      // Tooltip event listeners
+      bars
+        .on('mouseover', (event,d) => {
+          d3.select('#tooltip')
+            .style('display', 'block')
+            .style('left', (event.pageX + vis.config.tooltipPadding) + 'px')   
+            .style('top', (event.pageY + vis.config.tooltipPadding) + 'px')
+            .html(getTooltipHtml(d));
+        })
+        .on('mouseleave', () => {
+          d3.select('#tooltip').style('display', 'none');
+        });
+
+      const historicalBars = vis.chart.selectAll('.historical-bar')
+        .data(vis.canadaHistoricalData)
+        .join('rect')
+          .attr('class', d=>`historical-bar ${d.Year}`)
+          .attr('x', d => vis.xScale(d.Year))
+          .attr('width', vis.xScale.bandwidth())
+          .attr('height', d=>vis.yScale(0)-vis.yScale(d.CO2eq))
+          .attr('y', d=>vis.yScale(d.CO2eq))
+          .style('fill', 'grey')
+
+      // Tooltip event listeners
+      historicalBars
+        .on('mouseover', (event,d) => {
+          d3.select('#tooltip')
+            .style('display', 'block')
+            .style('left', (event.pageX + vis.config.tooltipPadding) + 'px')   
+            .style('top', (event.pageY + vis.config.tooltipPadding) + 'px')
+            .html(getTooltipHtmlHistorical(d));
+        })
+        .on('mouseleave', () => {
+          d3.select('#tooltip').style('display', 'none');
+        });
+
       // Update the axes
       vis.xAxisG.call(vis.xAxis);
       vis.yAxisG.call(vis.yAxis);
@@ -202,7 +236,6 @@ class Timeline {
               }
             })
 
-
       vis.legend.selectAll('text')
           .data(sortedColorScaleDomain)
           .join('text')
@@ -217,7 +250,7 @@ class Timeline {
 
     
 
-  // Html tooltip helper functions
+// Html tooltip helper functions
 function getTooltipHtml(d) {
     let format = d3.format(",");
     let C02estimate = 0-d.Estimate_of_Mitigation_Impact_in_2020_Kt_CO2_eq
@@ -226,5 +259,14 @@ function getTooltipHtml(d) {
       <div class="tooltip-title">${d.Name_of_Mitigation_Action}</div>
       <div><i>${d.Sector_Affected}, ${d.Start_year_of_Implementation}</i></div>
       <div>${C02estimate}<div>`
+
+  }
+
+  // Html tooltip helper functions
+function getTooltipHtmlHistorical(d) {
+    let format = d3.format(",");
+    C02estimate = format(d.CO2eq)
+    return `
+      <div><b>${d.Year}</b>: ${C02estimate}<div>`
 
   }

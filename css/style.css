@@ -1,3 +1,7 @@
+#main {
+    transition: margin-left .5s; /*Transition effect for sidebar*/
+}
+
 body {
     font-family: 'Noto Sans JP', sans-serif;
     font-size: 16px;
@@ -185,4 +189,7 @@ body{
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+}
+.sourcesWriteUp{
+    font-size: 10pt;
 }

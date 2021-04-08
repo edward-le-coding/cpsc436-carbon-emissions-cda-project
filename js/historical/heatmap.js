@@ -1,5 +1,5 @@
 class Heatmap{
-    constructor(_config, _data, _metric) {
+    constructor(_config, _data, _provinceDispatcher, _yearDispatcher, _metric) {
         this.config = {
             parentElement: _config.parentElement,
             containerWidth:  _config.containerWidth || 1200,
@@ -11,6 +11,9 @@ class Heatmap{
         }
         this.data = _data;
         this.metric = _metric || 'CO2eq'
+        this.provinceDispatcher = _provinceDispatcher;
+        this.yearDispatcher = _yearDispatcher;
+
         this.initVis();
     }
 
@@ -173,7 +176,7 @@ class Heatmap{
             .attr('class', d => 'year' + vis.xValue(d));
     
         // Enter + update
-        cellEnter.merge(cell)
+        let finalCells = cellEnter.merge(cell)
             .attr('height', vis.yScale.bandwidth())
             .attr('width', cellWidth)
             .attr('x', d => vis.xScale(vis.xValue(d)))
@@ -184,7 +187,9 @@ class Heatmap{
                 return vis.colorScale(vis.colorValue(d));
               }
             })
-            .on('mouseover', (event,d) => {
+        
+        finalCells
+            .on('mouseover', (event, d) => {
               const value = (d.CO2eq_tn_per_person === null) ? 'No data available' : d.CO2eq_tn_per_person;
               let units = metricUnits[vis.metric]
               d3.select('#tooltip')
@@ -198,6 +203,15 @@ class Heatmap{
             })
             .on('mouseleave', () => {
               d3.select('#tooltip').style('display', 'none');
+            });
+
+        finalCells
+            .on('click', (event, d) => {
+                console.log("clicked in heatmap, region is " + d.Region + d.Year);
+                const selectedProvince = d.Region;
+                const selectedYear = d.Year;
+                vis.provinceDispatcher.call('selectProvince', event, selectedProvince);
+                vis.yearDispatcher.call('selectYear', event, selectedYear);
             });
     
         // 2b) Diagonal lines for NA values
@@ -225,6 +239,7 @@ class Heatmap{
 
       // Add stops to the gradient
       // Learn more about gradients: https://www.visualcinnamon.com/2016/05/smooth-color-legend-d3-svg-gradient
+      // TODO: Melissa please explain to us what stop exactly is, I'm not sure I can follow, thanks. Flo
       vis.legendColorGradient.selectAll('stop')
           .data(vis.colorScale.range())
         .join('stop')

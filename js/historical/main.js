@@ -1,3 +1,8 @@
+// Initialize dispatcher that is used to orchestrate events
+const heatmapProvinceDispatcher = d3.dispatch('selectProvince');
+const heatmapYearDispatcher = d3.dispatch('selectYear');
+
+
 // Global objects
 let barChartData;
 let masterBarChartData;
@@ -40,7 +45,7 @@ Promise.all([
   let heatmapData = masterHistData.filter(d=>d.Source=='Total'&&d.Region!='Canada') // TODO: remove filtering of Canada
   heatmap = new Heatmap({
     parentElement: '#heatmap'
-  }, heatmapData);
+  }, heatmapData, heatmapProvinceDispatcher, heatmapYearDispatcher);
 
   subsetGeoChoropleth = prepareGeoData(subsetHistData, masterGeoData);
   console.log('subsetGeoChoropleth', subsetGeoChoropleth)
@@ -92,29 +97,10 @@ function prepareGeoData (histSubset, geoData){
   return geoData
 }
 
-// add event listener
-document.getElementById('provinces-selector').addEventListener('change', updateViews);
-  
-
-// helper function to update views
-function updateViews() {
-  console.log('masterHistData', masterHistData)
-  let selectedProvince = document.getElementById('provinces-selector').value;
-  console.log('selectedProvince', selectedProvince)
-  console.log('type of selectedProvince', typeof selectedProvince)
-  barChartData = masterBarChartData.filter(d => d.Region === selectedProvince)
-  console.log('barChartData', barChartData )
-  stackedBarChart.data = barChartData;
-  stackedBarChart.province = [selectedProvince];
-  stackedBarChart.updateVis();
-}
-
 d3.select("#sort-control").on("change", function () {
   heatmap.config.sortOption = d3.select(this).property("value");
   heatmap.updateVis();
 });
-
-
 
 
 d3.select("#metric-selector").on("change", function(d) {
@@ -149,4 +135,29 @@ d3.select("#metric-selector").on("change", function(d) {
   heatmap.updateVis()
 
 });
+
+/**
+ * Dispatcher waits for event
+ * We update the data in the stacked bar chart based on the region selected in the heatmap
+ */
+heatmapProvinceDispatcher.on('selectProvince', selectedProvince => {
+  console.log("back in main for province");
+  //console.log(selectedYear);
+  barChartData = masterBarChartData.filter(d => d.Region === selectedProvince)
+  stackedBarChart.data = barChartData;
+  stackedBarChart.province = [selectedProvince];
+  stackedBarChart.updateVis();
+});
+
+heatmapYearDispatcher.on('selectYear', selectedYear => {
+  console.log("back in main for year");
+  let stepIndex = selectedYear - 1990;
+  console.log(selectedYear);
+  console.log(stepIndex);
+
+})
+
+
+
+
 

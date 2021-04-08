@@ -169,7 +169,8 @@ class Heatmap{
     
         // Enter
         const cellEnter = cell.enter().append('rect')
-            .attr('class', 'h-cell');
+            .attr('class', 'h-cell')
+            .attr('class', d => 'year' + vis.xValue(d));
     
         // Enter + update
         cellEnter.merge(cell)
@@ -246,4 +247,22 @@ class Heatmap{
       // Update legend axis
       vis.xLegendAxisG.call(vis.xLegendAxis);
     }
+
+    // Updates the viz based on the year the user scrolls to
+    goToStep(stepIndex) {
+        let vis = this;
+    
+        let baseYear = 1990;
+        let className = `.year${baseYear + stepIndex}`;
+    
+        // set opactity of all bars to 0.2
+        vis.chart.selectAll('rect')
+          .transition()
+          .style('opacity', 0.2);
+        
+        // set opacity of the bar we're looking at to 1
+        vis.chart.selectAll(className)
+          .transition()
+          .style('opacity', 1);
+      }
 }

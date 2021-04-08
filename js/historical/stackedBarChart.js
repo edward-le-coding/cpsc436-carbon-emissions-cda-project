@@ -240,6 +240,7 @@ class StackedBarChart {
           .text(d => `Sources of emissions over the years in ${d}`);
   }
 
+  // Updates the viz based on the year user scrolls to
   goToStep(stepIndex) {
     let vis = this;
 

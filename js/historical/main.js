@@ -67,6 +67,7 @@ Promise.all([
 
         // Update visualization based on the current step
         stackedBarChart.goToStep(nextStep);
+        heatmap.goToStep(nextStep);
       },
       // Trigger scroll event halfway up. Depending on the text length, 75% might be even better
       offset: '50%',

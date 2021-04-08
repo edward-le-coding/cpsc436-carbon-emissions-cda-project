@@ -141,8 +141,6 @@ d3.select("#metric-selector").on("change", function(d) {
  * We update the data in the stacked bar chart based on the region selected in the heatmap
  */
 heatmapProvinceDispatcher.on('selectProvince', selectedProvince => {
-  console.log("back in main for province");
-  //console.log(selectedYear);
   barChartData = masterBarChartData.filter(d => d.Region === selectedProvince)
   stackedBarChart.data = barChartData;
   stackedBarChart.province = [selectedProvince];
@@ -150,10 +148,17 @@ heatmapProvinceDispatcher.on('selectProvince', selectedProvince => {
 });
 
 heatmapYearDispatcher.on('selectYear', selectedYear => {
-  console.log("back in main for year");
   let stepIndex = selectedYear - 1990;
-  console.log(selectedYear);
-  console.log(stepIndex);
+  stackedBarChart.goToStep(stepIndex);
+  heatmap.goToStep(stepIndex);
+  // TODO: add goToStep for choropleth
+
+  //TODO: scroller on side needs to get into view
+  // http://jsfiddle.net/walfo/cj8xynL0/1/
+  // http://jsfiddle.net/DerekL/x3edvp4t/
+  // https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView
+  // https://stackoverflow.com/questions/13735912/anchor-jumping-by-using-javascript
+  //
 
 })
 

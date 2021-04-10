@@ -84,7 +84,7 @@ class Timeline {
     
         // Initialize axes
         vis.xAxis = d3.axisTop(vis.xScale) // FIXME: maybe this shouldnt be axis top? this example has no xaxis http://bl.ocks.org/maaquib/6e989956b99b819d69e9
-          .tickValues([1990, 1995, 2000, 2005, 2010, 2015, 2020, 2025, 2030])
+          .tickValues([1990, 1995, 2000, 2005, 2010, 2015, 2020, 2025])
           .tickSizeOuter(0)
           .tickSize(0)
 

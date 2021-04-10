@@ -117,30 +117,6 @@ d3.select("#metric-selector").on("change", function(d) {
 
 
 /**
- * Event listener: toggle filter categories
- */
- d3.selectAll('.legend-btn').on('change', function() {
-
-  property = d3.select(this).property("metric")
-
-
-  // Toggle 'active' class
-  d3.select(this).classed('active', !d3.select(this).classed('active'))
-
-  // Check which categories are active
-  let selectedMetricString = d3.select(this).attr('metric')
-  console.log('selectedCategoryString', selectedMetricString)
-
-  if (selectedMetricString != heatmap.metric) {
-    d3.select(this).classed('active', !d3.select(this).classed('active'))
-  }
-
-  heatmap.metric = selectedMetricString
-  heatmap.updateVis()
-
-});
-
-/**
  * Dispatcher waits for event
  * We update the data in the stacked bar chart based on the region selected in the heatmap
  */

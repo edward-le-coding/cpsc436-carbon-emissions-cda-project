@@ -21,7 +21,7 @@ Data manipulation/pre-processing
 
 Stacked bar chart:
 - General structure of the stacked bar chart taken from: https://github.com/UBC-InfoVis/2021-436V-examples/tree/master/d3-stacked-bar-chart
-- Other general information on stacked bar chart: https://observablehq.com/@d3/stacked-bar-chart
+- For the use of the d.data.nameOther general information on stacked bar chart: https://observablehq.com/@d3/stacked-bar-chart
 - scrollytelling general info: https://bl.ocks.org/baronwatts/2a50ae537d7c46670aa5eb30254ef751
 - scrollytelling general info: https://towardsdatascience.com/how-i-created-an-interactive-scrolling-visualisation-with-d3-js-and-how-you-can-too-e116372e2c73
 - for finding max in 2D matrix: https://stackoverflow.com/questions/31249419/how-to-find-max-value-from-a-2d-matrix-using-d3-js

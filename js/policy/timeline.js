@@ -10,13 +10,13 @@ class Timeline {
           containerWidth: 800,
           containerHeight: 500,
           margin: {top: 250, right: 10, bottom: 50, left: 50},
-          mitigation_estimate_year: _config.mitigation_estimate_year || 2020,
+          mitigation_estimate_year: _config.mitigation_estimate_year || 2030,
           tooltipPadding: _config.tooltipPadding || 15,
           legendWidth: 200,
           legendHeight: 10,
           legendSquareSize: 15,
         }
-        this.policyData = _policyData.filter(d => d.Estimate_of_Mitigation_Impact_in_2020_Kt_CO2_eq<0)
+        this.policyData = _policyData.filter(d => d.Estimate_of_Mitigation_Impact_in_2030_Kt_CO2_eq<0)
 
         console.log('this.policyData', this.policyData)
         this.canadaHistoricalData = _canadaHistoricalData
@@ -35,7 +35,7 @@ class Timeline {
 
         // Specify accessor functions
         vis.xValue = d => d.Start_year_of_Implementation;
-        vis.yValue = d => d.Estimate_of_Mitigation_Impact_in_2020_Kt_CO2_eq;
+        vis.yValue = d => d.Estimate_of_Mitigation_Impact_in_2030_Kt_CO2_eq;
     
     
         // Calculate inner chart size. Margin specifies the space around the actual chart.
@@ -70,7 +70,7 @@ class Timeline {
             .paddingOuter(0.05);
 
         let maxYValue = d3.max(vis.canadaHistoricalData, d=>d.CO2eq)
-        let minYValue = d3.min(vis.policyData, d=>d.Estimate_of_Mitigation_Impact_in_2020_Kt_CO2_eq)
+        let minYValue = d3.min(vis.policyData, d=>d.Estimate_of_Mitigation_Impact_in_2030_Kt_CO2_eq)
 
         console.log('vis.config.height', vis.config.height)
         vis.yScale = d3.scaleLinear()
@@ -84,7 +84,7 @@ class Timeline {
     
         // Initialize axes
         vis.xAxis = d3.axisTop(vis.xScale) // FIXME: maybe this shouldnt be axis top? this example has no xaxis http://bl.ocks.org/maaquib/6e989956b99b819d69e9
-          .tickValues([1990, 1995, 2000, 2005, 2010, 2015, 2020, 2025])
+          .tickValues([1990, 1995, 2000, 2005, 2010, 2015, 2020, 2025, 2030])
           .tickSizeOuter(0)
           .tickSize(0)
 
@@ -129,11 +129,11 @@ class Timeline {
       let stackedData = vis.filteredData.map(d => {
         let returnValue = d
         if (!yearsSeen.has(d.Start_year_of_Implementation)){
-          previousy0 = d.Estimate_of_Mitigation_Impact_in_2020_Kt_CO2_eq
+          previousy0 = d.Estimate_of_Mitigation_Impact_in_2030_Kt_CO2_eq
           yearsSeen.add(d.Start_year_of_Implementation)
           returnValue = {...d, y0: 0, y1: previousy0}
         } else {
-          let newy1 = d.Estimate_of_Mitigation_Impact_in_2020_Kt_CO2_eq+previousy0
+          let newy1 = d.Estimate_of_Mitigation_Impact_in_2030_Kt_CO2_eq+previousy0
           returnValue = {...d, y0: previousy0, y1: newy1}
           previousy0 = newy1
         }
@@ -253,7 +253,7 @@ class Timeline {
 // Html tooltip helper functions
 function getTooltipHtml(d) {
     let format = d3.format(",");
-    let C02estimate = 0-d.Estimate_of_Mitigation_Impact_in_2020_Kt_CO2_eq
+    let C02estimate = 0-d.Estimate_of_Mitigation_Impact_in_2030_Kt_CO2_eq
     C02estimate = format(C02estimate)
     return `
       <div class="tooltip-title">${d.Name_of_Mitigation_Action}</div>

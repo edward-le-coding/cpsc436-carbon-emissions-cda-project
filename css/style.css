@@ -11,11 +11,6 @@ body {
     background: #f7f7f7;
 }
 
-/*
-body{
-  font-family: lato, sans-serif;
-}*/
-
   
 .container {
   position: relative;
@@ -76,6 +71,12 @@ h1 {
 #historicalLandingPage{
   background-image: url('../assets/Saskatchewan_Wheat.jpg');
   background-color: rgba(255,255,255,0.85);
+}
+#historicalGraphicsContainer{
+  position: relative;
+}
+.historicalChart{
+  position: fixed;
 }
 
 #policyLandingPage{
@@ -179,11 +180,6 @@ h1 {
   margin-top: 300px;
 }
 
-/*.stackedBarChart {
-  font-size: 1rem;
-  font-weight: bold;
-  fill: black;
-}*/
 
 .chart-label {
   font-size: .7rem;

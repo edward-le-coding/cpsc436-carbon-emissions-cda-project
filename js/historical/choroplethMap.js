@@ -36,17 +36,15 @@ class Choropleth{
         // Update view
         vis.updateVis();
     }
+    
     updateVis(_data = null, _plottedVar = 'CO2eq', _yearSelected = null, _selectedProvince = null){
         let vis = this;
-        // Update data (if provided)
-        if(_data != null) {
-            vis.data = _data;
-        }
-        // Render data
-        vis.renderVis(_plottedVar, _yearSelected, _selectedProvince)
+        
+        vis.renderVis()
     }
+
     // Render visualization
-    renderVis(_plottedVar = 'CO2eq', _yearSelected = 2018, selectedProvince = null) {
+    renderVis() {
         let vis = this;
         // Convert data to topoJson
         const provinces = topojson.feature(vis.data, vis.data.objects.provinces);

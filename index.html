@@ -76,7 +76,7 @@
             </div>
             <div id="historicalVis" class="page">
                 <h1 class="visTitle">Canada's Carbon Emissions (1990-2018)</h1>
-                <div id="container">
+                <div id="historicalGraphicsContainer">
                     <!-- Legend -->
                     <div id = 'selectors'>
                         <div name="metric-selector" id="metric-selector">
@@ -109,10 +109,10 @@
                             <option value="Saskatchewan">Saskatchewan</option>
                             <option value="Yukon">Yukon</option>
                         </select>
+                        <div id="heatmap"></div>
+                        <div id="choropleth"></div>
+                        <svg id="stackedBarChart"></svg>
                     </div> 
-                    <div id="heatmap" class="chart"></div>
-                    <div id="choropleth" class="chart"></div>
-                    <svg id="stackedBarChart"></svg>
                     <div class="container">
                         <div id="prose">
                             <div class="step" id="step0">1990</div>

@@ -1,13 +1,23 @@
+/* general */
 #main {
     transition: margin-left .5s; /*Transition effect for sidebar*/
 }
 
+/*TODO: delete one of the body versions*/
 body {
     font-family: 'Noto Sans JP', sans-serif;
     font-size: 16px;
     font-weight: 400;
     background: #f7f7f7;
 }
+
+  
+.container {
+  position: relative;
+  margin-top: 500px;
+  margin-bottom: 100px;
+}
+
 
 h1 {
     font-size: 48px;
@@ -19,25 +29,123 @@ h1 {
     margin: 2rem;
     max-width: 50rem;
 }
-  
-.container {
-  margin-bottom: 100px;
-}
-#choropleth {
-    float:left;
-}
-.geo-boundary-path {
-    stroke: #fff;
-    fill: none;
-    stroke-width: 1;
-  }
-#stackedBarChart {
-  position: fixed;
-  margin-top: 50px;
+
+/* landing pages */ 
+
+.landingPage{
+  position: relative;
+  height:100vh;
+  display: flex;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: lighten;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
 }
 
+#landingPage h1{
+  font-size: 60px;
+}
+
+.vis{
+  position: fixed;
+}
+
+
+.landingPage p{
+  font-size: 24px;
+}
+
+.readMoreImage {
+  fill: green;
+}
+
+#overallLandingPage{
+  background-image: url('../assets/edmonton-77798_1280.jpg');
+  background-color: rgba(255,255,255,0.85);
+}
+
+#historicalLandingPage{
+  background-image: url('../assets/Saskatchewan_Wheat.jpg');
+  background-color: rgba(255,255,255,0.85);
+}
+#historicalGraphicsContainer{
+  position: relative;
+}
+.historicalChart{
+  position: fixed;
+}
+
+#policyLandingPage{
+  background-image: url('../assets/Algonquin_Cache_Lake_Lookout.jpg');
+  background-color: rgba(255,255,255,0.85);
+}
+
+#endPage{
+  position: relative;
+  background-image: url('../assets/Marche_Bonsecours_Winter.jpg');
+  height:100vh;
+  display: flex;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(255,255,255,0.85);
+  background-blend-mode: lighten;
+  flex-direction: column;
+  padding: 0 10px;
+}
+
+#end-title{
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.pictureCaption{
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+  font-size: 18px;
+}
+
+.visTitle{
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+
+.visWriteUp{
+  font-size: 24px;
+  text-align: center;
+}
+
+.buttonArray{
+  float: left;
+  padding: 10px;
+}
+
+.button {
+  background-color: #4CAF50;
+  border: black;
+  border-radius: 25px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.sourcesWriteUp{
+  font-size: 10pt;
+}
+
+/* scrollwheel */
 #prose {
-  margin-left: 1100px;
+  margin-left: 1250px;
   padding-top: 300px;
 }
 
@@ -48,7 +156,31 @@ h1 {
 .step {
   font-size: 1rem;
 }
-  
+
+/* choropleth view */
+#choropleth {
+    position: sticky;
+    top: 400px;
+    margin-top: 300px;
+    float:left;
+    margin-top: 300px;
+}
+
+.geo-boundary-path {
+    stroke: #fff;
+    fill: none;
+    stroke-width: 1;
+  }
+
+/* stacked bar chart view */
+#stackedBarChart {
+  position: sticky;
+  top: 300px;
+  margin-left: 350px;
+  margin-top: 300px;
+}
+
+
 .chart-label {
   font-size: .7rem;
 }
@@ -76,22 +208,21 @@ rect {
   fill: black;
 }
 
-.stackedBarChart {
-  font-size: 1rem;
-  font-weight: bold;
-  fill: black;
+
+
+/* heatmap view */
+#heatmap {
+  float:left;
+  margin-top: 200px;
+  position: sticky;
+  top: 0;
 }
-  
-/* Todo: add styles */
-body{
-    font-family: lato, sans-serif;
-}
-/* Tooltip: heatmap*/
+
 #tooltip {
   position: absolute;
   display: none;
   background: #fff;
-  box-shadow: 3px 3px 3px 0px rgb(92 92 46);
+  box-shadow: 3px 3px 3px 0px rgb(92 92 92 / 0.5);
   border: 1px solid #ddd;
   font-size: 12px;
   font-weight: 500;
@@ -99,107 +230,10 @@ body{
   min-width: 100px;
   color: #333;
 }
+
 .tooltip-title {
   color: #000;
   font-size: 14px;
   font-weight: 600;
 }
 
-.vis{
-    position: fixed;
-}
-
-.landingPage{
-    position: relative;
-    height:100vh;
-    display: flex;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-blend-mode: lighten;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0 10px;
-}
-.landingPage p{
-    font-size: 24px;
-}
-#selectors{
-    z-index: 1;
-    position: fixed;
-}
-.readMoreImage {
-    fill: black;
-}
-.readMoreImage:hover {
-    fill: #444444;
- }
-#overallLandingPage{
-    background-image: url('../assets/edmonton-77798_1280.jpg');
-    background-color: rgba(255,255,255,0.85);
-}
-#historicalLandingPage{
-    background-image: url('../assets/Saskatchewan_Wheat.jpg');
-    background-color: rgba(255,255,255,0.85);
-}
-#policyLandingPage{
-    background-image: url('../assets/Algonquin_Cache_Lake_Lookout.jpg');
-    background-color: rgba(255,255,255,0.85);
-}
-#endPage{
-    position: relative;
-    background-image: url('../assets/Marche_Bonsecours_Winter.jpg');
-    height:100vh;
-    display: flex;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: rgba(255,255,255,0.85);
-    background-blend-mode: lighten;
-    flex-direction: column;
-    padding: 0 10px;
-}
-#end-title{
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-}
-
-.pictureCaption{
-    position: absolute;
-    bottom: 8px;
-    right: 16px;
-    font-size: 18px;
-}
-.visTitle{
-    position: absolute;
-    top: 8px;
-    left: 16px;
-}
-.visWriteUp{
-    font-size: 24px;
-    text-align: center;
-}
-.buttonArray{
-    float: left;
-    padding: 10px;
-}
-.button {
-    background-color: #4CAF50;
-    border: black;
-    border-radius: 25px;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-}
-.button:hover {
-    background-color: #7bdb7f;
-    border: #7bdb7f;
-}
-.sourcesWriteUp{
-    font-size: 10pt;
-}

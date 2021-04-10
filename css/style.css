@@ -125,10 +125,16 @@ body{
 .landingPage p{
     font-size: 24px;
 }
-
-.readMoreImage {
-    fill: green;
+#selectors{
+    z-index: 1;
+    position: fixed;
 }
+.readMoreImage {
+    fill: black;
+}
+.readMoreImage:hover {
+    fill: #444444;
+ }
 #overallLandingPage{
     background-image: url('../assets/edmonton-77798_1280.jpg');
     background-color: rgba(255,255,255,0.85);
@@ -189,6 +195,10 @@ body{
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+}
+.button:hover {
+    background-color: #7bdb7f;
+    border: #7bdb7f;
 }
 .sourcesWriteUp{
     font-size: 10pt;

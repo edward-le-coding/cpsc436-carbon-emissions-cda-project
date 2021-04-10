@@ -1,5 +1,6 @@
 /* These css stylings detail how the menu bar should look and behave */
-/* Siginifianct guidance from https://www.w3schools.com/css/css3_borders.asp*/
+/* Siginificant guidance from https://www.w3schools.com/howto/howto_js_collapse_sidebar.asp
+*/
 .navSidebar {
     height: 100%;
     width: 0;

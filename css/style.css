@@ -59,8 +59,11 @@ h1 {
   font-size: 24px;
 }
 
-.readMoreImage {
-  fill: green;
+.readMoreImage{
+  fill: black;
+}
+.readMoreImage:hover {
+  fill: #444444;
 }
 
 #overallLandingPage{

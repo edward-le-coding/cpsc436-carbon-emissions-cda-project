@@ -1,10 +1,21 @@
 /* general */
+#main {
+    transition: margin-left .5s; /*Transition effect for sidebar*/
+}
+
+/*TODO: delete one of the body versions*/
 body {
     font-family: 'Noto Sans JP', sans-serif;
     font-size: 16px;
     font-weight: 400;
     background: #f7f7f7;
 }
+
+/*
+body{
+  font-family: lato, sans-serif;
+}*/
+
   
 .container {
   position: relative;
@@ -12,13 +23,39 @@ body {
   margin-bottom: 100px;
 }
 
+
+h1 {
+    font-size: 48px;
+    margin-bottom: 50px;
+}
+  
+.page {
+    position: relative;
+    margin: 2rem;
+    max-width: 50rem;
+}
+
 /* landing page */ 
-#landingPage{
+/*#landingPage{
   background-image: url('../assets/edmonton-77798_1280.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-color: rgba(255,255,255,0.6);
+  background-blend-mode: lighten;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+}*/
+
+.landingPage{
+  position: relative;
+  height:100vh;
+  display: flex;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   background-blend-mode: lighten;
   flex-direction: column;
   justify-content: center;
@@ -30,13 +67,100 @@ body {
   font-size: 60px;
 }
 
-#landingPage p{
+
+/*#landingPage .button{
+  background-image: url('../assets/scroll button.png');
+  background-size: cover;
+}*/
+
+.vis{
+  position: fixed;
+}
+
+/*#landingPage p{
+  font-size: 24px;
+}*/
+
+.landingPage p{
   font-size: 24px;
 }
 
-#landingPage .button{
-  background-image: url('../assets/scroll button.png');
+.readMoreImage {
+  fill: green;
+}
+
+#overallLandingPage{
+  background-image: url('../assets/edmonton-77798_1280.jpg');
+  background-color: rgba(255,255,255,0.85);
+}
+
+#historicalLandingPage{
+  background-image: url('../assets/Saskatchewan_Wheat.jpg');
+  background-color: rgba(255,255,255,0.85);
+}
+
+#policyLandingPage{
+  background-image: url('../assets/Algonquin_Cache_Lake_Lookout.jpg');
+  background-color: rgba(255,255,255,0.85);
+}
+
+#endPage{
+  position: relative;
+  background-image: url('../assets/Marche_Bonsecours_Winter.jpg');
+  height:100vh;
+  display: flex;
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(255,255,255,0.85);
+  background-blend-mode: lighten;
+  flex-direction: column;
+  padding: 0 10px;
+}
+
+#end-title{
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.pictureCaption{
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+  font-size: 18px;
+}
+
+.visTitle{
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+
+.visWriteUp{
+  font-size: 24px;
+  text-align: center;
+}
+
+.buttonArray{
+  float: left;
+  padding: 10px;
+}
+
+.button {
+  background-color: #4CAF50;
+  border: black;
+  border-radius: 25px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.sourcesWriteUp{
+  font-size: 10pt;
 }
 
 /* scrollwheel */
@@ -129,8 +253,10 @@ rect {
   min-width: 100px;
   color: #333;
 }
+
 .tooltip-title {
   color: #000;
   font-size: 14px;
   font-weight: 600;
 }
+

@@ -4,90 +4,193 @@
     <title>Canada's Carbon Emissions</title>
     <link rel="icon" href="data:;base64,iVBORwOKGO=" />
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/menuBar.css">
     <link href="https://fonts.googleapis.com/css2?family=Castoro:ital@1&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
 </head>
+<meta charset="UTF-8"/>
 <body>
-       <header id="landingPage">
-            <h1>
-                Canada's Climate is Changing.
-            </h1>
-            <h2>
-                Here's Canada's carbon emissions and what Canada is doing to cut them.
-            </h2>
-            <p>Click the button below or scroll to see Canada's carbon emissions.</p>
-            <button id="readMore" style="border: 0; background: transparent">
-                <img id="readMoreImage" src="assets/arrow-down-circle-fill.svg" width="90" height="50"/>
-            </button>
-       </header>
-        <section id="charts">
-            <!-- Legend -->
-            <div name="metric-selector" id="metric-selector">
-                <input type="radio" name="metric-selector" value="CO2eq" checked>Absolute Emissions (total GHG)<br>
-                <input type="radio" name="metric-selector" value="CO2eq_tn_per_person">Emissions Intensity (per capita)</br>
-                <input type="radio" name="metric-selector" value="CO2eq_tn_per_mil_GDP">Emissions Intensity (by GDP)</br>
-            </div>
-            
-            <div class="caption">
-                <b>The heat map below shows different metrics for different regions.
-                    Sort regions </b>
-                <select id="sort-control">
-                    <option value="alphabetically">alphabetically</option>
-                    <option value="value">by metric</option>
-                </select>
-            </div>
 
-            <div id="heatmap" class="chart"></div>
-            
-            <div id="choropleth" class="chart"></div>
-
-            <svg id="stackedBarChart"></svg>
-            
-            <div class="container">
-
-                <div id="prose">
-                    <div class="step" id="step0">1990</div>
-                    <div class="step" id="step1">1991</div>
-                    <div class="step" id="step2">1992</div>
-                    <div class="step" id="step3">1993</div>
-                    <div class="step" id="step4">1994</div>
-                    <div class="step" id="step5">1995</div>
-                    <div class="step" id="step6">1996</div>
-                    <div class="step" id="step7">1997</div>
-                    <div class="step" id="step8">1998</div>
-                    <div class="step" id="step9">1999</div>
-                    <div class="step" id="step10">2000</div>
-                    <div class="step" id="step11">2001</div>
-                    <div class="step" id="step12">2002</div>
-                    <div class="step" id="step13">2003</div>
-                    <div class="step" id="step14">2004</div>
-                    <div class="step" id="step15">2005</div>
-                    <div class="step" id="step16">2006</div>
-                    <div class="step" id="step17">2007</div>
-                    <div class="step" id="step18">2008</div>
-                    <div class="step" id="step19">2009</div>
-                    <div class="step" id="step20">2010</div>
-                    <div class="step" id="step21">2011</div>
-                    <div class="step" id="step22">2012</div>
-                    <div class="step" id="step23">2013</div>
-                    <div class="step" id="step24">2014</div>
-                    <div class="step" id="step25">2015</div>
-                    <div class="step" id="step26">2016</div>
-                    <div class="step" id="step27">2017</div>
-                    <div class="step" id="step28">2018</div>
+    <div id="navSidebar" class="navSidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#overallLandingPage" onclick="closeNav()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+                <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+            </svg> Home</a>
+            <a href="#historicalLandingPage" onclick="closeNav()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock-history" viewBox="0 0 16 16">
+                <path d="M8.515 1.019A7 7 0 0 0 8 1V0a8 8 0 0 1 .589.022l-.074.997zm2.004.45a7.003 7.003 0 0 0-.985-.299l.219-.976c.383.086.76.2 1.126.342l-.36.933zm1.37.71a7.01 7.01 0 0 0-.439-.27l.493-.87a8.025 8.025 0 0 1 .979.654l-.615.789a6.996 6.996 0 0 0-.418-.302zm1.834 1.79a6.99 6.99 0 0 0-.653-.796l.724-.69c.27.285.52.59.747.91l-.818.576zm.744 1.352a7.08 7.08 0 0 0-.214-.468l.893-.45a7.976 7.976 0 0 1 .45 1.088l-.95.313a7.023 7.023 0 0 0-.179-.483zm.53 2.507a6.991 6.991 0 0 0-.1-1.025l.985-.17c.067.386.106.778.116 1.17l-1 .025zm-.131 1.538c.033-.17.06-.339.081-.51l.993.123a7.957 7.957 0 0 1-.23 1.155l-.964-.267c.046-.165.086-.332.12-.501zm-.952 2.379c.184-.29.346-.594.486-.908l.914.405c-.16.36-.345.706-.555 1.038l-.845-.535zm-.964 1.205c.122-.122.239-.248.35-.378l.758.653a8.073 8.073 0 0 1-.401.432l-.707-.707z"/>
+                <path d="M8 1a7 7 0 1 0 4.95 11.95l.707.707A8.001 8.001 0 1 1 8 0v1z"/>
+                <path d="M7.5 3a.5.5 0 0 1 .5.5v5.21l3.248 1.856a.5.5 0 0 1-.496.868l-3.5-2A.5.5 0 0 1 7 9V3.5a.5.5 0 0 1 .5-.5z"/>
+            </svg> Canadian Historical<br>Carbon Emissions</a>
+            <a href="#policyLandingPage" onclick="closeNav()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bar-chart" viewBox="0 0 16 16">
+                <path d="M4 11H2v3h2v-3zm5-4H7v7h2V7zm5-5v12h-2V2h2zm-2-1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1h-2zM6 7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7zm-5 4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-3z"/>
+            </svg> Canadian Climate<br>Policy Projections</a>
+            <a href="#endPage" onclick="closeNav()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-book" viewBox="0 0 16 16">
+                <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+            </svg> Methdology and Sources</a>
+        </div>
+        <div id="main">
+            <button class="openButton" onclick="openNav()">&#9776;</button>
+            <div id="overallLandingPage" class="landingPage">
+                <h1>Canada's Climate is Changing.</h1>
+                <h2>Here's Canada's carbon emissions and what Canada is doing to cut them.</h2>
+                <p>Click the button below or scroll to see Canada's carbon emissions.</p>
+                <div class="buttonArray">
+                    <a href="#historicalLandingPage" class="button">Canadian Historical<br>Carbon Emissions</a>
+                    <a href="#policyLandingPage" class="button">Canadian Climate<br>Policy Projections</a>
                 </div>
+                <div class="buttonArray">
+                    <a href="#endPage" class="button">Methodology and Sources</a>
+                </div>
+                <a id="gotoHistorical" href="#historicalLandingPage" style="border: 0; background: transparent">
+                    <img class="readMoreImage" src="assets/arrow-down-circle-fill.svg" width="90" height="50"/>
+                </a>
+                <div id= "landingPageCaption" class="pictureCaption">
+                    Pictured: Edmonton, Alberta <br>
+                    Source: <a href="https://pixabay.com/photos/edmonton-canada-city-cities-77798/" target="_blank">
+                    Pixabay (2013)</a>
+                </div>
+            </div>
+            <div id ="historicalLandingPage" class="landingPage">
+                <h1 class="visTitle">Canada's Carbon Emissions (1990-2018)</h1>
+                <p class="visWriteUp">
+                    Canada is one of the world's largest nations.. not just by land mass!<br><br>
+                    We are the world's 10th largest economy (out of 205)
+                    <a href="https://datacatalog.worldbank.org/dataset/gdp-ranking" target="_blank">
+                        (World Bank, 2020)</a>.<br><br>
+                    We are also the world's 10th largest emitter of greenhouse gasses (GHGs)
+                    <a href="https://www.climatewatchdata.org/ghg-emissions?end_year=2018&start_year=1990" target="_blank">
+                        (Climate Watch, 2021)</a>.<br><br>
+                    We make quite the impact for a nation of only about 38 million people
+                    <a href="https://www150.statcan.gc.ca/t1/tbl1/en/cv.action?pid=1710000501" target="_blank">
+                        (Statistics Canada, 2020)</a>.
+                </p>
+                <a id="gotoHistoricalVis" href="#historicalVis" style="border: 0; background: transparent">
+                    <img class="readMoreImage" src="assets/arrow-down-circle-fill.svg" width="90" height="50"/>
+                </a>
+                <h2></h2>
+                <div id="historicalCaption" class="pictureCaption">
+                    Pictured: Fields of Wheat (Saskatchewan)<br>
+                    Source: <a href="https://pixabay.com/photos/edmonton-canada-city-cities-77798/" target="_blank">
+                    Pixabay (2013)</a>
+                </div>
+            </div>
+            <div id="historicalVis" class="page">
+                <h1 class="visTitle">Canada's Carbon Emissions (1990-2018)</h1>
+                <div id="container">
+                    <!-- Legend -->
+                    <div id = 'selectors'>
+                        <div name="metric-selector" id="metric-selector">
+                            <input type="radio" name="metric-selector" value="CO2eq" checked>Absolute Emissions (total GHG)<br>
+                            <input type="radio" name="metric-selector" value="CO2eq_tn_per_person">Emissions Intensity (per capita)</br>
+                            <input type="radio" name="metric-selector" value="CO2eq_tn_per_mil_GDP">Emissions Intensity (by GDP)</br>
+                        </div>
+                        <div class="caption">
+                            <b>The heat map below shows different metrics for different regions.
+                                Sort regions </b>
+                            <select id="sort-control">
+                                <option value="alphabetically">alphabetically</option>
+                                <option value="value">by metric</option>
+                            </select>
+                        </div>
+                        Filter provinces and territories:
+                        <select id="provinces-selector">
+                            <option value="Canada">Canada</option>
+                            <option value="Alberta">Alberta</option>
+                            <option value="British Columbia">British Columbia</option>
+                            <option value="Manitoba">Manitoba</option>
+                            <option value="New Brunswick">New Brunswick</option>
+                            <option value="Newfoundland and Labrador">Newfoundland and Labrador</option>
+                            <option value="Northwest Territories">Northwest Territories</option>
+                            <option value="Nova Scotia">Nova Scotia</option>
+                            <option value="Nunavut">Nunavut</option>
+                            <option value="Ontario">Ontario</option>
+                            <option value="Prince Edward Island">Prince Edward Island</option>
+                            <option value="Quebec">Quebec</option>
+                            <option value="Saskatchewan">Saskatchewan</option>
+                            <option value="Yukon">Yukon</option>
+                        </select>
+                    </div> <div id="heatmap" class="chart"></div>
+                    <div id="choropleth" class="chart"></div>
+                    <svg id="stackedBarChart"></svg>
+                    <div class="container">
+                        <div id="prose">
+                            <div class="step" id="step0">1990</div>
+                            <div class="step" id="step1">1991</div>
+                            <div class="step" id="step2">1992</div>
+                            <div class="step" id="step3">1993</div>
+                            <div class="step" id="step4">1994</div>
+                            <div class="step" id="step5">1995</div>
+                            <div class="step" id="step6">1996</div>
+                            <div class="step" id="step7">1997</div>
+                            <div class="step" id="step8">1998</div>
+                            <div class="step" id="step9">1999</div>
+                            <div class="step" id="step10">2000</div>
+                            <div class="step" id="step11">2001</div>
+                            <div class="step" id="step12">2002</div>
+                            <div class="step" id="step13">2003</div>
+                            <div class="step" id="step14">2004</div>
+                            <div class="step" id="step15">2005</div>
+                            <div class="step" id="step16">2006</div>
+                            <div class="step" id="step17">2007</div>
+                            <div class="step" id="step18">2008</div>
+                            <div class="step" id="step19">2009</div>
+                            <div class="step" id="step20">2010</div>
+                            <div class="step" id="step21">2011</div>
+                            <div class="step" id="step22">2012</div>
+                            <div class="step" id="step23">2013</div>
+                            <div class="step" id="step24">2014</div>
+                            <div class="step" id="step25">2015</div>
+                            <div class="step" id="step26">2016</div>
+                            <div class="step" id="step27">2017</div>
+                            <div class="step" id="step28">2018</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="policyLandingPage" class="landingPage">
+                <h1 class="visTitle">Canadian Climate Policy (to 2030)</h1>
+                <p class="visWriteUp">
+                    Canada has made a few promises on climate change <a href="https://www.oag-bvg.gc.ca/internet/English/sds_fs_e_41101.html" target="_blank">
+                    (Office of the Auditor General, n.d.)</a>.<br><br>
+                    Our current goals were made in 2015<a href="https://www.oag-bvg.gc.ca/internet/English/sds_fs_e_41101.html" target="_blank">
+                    (Office of the Auditor General, n.d.)</a> and have expanded in 2020 <a href="https://www.canada.ca/en/services/environment/weather/climatechange/climate-plan/net-zero-emissions-2050.html" target ="_blank">
+                    (Environment and Climate Change Canada, 2021)</a>.
+                </p>
+                <h2>Overall, Canada wants to reduce emissions to 30% below 2005 levels by 2030 and eventually reach net-zero emissions by 2050</h2>
+                <a id="gotoPolicyVis" href="#policyVis" style="border: 0; background: transparent">
+                    <img class="readMoreImage" src="assets/arrow-down-circle-fill.svg" width="90" height="50"/>
+                </a>
+                <div id="policyLandPageCaption" class="pictureCaption">
+                    Pictured: Algonquin Provincial Park (Ontario)<br>
+                    Source: <a href="https://commons.wikimedia.org/wiki/File:Algonquin_Cache_Lake_Lookout.JPG" target="_blank">
+                    Ptrbnsn (2006)</a>
+                </div>
+            </div>
+            <div id="policyVis" class="page">
+                <h1 class="visTitle">Canada's Carbon Emissions (1990-2018)</h1>
+                <div id="stackedBarChart" class='chart'></div>
+            </div>
+            <div id="endPage">
+                <div id="end-title">
+                    <h1>Methodology and Sources</h1>
+                    <h2>Thank you for exploring our visualization!</h2>
+                </div>
+                <h2>Methodology, Sources and Credits :</h2>
+                <p class="sourcesWriteUp">Our detailed methodology, sources, and credits are provided <a href="https://docs.google.com/document/d/1LymXa7yuE3oXib-7tnIY51kD96zwqDIMlciszQzJGy4/edit?usp=sharing" target="_blank">here</a>.</p>
+                <div id="endPageCaption" class="pictureCaption">
+                    Pictured: Marché Bonsecours - Montréal, Quebec <br>
+                    Source: <a href="https://commons.wikimedia.org/wiki/File:March%C3%A9_Bonsecours_Winter.jpg" target="_blank">
+                    Million (2012)</a>
+                </div>
+            </div>
+            <div id="tooltip"></div>
+        </div>
 
-
-            </div>            
-            
-        </section>
-
-    <div id="tooltip"></div>
-    
     <script src="js/d3.v6.min.js"></script>
     <script src="js/noframework.waypoints.min.js"></script>
     <script src="/js/sticky.min.js"></script>
     <script src="js/topojson.v3.js"></script>
-
+    <script src="js/index.js"></script>
     <script src="js/historical/main.js"></script>
     <script src="js/historical/heatmap.js"></script>
     <script src="js/historical/choroplethMap.js"></script>

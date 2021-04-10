@@ -35,19 +35,7 @@ h1 {
     max-width: 50rem;
 }
 
-/* landing page */ 
-/*#landingPage{
-  background-image: url('../assets/edmonton-77798_1280.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: rgba(255,255,255,0.6);
-  background-blend-mode: lighten;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 0 10px;
-}*/
+/* landing pages */ 
 
 .landingPage{
   position: relative;
@@ -67,19 +55,10 @@ h1 {
   font-size: 60px;
 }
 
-
-/*#landingPage .button{
-  background-image: url('../assets/scroll button.png');
-  background-size: cover;
-}*/
-
 .vis{
   position: fixed;
 }
 
-/*#landingPage p{
-  font-size: 24px;
-}*/
 
 .landingPage p{
   font-size: 24px;
@@ -195,10 +174,16 @@ h1 {
 /* stacked bar chart view */
 #stackedBarChart {
   position: sticky;
-  top: 400px;
+  top: 300px;
   margin-left: 350px;
   margin-top: 300px;
 }
+
+/*.stackedBarChart {
+  font-size: 1rem;
+  font-weight: bold;
+  fill: black;
+}*/
 
 .chart-label {
   font-size: .7rem;
@@ -227,11 +212,7 @@ rect {
   fill: black;
 }
 
-.stackedBarChart {
-  font-size: 1rem;
-  font-weight: bold;
-  fill: black;
-}
+
 
 /* heatmap view */
 #heatmap {

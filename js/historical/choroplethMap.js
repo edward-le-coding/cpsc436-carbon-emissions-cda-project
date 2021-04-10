@@ -36,8 +36,8 @@ class Choropleth{
         // Update view
         vis.updateVis();
     }
-    
-    updateVis(_data = null, _plottedVar = 'CO2eq', _yearSelected = null, _selectedProvince = null){
+
+    updateVis(){
         let vis = this;
         
         vis.renderVis()
@@ -68,8 +68,7 @@ class Choropleth{
     }
 
     // Render new year's worth of data as a result of a trigger
-    goToStep(stepIndex, yearData, plottedVar, yearSelected = 2018, selectedProvince = null) {
+    goToStep(stepIndex) {
         let vis = this;
-        vis.renderVis(yearData, plottedVar, yearSelected, selectedProvince)
     }
 }

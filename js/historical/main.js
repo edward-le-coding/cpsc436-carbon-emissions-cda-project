@@ -4,27 +4,34 @@ const heatmapYearDispatcher = d3.dispatch('selectYear');
 
 
 // Global objects
-let barChartData;
-let masterBarChartData;
- 
 let uuid = 0;
-let subsetGeoChoropleth;
-let subsetHistData;
+
 let masterGeoData;
 let masterHistData;
+
+let heatmapData;
 let heatmap;
+
+let choropleth;
+let chropolethData;
+
+let barChartData;
+let masterBarChartData;
+
 
 const metricUnits = {
   CO2eq: 'million tn CO2',
   CO2eq_tn_per_person: 'tn CO2e emitted/person',
   CO2eq_tn_per_mil_GDP: 'tn CO2e emitted/$1 million CAD' // TODO add note about 2012  inflation-adjusted dollars
 }
+
 Promise.all([
     d3.json('data/canada_provinces.topo.json'),
     d3.csv('data/historical/historical_dataset.csv')
 ]).then(_data => {
   masterGeoData = _data[0];
   masterHistData = _data[1];
+
   // Convert columns to numerical values
   masterHistData.forEach(d => {
       Object.keys(d).forEach(attr => {
@@ -38,30 +45,27 @@ Promise.all([
         uuid++;
       });
     });
-  // Prepare default data
-  subsetHistData =  masterHistData.filter(d => d.Year == 2018);
-  
-// Prepare heatmap data: only use data with 'Source' column == Total
-  let heatmapData = masterHistData.filter(d=>d.Source=='Total'&&d.Region!='Canada') // TODO: remove filtering of Canada
+
+   
+  // Prepare heatmap data and initialize heatmap
+  heatmapData = masterHistData.filter(d => d.Source == 'Total' &&d.Region != 'Canada') // TODO: remove filtering of Canada
   heatmap = new Heatmap({
     parentElement: '#heatmap'
   }, heatmapData, heatmapProvinceDispatcher, heatmapYearDispatcher);
 
-  subsetGeoChoropleth = prepareGeoData(subsetHistData, masterGeoData);
-  console.log('subsetGeoChoropleth', subsetGeoChoropleth)
-  let histChoropleth = new Choropleth({
-    parentElement: '#choropleth'}, subsetGeoChoropleth);
+  // Prepare choropleth data and initalize choropleth
+  let defaultYearData = masterHistData.filter(d => d.Year == 1990);
+  chropolethData = prepareChoroplethData(defaultYearData, masterGeoData);
+  choropleth = new Choropleth({
+    parentElement: '#choropleth'}, chropolethData);
 
-
-  // Initialize bar chart with default Canada
-  masterBarChartData = masterHistData.filter(d=>d.Source!='Total')
-  barChartData = masterBarChartData.filter(d => d.Region === 'Canada');
+  // Prepare stacked bar chart data and initialize stacked bar chart
+  barChartData = masterHistData.filter(d => d.Source != 'Total' && d.Region === 'Canada')
   let province = ['Canada'];
-
   stackedBarChart = new StackedBarChart({ parentElement: '#stackedBarChart'}, barChartData, province);
-  stackedBarChart.updateVis();
   
-  // Create a waypoint for each `step` container
+
+  // Enable scrolling by creating a waypoint for each `step` container
   const waypoints = d3.selectAll('.step').each( function(d, stepIndex) {
     return new Waypoint({
       // `this` contains the current HTML element
@@ -73,6 +77,7 @@ Promise.all([
         // Update visualization based on the current step
         stackedBarChart.goToStep(nextStep);
         heatmap.goToStep(nextStep);
+        //choropleth.goToStep(nextStep);
       },
       // Trigger scroll event halfway up. Depending on the text length, 75% might be even better
       offset: '50%',
@@ -80,7 +85,8 @@ Promise.all([
   });
 }).catch(error => console.error(error)); 
 
-function prepareGeoData (histSubset, geoData){
+// Prepares the data for the choropleth
+function prepareChoroplethData (histSubset, geoData){
   geoData.objects.provinces.geometries.forEach(d => {
     for (let i = 0; i < histSubset.length; i++) {
       if (d.properties.PRNAME == histSubset[i].region) {
@@ -97,11 +103,11 @@ function prepareGeoData (histSubset, geoData){
   return geoData
 }
 
+// Listeners for the metric controls
 d3.select("#sort-control").on("change", function () {
   heatmap.config.sortOption = d3.select(this).property("value");
   heatmap.updateVis();
 });
-
 
 d3.select("#metric-selector").on("change", function(d) {
   let metricSelectorFilter = d3.select('input[name="metric-selector"]:checked').node().value
@@ -126,9 +132,7 @@ d3.select("#metric-selector").on("change", function(d) {
   console.log('selectedCategoryString', selectedMetricString)
 
   if (selectedMetricString != heatmap.metric) {
-
     d3.select(this).classed('active', !d3.select(this).classed('active'))
-
   }
 
   heatmap.metric = selectedMetricString
@@ -151,7 +155,7 @@ heatmapYearDispatcher.on('selectYear', selectedYear => {
   let stepIndex = selectedYear - 1990;
   stackedBarChart.goToStep(stepIndex);
   heatmap.goToStep(stepIndex);
-  // TODO: add goToStep for choropleth
+  //choropleth.goToStep(stepIndex);
 
   //TODO: scroller on side needs to get into view
   // http://jsfiddle.net/walfo/cj8xynL0/1/

@@ -96,6 +96,8 @@ class StackedBarChart {
         .style('text-anchor', 'middle')
         .attr('dy', '1em')
         .text('GHG emissions in tonnes of CO2 equivalent');
+
+    vis.updateVis();
   }
 
   /**

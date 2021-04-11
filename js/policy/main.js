@@ -38,7 +38,6 @@ Promise.all([
   }) 
   canadaHistoricalData = canadaHistoricalData.sort((a,b) => a.Year - b.Year)
 
-  console.log('windowHeight', windowHeight)
   timeline = new Timeline({
     parentElement: '#timeline',
     containerHeight: 0.4 * windowHeight,

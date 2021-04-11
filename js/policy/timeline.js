@@ -259,9 +259,10 @@ function getTooltipHtml(d) {
     C02estimate = format(C02estimate)
     return `
       <div class="tooltip-title">${d.Name_of_Mitigation_Action}</div>
-      <div><i>${d.Sector_Affected}, ${d.Start_year_of_Implementation}</i></div>
-      <div>${C02estimate} Kt CO<sub>2</sub>eq<div>`
-
+      <div>${d.Sector_Affected}, <i>${d.Implementation_Entity}</i>, ${d.Start_year_of_Implementation}</div>
+      <div>${C02estimate} Kt CO<sub>2</sub>eq<div>
+      <br>
+      <div class="description-text"><b>Description:</b> ${d.Brief_Description}</div>`
   }
 
   // Html tooltip helper functions
@@ -269,6 +270,6 @@ function getTooltipHtmlHistorical(d) {
     let format = d3.format(",");
     C02estimate = format(d.CO2eq)
     return `
-      <div><b>${d.Year}</b>: ${C02estimate} Kt CO<sub>2</sub>eq<div>`
+      <div><b>${d.Year}:</b> ${C02estimate} Kt CO<sub>2</sub>eq<div>`
 
   }

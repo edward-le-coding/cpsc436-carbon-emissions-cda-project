@@ -1,7 +1,7 @@
 // Initialize dispatcher that is used to orchestrate events
 const heatmapProvinceDispatcher = d3.dispatch('selectProvince');
 const heatmapYearDispatcher = d3.dispatch('selectYear');
-
+const windowWidth = window.innerWidth, windowHeight = window.innerWidth;
 
 // Global objects
 let barChartData;
@@ -40,9 +40,8 @@ Promise.all([
     });
   // Prepare default data
   subsetHistData =  masterHistData.filter(d => d.Year == 2018);
-  windowWidth = window.innerWidth;
-  windowHeight = window.innerWidth;
-// Prepare heatmap data: only use data with 'Source' column == Total
+  
+  // Prepare heatmap data: only use data with 'Source' column == Total
   let heatmapData = masterHistData.filter(d=>d.Source=='Total'&&d.Region!='Canada') // TODO: remove filtering of Canada
   heatmap = new Heatmap({
     parentElement: '#heatmap',

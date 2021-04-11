@@ -7,8 +7,8 @@ class Timeline {
     constructor(_config, _policyData, _canadaHistoricalData) {
         this.config = {
           parentElement: _config.parentElement,
-          containerWidth: 800,
-          containerHeight: 500,
+          containerWidth: _config.containerWidth || 800,
+          containerHeight: _config.containerHeight || 500,
           margin: {top: 250, right: 10, bottom: 50, left: 50},
           mitigation_estimate_year: _config.mitigation_estimate_year || 2030,
           tooltipPadding: _config.tooltipPadding || 15,
@@ -48,7 +48,7 @@ class Timeline {
       
         // Add group for legend
         vis.legend = vis.svg.append('g')
-            .attr('transform', `translate(100, 100)`);
+            .attr('transform', `translate(100, 40)`);
       
         vis.chartArea = vis.svg.append('g')
             .attr('transform', `translate(${vis.config.margin.left},${vis.config.margin.top})`);
@@ -90,13 +90,6 @@ class Timeline {
         // Append y-axis group
         vis.yAxisG = vis.chartArea.append('g')
             .attr('class', 'axis y-axis') 
-        
-        vis.chart.append("text")
-            .attr("x", vis.config.margin.left + 50)             
-            .attr("y", 0 - vis.config.margin.top + 50)
-            .attr("text-anchor", "middle")  
-            .style("font-size", "40px") 
-            .text("Policy Dataset");
 
         vis.updateVis();
     }

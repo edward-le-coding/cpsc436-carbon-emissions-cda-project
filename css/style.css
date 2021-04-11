@@ -1,36 +1,30 @@
 /* general */
 #main {
-    transition: margin-left .5s; /*Transition effect for sidebar*/
+  position: relative;
+  transition: margin-left .5s; /*Transition effect for sidebar*/
 }
 
 /*TODO: delete one of the body versions*/
 body {
-    font-family: 'Noto Sans JP', sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    background: #f7f7f7;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  background: #f7f7f7;
 }
-
-  
-.container {
-  position: relative;
-  margin-top: 500px;
-  margin-bottom: 100px;
+#histTimeline {
+  padding-left: 95%;
+  padding-top: 25%;
 }
-
-
 h1 {
-    font-size: 48px;
-    margin-bottom: 50px;
+  font-size: 48px;
+  margin-bottom: 50px;
 }
-  
-.page {
-    position: relative;
-    margin: 2rem;
-    max-width: 50rem;
+.visPage {
+  position: relative;
+  width: 100%;
 }
 
-/* landing pages */ 
+/* landing pages */
 
 .landingPage{
   position: relative;
@@ -43,17 +37,11 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0 10px;
 }
 
 #landingPage h1{
   font-size: 60px;
 }
-
-.vis{
-  position: fixed;
-}
-
 
 .landingPage p{
   font-size: 24px;
@@ -75,18 +63,34 @@ h1 {
   background-image: url('../assets/Saskatchewan_Wheat.jpg');
   background-color: rgba(255,255,255,0.85);
 }
-#historicalGraphicsContainer{
-  position: relative;
+.histVisElem{
+  display: inline-block;
 }
-.historicalChart{
+.historicalSelectors{
+  vertical-align: top;
+  display: flex;
+  justify-content: space-evenly;
+}
+#historicalVis{
+  vertical-align: top;
+  align-items: flex-start;
+  align-content: flex-start;
+  flex-direction: row;
+}
+#historicalGraphicsContainer{
+  top: 0;
+  left: 0;
+  vertical-align: top;
+  position: sticky;
+  align-self: flex-start;
+}
+.historicalIsFixed{
   position: fixed;
 }
-
 #policyLandingPage{
   background-image: url('../assets/Algonquin_Cache_Lake_Lookout.jpg');
   background-color: rgba(255,255,255,0.85);
 }
-
 #endPage{
   position: relative;
   background-image: url('../assets/Marche_Bonsecours_Winter.jpg');
@@ -114,10 +118,16 @@ h1 {
   font-size: 18px;
 }
 
-.visTitle{
-  position: absolute;
+.landingPageTitle{
+  position: relative;
   top: 8px;
   left: 16px;
+}
+.visTitle{
+  position: relative;
+  text-align: center;
+  justify-content: center;
+  line-height: 0;
 }
 
 .visWriteUp{
@@ -148,66 +158,49 @@ h1 {
 
 /* scrollwheel */
 #prose {
-  margin-left: 1250px;
-  padding-top: 300px;
+  /*padding-top: 50%;*/
 }
 
 #prose .step {
   height: 500px;
 }
-  
 .step {
   font-size: 1rem;
 }
 
-/* choropleth view */
-#choropleth {
-    position: sticky;
-    top: 400px;
-    margin-top: 300px;
-    float:left;
-    margin-top: 300px;
-}
-
 .geo-boundary-path {
-    stroke: #fff;
-    fill: none;
-    stroke-width: 1;
-  }
-
-/* stacked bar chart view */
-#stackedBarChart {
-  position: sticky;
-  top: 300px;
-  margin-left: 350px;
-  margin-top: 300px;
+  stroke: #fff;
+  fill: none;
+  stroke-width: 1;
 }
 
-
+.button-label{
+  font-size: 0.6rem;
+}
 .chart-label {
-  font-size: .7rem;
+  font-size: .5rem;
 }
 
 .axis-label {
-  font-size: .9rem;
+  font-size: .5rem;
   fill: #6b6b6b;
 }
 
 .axis text {
-  font-size: .7rem;
+  font-size: .5rem;
   fill: #6b6b6b;
 }
-  
+
 .domain, .axis .tick line {
   stroke: #888;
 }
-  
+
 rect {
   shape-rendering: crispEdges;
 }
 
 .legendText {
-  font-size: .8rem;
+  font-size: .5rem;
   fill: black;
 }
 
@@ -215,17 +208,21 @@ rect {
 
 /* heatmap view */
 #heatmap {
-  float:left;
-  margin-top: 200px;
-  position: sticky;
-  top: 0;
+}
+/* choropleth view */
+#choropleth {
+  display: inline-block;
+}
+/* stacked bar chart view */
+#stackedBarChart {
+  display: inline-block;
 }
 
 #tooltip {
   position: absolute;
   display: none;
   background: #fff;
-  box-shadow: 3px 3px 3px 0px rgb(92 92 92 / 0.5);
+  box-shadow: 3px 3px 3px 0px rgb(92 92 92);
   border: 1px solid #ddd;
   font-size: 12px;
   font-weight: 500;
@@ -238,5 +235,9 @@ rect {
   color: #000;
   font-size: 14px;
   font-weight: 600;
+}
+
+#sortSelect{
+  bottom: 0;
 }
 

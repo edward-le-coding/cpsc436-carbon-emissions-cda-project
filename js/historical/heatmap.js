@@ -2,14 +2,15 @@ class Heatmap{
     constructor(_config, _data, _provinceDispatcher, _yearDispatcher, _metric) {
         this.config = {
             parentElement: _config.parentElement,
-            containerWidth:  _config.containerWidth || 1200,
-            containerHeight: _config.containerHeight || 300,
+            containerWidth:  _config.containerWidth, //|| 1200,
+            containerHeight: _config.containerHeight, //|| 300,
             tooltipPadding: 15,
-            margin: _config.margin || {top: 60, right: 20, bottom: 20, left: 250},
+            margin: _config.margin || {top: 60, right: 20, bottom: 20, left: 150},
             sortOption: _config.sortOption || 'alphabetically',
             legendWidth: 160,
         }
         this.data = _data;
+        this.selectedYear = null;
         this.metric = _metric || 'CO2eq'
         this.provinceDispatcher = _provinceDispatcher;
         this.yearDispatcher = _yearDispatcher;
@@ -57,7 +58,8 @@ class Heatmap{
 
         // Legend
         vis.legend = vis.svg.append('g')
-            .attr('transform', `translate(${vis.config.containerWidth - vis.config.legendWidth - vis.config.margin.right},0)`);
+            .attr('transform', `translate(${vis.config.containerWidth - vis.config.legendWidth - vis.config.margin.right},
+             ${vis.config.margin.top/2})`);
 
         vis.legendColorGradient = vis.legend.append('defs').append('linearGradient')
             .attr('id', 'linear-gradient');
@@ -105,7 +107,7 @@ class Heatmap{
             vis.groupedData.sort((a, b) => b[3] - a[3]);
         }
 
-        // Specificy accessor functions
+        // Specify accessor functions
         vis.yValue = d => {
             return d[0]
         }
@@ -115,12 +117,15 @@ class Heatmap{
     
         // Set color scales on update
         if (vis.metric == 'CO2eq') {
+            // Carbon emissions
             vis.colorScale = d3.scaleSequential()
                 .interpolator(d3.interpolateGreens);
         } else if (vis.metric == 'CO2eq_tn_per_person') {
+            // Intensity per capita
             vis.colorScale = d3.scaleSequential()
                 .interpolator(d3.interpolateBlues);
         } else {
+            // Intensity by GDP
             vis.colorScale = d3.scaleSequential()
                 .interpolator(d3.interpolateReds);
         }  
@@ -131,14 +136,16 @@ class Heatmap{
         vis.yScale.domain(vis.groupedData.map(vis.yValue));
 
         vis.renderVis();
-        vis.renderLegend();
     }
 
     renderVis() {
         const vis = this;
 
         const cellWidth = (vis.config.width / (vis.xScale.domain()[1] - vis.xScale.domain()[0])) - 2;
-        
+        // Reset cell colours
+        vis.chart.selectAll('rect')
+            .attr('fill', '#fff');
+
         // 1. Level: rows
         const row = vis.chart.selectAll('.h-row')
             .data(vis.groupedData, d=> d[0]);
@@ -148,6 +155,7 @@ class Heatmap{
             .attr('class', 'h-row');
     
         // Enter + update
+
         rowEnter.merge(row)
           .transition().duration(1000)
             .attr('transform', d => `translate(0,${vis.yScale(vis.yValue(d))})`);
@@ -157,9 +165,9 @@ class Heatmap{
     
         // Append row label (y-axis)
         rowEnter.append('text')
-            .attr('class', 'h-label')
+            .attr('class', 'axis-label')
             .attr('text-anchor', 'end')
-            .attr('dy', '0.85em')
+            .attr('dy', '0.5rem')
             .attr('x', -8)
             .text(vis.yValue);
     
@@ -174,7 +182,7 @@ class Heatmap{
         const cellEnter = cell.enter().append('rect')
             .attr('class', 'h-cell')
             .attr('class', d => 'year' + vis.xValue(d));
-    
+        console.log(cell);
         // Enter + update
         let finalCells = cellEnter.merge(cell)
             .attr('height', vis.yScale.bandwidth())
@@ -186,8 +194,10 @@ class Heatmap{
               } else {
                 return vis.colorScale(vis.colorValue(d));
               }
-            })
-        
+            });
+        if(vis.selectedYear){
+            vis.colourSelectedYear(vis.selectedYear);
+        }
         finalCells
             .on('mouseover', (event, d) => {
               const value = (d.CO2eq_tn_per_person === null) ? 'No data available' : d.CO2eq_tn_per_person;
@@ -229,6 +239,9 @@ class Heatmap{
     
         // Update axis
         vis.xAxisG.call(vis.xAxis);
+
+        // Update legend
+        vis.renderLegend();
     }
 
     /**
@@ -258,7 +271,6 @@ class Heatmap{
         parseInt(extent[1]/3*2),
         extent[1]
       ]);
-
       // Update legend axis
       vis.xLegendAxisG.call(vis.xLegendAxis);
     }
@@ -268,16 +280,30 @@ class Heatmap{
         let vis = this;
     
         let baseYear = 1990;
-        let className = `.year${baseYear + stepIndex}`;
-    
+        if(stepIndex == 0){
+            // Reset year, overall case
+            vis.chart.selectAll('rect')
+                .transition()
+                .style('opacity', 1);
+            vis.selectedYear = null;
+        } else {
+            // Set selected year
+            vis.selectedYear = baseYear + stepIndex-1;
+        }
+        // Update vis
+        vis.updateVis();
+      }
+
+    colourSelectedYear(selectedYear) {
+        let vis = this;
+        let className = `.year${selectedYear}`;
+
         // set opactity of all bars to 0.2
         vis.chart.selectAll('rect')
-          .transition()
-          .style('opacity', 0.2);
-        
+            .style('opacity', 0.2);
+
         // set opacity of the bar we're looking at to 1
         vis.chart.selectAll(className)
-          .transition()
-          .style('opacity', 1);
-      }
+            .style('opacity', 1);
+    }
 }

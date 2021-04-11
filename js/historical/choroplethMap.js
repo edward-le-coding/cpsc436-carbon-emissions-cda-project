@@ -4,8 +4,8 @@ class Choropleth{
         // Define settings for object (e.g. where it belongs, margins, width, height, etc).
         this.config = {
             parentElement: _config.parentElement,
-            containerWidth: _config.containerWidth || 400,
-            containerHeight: _config.containerHeight || 300,
+            containerWidth: _config.containerWidth, //|| 400,
+            containerHeight: _config.containerHeight, //|| 300,
             margin: _config.margin || {top: 0, right: 0, bottom: 0, left: 0},
             projection: _config.projection || d3.geoConicConformal().parallels([49, 77]).rotate([110, 0])
         }

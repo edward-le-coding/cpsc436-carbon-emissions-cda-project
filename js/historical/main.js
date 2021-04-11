@@ -40,25 +40,33 @@ Promise.all([
     });
   // Prepare default data
   subsetHistData =  masterHistData.filter(d => d.Year == 2018);
-  
+  windowWidth = window.innerWidth;
+  windowHeight = window.innerWidth;
 // Prepare heatmap data: only use data with 'Source' column == Total
   let heatmapData = masterHistData.filter(d=>d.Source=='Total'&&d.Region!='Canada') // TODO: remove filtering of Canada
   heatmap = new Heatmap({
-    parentElement: '#heatmap'
+    parentElement: '#heatmap',
+    containerHeight: 0.15 * windowHeight,
+    containerWidth: 0.85 * windowWidth
   }, heatmapData, heatmapProvinceDispatcher, heatmapYearDispatcher);
 
   subsetGeoChoropleth = prepareGeoData(subsetHistData, masterGeoData);
-  console.log('subsetGeoChoropleth', subsetGeoChoropleth)
   let histChoropleth = new Choropleth({
-    parentElement: '#choropleth'}, subsetGeoChoropleth);
-
+    parentElement: '#choropleth',
+    containerHeight: 0.2 * windowHeight,
+    containerWidth: 0.425 * windowWidth
+  }, subsetGeoChoropleth);
 
   // Initialize bar chart with default Canada
   masterBarChartData = masterHistData.filter(d=>d.Source!='Total')
   barChartData = masterBarChartData.filter(d => d.Region === 'Canada');
   let province = ['Canada'];
 
-  stackedBarChart = new StackedBarChart({ parentElement: '#stackedBarChart'}, barChartData, province);
+  stackedBarChart = new StackedBarChart({
+    parentElement: '#stackedBarChart',
+    containerHeight: 0.2 * windowHeight,
+    containerWidth: 0.425 * windowWidth
+  }, barChartData, province);
   stackedBarChart.updateVis();
   
   // Create a waypoint for each `step` container
@@ -69,7 +77,17 @@ Promise.all([
       handler: function(direction) {
         // Check if the user is scrolling up or down
         const nextStep = direction === 'down' ? stepIndex : Math.max(0, stepIndex - 1)
-
+        // Set window to be fixed vs absolute
+        histGraphicsCont = document.getElementById("historicalGraphicsContainer");
+        if (nextStep == 0){
+          if(histGraphicsCont.hasAttribute('historicalIsFixed')){
+            histGraphicsCont.classList.remove('historicalIsFixed');
+          }
+        } else{
+          if(!histGraphicsCont.hasAttribute('historicalIsFixed')) {
+            histGraphicsCont.classList.add('historicalIsFixed');
+          }
+        }
         // Update visualization based on the current step
         stackedBarChart.goToStep(nextStep);
         heatmap.goToStep(nextStep);

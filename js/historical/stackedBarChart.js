@@ -8,9 +8,9 @@ class StackedBarChart {
   constructor(_config, _data, _province) {
     this.config = {
       parentElement: _config.parentElement,
-      containerWidth: 900,
-      containerHeight: 400,
-      margin: {top: 250, right: 10, bottom: 50, left: 100},
+      containerWidth: _config.containerWidth, //|| 900,
+      containerHeight: _config.containerHeight, //|| 400,
+      margin: {top: 150, right: 10, bottom: 50, left: 50},
       legendWidth: 200,
       legendHeight: 10,
       legendSquareSize: 15,
@@ -67,11 +67,11 @@ class StackedBarChart {
 
     // Add group for legend
     vis.legend = vis.svg.append('g')
-        .attr('transform', `translate(${vis.config.margin.left}, 100)`);
+        .attr('transform', `translate(${vis.config.margin.left}, 50)`);
 
     // Add group for title
     vis.title = vis.svg.append('g')
-        .attr('transform', `translate(${vis.width/2}, 50)`);
+        .attr('transform', `translate(${vis.width/2}, 25)`);
 
     // Append empty x-axis group and move it to the bottom of the chart
     vis.xAxisG = vis.chart.append('g')
@@ -212,7 +212,7 @@ class StackedBarChart {
     vis.legend.selectAll('rect')
         .data(vis.colorScale.domain())
         .join('rect')
-          .attr('x', (d, i) => (i % 2) * (vis.config.legendWidth))
+          .attr('x', (d, i) => (i % 3) * (vis.config.legendWidth))
           .attr('y', (d, i) => i % 2 === 0? i * vis.config.legendHeight : (i-1) * vis.config.legendHeight)
           .attr('width', vis.config.legendSquareSize)
           .attr('height', vis.config.legendSquareSize)
@@ -222,8 +222,8 @@ class StackedBarChart {
         .data(vis.colorScale.domain())
         .join('text')
           .attr('class', 'legendText')
-          .attr('x', (d, i) => (i % 2) * (vis.config.legendWidth) + vis.config.legendSquareSize + 5)
-          .attr('y', (d, i) =>  i % 2 === 0 ? i * vis.config.legendHeight + vis.config.legendSquareSize : (i-1) * vis.config.legendHeight + vis.config.legendSquareSize)
+          .attr('x', (d, i) => (i % 3) * (vis.config.legendWidth) + vis.config.legendSquareSize + 5)
+          .attr('y', (d, i) =>  i % 2 === 0 ? i * vis.config.legendHeight + (vis.config.legendSquareSize/2) : (i-1) * vis.config.legendHeight + (vis.config.legendSquareSize/2))
           .text(d => d)
           .attr('text-anchor', 'left');
   }
@@ -237,7 +237,7 @@ class StackedBarChart {
         .join('text')
           .attr('class', 'stackedBarChart title')
           .attr('text-anchor', 'middle')
-          .text(d => `Sources of emissions over the years in ${d}`);
+          .text(d => `Sources of emissions over 1990-2018 in ${d}`);
   }
 
   // Updates the viz based on the year user scrolls to
@@ -245,17 +245,24 @@ class StackedBarChart {
     let vis = this;
 
     let baseYear = 1990;
-    let className = `.year${baseYear + stepIndex}`;
+    if(stepIndex == 0){
+      // Reset year, overall case
+      vis.chart.selectAll('rect')
+          .transition()
+          .style('opacity', 1);
+    } else {
+      let className = `.year${baseYear + stepIndex-1}`;
 
-    // set opactity of all bars to 0.2
-    vis.chart.selectAll('rect')
-      .transition()
-      .style('opacity', 0.2);
-    
-    // set opacity of the bar we're looking at to 1
-    vis.chart.selectAll(className)
-      .transition()
-      .style('opacity', 1);
+      // set opactity of all bars to 0.2
+      vis.chart.selectAll('rect')
+          .transition()
+          .style('opacity', 0.2);
+
+      // set opacity of the bar we're looking at to 1
+      vis.chart.selectAll(className)
+          .transition()
+          .style('opacity', 1);
+    }
   }
 
 }

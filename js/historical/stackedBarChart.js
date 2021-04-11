@@ -1,3 +1,4 @@
+
 class StackedBarChart {
 
   /**
@@ -20,7 +21,7 @@ class StackedBarChart {
 
     // Specify which sources we want to show
     this.sources = [...new Set(this.data.map(d => d.Source))];
-    
+
     // need to hardcode the years here because otherwise domain changes when we don't have data for some provinces
     this.allYears = [];
     for (let i = 1990; i <= 2018; i++) {
@@ -28,7 +29,7 @@ class StackedBarChart {
     }
     this.initVis();
   }
-  
+
   /**
    * Initialize scales/axes and append static chart elements
    */
@@ -56,8 +57,8 @@ class StackedBarChart {
     vis.xAxis = d3.axisBottom(vis.xScale);
     vis.yAxis = d3.axisLeft(vis.yScale).ticks(6);
 
-    // Define size of SVG drawing area
-    vis.svg = d3.select(vis.config.parentElement)
+    // Define SVG drawing area
+    vis.svg = d3.select(vis.config.parentElement).append('svg')
         .attr('width', vis.config.containerWidth)
         .attr('height', vis.config.containerHeight);
 
@@ -67,7 +68,8 @@ class StackedBarChart {
 
     // Add group for legend
     vis.legend = vis.svg.append('g')
-        .attr('transform', `translate(${vis.config.margin.left}, 50)`);
+        .attr('id', 'legend')
+        .attr('transform', `translate(0, 50)`);
 
     // Add group for title
     vis.title = vis.svg.append('g')
@@ -77,7 +79,7 @@ class StackedBarChart {
     vis.xAxisG = vis.chart.append('g')
         .attr('class', 'axis x-axis')
         .attr('transform', `translate(0,${vis.height})`);
-    
+
     // Append y-axis group
     vis.yAxisG = vis.chart.append('g')
         .attr('class', 'axis y-axis');
@@ -87,7 +89,7 @@ class StackedBarChart {
         .attr('transform', `translate(${vis.width/2}, ${vis.height + 40})`)
         .style('text-anchor', 'middle')
         .text('Year');
-    
+
     vis.chart.append('text')
         .attr('class', 'axis-label')
         .attr('transform', 'rotate(-90)')
@@ -110,7 +112,7 @@ class StackedBarChart {
 
     // roll up the data to get nested map of year, source and sum of CO2eq for each source
     vis.rolledUpData = d3.rollup(vis.data, v => d3.sum(v, d => d.CO2eq), d => d.Year, d => d.Source);
-    
+
     // create a flattened array of the nested object so we can feed it to the stack generator
     vis.flattenedData = []
     vis.rolledUpData.forEach((sources, year) => {
@@ -155,7 +157,7 @@ class StackedBarChart {
 
     // because the data is stacked we know highest val is in last element of stacked data
     let maxYValue = d3.max(vis.stackedData[vis.stackedData.length - 1], d => {
-        return d3.max(d);
+      return d3.max(d);
     })
 
     // set the dynamic domains
@@ -178,12 +180,12 @@ class StackedBarChart {
 
     vis.chart.selectAll('.category')
         .data(vis.stackedData)
-      .join('g')
+        .join('g')
         .attr('class', d => `category cat-${d.key}`)
         .style('fill', d => vis.colorScale(d.key))
-      .selectAll('rect')
+        .selectAll('rect')
         .data(d => d)
-      .join('rect')
+        .join('rect')
         .attr('class', d => 'year' + d.data.year)
         .attr('x', d => vis.xScale(vis.xValue(d)))
         .attr('y', d => vis.yScale(vis.yValue(d)))
@@ -198,7 +200,38 @@ class StackedBarChart {
           }
           return vis.yScale(d[0]) - yValue;
         })
-        .attr('width', vis.xScale.bandwidth());
+        .attr('width', vis.xScale.bandwidth())
+        // Define mouseover tooltip
+        .on('mouseover', (event,d) => {
+          console.log(Object.entries(d.data)[0]);
+          d3.select('#tooltip')
+              .style('display', 'block')
+              // Format number with text and newline and numerical cost
+              .html(`<div id="tooltip-label" class="tooltip-label">
+                        ${(vis.province)+ "\r\n"}
+                        ${(d.data.year) + "\r\n"}
+                        </div>`);
+          let label = document.getElementById("tooltip-label");
+          for (let ent in Object.entries(d.data)) {
+            let key = ent[0];
+            let value = ent[1];
+            console.log(key);
+            if (key != 'year'){
+              label.innerHTML += `<div class="tooltip-label">${key + ": " +"\r\n"}</div>`
+            }
+          }
+          console.log(label);
+        })
+        // Define behaviour of tooltip as the mouse moves around
+        .on('mousemove', (event) => {
+          d3.select('#tooltip')
+              .style('left', (event.pageX + vis.config.tooltipPadding) + 'px')
+              .style('top', (event.pageY + vis.config.tooltipPadding) + 'px')
+        })
+        // Define "disappearance" of tool tip after mouse moves away from semi-circle
+        .on('mouseleave', () => {
+          d3.select('#tooltip').style('display', 'none');
+        });
 
     // Update the axes
     vis.xAxisG.call(vis.xAxis);
@@ -208,24 +241,51 @@ class StackedBarChart {
   // Renders the legend
   renderLegend() {
     let vis = this;
-
+    // let cols = 3;
+    // let rows = 4;
+    // let boxOffset = 5;
+    // let baseOffset = 0;
+    // let heightInterval = vis.config.legendHeight/rows;
+    // let widthInterval = (vis.config.legendWidth/cols);
+    // // TODO: Unkown why this is broken
+    // vis.legend.selectAll('rect')
+    //     .data(vis.colorScale.domain())
+    //     .join('rect')
+    //     .attr('x', (d, i) => {
+    //       // if (i > 4) baseOffset = 25;
+    //       return ((i%cols) * widthInterval + baseOffset)})
+    //     .attr('y', (d, i) => ((i%rows) * heightInterval))
+    //     .attr('width', vis.config.legendSquareSize)
+    //     .attr('height', vis.config.legendSquareSize)
+    //     .style('fill', d => vis.colorScale(d));
+    //
+    // vis.legend.selectAll('text')
+    //     .data(vis.colorScale.domain())
+    //     .join('text')
+    //     .attr('class', 'legendText')
+    //     .attr('x', (d, i) => {
+    //       // if (i > 4) baseOffset = 25;
+    //       return ((i%cols) * widthInterval) + vis.config.legendSquareSize + boxOffset + baseOffset})
+    //     .attr('y', (d, i) => ((i%rows) * heightInterval) + vis.config.legendSquareSize)
+    //     .text(d => d)
+    //     .attr('text-anchor', 'left');
     vis.legend.selectAll('rect')
         .data(vis.colorScale.domain())
         .join('rect')
-          .attr('x', (d, i) => (i % 3) * (vis.config.legendWidth))
-          .attr('y', (d, i) => i % 2 === 0? i * vis.config.legendHeight : (i-1) * vis.config.legendHeight)
-          .attr('width', vis.config.legendSquareSize)
-          .attr('height', vis.config.legendSquareSize)
-          .style('fill', d => vis.colorScale(d));
+        .attr('x', (d, i) => (i % 2) * (vis.config.legendWidth))
+        .attr('y', (d, i) => i % 2 === 0? i * vis.config.legendHeight : (i-1) * vis.config.legendHeight)
+        .attr('width', vis.config.legendSquareSize)
+        .attr('height', vis.config.legendSquareSize)
+        .style('fill', d => vis.colorScale(d));
 
     vis.legend.selectAll('text')
         .data(vis.colorScale.domain())
         .join('text')
-          .attr('class', 'legendText')
-          .attr('x', (d, i) => (i % 3) * (vis.config.legendWidth) + vis.config.legendSquareSize + 5)
-          .attr('y', (d, i) =>  i % 2 === 0 ? i * vis.config.legendHeight + (vis.config.legendSquareSize/2) : (i-1) * vis.config.legendHeight + (vis.config.legendSquareSize/2))
-          .text(d => d)
-          .attr('text-anchor', 'left');
+        .attr('class', 'legendText')
+        .attr('x', (d, i) => (i % 2) * (vis.config.legendWidth) + vis.config.legendSquareSize + 5)
+        .attr('y', (d, i) =>  i % 2 === 0 ? i * vis.config.legendHeight + vis.config.legendSquareSize : (i-1) * vis.config.legendHeight + vis.config.legendSquareSize)
+        .text(d => d)
+        .attr('text-anchor', 'left');
   }
 
   // Renders the title (not in index.html because title changes dynamically)
@@ -235,9 +295,9 @@ class StackedBarChart {
     vis.title.selectAll('text')
         .data(vis.province)
         .join('text')
-          .attr('class', 'stackedBarChart title')
-          .attr('text-anchor', 'middle')
-          .text(d => `Sources of emissions over 1990-2018 in ${d}`);
+        .attr('class', 'stackedBarChart title')
+        .attr('text-anchor', 'middle')
+        .text(d => `Sources of emissions over 1990-2018 in ${d}`);
   }
 
   // Updates the viz based on the year user scrolls to

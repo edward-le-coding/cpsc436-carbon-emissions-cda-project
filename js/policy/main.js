@@ -52,3 +52,7 @@ Promise.all([
  * - listen to events and update views
  */
   
+d3.select("#historical-toggle").on("change", function(d) {
+  timeline.includeHistorical = d3.select("#historical-toggle").property("checked")
+  timeline.updateVis();
+})

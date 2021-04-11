@@ -18,12 +18,12 @@ class Timeline {
         }
         this.policyData = _policyData.filter(d => d.Estimate_of_Mitigation_Impact_in_2030_Kt_CO2_eq<0)
 
-        console.log('this.policyData', this.policyData)
         this.canadaHistoricalData = _canadaHistoricalData
         this.sectors = [...new Set(this.policyData.map(d => d.Sector_Affected))];
 
         this.selectedSectors = this.sectors
 
+        this.includeHistorical = false
         this.initVis();
     }
     
@@ -36,7 +36,6 @@ class Timeline {
         // Specify accessor functions
         vis.xValue = d => d.Start_year_of_Implementation;
         vis.yValue = d => d.Estimate_of_Mitigation_Impact_in_2030_Kt_CO2_eq;
-    
     
         // Calculate inner chart size. Margin specifies the space around the actual chart.
         vis.config.width = vis.config.containerWidth - vis.config.margin.left - vis.config.margin.right;
@@ -64,17 +63,11 @@ class Timeline {
         // Intialize the scales
         vis.xScale = d3.scaleBand()
             .domain(xScaleDomain) 
-            // .domain([1990, 2025]) 
             .range([0, vis.config.width])
             .paddingInner(0.05)
             .paddingOuter(0.05);
-
-        let maxYValue = d3.max(vis.canadaHistoricalData, d=>d.CO2eq)
-        let minYValue = d3.min(vis.policyData, d=>d.Estimate_of_Mitigation_Impact_in_2030_Kt_CO2_eq)
-
-        console.log('vis.config.height', vis.config.height)
+        
         vis.yScale = d3.scaleLinear()
-            .domain([minYValue, maxYValue])
             .range([vis.config.height,0])
             .nice();
     
@@ -93,8 +86,6 @@ class Timeline {
         // Append empty x-axis group and move it to the bottom of the chart
         vis.xAxisG = vis.chartArea.append('g')
             .attr('class', 'axis x-axis')
-            .attr('transform', `translate(0,${vis.yScale(0)})`)
-            // .attr('y', 20);
         
         // Append y-axis group
         vis.yAxisG = vis.chartArea.append('g')
@@ -109,6 +100,13 @@ class Timeline {
     updateVis() {
         let vis = this;
   
+        let maxYValue = vis.includeHistorical ? d3.max(vis.canadaHistoricalData, d=>d.CO2eq) : d3.max(vis.policyData, d=>d.Estimate_of_Mitigation_Impact_in_2030_Kt_CO2_eq)
+        let minYValue = d3.min(vis.policyData, d=>d.Estimate_of_Mitigation_Impact_in_2030_Kt_CO2_eq)
+
+        vis.yScale.domain([minYValue, maxYValue])
+
+        vis.xAxisG.attr('transform', `translate(0,${vis.yScale(0)})`)
+
         // Filtering to only show selectedsectors
         vis.filteredData = vis.policyData.filter(d=>vis.selectedSectors.includes(d.Sector_Affected))
 
@@ -143,7 +141,9 @@ class Timeline {
       const bars = vis.chart.selectAll('.bar')
           .data(stackedData)
         .join('rect')
-            .attr('class', d => `bar policy '${d.key}'`) //FIXME: key is undefined
+            .attr('class', d => {
+              return `bar policy ${d.Start_year_of_Implementation} '${d.Name_of_Mitigation_Action}'`
+            })
             .attr('x', d => {
               return vis.xScale(vis.xValue(d))
             })
@@ -178,6 +178,10 @@ class Timeline {
           .attr('height', d=>vis.yScale(0)-vis.yScale(d.CO2eq))
           .attr('y', d=>vis.yScale(d.CO2eq))
           .style('fill', 'grey')
+
+      if (!vis.includeHistorical) {
+        d3.selectAll('.historical-bar').remove()
+      }
 
       // Tooltip event listeners
       historicalBars
@@ -247,8 +251,6 @@ class Timeline {
     }
   
   }
-
-    
 
 // Html tooltip helper functions
 function getTooltipHtml(d) {

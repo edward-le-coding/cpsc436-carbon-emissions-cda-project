@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Policy Dataset</title>
+    <link rel="icon" href="data:;base64,iVBORwOKGO=" />
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Castoro:ital@1&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a href="index.html">Main Page</a>
+
+    <br>
+    <input type="checkbox" id="historical-toggle" name="historical-toggle-name">
+    <label for="historical-toggle-name">Include Historical Data</label>
+    <br>
+    
+    <div>
+        <svg id="timeline" class="chart"></svg> 
+    </div>
+
+    <div id="tooltip"></div>
+
+    <script src="js/d3.v6.min.js"></script>
+    <script src="js/policy/main.js"></script>
+
+    <script src="js/policy/timeline.js"></script>
+</body>
+</html>

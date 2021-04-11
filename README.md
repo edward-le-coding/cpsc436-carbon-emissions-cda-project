@@ -87,3 +87,6 @@ Adding in the historical dataset
 - used promise.all in main, like in the historical main
 - had to change the domains of the axis
 - had to move the xaxis from the top to yscale(0), following this source http://bl.ocks.org/maaquib/6e989956b99b819d69e9
+
+Conditional rendering for historical data in policy timeline
+- https://stackoverflow.com/questions/10784018/how-can-i-remove-or-replace-svg-content

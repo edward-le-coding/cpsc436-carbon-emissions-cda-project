@@ -101,8 +101,8 @@ class Timeline {
         let vis = this;
   
         let maxYValue = vis.includeHistorical ? d3.max(vis.canadaHistoricalData, d=>d.CO2eq) : d3.max(vis.policyData, d=>d.Estimate_of_Mitigation_Impact_in_2030_Kt_CO2_eq)
-        let minYValue = d3.min(vis.policyData, d=>d.Estimate_of_Mitigation_Impact_in_2030_Kt_CO2_eq)
-
+        let rollupTemp = d3.rollups(vis.policyData, v=>d3.sum(v, d => d.Estimate_of_Mitigation_Impact_in_2030_Kt_CO2_eq), d=>d.Start_year_of_Implementation)
+        let minYValue = d3.min(rollupTemp, d=>d[1])
         vis.yScale.domain([minYValue, maxYValue])
 
         vis.xAxisG.attr('transform', `translate(0,${vis.yScale(0)})`)

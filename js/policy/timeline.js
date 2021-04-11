@@ -91,9 +91,16 @@ class Timeline {
         vis.yAxisG = vis.chartArea.append('g')
             .attr('class', 'axis y-axis') 
         
+        vis.chart.append("text")
+            .attr("x", vis.config.margin.left + 50)             
+            .attr("y", 0 - vis.config.margin.top + 50)
+            .attr("text-anchor", "middle")  
+            .style("font-size", "40px") 
+            .text("Policy Dataset");
+
         vis.updateVis();
     }
-  
+
     /**
      * Prepare the data and scales before we render it.
      */

@@ -37,7 +37,6 @@ Promise.all([
     return {...d, CO2eq: d.CO2eq*1000} //multiply by 1000 because 1 Mt (unit historical data) = 1000 Kt (unit policy data)
   }) 
   canadaHistoricalData = canadaHistoricalData.sort((a,b) => a.Year - b.Year)
-  console.log('CanadaHistoricalData', canadaHistoricalData)
 
   timeline = new Timeline({
     parentElement: '#timeline'

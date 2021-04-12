@@ -19,9 +19,9 @@ let stackedBarChart;
 let barChartData;
 
 const metricUnits = {
-  CO2eq: 'million tn CO2',
-  CO2eq_tn_per_person: 'tn CO2e emitted/person',
-  CO2eq_tn_per_mil_GDP: 'tn CO2e emitted/$1 million CAD' // TODO add note about 2012  inflation-adjusted dollars
+  CO2eq: 'million tn CO2eq',
+  CO2eq_tn_per_person: 'tn CO2eq emitted/person',
+  CO2eq_tn_per_mil_GDP: 'tn CO2eq emitted/$1 million CAD' // TODO add note about 2012  inflation-adjusted dollars
 }
 
 Promise.all([

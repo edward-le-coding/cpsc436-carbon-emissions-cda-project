@@ -12,6 +12,7 @@ class StackedBarChart {
       containerWidth: _config.containerWidth, //|| 900,
       containerHeight: _config.containerHeight, //|| 400,
       margin: {top: 150, right: 10, bottom: 50, left: 50},
+      tooltipPadding: 15,
       legendWidth: 200,
       legendHeight: 10,
       legendSquareSize: 15,
@@ -198,30 +199,32 @@ class StackedBarChart {
         .attr('width', vis.xScale.bandwidth())
         // Define mouseover tooltip
         .on('mouseover', (event,d) => {
-          console.log(Object.entries(d.data)[0]);
           d3.select('#tooltip')
               .style('display', 'block')
               // Format number with text and newline and numerical cost
               .html(`<div id="tooltip-label" class="tooltip-label">
-                        ${(vis.province)+ "\r\n"}
-                        ${(d.data.year) + "\r\n"}
+                        Jurisdiction: ${(vis.province)+ "\r\n"}<br>
+                        Year: ${(d.data.year) + "\r\n"}<br><br>
+                        Emissions:
                         </div>`);
           let label = document.getElementById("tooltip-label");
-          for (let ent in Object.entries(d.data)) {
-            let key = ent[0];
-            let value = ent[1];
-            console.log(key);
-            if (key != 'year'){
-              label.innerHTML += `<div class="tooltip-label">${key + ": " +"\r\n"}</div>`
+          // for (let ent in Object.entries(d.data)) {
+          //   ent = Object.keys(ent);
+          //   console.log(ent);
+          //   let key = ent[0];
+          //   let value = ent[1];
+          //   console.log(key);
+          Object.entries(d.data).forEach(([key, value]) => {
+            if (key != 'year') {
+              label.innerHTML += `<div class="tooltip-label-normal">${key + ": " + Math.round(value)+ ' million tn CO2eq' + "\r\n"}</div>`
             }
-          }
-          console.log(label);
+          });
         })
         // Define behaviour of tooltip as the mouse moves around
         .on('mousemove', (event) => {
           d3.select('#tooltip')
               .style('left', (event.pageX + vis.config.tooltipPadding) + 'px')
-              .style('top', (event.pageY + vis.config.tooltipPadding) + 'px')
+              .style('top', (event.pageY - vis.config.tooltipPadding) + 'px')
         })
         // Define "disappearance" of tool tip after mouse moves away from semi-circle
         .on('mouseleave', () => {

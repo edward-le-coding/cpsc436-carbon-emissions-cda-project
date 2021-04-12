@@ -180,8 +180,6 @@ class StackedBarChart {
   renderVis() {
     let vis = this;
 
-    console.log("vis.stacked data is per source 28 years")
-
     vis.chart.selectAll('.category')
         .data(vis.stackedData)
         .join('g')
@@ -318,6 +316,7 @@ class StackedBarChart {
       // set opacity of the bar we're looking at to 1
       vis.chart.selectAll(className)
           .transition()
+          //.attr("stroke", "black")
           .style('opacity', 1);
     }
   }

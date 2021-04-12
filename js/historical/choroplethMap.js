@@ -54,7 +54,7 @@ class Choropleth{
         // Append shapes of Canadian provinces
         const geoPath = vis.chart.selectAll('.geo-path')
             .data(provinces.features)
-            .join('path')
+           .join('path')
             .attr('class', 'geo-path')
             .attr('d', vis.geoPath);
 

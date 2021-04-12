@@ -10,10 +10,10 @@ class StackedBarChart {
       parentElement: _config.parentElement,
       containerWidth: 900,
       containerHeight: 400,
-      margin: {top: 250, right: 10, bottom: 50, left: 100},
-      legendWidth: 200,
-      legendHeight: 10,
-      legendSquareSize: 15,
+      margin: {top: 150, right: 10, bottom: 50, left: 100},
+      legendWidth: 100,
+      legendHeight: 8,
+      legendSquareSize: 5,
     }
     this.province = _province;
     this.data = _data

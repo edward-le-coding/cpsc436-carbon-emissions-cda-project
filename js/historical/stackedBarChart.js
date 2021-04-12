@@ -126,7 +126,7 @@ class StackedBarChart {
       vis.flattenedData.push(obj);
     });
 
-    // add dummy values for all the years where we don't have data for that province
+    // add dummy values for all the years where we don't have data for that province (only relevant for Nunavut and Northwest Territories)
     let yearsOfRolledUpData = [ ...vis.rolledUpData.keys()];
     let difference = vis.allYears.filter(e => !yearsOfRolledUpData.includes(e));
 
@@ -139,9 +139,9 @@ class StackedBarChart {
       vis.flattenedData.push(obj);
     }
 
-    // console.log("years of rolledUpData", yearsOfRolledUpData);
-    // console.log("difference", difference);
-    // console.log("flattened data", vis.flattenedData);
+    console.log("years of rolledUpData", yearsOfRolledUpData);
+    console.log("difference", difference);
+    console.log("flattened data", vis.flattenedData);
 
     // Initialize stack generator with the sources
     vis.stackGen = d3.stack().keys(vis.sources);
@@ -149,13 +149,13 @@ class StackedBarChart {
     // Call stack generator on the dataset
     vis.stackedData = vis.stackGen(vis.flattenedData);
 
-    // console.log('vis.stackedData', vis.stackedData)
-    // console.log("rolled up by year and source", vis.rolledUpData);
-    // console.log("stacked data", vis.stackedData);
-    // console.log("keys of rolled up data", [ ...vis.rolledUpData.keys()]);
-    // console.log("sources", vis.sources);
-    // console.log('vis.stackedData.length', vis.stackedData.length)
-    // console.log('stackedData', vis.stackedData)
+    console.log('vis.stackedData', vis.stackedData);
+    console.log("rolled up by year and source", vis.rolledUpData);
+    console.log("stacked data", vis.stackedData);
+    console.log("keys of rolled up data", [ ...vis.rolledUpData.keys()]);
+    console.log("sources", vis.sources);
+    console.log('vis.stackedData.length', vis.stackedData.length);
+    console.log('stackedData', vis.stackedData);
 
     // because the data is stacked we know highest val is in last element of stacked data
     let maxYValue = d3.max(vis.stackedData[vis.stackedData.length - 1], d => {
@@ -180,6 +180,8 @@ class StackedBarChart {
   renderVis() {
     let vis = this;
 
+    console.log("vis.stacked data is per source 28 years")
+
     vis.chart.selectAll('.category')
         .data(vis.stackedData)
         .join('g')
@@ -192,15 +194,8 @@ class StackedBarChart {
         .attr('x', d => vis.xScale(vis.xValue(d)))
         .attr('y', d => vis.yScale(vis.yValue(d)))
         .attr('height', d => {
-          // TODO: need to deal with cases where d[0] is null
-          if (!d[0]) {
-            // console.log(`!d[0], d is ${d}`);
-          }
-          let yValue = !d[1]? 0 : vis.yScale(d[1]);
-          if (yValue == 0) {
-            // console.log(`!d[1], d is ${d}`);
-          }
-          return vis.yScale(d[0]) - yValue;
+          let y1 = !d[1] ? 0 : d[1];
+          return vis.yScale(d[0]) - vis.yScale(y1);
         })
         .attr('width', vis.xScale.bandwidth())
         // Define mouseover tooltip

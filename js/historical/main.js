@@ -17,8 +17,6 @@ let chropolethData;
 
 let stackedBarChart;
 let barChartData;
-let masterBarChartData;
-
 
 const metricUnits = {
   CO2eq: 'million tn CO2',
@@ -137,13 +135,12 @@ d3.select("#metric-selector").on("change", function(d) {
   heatmap.updateVis();
 })
 
-
 /**
  * Dispatcher waits for event
  * We update the data in the stacked bar chart based on the region selected in the heatmap
  */
 heatmapProvinceDispatcher.on('selectProvince', selectedProvince => {
-  barChartData = masterBarChartData.filter(d => d.Region === selectedProvince)
+  barChartData = masterHistData.filter(d => d.Region === selectedProvince)
   stackedBarChart.data = barChartData;
   stackedBarChart.province = [selectedProvince];
   stackedBarChart.updateVis();

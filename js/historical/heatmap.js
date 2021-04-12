@@ -220,7 +220,6 @@ class Heatmap{
 
         finalCells
             .on('click', (event, d) => {
-                console.log("clicked in heatmap, region is " + d.Region + d.Year);
                 const selectedProvince = d.Region;
                 const selectedYear = d.Year;
                 vis.provinceDispatcher.call('selectProvince', event, selectedProvince);

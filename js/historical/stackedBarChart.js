@@ -15,7 +15,7 @@ class StackedBarChart {
       tooltipPadding: 15,
       legendWidth: 200,
       legendHeight: 10,
-      legendSquareSize: 15,
+      legendSquareSize: 10,
     }
     this.province = _province;
     this.data = _data
@@ -33,7 +33,7 @@ class StackedBarChart {
 
   /**
    * Initialize scales/axes and append static chart elements
-   */
+   */blue
   initVis() {
     let vis = this;
 
@@ -70,7 +70,7 @@ class StackedBarChart {
     // Add group for legend
     vis.legend = vis.svg.append('g')
         .attr('id', 'legend')
-        .attr('transform', `translate(0, 50)`);
+        .attr('transform', `translate(50, 50)`);
 
     // Add group for title
     vis.title = vis.svg.append('g')

@@ -303,7 +303,7 @@ class Heatmap{
 
         // set opactity of all bars to 0.2
         vis.chart.selectAll('rect')
-            .style('opacity', 0.2);
+            .style('opacity', 0.7);
 
         // set opacity of the bar we're looking at to 1
         vis.chart.selectAll(className)

@@ -314,7 +314,7 @@ class StackedBarChart {
       // set opactity of all bars to 0.2
       vis.chart.selectAll('rect')
           .transition()
-          .style('opacity', 0.2);
+          .style('opacity', 0.6);
 
       // set opacity of the bar we're looking at to 1
       vis.chart.selectAll(className)

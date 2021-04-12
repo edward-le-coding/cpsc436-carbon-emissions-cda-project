@@ -24,7 +24,7 @@ class Heatmap{
         // Calculate inner chart size. Margin specifies the space around the actual chart.
         vis.config.width = vis.config.containerWidth - vis.config.margin.left - vis.config.margin.right;
         vis.config.height = vis.config.containerHeight - vis.config.margin.top - vis.config.margin.bottom;
-        
+
         vis.svg = d3.select(vis.config.parentElement).append('svg')
             .attr('width', vis.config.containerWidth)
             .attr('height', vis.config.containerHeight);
@@ -78,7 +78,7 @@ class Heatmap{
 
         vis.xLegendAxisG = vis.legend.append('g')
             .attr('class', 'axis x-axis legend-axis');
-        
+
         vis.updateVis();
 
     }
@@ -95,14 +95,14 @@ class Heatmap{
 
         // Sort regions by alphabetical or value order
         if (vis.config.sortOption == 'alphabetically') {
-          vis.groupedData.sort((a,b) => {
-            return a[0].localeCompare(b[0]);
-          })
+            vis.groupedData.sort((a,b) => {
+                return a[0].localeCompare(b[0]);
+            })
         } else if (vis.config.sortOption == 'value') {
             vis.groupedData.forEach((d) => {
                 d[3] = d3.sum(d[1], (k) => k[vis.metric]);
             });
-        
+
             // Descending order
             vis.groupedData.sort((a, b) => b[3] - a[3]);
         }
@@ -114,7 +114,7 @@ class Heatmap{
         // d[0];
         vis.colorValue = d => d[vis.metric]; //FIXME: just CO2eq_tn_per_person for now
         vis.xValue = d => d.Year;
-    
+
         // Set color scales on update
         if (vis.metric == 'CO2eq') {
             // Carbon emissions
@@ -128,7 +128,7 @@ class Heatmap{
             // Intensity by GDP
             vis.colorScale = d3.scaleSequential()
                 .interpolator(d3.interpolateReds);
-        }  
+        }
 
         // Set the scale input domains
         vis.colorScale.domain(d3.extent(vis.data, vis.colorValue));
@@ -149,20 +149,20 @@ class Heatmap{
         // 1. Level: rows
         const row = vis.chart.selectAll('.h-row')
             .data(vis.groupedData, d=> d[0]);
-    
+
         // Enter
         const rowEnter = row.enter().append('g')
             .attr('class', 'h-row');
-    
+
         // Enter + update
 
         rowEnter.merge(row)
-          .transition().duration(1000)
+            .transition().duration(1000)
             .attr('transform', d => `translate(0,${vis.yScale(vis.yValue(d))})`);
-    
+
         // Exit
         row.exit().remove();
-    
+
         // Append row label (y-axis)
         rowEnter.append('text')
             .attr('class', 'axis-label')
@@ -170,14 +170,14 @@ class Heatmap{
             .attr('dy', '0.5rem')
             .attr('x', -8)
             .text(vis.yValue);
-    
-    
+
+
         // 2. Level: columns
-    
+
         // 2a) Actual cells
         const cell = row.merge(rowEnter).selectAll('.h-cell')
             .data(d => d[1]);
-    
+
         // Enter
         const cellEnter = cell.enter().append('rect')
             .attr('class', 'h-cell')
@@ -189,30 +189,33 @@ class Heatmap{
             .attr('width', cellWidth)
             .attr('x', d => vis.xScale(vis.xValue(d)))
             .attr('fill', d => {
-              if (d.value === 0 || d.value === null) {
-                return '#fff';
-              } else {
-                return vis.colorScale(vis.colorValue(d));
-              }
+                if (d.value === 0 || d.value === null) {
+                    return '#fff';
+                } else {
+                    return vis.colorScale(vis.colorValue(d));
+                }
             });
         if(vis.selectedYear){
             vis.colourSelectedYear(vis.selectedYear);
         }
         finalCells
             .on('mouseover', (event, d) => {
-              const value = (d.CO2eq_tn_per_person === null) ? 'No data available' : d.CO2eq_tn_per_person;
-              let units = metricUnits[vis.metric]
-              d3.select('#tooltip')
-                .style('display', 'block')
-                .style('left', (event.pageX + vis.config.tooltipPadding) + 'px')   
-                .style('top', (event.pageY + vis.config.tooltipPadding) + 'px')
-                .html(`
-                  <div class='tooltip-title'>${d.Region}</div>
-                  <div>${d.Year}: <strong>${value.toFixed(0)} ${units}</strong></div>
+                const value = (d.CO2eq_tn_per_person === null) ? 'No data available' : d.CO2eq_tn_per_person;
+                let units = metricUnits[vis.metric]
+                d3.select('#tooltip')
+                    .style('display', 'block')
+                    .style('left', (event.pageX + vis.config.tooltipPadding) + 'px')
+                    .style('top', (event.pageY + vis.config.tooltipPadding) + 'px')
+                    .html(`
+                  <div class='tooltip-label'>
+                    Jurisdiction: ${d.Region}<br>
+                    Year: ${d.Year}
+                  </div>
+                  <div class="tooltip-label-normal">${value.toFixed(0)} ${units}</div>
                 `);
             })
             .on('mouseleave', () => {
-              d3.select('#tooltip').style('display', 'none');
+                d3.select('#tooltip').style('display', 'none');
             });
 
         finalCells
@@ -223,20 +226,20 @@ class Heatmap{
                 vis.provinceDispatcher.call('selectProvince', event, selectedProvince);
                 vis.yearDispatcher.call('selectYear', event, selectedYear);
             });
-    
+
         // 2b) Diagonal lines for NA values
         const cellNa = row.merge(rowEnter).selectAll('.h-cell-na')
             .data(d => d[1].filter(k => k.value === null));
-    
+
         const cellNaEnter = cellNa.enter().append('line')
             .attr('class', 'h-cell-na');
-    
+
         cellNaEnter.merge(cellNa)
             .attr('x1', d => vis.xScale(vis.xValue(d)))
             .attr('x2', d => vis.xScale(vis.xValue(d)) + cellWidth)
             .attr('y1', vis.yScale.bandwidth())
             .attr('y2', 0);
-    
+
         // Update axis
         vis.xAxisG.call(vis.xAxis);
 
@@ -248,37 +251,37 @@ class Heatmap{
      * Update colour legend
      */
     renderLegend() {
-      const vis = this;
+        const vis = this;
 
-      // Add stops to the gradient
-      // Learn more about gradients: https://www.visualcinnamon.com/2016/05/smooth-color-legend-d3-svg-gradient
-      // TODO: Melissa please explain to us what stop exactly is, I'm not sure I can follow, thanks. Flo
-      vis.legendColorGradient.selectAll('stop')
-          .data(vis.colorScale.range())
-        .join('stop')
-          .attr('offset', (d,i) => i/(vis.colorScale.range().length-1))
-          .attr('stop-color', d => d);
+        // Add stops to the gradient
+        // Learn more about gradients: https://www.visualcinnamon.com/2016/05/smooth-color-legend-d3-svg-gradient
+        // TODO: Melissa please explain to us what stop exactly is, I'm not sure I can follow, thanks. Flo
+        vis.legendColorGradient.selectAll('stop')
+            .data(vis.colorScale.range())
+            .join('stop')
+            .attr('offset', (d,i) => i/(vis.colorScale.range().length-1))
+            .attr('stop-color', d => d);
 
-      // Set x-scale and reuse colour-scale because they share the same domain
-      // Round values using `nice()` to make them easier to read.
-      vis.xLegendScale.domain(vis.colorScale.domain()).nice();
-      const extent = vis.xLegendScale.domain();
+        // Set x-scale and reuse colour-scale because they share the same domain
+        // Round values using `nice()` to make them easier to read.
+        vis.xLegendScale.domain(vis.colorScale.domain()).nice();
+        const extent = vis.xLegendScale.domain();
 
-      // Manually calculate tick values
-      vis.xLegendAxis.tickValues([
-        extent[0],
-        parseInt(extent[1]/3),
-        parseInt(extent[1]/3*2),
-        extent[1]
-      ]);
-      // Update legend axis
-      vis.xLegendAxisG.call(vis.xLegendAxis);
+        // Manually calculate tick values
+        vis.xLegendAxis.tickValues([
+            extent[0],
+            parseInt(extent[1]/3),
+            parseInt(extent[1]/3*2),
+            extent[1]
+        ]);
+        // Update legend axis
+        vis.xLegendAxisG.call(vis.xLegendAxis);
     }
 
     // Updates the viz based on the year the user scrolls to
     goToStep(stepIndex) {
         let vis = this;
-    
+
         let baseYear = 1990;
         if(stepIndex == 0){
             // Reset year, overall case
@@ -292,7 +295,7 @@ class Heatmap{
         }
         // Update vis
         vis.updateVis();
-      }
+    }
 
     colourSelectedYear(selectedYear) {
         let vis = this;

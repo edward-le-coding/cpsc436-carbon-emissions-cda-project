@@ -233,6 +233,9 @@ rect {
   font-size: 14px;
   font-weight: 600;
 }
+.tooltip-label-normal{
+  font-weight: normal;
+}
 
 #sortSelect{
   bottom: 0;

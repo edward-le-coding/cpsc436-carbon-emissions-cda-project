@@ -85,7 +85,7 @@ class Choropleth{
                 }
             }
         });
-        console.log(vis.geoData.objects.provinces.geometries);
+        //console.log(vis.geoData.objects.provinces.geometries);
         vis.renderVis();
     }
 
@@ -159,7 +159,7 @@ class Choropleth{
         if(stepIndex == 0) {
             vis.currYear = 2018
         } else {
-            vis.currYear = baseYear + stepIndex-1;
+            vis.currYear = baseYear + stepIndex;
         }
         // Update vis
         vis.updateVis();

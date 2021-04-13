@@ -293,9 +293,9 @@ class StackedBarChart {
     vis.title.selectAll('text')
         .data(vis.province)
         .join('text')
-        .attr('class', 'stackedBarChart title')
+        .attr('class', 'stackedBarChart histSubVisTitle')
         .attr('text-anchor', 'middle')
-        .text(d => `Sources of emissions over 1990-2018 in ${d}`);
+        .text(d => `Sources of emissions in ${d} (1990-2018)`);
   }
 
   // Updates the viz based on the year user scrolls to

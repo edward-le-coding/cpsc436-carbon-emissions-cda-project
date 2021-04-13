@@ -200,7 +200,7 @@ class Heatmap{
         }
         finalCells
             .on('mouseover', (event, d) => {
-                const value = (d.CO2eq_tn_per_person === null) ? 'No data available' : d.CO2eq_tn_per_person;
+                const value = (d[vis.metric] === null) ? 'No data available' : d[vis.metric];
                 let units = metricUnits[vis.metric]
                 d3.select('#tooltip')
                     .style('display', 'block')

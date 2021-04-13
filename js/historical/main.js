@@ -1,6 +1,8 @@
 // Initialize dispatcher that is used to orchestrate events
 const heatmapProvinceDispatcher = d3.dispatch('selectProvince');
 const heatmapYearDispatcher = d3.dispatch('selectYear');
+const stackedBarChartYearDispatcher = d3.dispatch('selectYear');
+
 const windowWidth = window.innerWidth, windowHeight = window.innerWidth;
 
 // Global objects
@@ -78,7 +80,7 @@ Promise.all([
     parentElement: '#stackedBarChart',
     containerHeight: 0.2 * windowHeight,
     containerWidth: 0.425 * windowWidth}, 
-  barChartData, province);
+  barChartData, province, stackedBarChartYearDispatcher);
 
 
   // Enable scrolling by creating a waypoint for each `step` container
@@ -151,8 +153,15 @@ heatmapYearDispatcher.on('selectYear', selectedYear => {
   // https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView
   // https://stackoverflow.com/questions/13735912/anchor-jumping-by-using-javascript
   //
-
 })
+
+stackedBarChartYearDispatcher.on('selectYear', selectedYear => {
+  let stepIndex = selectedYear - 1990;
+  stackedBarChart.goToStep(stepIndex);
+  heatmap.goToStep(stepIndex);
+  choropleth.goToStep(stepIndex);
+});
+
 
 
 

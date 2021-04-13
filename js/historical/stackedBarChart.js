@@ -6,7 +6,7 @@ class StackedBarChart {
    * @param {Object}
    * @param {Array}
    */
-  constructor(_config, _data, _province) {
+  constructor(_config, _data, _province, _yearDispatcher) {
     this.config = {
       parentElement: _config.parentElement,
       containerWidth: _config.containerWidth, //|| 900,
@@ -17,8 +17,9 @@ class StackedBarChart {
       legendHeight: 10,
       legendSquareSize: 10,
     }
+    this.data = _data;
     this.province = _province;
-    this.data = _data
+    this.yearDispatcher = _yearDispatcher;
 
     // Specify which sources we want to show
     this.sources = [...new Set(this.data.map(d => d.Source))];
@@ -169,7 +170,7 @@ class StackedBarChart {
   renderVis() {
     let vis = this;
 
-    vis.chart.selectAll('.category')
+    let categoryBar = vis.chart.selectAll('.category')
         .data(vis.stackedData)
         .join('g')
         .attr('class', d => `category cat-${d.key}`)
@@ -184,7 +185,9 @@ class StackedBarChart {
           let y1 = !d[1] ? 0 : d[1];
           return vis.yScale(d[0]) - vis.yScale(y1);
         })
-        .attr('width', vis.xScale.bandwidth())
+        .attr('width', vis.xScale.bandwidth());
+
+      categoryBar
         // Define mouseover tooltip
         .on('mouseover', (event,d) => {
           d3.select('#tooltip')
@@ -218,6 +221,12 @@ class StackedBarChart {
         .on('mouseleave', () => {
           d3.select('#tooltip').style('display', 'none');
         });
+
+      categoryBar
+        .on('click', (event, d) => {
+          const selectedYear = d.data.year;
+          vis.yearDispatcher.call('selectYear', event, selectedYear);
+      });
 
     // Update the axes
     vis.xAxisG.call(vis.xAxis);

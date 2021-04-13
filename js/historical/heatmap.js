@@ -11,7 +11,6 @@ class Heatmap{
             legendBarHeight: 10
         }
         this.data = _data;
-        this.selectedYear = null;
         this.metric = _metric || 'CO2eq'
         this.provinceDispatcher = _provinceDispatcher;
         this.yearDispatcher = _yearDispatcher;

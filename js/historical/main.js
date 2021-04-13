@@ -141,10 +141,10 @@ heatmapProvinceDispatcher.on('selectProvince', selectedProvince => {
 
 heatmapYearDispatcher.on('selectYear', selectedYear => {
   let stepIndex = selectedYear - 1990;
-  // stackedBarChart.goToStep(stepIndex);
-  // heatmap.goToStep(stepIndex);
-  // choropleth.goToStep(stepIndex);
-  document.getElementById('myDiv').scrollIntoView();
+  stackedBarChart.goToStep(stepIndex);
+  heatmap.goToStep(stepIndex);
+  choropleth.goToStep(stepIndex);
+  //document.getElementById('myDiv').scrollIntoView();
   //TODO: scroller on side needs to get into view
   // http://jsfiddle.net/walfo/cj8xynL0/1/
   // http://jsfiddle.net/DerekL/x3edvp4t/

@@ -248,12 +248,6 @@ rect {
 }
 
 /*Timeline*/
-.x-axis{
-  stroke: black;
-  fill: black;
-  stroke-width: 0.1;
-}
-
 .policy {
   stroke: white;
   stroke-width: 0.2;

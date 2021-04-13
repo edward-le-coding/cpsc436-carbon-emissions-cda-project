@@ -138,9 +138,15 @@ class Choropleth{
 
         // Add title
         vis.title.selectAll('text')
-            .data(provinces.features)
+            .data(provinces.features, d => {
+                //console.log(provinces.features)
+                //console.log(d.properties.Year);
+                //console.log(provinces.features[0]);
+                //console.log("d is ", d.properties.Year);
+                return d.properties.Year;
+            })
             .join('text')
-            .attr('class', 'stackedBarChart histSubVisTitle')
+            .attr('class', 'histSubVisTitle')
             .attr('text-anchor', 'middle')
             .text(metricNames[vis.currMetric] + ", " + vis.currYear);
     }

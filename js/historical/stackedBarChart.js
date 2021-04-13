@@ -278,6 +278,8 @@ class StackedBarChart {
   renderTitle() {
     let vis = this;
 
+    console.log("rendering title");
+
     vis.title.selectAll('text')
         .data(vis.province)
         .join('text')

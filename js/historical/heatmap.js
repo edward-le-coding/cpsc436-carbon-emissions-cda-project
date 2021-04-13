@@ -8,6 +8,7 @@ class Heatmap{
             margin: _config.margin || {top: 60, right: 20, bottom: 20, left: 150},
             sortOption: _config.sortOption || 'alphabetically',
             legendWidth: 160,
+            legendBarHeight: 10
         }
         this.data = _data;
         this.selectedYear = null;
@@ -112,7 +113,7 @@ class Heatmap{
             return d[0]
         }
         // d[0];
-        vis.colorValue = d => d[vis.metric]; //FIXME: just CO2eq_tn_per_person for now
+        vis.colorValue = d => d[vis.metric];
         vis.xValue = d => d.Year;
 
         // Set color scales on update
@@ -155,7 +156,6 @@ class Heatmap{
             .attr('class', 'h-row');
 
         // Enter + update
-
         rowEnter.merge(row)
             .transition().duration(1000)
             .attr('transform', d => `translate(0,${vis.yScale(vis.yValue(d))})`);
@@ -182,7 +182,6 @@ class Heatmap{
         const cellEnter = cell.enter().append('rect')
             .attr('class', 'h-cell')
             .attr('class', d => 'year' + vis.xValue(d));
-        console.log(cell);
         // Enter + update
         let finalCells = cellEnter.merge(cell)
             .attr('height', vis.yScale.bandwidth())
@@ -252,9 +251,9 @@ class Heatmap{
     renderLegend() {
         const vis = this;
 
+        console.log('vis.colorScale.range()', vis.colorScale.range())
         // Add stops to the gradient
         // Learn more about gradients: https://www.visualcinnamon.com/2016/05/smooth-color-legend-d3-svg-gradient
-        // TODO: Melissa please explain to us what stop exactly is, I'm not sure I can follow, thanks. Flo
         vis.legendColorGradient.selectAll('stop')
             .data(vis.colorScale.range())
             .join('stop')
@@ -266,6 +265,7 @@ class Heatmap{
         vis.xLegendScale.domain(vis.colorScale.domain()).nice();
         const extent = vis.xLegendScale.domain();
 
+        console.log('extent', extent)
         // Manually calculate tick values
         vis.xLegendAxis.tickValues([
             extent[0],

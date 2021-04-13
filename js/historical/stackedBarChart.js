@@ -140,23 +140,11 @@ class StackedBarChart {
       vis.flattenedData.push(obj);
     }
 
-    console.log("years of rolledUpData", yearsOfRolledUpData);
-    console.log("difference", difference);
-    console.log("flattened data", vis.flattenedData);
-
     // Initialize stack generator with the sources
     vis.stackGen = d3.stack().keys(vis.sources);
 
     // Call stack generator on the dataset
     vis.stackedData = vis.stackGen(vis.flattenedData);
-
-    console.log('vis.stackedData', vis.stackedData);
-    console.log("rolled up by year and source", vis.rolledUpData);
-    console.log("stacked data", vis.stackedData);
-    console.log("keys of rolled up data", [ ...vis.rolledUpData.keys()]);
-    console.log("sources", vis.sources);
-    console.log('vis.stackedData.length', vis.stackedData.length);
-    console.log('stackedData', vis.stackedData);
 
     // because the data is stacked we know highest val is in last element of stacked data
     let maxYValue = d3.max(vis.stackedData[vis.stackedData.length - 1], d => {

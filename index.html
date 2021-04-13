@@ -89,7 +89,7 @@
                         Please select a metric:<br>
                         <input type="radio" name="metric-selector" value="CO2eq" checked>Absolute Emissions (total GHG)<br>
                         <input type="radio" name="metric-selector" value="CO2eq_tn_per_person">Emissions Intensity (per capita)</br>
-                        <input type="radio" name="metric-selector" value="CO2eq_tn_per_mil_GDP">Emissions Intensity (by GDP)</br>
+                        <input type="radio" name="metric-selector" value="CO2eq_tn_per_mil_GDP">Emissions Intensity (by Gross Domestic Product, CO2eq per million $ GDP; in 2012 dollars)</br>
                     </div>
                     <div id="sortSelect">
                         Heatmap: Sort regions
@@ -100,9 +100,13 @@
                     </div>
                 </div>
             </div>
+           
             <div id="heatmap"></div>
             <div id="choropleth"></div>
             <div id="stackedBarChart"></div>
+                 
+            
+            
         </div>
         <div id="histTimeline" class="histVisElem">
             <div>
@@ -167,11 +171,8 @@
         <h1 class="visTitle">Canadian Carbon Policy Commitments (to 2030)</h1>
         <br>
         <input type="checkbox" id="historical-toggle" name="historical-toggle-name">
-        <label for="historical-toggle-name" class="historical-toggle-checkbox">Include Historical Data</label>
-        <br>
-        <div>
-            <svg id="timeline" class="chart"></svg> 
-        </div>
+        <label for="historical-toggle-name" class="historical-toggle-checkbox">Compare with historical emissions</label>
+        <div id="timeline" class="chart"></div>
     
     </div>
     <div id="endPage">

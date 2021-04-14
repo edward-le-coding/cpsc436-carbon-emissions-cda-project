@@ -203,6 +203,10 @@ stackedBarChartYearDispatcher.on('selectYear', selectedYear => {
       .scrollIntoView({ behavior: 'smooth', block: 'center' });
 });
 
+document.addEventListener('scroll', function(e) {
+  document.getElementById('tooltip').style.display = 'none';
+});
+
 
 
 

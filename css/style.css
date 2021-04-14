@@ -75,6 +75,10 @@ h1 {
   display: inline-block;
   cursor: pointer;
   margin-left: 20px;
+  margin-bottom: 5px;
+  border: 0.5px solid #666;
+  border-radius: 4px;
+  padding: 5px;
 }      
 .radio-button input[type="radio"]:checked+label {
   background-color: lightgrey;

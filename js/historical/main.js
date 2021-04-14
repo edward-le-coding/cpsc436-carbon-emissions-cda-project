@@ -120,10 +120,7 @@ d3.select("#sort-control").on("change", function () {
 });
 
 d3.select("#metric-selector").on("change", function(d) {
-  console.log('triggered metric selector')
-  console.log('metric before', heatmap.metric)
-  let metricSelectorFilter = d3.select('input[name="radios"]:checked').node().value
-  console.log('metric after', metricSelectorFilter)
+  let metricSelectorFilter = d3.select('input[name="metric-selector"]:checked').node().value
   // Change heatmap metric
   heatmap.metric = metricSelectorFilter;
   heatmap.updateVis();
@@ -146,18 +143,6 @@ heatmapProvinceDispatcher.on('selectProvince', selectedProvince => {
 
 heatmapYearDispatcher.on('selectYear', selectedYear => {
   let stepIndex = selectedYear - 1990;
-
-  /* stackedBarChart.goToStep(stepIndex);
-  heatmap.goToStep(stepIndex);
-  choropleth.goToStep(stepIndex); */
-  //document.getElementById('myDiv').scrollIntoView();
-  //TODO: scroller on side needs to get into view
-  // http://jsfiddle.net/walfo/cj8xynL0/1/
-  // http://jsfiddle.net/DerekL/x3edvp4t/
-  // https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView
-  // https://stackoverflow.com/questions/13735912/anchor-jumping-by-using-javascript
-  //
-
   document.getElementById('step'+stepIndex).scrollIntoView({ behavior: 'smooth', block: 'center' });
 })
 

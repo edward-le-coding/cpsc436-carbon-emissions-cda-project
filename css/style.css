@@ -67,30 +67,6 @@ h1 {
   vertical-align: top;
   display: flex;
   justify-content: space-evenly;
-}   
-.radio-button input[type="radio"] {
-  display: none;
-}  
-.radio-button label {
-  display: inline-block;
-  cursor: pointer;
-  margin-left: 20px;
-  margin-bottom: 5px;
-  border: 0.5px solid #666;
-  border-radius: 4px;
-  padding: 5px;
-}      
-.radio-button input[type="radio"]:checked+label {
-  background-color: lightgrey;
-}
-.CO2eq {
-  color: green;
-}
-.CO2eq_tn_per_person {
-  color: blue;
-}
-.CO2eq_tn_per_mil_GDP {
-  color: red;
 }
 #historicalVis{
   vertical-align: top;

@@ -115,10 +115,11 @@ class Choropleth{
                 } else {
                     return '#fff'
                 }}
-            ).style("stroke", "gray")
+            )
+            .style("stroke", "red")
             .style("stroke-width", d=> {
-                if (d.properties.PRENAME){
-                    return 1;
+                if (d.properties.PRENAME == vis.currSelectedProvince){
+                    return 5;
                 } else {
                     return 0;
                 }
@@ -140,9 +141,10 @@ class Choropleth{
             })
             .on('mouseleave', () => {
                 d3.select('#tooltip').style('display', 'none');
-            }).on('click', (event, d) => {
-                const selectedProvince = d.properties.PRENAME;
-                vis.choroplethProvinceDispatcher.call('selectChoroplethProvince', event, selectedProvince);
+            })
+            .on('click', (event, d) => {
+                vis.currSelectedProvince = d.properties.PRENAME;
+                vis.choroplethProvinceDispatcher.call('selectChoroplethProvince', event, vis.currSelectedProvince);
             });
 
         // Add an additional layer on top of the map to show the province borders more clearly based on tutorial suggestions

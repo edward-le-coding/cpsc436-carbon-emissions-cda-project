@@ -75,9 +75,9 @@ Promise.all([
     parentElement: '#choropleth',
     containerHeight: 0.2 * windowHeight,
     containerWidth: 0.4 * windowWidth
-  }, choroplethData,
+    },
+      choroplethData,
       masterGeoData,
-      metricUnits,
       choroplethProvinceDispatcher);
 
   // Prepare stacked bar chart data and initialize stacked bar chart
@@ -86,7 +86,7 @@ Promise.all([
   stackedBarChart = new StackedBarChart({ 
     parentElement: '#stackedBarChart',
     containerHeight: 0.2 * windowHeight,
-    containerWidth: 0.5 * windowWidth}, 
+    containerWidth: 0.55 * windowWidth},
   barChartData, province, stackedBarChartYearDispatcher);
 
 
@@ -185,6 +185,7 @@ choroplethProvinceDispatcher.on('selectChoroplethProvince', selectedProvince =>{
   } else {
     currSelectedProvince = selectedProvince;
   }
+  updateProvinceViews();
 });
 heatmapYearDispatcher.on('selectYear', selectedYear => {
   let stepIndex = selectedYear - 1990;

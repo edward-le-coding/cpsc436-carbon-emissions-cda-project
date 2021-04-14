@@ -306,14 +306,14 @@ class StackedBarChart {
 
     // set opactity of all bars to 0.2
     vis.chart.selectAll('rect')
-        .style('stroke', 'none');
-        //.style('opacity', 0.6);
+        .style('stroke', 'none')
+        .style('opacity', 0.6);
 
     // set opacity of the bar we're looking at to 1
     vis.chart.selectAll(className)
         .style('stroke', 'black')
-        .style('stroke-width', 2);
-        //.style('opacity', 1);
+        .style('stroke-width', 2)
+        .style('opacity', 1);
   }
 
 }

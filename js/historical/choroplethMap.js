@@ -6,9 +6,13 @@ class Choropleth{
             parentElement: _config.parentElement,
             containerWidth: _config.containerWidth, //|| 400,
             containerHeight: _config.containerHeight, //|| 300,
-            margin: _config.margin || {top: 50, right: 0, bottom: 10, left: 0},
+            margin: _config.margin || {top: 50, right: 0, bottom: 50, left: 0},
             projection: _config.projection || d3.geoConicConformal().parallels([49, 77]).rotate([110, 0]),
             tooltipPadding: 15,
+            legendLeft: 15,
+            legendBottom: 25,
+            legendRectHeight: 15,
+            legendRectWidth: 100,
         }
         // Update data
         this.data = _data;
@@ -38,7 +42,17 @@ class Choropleth{
         // Create space for chart
         vis.chart = vis.svg.append('g')
             .attr('transform', `translate(${vis.config.margin.left},${vis.config.margin.top})`);
-
+        // Create legend group
+        vis.legend = vis.svg.append('g')
+            .attr('class', 'legend')
+            .attr('transform', `translate(${vis.config.legendLeft},${vis.height - vis.config.legendBottom})`);
+        // Create space for legend
+        vis.legendRect = vis.legend.append('rect')
+            .attr('width', vis.config.legendRectWidth)
+            .attr('height', vis.config.legendRectHeight);
+        // Create legend gradient
+        vis.linearGradient = vis.svg.append('defs').append('linearGradient')
+            .attr("id", "legend-gradient");
         // Add title group
         vis.title = vis.svg.append('g')
             .attr('id', 'choropleth-title')
@@ -46,6 +60,12 @@ class Choropleth{
             .append('text')
             .attr('class', 'stackedBarChart chartTitle')
             .attr('text-anchor', 'middle');
+        vis.legendTitle = vis.legend.append('text')
+            .attr('class', 'choropleth-legend-title')
+            .attr('text-anchor', 'middle')
+            .attr('dy', '.35em')
+            .attr('y', -10)
+            .attr('x', vis.config.legendRectWidth/2);
 
         // Add geographical projection
         vis.geoPath = d3.geoPath().projection(vis.config.projection);
@@ -92,7 +112,15 @@ class Choropleth{
                 }
             }
         });
-        //console.log(vis.geoData.objects.provinces.geometries);
+        let metricExtent = vis.data.map(d => d[vis.currMetric]);
+        // Create legend stops
+        vis.legendStops = [
+            { color: vis.colorScale(d3.min(metricExtent)), value: d3.min(metricExtent).toFixed(1), offset: '0%'},
+            { color: vis.colorScale(d3.quantile(metricExtent, 0.25)), value: d3.quantile(metricExtent, 0.25).toFixed(1), offset: '25%'},
+            { color: vis.colorScale(d3.quantile(metricExtent, 0.50)), value: d3.quantile(metricExtent, 0.50).toFixed(1), offset: '50%'},
+            { color: vis.colorScale(d3.quantile(metricExtent, 0.75)), value: d3.quantile(metricExtent, 0.55).toFixed(1), offset: '75%'},
+            { color: vis.colorScale(d3.max(metricExtent)), value: d3.max(metricExtent).toFixed(1), offset: '100%'},
+        ];
         vis.renderVis();
     }
 
@@ -159,6 +187,29 @@ class Choropleth{
         // Add title
         vis.title
             .text(metricNames[vis.currMetric] + ", " + vis.currYear);
+        // Add legend
+        vis.legendTitle
+            .text(metricUnits[vis.currMetric]);
+        // Add legend labels
+        vis.legend.selectAll('.choropleth-legend-label')
+            .data(vis.legendStops)
+            .join('text')
+            .attr('class', 'choropleth-legend-label')
+            .attr('text-anchor', 'middle')
+            .attr('text-align', 'center')
+            .attr('dy', '.35em')
+            .attr('y', 20)
+            .attr('x', (d,index) => {
+                return index*(vis.config.legendRectWidth/(vis.legendStops.length-1));
+            })
+            .text(d => d.value);
+
+        // Update gradient for legend
+        vis.linearGradient.selectAll('stop')
+            .data(vis.legendStops)
+            .join('stop')
+            .attr('offset', (d) => d.offset)
+            .attr('stop-color', d => d.color);
     }
 
     // Render new year's worth of data as a result of a trigger

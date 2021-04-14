@@ -246,3 +246,10 @@ rect {
   font-size: 14px;
   font-weight: 600;
 }
+
+.choropleth-legend-title{
+  font-size: 0.6rem;
+}
+.choropleth-legend-label{
+   font-size: 0.5rem;
+ }

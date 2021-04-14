@@ -120,7 +120,10 @@ d3.select("#sort-control").on("change", function () {
 });
 
 d3.select("#metric-selector").on("change", function(d) {
-  let metricSelectorFilter = d3.select('input[name="metric-selector"]:checked').node().value
+  console.log('triggered metric selector')
+  console.log('metric before', heatmap.metric)
+  let metricSelectorFilter = d3.select('input[name="radios"]:checked').node().value
+  console.log('metric after', metricSelectorFilter)
   // Change heatmap metric
   heatmap.metric = metricSelectorFilter;
   heatmap.updateVis();

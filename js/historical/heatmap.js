@@ -5,7 +5,7 @@ class Heatmap{
             containerWidth:  _config.containerWidth, //|| 1200,
             containerHeight: _config.containerHeight, //|| 300,
             tooltipPadding: 15,
-            margin: _config.margin || {top: 60, right: 20, bottom: 20, left: 150},
+            margin: _config.margin || {top: 60, right: 50, bottom: 20, left: 150},
             sortOption: _config.sortOption || 'alphabetically',
             legendWidth: 160,
             legendBarHeight: 10
@@ -249,9 +249,8 @@ class Heatmap{
         const vis = this;
 
         // Add stops to the gradient
-        // Learn more about gradients: https://www.visualcinnamon.com/2016/05/smooth-color-legend-d3-svg-gradient
         vis.legendColorGradient.selectAll('stop')
-            .data(vis.colorScale.range())
+                .data(vis.colorScale.range())
             .join('stop')
             .attr('offset', (d,i) => i/(vis.colorScale.range().length-1))
             .attr('stop-color', d => d);

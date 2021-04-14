@@ -147,7 +147,7 @@ class Choropleth{
                     return '#fff'
                 }}
             )
-            .style("stroke", "red")
+            .style("stroke", "black")
             .style("stroke-width", d=> {
                 if (d.properties.PRENAME == vis.currSelectedProvince){
                     return 5;

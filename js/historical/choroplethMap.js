@@ -1,6 +1,6 @@
 class Choropleth{
     // Basic constructor
-    constructor(_config, _data, _geoData) {
+    constructor(_config, _data, _geoData, _choroplethProvinceDispatcher) {
         // Define settings for object (e.g. where it belongs, margins, width, height, etc).
         this.config = {
             parentElement: _config.parentElement,
@@ -13,6 +13,10 @@ class Choropleth{
         // Update data
         this.data = _data;
         this.geoData = _geoData;
+        // Selected province
+        this.currSelectedProvince = null;
+        // Set dispatcher
+        this.choroplethProvinceDispatcher = _choroplethProvinceDispatcher;
         // Define default display data
         this.currYear = 2018;
         this.currMetric = 'CO2eq';
@@ -54,7 +58,7 @@ class Choropleth{
             .interpolator(d3.interpolateBlues)
             .domain(d3.extent(vis.data, d => d.CO2eq_tn_per_person));
         vis.colorScaleCO2eqPerMilGDP = d3.scaleSequential()
-            .interpolator(d3.interpolateReds)
+            .interpolator(d3.interpolatePurples)
             .domain(d3.extent(vis.data, d => d.CO2eq_tn_per_mil_GDP));
         // Update view
         vis.updateVis();
@@ -111,7 +115,15 @@ class Choropleth{
                 } else {
                     return '#fff'
                 }}
-            ).on('mouseover', (event, d) => {
+            ).style("stroke", "gray")
+            .style("stroke-width", d=> {
+                if (d.properties.PRENAME){
+                    return 1;
+                } else {
+                    return 0;
+                }
+            })
+            .on('mouseover', (event, d) => {
                 const value = (d.properties.metric === null) ? 'No data available' : d.properties.metric;
                 let units = metricUnits[vis.currMetric]
                 d3.select('#tooltip')
@@ -128,6 +140,9 @@ class Choropleth{
             })
             .on('mouseleave', () => {
                 d3.select('#tooltip').style('display', 'none');
+            }).on('click', (event, d) => {
+                const selectedProvince = d.properties.PRENAME;
+                vis.choroplethProvinceDispatcher.call('selectChoroplethProvince', event, selectedProvince);
             });
 
         // Add an additional layer on top of the map to show the province borders more clearly based on tutorial suggestions

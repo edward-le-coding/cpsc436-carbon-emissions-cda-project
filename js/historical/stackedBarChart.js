@@ -242,34 +242,6 @@ class StackedBarChart {
   // Renders the legend
   renderLegend() {
     let vis = this;
-    // let cols = 3;
-    // let rows = 4;
-    // let boxOffset = 5;
-    // let baseOffset = 0;
-    // let heightInterval = vis.config.legendHeight/rows;
-    // let widthInterval = (vis.config.legendWidth/cols);
-    // // TODO: Unkown why this is broken
-    // vis.legend.selectAll('rect')
-    //     .data(vis.colorScale.domain())
-    //     .join('rect')
-    //     .attr('x', (d, i) => {
-    //       // if (i > 4) baseOffset = 25;
-    //       return ((i%cols) * widthInterval + baseOffset)})
-    //     .attr('y', (d, i) => ((i%rows) * heightInterval))
-    //     .attr('width', vis.config.legendSquareSize)
-    //     .attr('height', vis.config.legendSquareSize)
-    //     .style('fill', d => vis.colorScale(d));
-    //
-    // vis.legend.selectAll('text')
-    //     .data(vis.colorScale.domain())
-    //     .join('text')
-    //     .attr('class', 'legendText')
-    //     .attr('x', (d, i) => {
-    //       // if (i > 4) baseOffset = 25;
-    //       return ((i%cols) * widthInterval) + vis.config.legendSquareSize + boxOffset + baseOffset})
-    //     .attr('y', (d, i) => ((i%rows) * heightInterval) + vis.config.legendSquareSize)
-    //     .text(d => d)
-    //     .attr('text-anchor', 'left');
     vis.legend.selectAll('rect')
         .data(vis.colorScale.domain())
         .join('rect')
@@ -292,9 +264,6 @@ class StackedBarChart {
   // Renders the title (not in index.html because title changes dynamically)
   renderTitle() {
     let vis = this;
-
-    console.log("rendering title");
-
     vis.title.selectAll('text')
         .data(vis.province)
         .join('text')

@@ -2,6 +2,7 @@
 const heatmapProvinceDispatcher = d3.dispatch('selectProvince');
 const heatmapYearDispatcher = d3.dispatch('selectYear');
 const stackedBarChartYearDispatcher = d3.dispatch('selectYear');
+const choroplethProvinceDispatcher = d3.dispatch('selectChoroplethProvince');
 
 const windowWidth = window.innerWidth, windowHeight = window.innerWidth;
 
@@ -20,6 +21,11 @@ let chropolethData;
 let stackedBarChart;
 let barChartData;
 
+// Define global (historical) selected province
+let currSelectedProvince = null;
+let currSelectedYear = null;
+let heatmapProvinceDoubleClickCounter = 0;
+
 const metricUnits = {
   CO2eq: 'million tn CO2eq',
   CO2eq_tn_per_person: 'tn CO2eq emitted/person',
@@ -27,9 +33,9 @@ const metricUnits = {
 }
 
 const metricNames = {
-  CO2eq: 'Absolute Emissions (total GHG, million tn CO2eq)',
-  CO2eq_tn_per_person: 'Emissions Intensity (per capita, tn CO2eq emitted/person)',
-  CO2eq_tn_per_mil_GDP: 'Emissions Intensity (by Gross Domestic Product, CO2eq per million $ GDP; 2012 dollars)'
+  CO2eq: 'Absolute Emissions (million tn CO2eq)',
+  CO2eq_tn_per_person: 'Emissions Intensity (tn CO2eq emitted/person)',
+  CO2eq_tn_per_mil_GDP: 'Emissions Intensity (CO2eq per million $ GDP; 2012 dollars)'
   }
 Promise.all([
     d3.json('data/canada_provinces.topo.json'),
@@ -71,14 +77,15 @@ Promise.all([
     containerWidth: 0.4 * windowWidth
   }, choroplethData,
       masterGeoData,
-      metricUnits);
+      metricUnits,
+      choroplethProvinceDispatcher);
 
   // Prepare stacked bar chart data and initialize stacked bar chart
   barChartData = masterHistData.filter(d => d.Source != 'Total' && d.Region === 'Canada')
   let province = ['Canada'];
   stackedBarChart = new StackedBarChart({ 
     parentElement: '#stackedBarChart',
-    containerHeight: 0.25 * windowHeight,
+    containerHeight: 0.2 * windowHeight,
     containerWidth: 0.5 * windowWidth}, 
   barChartData, province, stackedBarChartYearDispatcher);
 
@@ -133,21 +140,66 @@ d3.select("#metric-selector").on("change", function(d) {
  * Dispatcher waits for event
  * We update the data in the stacked bar chart based on the region selected in the heatmap
  */
-heatmapProvinceDispatcher.on('selectProvince', selectedProvince => {
-  barChartData = masterHistData.filter(d => d.Region === selectedProvince)
-  stackedBarChart.data = barChartData;
-  stackedBarChart.province = [selectedProvince];
+
+function updateProvinceViews() {
+  // Update heatmap
+  heatmap.currSelectedProvince = currSelectedProvince;
+  heatmap.updateVis();
+  // Update choropleth
+  choropleth.currSelectedProvince = currSelectedProvince;
+  choropleth.updateVis();
+  // Update barchart
+  if (currSelectedProvince == null) {
+    barChartData = masterHistData.filter(d => d.Region === 'Canada');
+    stackedBarChart.data = barChartData;
+    stackedBarChart.province = ['Canada'];
+  } else {
+    barChartData = masterHistData.filter(d => d.Region === currSelectedProvince);
+    stackedBarChart.data = barChartData;
+    stackedBarChart.province = [currSelectedProvince];
+  }
   stackedBarChart.updateVis();
+}
+
+heatmapProvinceDispatcher.on('selectProvince', selectedProvince => {
+  heatmapProvinceDoubleClickCounter = heatmapProvinceDoubleClickCounter + 1;
+  // Update global field selected province
+  if(currSelectedProvince == selectedProvince){
+    if(heatmapProvinceDoubleClickCounter > 1) {
+      currSelectedProvince = null;
+      heatmapProvinceDoubleClickCounter = 0
+      updateProvinceViews();
+      console.log('updatedView');
+    }
+    console.log(heatmapProvinceDoubleClickCounter)
+  } else if (currSelectedProvince != selectedProvince){
+    currSelectedProvince = selectedProvince;
+    updateProvinceViews();
+  }
 });
 
+choroplethProvinceDispatcher.on('selectChoroplethProvince', selectedProvince =>{
+  // Update global field selected province
+  if(currSelectedProvince == selectedProvince){
+    currSelectedProvince = null;
+  } else {
+    currSelectedProvince = selectedProvince;
+  }
+});
 heatmapYearDispatcher.on('selectYear', selectedYear => {
   let stepIndex = selectedYear - 1990;
-  document.getElementById('step'+stepIndex).scrollIntoView({ behavior: 'smooth', block: 'center' });
-})
+  // Reset click counter
+  heatmapProvinceDoubleClickCounter = 0;
+  document
+      .getElementById('step'+stepIndex)
+      .scrollIntoView({ behavior: 'smooth', block: 'center' });
+});
 
 stackedBarChartYearDispatcher.on('selectYear', selectedYear => {
   let stepIndex = selectedYear - 1990;
-  document.getElementById('step'+stepIndex).scrollIntoView({ behavior: 'smooth', block: 'center' });
+  document
+      .getElementById('step'+stepIndex)
+      .scrollIntoView({ behavior: 'smooth', block: 'center' });
 });
 
 

@@ -5,16 +5,21 @@ class Heatmap{
             containerWidth:  _config.containerWidth, //|| 1200,
             containerHeight: _config.containerHeight, //|| 300,
             tooltipPadding: 15,
-            margin: _config.margin || {top: 60, right: 50, bottom: 20, left: 150},
+            margin: _config.margin || {top: 60, right: 50, bottom: 20, left: 200},
             sortOption: _config.sortOption || 'alphabetically',
             legendWidth: 160,
             legendBarHeight: 10
         }
+        // Init starting data
         this.data = _data;
         this.metric = _metric || 'CO2eq'
         this.provinceDispatcher = _provinceDispatcher;
         this.yearDispatcher = _yearDispatcher;
 
+        // Define selected province
+        this.currSelectedProvince = null;
+        this.currSelectedYear = null;
+        // Init vis
         this.initVis();
     }
 
@@ -127,7 +132,7 @@ class Heatmap{
         } else {
             // Intensity by GDP
             vis.colorScale = d3.scaleSequential()
-                .interpolator(d3.interpolateReds);
+                .interpolator(d3.interpolatePurples);
         }
 
         // Set the scale input domains
@@ -181,11 +186,36 @@ class Heatmap{
         const cellEnter = cell.enter().append('rect')
             .attr('class', 'h-cell')
             .attr('class', d => 'year' + vis.xValue(d));
+        // Clear previous stroke settings
+        vis.chart.selectAll('rect')
+            .style('stroke', 'none')
+            .style('stroke-width', 0);
         // Enter + update
         let finalCells = cellEnter.merge(cell)
+            .attr('id', d => d.Region.replace(/\s/g, ''))
             .attr('height', vis.yScale.bandwidth())
             .attr('width', cellWidth)
             .attr('x', d => vis.xScale(vis.xValue(d)))
+            .style('stroke', d => {
+                if (d.Region === vis.currSelectedProvince ){
+                    return 'gray';
+                } else if(vis.currSelectedYear && d.Year == vis.currSelectedYear){
+                    return 'black'
+                } else {
+                    return 'none';
+                }
+            })
+            .style('stroke-width',d => {
+                if (d.Region === vis.currSelectedProvince){
+                    return 2;
+                } else if (vis.currSelectedYear){
+                    if (d.Year == vis.currSelectedYear){
+                        return 2;
+                    }
+                } else {
+                    return 'none';
+                }
+            })
             .attr('fill', d => {
                 if (d.value === 0 || d.value === null) {
                     return '#fff';
@@ -193,7 +223,7 @@ class Heatmap{
                     return vis.colorScale(vis.colorValue(d));
                 }
             });
-        
+
         finalCells
             .on('mouseover', (event, d) => {
                 const value = (d[vis.metric] === null) ? 'No data available' : d[vis.metric];
@@ -218,6 +248,7 @@ class Heatmap{
             .on('click', (event, d) => {
                 const selectedProvince = d.Region;
                 const selectedYear = d.Year;
+                // Encase calls in if conditions to improve performance (only re-render if necessary)
                 vis.provinceDispatcher.call('selectProvince', event, selectedProvince);
                 vis.yearDispatcher.call('selectYear', event, selectedYear);
             });
@@ -250,7 +281,7 @@ class Heatmap{
 
         // Add stops to the gradient
         vis.legendColorGradient.selectAll('stop')
-                .data(vis.colorScale.range())
+            .data(vis.colorScale.range())
             .join('stop')
             .attr('offset', (d,i) => i/(vis.colorScale.range().length-1))
             .attr('stop-color', d => d);
@@ -275,19 +306,24 @@ class Heatmap{
     goToStep(stepIndex) {
         let vis = this;
 
-        let selectedYear = 1990 + stepIndex;
-        let className = `.year${selectedYear}`;
-
+        let currSelectedYear = 1990 + stepIndex;
+        vis.currSelectedYear = currSelectedYear;
+        let className = `.year${currSelectedYear}`;
         // those years that are not selected have no stroke
-         vis.chart.selectAll('rect')
-            .style('stroke', 'none');
-            //.style('opacity', 0.7);
+        vis.chart.selectAll('rect')
+            .style('stroke', 'none')
+            .style('stroke-width', 0);
 
         // those years that are selected have a stroke
         vis.chart.selectAll(className)
             .style('stroke', '#464141')
             .style('stroke-width', 2);
-            //.style('opacity', 1);
-        
+        // Highlight currently selected province (if selected)
+        if (vis.currSelectedProvince){
+            let provinceCode = vis.currSelectedProvince.replace(/\s/g, '');
+            vis.chart.selectAll('#'+provinceCode)
+                .style('stroke', '#464141')
+                .style('stroke-width', 2);
+        }
     }
 }

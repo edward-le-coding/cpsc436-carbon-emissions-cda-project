@@ -41,7 +41,7 @@ Promise.all([
     timeline = new Timeline({
         parentElement: '#timeline',
         containerHeight: 0.4 * policWindowHeight,
-        containerWidth: 0.85 * policyWindowWidth
+        containerWidth: 0.75 * policyWindowWidth
     }, masterPolicyData, canadaHistoricalData)
 
 }).catch(error => console.error(error));

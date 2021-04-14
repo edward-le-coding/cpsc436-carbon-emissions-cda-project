@@ -9,10 +9,10 @@ class Timeline {
           parentElement: _config.parentElement,
           containerWidth: _config.containerWidth || 800,
           containerHeight: _config.containerHeight || 500,
-          margin: {top: 250, right: 10, bottom: 50, left: 50},
+          margin: {top: 250, right: 10, bottom: 50, left: 150},
           mitigation_estimate_year: _config.mitigation_estimate_year || 2030,
           tooltipPadding: _config.tooltipPadding || 15,
-          legendWidth: 200,
+          legendWidth: 300,
           legendHeight: 10,
           legendSquareSize: 15,
         }

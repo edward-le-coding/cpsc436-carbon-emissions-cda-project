@@ -88,9 +88,9 @@
                 <div class="historicalSelectors">
                     <div name="metric-selector" id="metric-selector" class="historicalSelectors">
                         Please select a metric:<br>
-                        <input type="radio" name="metric-selector" value="CO2eq" checked>Absolute Emissions (total GHG, million tn CO2eq)<br>
-                        <input type="radio" name="metric-selector" value="CO2eq_tn_per_person">Emissions Intensity (per capita, tn CO2eq emitted/person)</br>
-                        <input type="radio" name="metric-selector" value="CO2eq_tn_per_mil_GDP">Emissions Intensity (by Gross Domestic Product, CO2eq per million $ GDP; 2012 dollars)</br>
+                        <input type="radio" name="metric-selector" value="CO2eq" checked>Absolute Emissions (million tn CO2eq)<br>
+                        <input type="radio" name="metric-selector" value="CO2eq_tn_per_person">Emissions Intensity, Per Capita (tn CO2eq emitted/person)</br>
+                        <input type="radio" name="metric-selector" value="CO2eq_tn_per_mil_GDP">Emissions Intensity, Economic (CO2eq per million $ GDP; 2012 dollars)</br>
                     </div>
                     <div id="sortSelect">
                         Heatmap: Sort regions
@@ -170,7 +170,7 @@
     </div>
     <div id="policyVis" class="visPage">
         <h1 class="visTitle">Canadian Carbon Policy Commitments (to 2030)</h1>
-        <br>
+        <p>This visualization shows the implementation years of policies and their project impacts by the year 2030</p>
         <input type="checkbox" id="historical-toggle" name="historical-toggle-name">
         <label for="historical-toggle-name" class="historical-toggle-checkbox">Compare with historical emissions</label>
         <div id="timeline" class="chart"></div>

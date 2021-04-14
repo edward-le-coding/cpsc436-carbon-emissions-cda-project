@@ -11,7 +11,6 @@ class Heatmap{
             legendBarHeight: 10
         }
         this.data = _data;
-        this.selectedYear = null;
         this.metric = _metric || 'CO2eq'
         this.provinceDispatcher = _provinceDispatcher;
         this.yearDispatcher = _yearDispatcher;
@@ -194,12 +193,10 @@ class Heatmap{
                     return vis.colorScale(vis.colorValue(d));
                 }
             });
-        if(vis.selectedYear){
-            vis.colourSelectedYear(vis.selectedYear);
-        }
+        
         finalCells
             .on('mouseover', (event, d) => {
-                const value = (d.CO2eq_tn_per_person === null) ? 'No data available' : d.CO2eq_tn_per_person;
+                const value = (d[vis.metric] === null) ? 'No data available' : d[vis.metric];
                 let units = metricUnits[vis.metric]
                 d3.select('#tooltip')
                     .style('display', 'block')
@@ -279,31 +276,19 @@ class Heatmap{
     goToStep(stepIndex) {
         let vis = this;
 
-        let baseYear = 1990;
-        if(stepIndex == 0){
-            // Reset year, overall case
-            vis.chart.selectAll('rect')
-                .transition()
-                .style('opacity', 1);
-            vis.selectedYear = null;
-        } else {
-            // Set selected year
-            vis.selectedYear = baseYear + stepIndex-1;
-        }
-        // Update vis
-        vis.updateVis();
-    }
-
-    colourSelectedYear(selectedYear) {
-        let vis = this;
+        let selectedYear = 1990 + stepIndex;
         let className = `.year${selectedYear}`;
 
-        // set opactity of all bars to 0.2
-        vis.chart.selectAll('rect')
-            .style('opacity', 0.7);
+        // those years that are not selected have no stroke
+         vis.chart.selectAll('rect')
+            .style('stroke', 'none');
+            //.style('opacity', 0.7);
 
-        // set opacity of the bar we're looking at to 1
+        // those years that are selected have a stroke
         vis.chart.selectAll(className)
-            .style('opacity', 1);
+            .style('stroke', 'black')
+            .style('stroke-width', 2);
+            //.style('opacity', 1);
+        
     }
 }

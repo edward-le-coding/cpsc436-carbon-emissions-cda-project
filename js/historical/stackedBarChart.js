@@ -6,7 +6,7 @@ class StackedBarChart {
    * @param {Object}
    * @param {Array}
    */
-  constructor(_config, _data, _province) {
+  constructor(_config, _data, _province, _yearDispatcher) {
     this.config = {
       parentElement: _config.parentElement,
       containerWidth: _config.containerWidth, //|| 900,
@@ -17,8 +17,9 @@ class StackedBarChart {
       legendHeight: 10,
       legendSquareSize: 10,
     }
+    this.data = _data;
     this.province = _province;
-    this.data = _data
+    this.yearDispatcher = _yearDispatcher;
 
     // Specify which sources we want to show
     this.sources = [...new Set(this.data.map(d => d.Source))];
@@ -169,7 +170,7 @@ class StackedBarChart {
   renderVis() {
     let vis = this;
 
-    vis.chart.selectAll('.category')
+    let categoryBar = vis.chart.selectAll('.category')
         .data(vis.stackedData)
         .join('g')
         .attr('class', d => `category cat-${d.key}`)
@@ -184,7 +185,9 @@ class StackedBarChart {
           let y1 = !d[1] ? 0 : d[1];
           return vis.yScale(d[0]) - vis.yScale(y1);
         })
-        .attr('width', vis.xScale.bandwidth())
+        .attr('width', vis.xScale.bandwidth());
+
+      categoryBar
         // Define mouseover tooltip
         .on('mouseover', (event,d) => {
           d3.select('#tooltip')
@@ -218,6 +221,12 @@ class StackedBarChart {
         .on('mouseleave', () => {
           d3.select('#tooltip').style('display', 'none');
         });
+
+      categoryBar
+        .on('click', (event, d) => {
+          const selectedYear = d.data.year;
+          vis.yearDispatcher.call('selectYear', event, selectedYear);
+      });
 
     // Update the axes
     vis.xAxisG.call(vis.xAxis);
@@ -278,12 +287,14 @@ class StackedBarChart {
   renderTitle() {
     let vis = this;
 
+    console.log("rendering title");
+
     vis.title.selectAll('text')
         .data(vis.province)
         .join('text')
-        .attr('class', 'stackedBarChart title')
+        .attr('class', 'stackedBarChart histSubVisTitle')
         .attr('text-anchor', 'middle')
-        .text(d => `Sources of emissions over 1990-2018 in ${d}`);
+        .text(d => `Sources of Emissions in ${d} (1990-2018)`);
   }
 
   // Updates the viz based on the year user scrolls to
@@ -291,25 +302,18 @@ class StackedBarChart {
     let vis = this;
 
     let baseYear = 1990;
-    if(stepIndex == 0){
-      // Reset year, overall case
-      vis.chart.selectAll('rect')
-          .transition()
-          .style('opacity', 1);
-    } else {
-      let className = `.year${baseYear + stepIndex-1}`;
+    let className = `.year${baseYear + stepIndex}`;
 
-      // set opactity of all bars to 0.2
-      vis.chart.selectAll('rect')
-          .transition()
-          .style('opacity', 0.6);
+    // set opactity of all bars to 0.2
+    vis.chart.selectAll('rect')
+        .style('stroke', 'none');
+        //.style('opacity', 0.6);
 
-      // set opacity of the bar we're looking at to 1
-      vis.chart.selectAll(className)
-          .transition()
-          //.attr("stroke", "black")
-          .style('opacity', 1);
-    }
+    // set opacity of the bar we're looking at to 1
+    vis.chart.selectAll(className)
+        .style('stroke', 'black')
+        .style('stroke-width', 2);
+        //.style('opacity', 1);
   }
 
 }

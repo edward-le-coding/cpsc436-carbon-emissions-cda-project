@@ -9,7 +9,7 @@ class Choropleth{
             margin: _config.margin || {top: 50, right: 0, bottom: 50, left: 0},
             projection: _config.projection || d3.geoConicConformal().parallels([49, 77]).rotate([110, 0]),
             tooltipPadding: 15,
-            legendLeft: 15,
+            legendLeft: 25,
             legendBottom: 25,
             legendRectHeight: 15,
             legendRectWidth: 100,
@@ -49,7 +49,9 @@ class Choropleth{
         // Create space for legend
         vis.legendRect = vis.legend.append('rect')
             .attr('width', vis.config.legendRectWidth)
-            .attr('height', vis.config.legendRectHeight);
+            .attr('height', vis.config.legendRectHeight)
+            .style('stroke', 'black')
+            .style('stroke-width',1);
         // Create legend gradient
         vis.linearGradient = vis.svg.append('defs').append('linearGradient')
             .attr("id", "legend-gradient");
@@ -64,7 +66,7 @@ class Choropleth{
             .attr('class', 'choropleth-legend-title')
             .attr('text-anchor', 'middle')
             .attr('dy', '.35em')
-            .attr('y', -10)
+            .attr('y', -20)
             .attr('x', vis.config.legendRectWidth/2);
 
         // Add geographical projection
@@ -121,6 +123,7 @@ class Choropleth{
             { color: vis.colorScale(d3.quantile(metricExtent, 0.75)), value: d3.quantile(metricExtent, 0.55).toFixed(1), offset: '75%'},
             { color: vis.colorScale(d3.max(metricExtent)), value: d3.max(metricExtent).toFixed(1), offset: '100%'},
         ];
+        vis.legendStopStartEnd = [vis.legendStops[0], vis.legendStops[vis.legendStops.length]];
         vis.renderVis();
     }
 
@@ -208,8 +211,10 @@ class Choropleth{
         vis.linearGradient.selectAll('stop')
             .data(vis.legendStops)
             .join('stop')
-            .attr('offset', (d) => d.offset)
+            .attr('offset', d => d.offset)
             .attr('stop-color', d => d.color);
+        // Attach gradient to legend rectangle
+        vis.legendRect.attr('fill', 'url(#legend-gradient)');
     }
 
     // Render new year's worth of data as a result of a trigger

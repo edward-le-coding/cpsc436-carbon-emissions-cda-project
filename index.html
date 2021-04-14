@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/menuBar.css">
     <link href="https://fonts.googleapis.com/css2?family=Castoro:ital@1&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
-    
+
 </head>
 <meta charset="UTF-8"/>
 <body>
@@ -89,8 +89,8 @@
                     <div name="metric-selector" id="metric-selector" class="historicalSelectors">
                         Please select a metric:<br>
                         <input type="radio" name="metric-selector" value="CO2eq" checked>Absolute Emissions (million tn CO2eq)<br>
-                        <input type="radio" name="metric-selector" value="CO2eq_tn_per_person">Emissions Intensity, Per Capita (tn CO2eq emitted/person)</br>
-                        <input type="radio" name="metric-selector" value="CO2eq_tn_per_mil_GDP">Emissions Intensity, Economic (CO2eq per million $ GDP; 2012 dollars)</br>
+                        <input type="radio" name="metric-selector" value="CO2eq_tn_per_person">Per Capita Intensity, (tn CO2eq emitted/person)</br>
+                        <input type="radio" name="metric-selector" value="CO2eq_tn_per_mil_GDP">Economic Intensity, (CO2eq per million $ GDP; 2012 CAD)</br>
                     </div>
                     <div id="sortSelect">
                         Heatmap: Sort regions
@@ -100,14 +100,15 @@
                         </select>
                     </div>
                 </div>
+
             </div>
-           
+
             <div id="heatmap"></div>
             <div id="choropleth"></div>
             <div id="stackedBarChart"></div>
-                 
-            
-            
+
+
+
         </div>
         <div id="histTimeline" class="histVisElem">
             <div>
@@ -174,7 +175,7 @@
         <input type="checkbox" id="historical-toggle" name="historical-toggle-name">
         <label for="historical-toggle-name" class="historical-toggle-checkbox">Compare with historical emissions</label>
         <div id="timeline" class="chart"></div>
-    
+
     </div>
     <div id="endPage">
         <div id="end-title">

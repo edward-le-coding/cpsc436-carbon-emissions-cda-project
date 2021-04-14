@@ -28,8 +28,8 @@ let heatmapProvinceDoubleClickCounter = 0;
 
 const metricUnits = {
   CO2eq: 'million tn CO2eq',
-  CO2eq_tn_per_person: 'tn CO2eq emitted/person',
-  CO2eq_tn_per_mil_GDP: 'tn CO2eq emitted/$1 million CAD (2012 Canadian Dollars)'
+  CO2eq_tn_per_person: 'tn CO2eq/person',
+  CO2eq_tn_per_mil_GDP: 'tn CO2eq/$1 million CAD (2012 CAD)'
 }
 
 const metricNames = {

@@ -251,7 +251,6 @@ class Heatmap{
     renderLegend() {
         const vis = this;
 
-        console.log('vis.colorScale.range()', vis.colorScale.range())
         // Add stops to the gradient
         // Learn more about gradients: https://www.visualcinnamon.com/2016/05/smooth-color-legend-d3-svg-gradient
         vis.legendColorGradient.selectAll('stop')
@@ -265,7 +264,6 @@ class Heatmap{
         vis.xLegendScale.domain(vis.colorScale.domain()).nice();
         const extent = vis.xLegendScale.domain();
 
-        console.log('extent', extent)
         // Manually calculate tick values
         vis.xLegendAxis.tickValues([
             extent[0],

@@ -46,8 +46,6 @@ TODOs for final submission:
 Policy:
 - linking to another page https://www.homeandlearn.co.uk/WD/wds5pA.html
 Policy Dataset:
-1. needed to edit the start years of some to be just one year.
-2. needed to just have one word in 'status of implementation' column.
 below are links i used to find the start years
 - Ontario Emissions Reduction fund date 2021 https://www.nrcan.gc.ca/science-and-data/funding-partnerships/funding-opportunities/current-funding-opportunities/emissions-reduction-fund/22781
 - 'Alberta Coal-Fired Electricity Generation phaseout*' https://globalnews.ca/news/7502144/alberta-coal-power-ahead-of-schedule/
@@ -57,15 +55,12 @@ below are links i used to find the start years
 - 'Prince Edward Island Alternative Land Use Services Program' https://www.princeedwardisland.ca/en/service/alternative-land-use-services-alus-program 
 
 Policy dataset stretch goal: in 'estimate of mitigation 2020/2030' columns, add legend from page 125 of the policy pdf to match up NE vs NA and the subletters a,b,c,etc.
-- remove * and ** from first column: DONE https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll
+- remove * and ** from first column:  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll
 
 Policy implementation timeline
 - P2 melissa's bar chart
 - http://bl.ocks.org/mstanaland/6100713
 - https://observablehq.com/@d3/stacked-bar-chart
-
-removing an element from an array
-// source: https://stackoverflow.com/questions/5767325/how-can-i-remove-a-specific-item-from-an-array
 
 For the policy stacked bar chart, I (Melissa) had to add custom attributes y0 and y1 to allow the data to be stacked.
 I tried using the d3 stack generator but it did not work because the d3.stack.keys were not keys in the data object.

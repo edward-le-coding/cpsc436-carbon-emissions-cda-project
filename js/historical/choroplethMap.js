@@ -88,6 +88,8 @@ class Choropleth{
 
     updateVis(){
         let vis = this;
+        // Find range of metric
+        let metricExtent = vis.data.map(d => d[vis.currMetric]);
         // Create colour scale
         // Set color scales on update
         if (vis.currMetric == 'CO2eq') {
@@ -114,7 +116,6 @@ class Choropleth{
                 }
             }
         });
-        let metricExtent = vis.data.map(d => d[vis.currMetric]);
         // Create legend stops
         vis.legendStops = [
             { color: vis.colorScale(d3.min(metricExtent)), value: d3.min(metricExtent).toFixed(1), offset: '0%'},
@@ -123,7 +124,6 @@ class Choropleth{
             { color: vis.colorScale(d3.quantile(metricExtent, 0.75)), value: d3.quantile(metricExtent, 0.55).toFixed(1), offset: '75%'},
             { color: vis.colorScale(d3.max(metricExtent)), value: d3.max(metricExtent).toFixed(1), offset: '100%'},
         ];
-        vis.legendStopStartEnd = [vis.legendStops[0], vis.legendStops[vis.legendStops.length]];
         vis.renderVis();
     }
 

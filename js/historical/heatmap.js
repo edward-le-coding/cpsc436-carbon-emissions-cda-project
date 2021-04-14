@@ -140,6 +140,15 @@ class Heatmap{
         vis.xScale.domain(d3.extent(vis.data, vis.xValue));
         vis.yScale.domain(vis.groupedData.map(vis.yValue));
 
+        let metricExtent = vis.data.map(d => d[vis.metric]);
+        // Create legend stops
+        vis.legendStops = [
+            { color: vis.colorScale(d3.min(metricExtent)), value: d3.min(metricExtent).toFixed(1), offset: '0%'},
+            { color: vis.colorScale(d3.quantile(metricExtent, 0.25)), value: d3.quantile(metricExtent, 0.25).toFixed(1), offset: '25%'},
+            { color: vis.colorScale(d3.quantile(metricExtent, 0.50)), value: d3.quantile(metricExtent, 0.50).toFixed(1), offset: '50%'},
+            { color: vis.colorScale(d3.quantile(metricExtent, 0.75)), value: d3.quantile(metricExtent, 0.55).toFixed(1), offset: '75%'},
+            { color: vis.colorScale(d3.max(metricExtent)), value: d3.max(metricExtent).toFixed(1), offset: '100%'},
+        ];
         vis.renderVis();
     }
 
@@ -281,10 +290,10 @@ class Heatmap{
 
         // Add stops to the gradient
         vis.legendColorGradient.selectAll('stop')
-            .data(vis.colorScale.range())
+            .data(vis.legendStops)
             .join('stop')
-            .attr('offset', (d,i) => i/(vis.colorScale.range().length-1))
-            .attr('stop-color', d => d);
+            .attr('offset', d => d.offset)
+            .attr('stop-color', d => d.color);
 
         // Set x-scale and reuse colour-scale because they share the same domain
         // Round values using `nice()` to make them easier to read.

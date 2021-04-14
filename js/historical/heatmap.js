@@ -285,7 +285,7 @@ class Heatmap{
 
         // those years that are selected have a stroke
         vis.chart.selectAll(className)
-            .style('stroke', 'black')
+            .style('stroke', '#464141')
             .style('stroke-width', 2);
             //.style('opacity', 1);
         

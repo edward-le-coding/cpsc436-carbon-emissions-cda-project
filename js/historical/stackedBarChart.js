@@ -11,7 +11,7 @@ class StackedBarChart {
       parentElement: _config.parentElement,
       containerWidth: _config.containerWidth, //|| 900,
       containerHeight: _config.containerHeight, //|| 400,
-      margin: {top: 150, right: 10, bottom: 50, left: 50},
+      margin: {top: 150, right: 100, bottom: 50, left: 100},
       tooltipPadding: 15,
       legendWidth: 200,
       legendHeight: 10,
@@ -24,11 +24,7 @@ class StackedBarChart {
     // Specify which sources we want to show
     this.sources = [...new Set(this.data.map(d => d.Source))];
 
-    // need to hardcode the years here because otherwise domain changes when we don't have data for some provinces
-    this.allYears = [];
-    for (let i = 1990; i <= 2018; i++) {
-      this.allYears.push(i);
-    }
+   
     this.initVis();
   }
 
@@ -41,6 +37,12 @@ class StackedBarChart {
     // Calculate inner chart size. Margin specifies the space around the actual chart.
     vis.width = vis.config.containerWidth - vis.config.margin.left - vis.config.margin.right;
     vis.height = vis.config.containerHeight - vis.config.margin.top - vis.config.margin.bottom;
+
+    // need to hardcode the years here because otherwise domain changes when we don't have data for some provinces
+    vis.allYears = [];
+    for (let i = 1990; i <= 2018; i++) {
+       vis.allYears.push(i);
+    }
 
     // Intialize the scales
     vis.xScale = d3.scaleBand()
@@ -56,8 +58,12 @@ class StackedBarChart {
         .range(d3.schemeCategory10); // scheme paired implied relationship between unrelated economic sectors (sources)
 
     // Initialize axes
-    vis.xAxis = d3.axisBottom(vis.xScale);
-    vis.yAxis = d3.axisLeft(vis.yScale).ticks(6);
+    vis.xAxis = d3.axisBottom(vis.xScale)
+      .tickPadding(10)
+      .tickSize(0);
+
+    vis.yAxis = d3.axisLeft(vis.yScale)
+      .ticks(6);
 
     // Define SVG drawing area
     vis.svg = d3.select(vis.config.parentElement).append('svg')
@@ -71,15 +77,15 @@ class StackedBarChart {
     // Add group for legend
     vis.legend = vis.svg.append('g')
         .attr('id', 'legend')
-        .attr('transform', `translate(50, 50)`);
+        .attr('transform', `translate(100, 50)`);
 
     // Add group for title
     vis.title = vis.svg.append('g')
-        .attr('transform', `translate(${vis.width/2}, 25)`);
+        .attr('transform', `translate(${vis.width/2 + vis.config.margin.left}, 25)`);
 
     // Append empty x-axis group and move it to the bottom of the chart
     vis.xAxisG = vis.chart.append('g')
-        .attr('class', 'axis x-axis')
+        .attr('class', 'axis stacked-bar-chart-x-axis')
         .attr('transform', `translate(0,${vis.height})`);
 
     // Append y-axis group
@@ -96,10 +102,10 @@ class StackedBarChart {
         .attr('class', 'axis-label')
         .attr('transform', 'rotate(-90)')
         .attr('x', 0 - vis.height/2)
-        .attr('y', - 70)
+        .attr('y', -60)
         .style('text-anchor', 'middle')
         .attr('dy', '1em')
-        .text('GHG emissions in tonnes of CO2 equivalent');
+        .text('mt of CO2 equivalent');
 
     vis.updateVis();
   }
@@ -292,7 +298,7 @@ class StackedBarChart {
     vis.title.selectAll('text')
         .data(vis.province)
         .join('text')
-        .attr('class', 'stackedBarChart histSubVisTitle')
+        .attr('class', 'stackedBarChart chartTitle')
         .attr('text-anchor', 'middle')
         .text(d => `Sources of Emissions in ${d} (1990-2018)`);
   }
@@ -311,7 +317,7 @@ class StackedBarChart {
 
     // set opacity of the bar we're looking at to 1
     vis.chart.selectAll(className)
-        .style('stroke', 'black')
+        .style('stroke', '#464141')
         .style('stroke-width', 2)
         .style('opacity', 1);
   }

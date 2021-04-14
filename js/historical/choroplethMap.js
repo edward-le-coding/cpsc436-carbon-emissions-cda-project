@@ -40,7 +40,7 @@ class Choropleth{
             .attr('id', 'choropleth-title')
             .attr('transform', `translate(${vis.width/2}, 25)`)
             .append('text')
-            .attr('class', 'stackedBarChart histSubVisTitle')
+            .attr('class', 'stackedBarChart chartTitle')
             .attr('text-anchor', 'middle');
 
         // Add geographical projection

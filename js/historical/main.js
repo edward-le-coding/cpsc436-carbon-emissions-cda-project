@@ -68,7 +68,7 @@ Promise.all([
   choropleth = new Choropleth({
     parentElement: '#choropleth',
     containerHeight: 0.2 * windowHeight,
-    containerWidth: 0.425 * windowWidth
+    containerWidth: 0.4 * windowWidth
   }, choroplethData,
       masterGeoData,
       metricUnits);
@@ -78,8 +78,8 @@ Promise.all([
   let province = ['Canada'];
   stackedBarChart = new StackedBarChart({ 
     parentElement: '#stackedBarChart',
-    containerHeight: 0.2 * windowHeight,
-    containerWidth: 0.425 * windowWidth}, 
+    containerHeight: 0.25 * windowHeight,
+    containerWidth: 0.5 * windowWidth}, 
   barChartData, province, stackedBarChartYearDispatcher);
 
 
@@ -127,8 +127,7 @@ d3.select("#metric-selector").on("change", function(d) {
   // Change choropleth metric
   choropleth.currMetric = metricSelectorFilter;
   choropleth.updateVis();
-
-})
+});
 
 /**
  * Dispatcher waits for event

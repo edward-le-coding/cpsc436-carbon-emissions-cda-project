@@ -35,27 +35,22 @@ h1 {
   justify-content: center;
   align-items: center;
 }
-
 #landingPage h1{
   font-size: 60px;
 }
-
 .landingPage p{
   font-size: 24px;
 }
-
 .readMoreImage{
   fill: black;
 }
 .readMoreImage:hover {
   fill: #444444;
 }
-
 #overallLandingPage{
   background-image: url('../assets/edmonton-77798_1280.jpg');
   background-color: rgba(255,255,255,0.85);
 }
-
 #historicalLandingPage{
   background-image: url('../assets/Saskatchewan_Wheat.jpg');
   background-color: rgba(255,255,255,0.85);
@@ -67,6 +62,8 @@ h1 {
   vertical-align: top;
   display: flex;
   justify-content: space-evenly;
+  color: #464141;
+  font-size: 0.8rem;
 }
 #historicalVis{
   vertical-align: top;
@@ -101,13 +98,11 @@ h1 {
   flex-direction: column;
   padding: 0 10px;
 }
-
 #end-title{
   text-align: center;
   justify-content: center;
   align-items: center;
 }
-
 .pictureCaption{
   position: absolute;
   bottom: 8px;
@@ -120,7 +115,6 @@ h1 {
   left: 16px;
   font-size: 18px;
 }
-
 .landingPageTitle{
   position: relative;
   top: 8px;
@@ -132,21 +126,14 @@ h1 {
   justify-content: center;
   line-height: 0;
 }
-.histSubVisTitle{
-  font-size: 0.75rem;
-  font-weight: normal;
-}
-
 .visWriteUp{
   font-size: 24px;
   text-align: center;
 }
-
 .buttonArray{
   float: left;
   padding: 10px;
 }
-
 .button {
   background-color: #4CAF50;
   border: black;
@@ -161,7 +148,6 @@ h1 {
 .button:hover{
   background-color: #69b16d;
 }
-
 .sourcesWriteUp{
   font-size: 10pt;
 }
@@ -170,7 +156,6 @@ h1 {
 #prose {
   /*padding-top: 50%;*/
 }
-
 #prose .step {
   height: 500px;
 }
@@ -178,54 +163,33 @@ h1 {
   font-size: 1rem;
 }
 
-.geo-boundary-path {
-  stroke: #fff;
-  fill: none;
-  stroke-width: 1;
-}
+
+/*styling for all views*/
 
 .button-label{
   font-size: 0.6rem;
 }
-.chart-label {
-  font-size: .5rem;
-}
-
 .axis-label {
-  font-size: .5rem;
-  fill: #6b6b6b;
+  font-size: .8rem;
+  fill: #464141;
 }
-
 .axis text {
-  font-size: .5rem;
-  fill: #6b6b6b;
+  font-size: .8rem;
+  fill: #464141;
 }
-
+.stacked-bar-chart-x-axis text {
+  font-size: .55rem;
+}
 .domain, .axis .tick line {
-  stroke: #888;
+  stroke: rgb(146, 142, 142);
 }
-
 rect {
   shape-rendering: crispEdges;
 }
-
 .legendText {
-  font-size: .5rem;
-  fill: black;
+  font-size: .8rem;
+  fill: #464141;
 }
-
-/* heatmap view */
-#heatmap {
-}
-/* choropleth view */
-#choropleth {
-  display: inline-block;
-}
-/* stacked bar chart view */
-#stackedBarChart {
-  display: inline-block;
-}
-
 #tooltip {
   position: absolute;
   display: none;
@@ -238,18 +202,35 @@ rect {
   min-width: 100px;
   color: #333;
 }
-
-.tooltip-title {
-  color: #000;
-  font-size: 14px;
-  font-weight: 600;
-}
 .tooltip-label-normal{
   font-weight: normal;
 }
+.chartTitle{
+  font-size: 1rem;
+  font-weight: normal;
+  fill:#464141;
+}
 
+/* heatmap view */
+#heatmap {
+}
 #sortSelect{
   bottom: 0;
+}
+
+/* choropleth view */
+#choropleth {
+  display: inline-block;
+}
+.geo-boundary-path {
+  stroke: #fff;
+  fill: none;
+  stroke-width: 1;
+}
+
+/* stacked bar chart view */
+#stackedBarChart {
+  display: inline-block;
 }
 
 /*Timeline*/
@@ -257,7 +238,11 @@ rect {
   stroke: white;
   stroke-width: 0.2;
 }
-
 .historical-toggle-checkbox {
   font-size: 20px;
+}
+.tooltip-title {
+  color: #000;
+  font-size: 14px;
+  font-weight: 600;
 }

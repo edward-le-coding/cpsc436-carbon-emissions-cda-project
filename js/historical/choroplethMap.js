@@ -38,8 +38,7 @@ class Choropleth{
         // Add title group
         vis.title = vis.svg.append('g')
             .attr('id', 'choropleth-title')
-            .attr('transform', `translate(${vis.width/2}, 25)`)
-            .append('g');
+            .attr('transform', `translate(${vis.width/2}, 25)`);
 
         // Add geographical projection
         vis.geoPath = d3.geoPath().projection(vis.config.projection);
@@ -139,7 +138,10 @@ class Choropleth{
 
         // Add title
         vis.title
-            .attr('class', 'histSubVisTitle')
+        vis.title.selectAll('.text')
+            .data(provinces.features)
+            .join('text')
+            .attr('class', 'stackedBarChart histSubVisTitle')
             .attr('text-anchor', 'middle')
             .text(metricNames[vis.currMetric] + ", " + vis.currYear);
     }

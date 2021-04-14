@@ -88,9 +88,12 @@
                 <div class="historicalSelectors">
                     <div name="metric-selector" id="metric-selector" class="historicalSelectors">
                         Please select a metric:<br>
-                        <input type="radio" name="metric-selector" value="CO2eq" checked>Absolute Emissions (million tn CO2eq)<br>
-                        <input type="radio" name="metric-selector" value="CO2eq_tn_per_person">Per Capita Intensity, (tn CO2eq emitted/person)</br>
-                        <input type="radio" name="metric-selector" value="CO2eq_tn_per_mil_GDP">Economic Intensity, (CO2eq per million $ GDP; 2012 CAD)</br>
+                        <input type="radio" id='CO2' name="metric-selector" value="CO2eq" checked>
+                        <label for="CO2" class="CO2eq">Absolute Emissions (total GHG, million tn CO2eq)</label><br>
+                        <input type="radio" id='CO2eq_tn_per_person' name="metric-selector" value="CO2eq_tn_per_person">
+                        <label for="CO2eq_tn_per_person" class="CO2eq_tn_per_person">Per Capita Intensity, (tn CO2eq emitted/person)</label></br>
+                        <input type="radio" id="CO2eq_tn_per_mil_GDP" name="metric-selector" value="CO2eq_tn_per_mil_GDP">
+                        <label for="CO2eq_tn_per_mil_GDP" class="CO2eq_tn_per_mil_GDP">Economic Intensity, (CO2eq per million $ GDP; 2012 CAD)</label></br>
                     </div>
                     <div id="sortSelect">
                         Heatmap: Sort regions

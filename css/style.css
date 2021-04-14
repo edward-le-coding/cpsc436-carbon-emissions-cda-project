@@ -114,6 +114,12 @@ h1 {
   right: 16px;
   font-size: 18px;
 }
+.leftCaption{
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  font-size: 18px;
+}
 
 .landingPageTitle{
   position: relative;

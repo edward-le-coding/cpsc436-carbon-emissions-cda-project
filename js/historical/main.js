@@ -58,7 +58,7 @@ Promise.all([
   heatmapData = masterHistData.filter(d => d.Source == 'Total' &&d.Region != 'Canada') // TODO: remove filtering of Canada
   heatmap = new Heatmap({
     parentElement: '#heatmap',
-    containerHeight: 0.125 * windowHeight,
+    containerHeight: 0.175 * windowHeight,
     containerWidth: 0.85 * windowWidth
   }, heatmapData, heatmapProvinceDispatcher, heatmapYearDispatcher);
 
@@ -67,7 +67,7 @@ Promise.all([
   choroplethData = heatmapData; // Appears to be the same data I need at the moment
   choropleth = new Choropleth({
     parentElement: '#choropleth',
-    containerHeight: 0.19 * windowHeight,
+    containerHeight: 0.2 * windowHeight,
     containerWidth: 0.425 * windowWidth
   }, choroplethData,
       masterGeoData,
@@ -78,7 +78,7 @@ Promise.all([
   let province = ['Canada'];
   stackedBarChart = new StackedBarChart({ 
     parentElement: '#stackedBarChart',
-    containerHeight: 0.19 * windowHeight,
+    containerHeight: 0.2 * windowHeight,
     containerWidth: 0.425 * windowWidth}, 
   barChartData, province, stackedBarChartYearDispatcher);
 
@@ -148,9 +148,7 @@ heatmapYearDispatcher.on('selectYear', selectedYear => {
 
 stackedBarChartYearDispatcher.on('selectYear', selectedYear => {
   let stepIndex = selectedYear - 1990;
-  stackedBarChart.goToStep(stepIndex);
-  heatmap.goToStep(stepIndex);
-  choropleth.goToStep(stepIndex);
+  document.getElementById('step'+stepIndex).scrollIntoView({ behavior: 'smooth', block: 'center' });
 });
 
 

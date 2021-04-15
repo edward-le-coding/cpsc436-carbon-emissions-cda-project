@@ -22,7 +22,6 @@ h1 {
 }
 
 /* landing pages */
-
 .landingPage{
   position: relative;
   height:100vh;
@@ -51,6 +50,7 @@ h1 {
   background-image: url('../assets/edmonton-77798_1280.jpg');
   background-color: rgba(255,255,255,0.85);
 }
+/** Historical Landing Page **/
 #historicalLandingPage{
   background-image: url('../assets/Saskatchewan_Wheat.jpg');
   background-color: rgba(255,255,255,0.85);
@@ -81,10 +81,12 @@ h1 {
 .historicalIsFixed{
   position: fixed;
 }
+/** Policy Landing Page **/
 #policyLandingPage{
   background-image: url('../assets/Algonquin_Cache_Lake_Lookout.jpg');
   background-color: rgba(255,255,255,0.85);
 }
+/** End Landing Page **/
 #endPage{
   position: relative;
   background-image: url('../assets/Marche_Bonsecours_Winter.jpg');
@@ -103,6 +105,7 @@ h1 {
   justify-content: center;
   align-items: center;
 }
+/** Other **/
 .pictureCaption{
   position: absolute;
   bottom: 8px;
@@ -130,7 +133,11 @@ h1 {
   font-size: 24px;
   text-align: center;
 }
-.buttonArray{
+.sourcesWriteUp{
+  font-size: 10pt;
+}
+/** Button **/
+.buttonArray{ /*button array for home page navigation to other pages*/
   float: left;
   padding: 10px;
 }
@@ -155,20 +162,14 @@ h1 {
   border: 1px solid #000000;
   border-radius: 25px;
   color: black;
-  padding: 5px 5px;
+  padding: 10px 10px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
 }
-.sourcesWriteUp{
-  font-size: 10pt;
-}
 
-/* scrollwheel */
-#prose {
-  /*padding-top: 50%;*/
-}
+/* Scrollwheel (waypoints package) */
 #prose .step {
   height: 500px;
 }
@@ -178,7 +179,11 @@ h1 {
 
 
 /*styling for all views*/
-
+.chartTitle{
+  font-size: 1rem;
+  font-weight: normal;
+  fill:#464141;
+}
 .button-label{
   font-size: 0.6rem;
 }
@@ -189,9 +194,6 @@ h1 {
 .axis text {
   font-size: .8rem;
   fill: #464141;
-}
-.stacked-bar-chart-x-axis text {
-  font-size: .55rem;
 }
 .domain, .axis .tick line {
   stroke: rgb(146, 142, 142);
@@ -218,20 +220,18 @@ rect {
 .tooltip-label-normal{
   font-weight: normal;
 }
-.chartTitle{
-  font-size: 1rem;
-  font-weight: normal;
-  fill:#464141;
+.tooltip-title {
+  color: #000;
+  font-size: 14px;
+  font-weight: 600;
 }
 
-/* heatmap view */
-#heatmap {
-}
+/* Heatmap view */
 #sortSelect{
   bottom: 0;
 }
 
-/* choropleth view */
+/* Choropleth view */
 #choropleth {
   display: inline-block;
 }
@@ -240,13 +240,22 @@ rect {
   fill: none;
   stroke-width: 1;
 }
+.choropleth-legend-title{
+  font-size: 0.5rem;
+}
+.choropleth-legend-label{
+   font-size: 0.5rem;
+ }
 
-/* stacked bar chart view */
+/* Stacked bar chart view */
 #stackedBarChart {
   display: inline-block;
 }
+.stacked-bar-chart-x-axis text {
+  font-size: .55rem;
+}
 
-/*Timeline*/
+/* Timeline (policy/stacked bar chart) view */
 .policy {
   stroke: white;
   stroke-width: 0.2;
@@ -257,15 +266,3 @@ rect {
 .historical-bar {
   fill: lightgray;
 }
-.tooltip-title {
-  color: #000;
-  font-size: 14px;
-  font-weight: 600;
-}
-
-.choropleth-legend-title{
-  font-size: 0.5rem;
-}
-.choropleth-legend-label{
-   font-size: 0.5rem;
- }

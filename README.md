@@ -25,7 +25,7 @@ and a stacked bar chart (`stackedBarChart.js`). There are coordinated interactio
 
 The policy visualization is composed of a stacked bachart (`timeline.js`)
 
-## File Structure
+### File Structure
 - assets: photos including `thumbnail.png`
 - css: styling
 - data

@@ -254,6 +254,9 @@ rect {
 .historical-toggle-checkbox {
   font-size: 20px;
 }
+.historical-bar {
+  fill: lightgray;
+}
 .tooltip-title {
   color: #000;
   font-size: 14px;

@@ -192,7 +192,6 @@ class Timeline {
           .attr('width', vis.xScale.bandwidth())
           .attr('height', d=>vis.yScale(0)-vis.yScale(d.CO2eq))
           .attr('y', d=>vis.yScale(d.CO2eq))
-          .style('fill', 'grey')
 
       if (!vis.includeHistorical) {
         d3.selectAll('.historical-bar').remove()

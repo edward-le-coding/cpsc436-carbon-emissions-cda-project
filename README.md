@@ -10,7 +10,7 @@ Instructor: Tamara Munzner
 
 ## Screenshot
 ![](thumbnail.png)
-## File Structure Description
+## File Structure
 The code is structured along two paths, representing our two visualizations (`historical` and `policy`).
 Each visualization will have its own `main.js` controlling their behvaviours).
 
@@ -22,7 +22,7 @@ and a stacked bar chart (`stackedBarChart.js`). There are coordinated interactio
 
 The policy visualization is composed of a stacked bachart (`timeline.js`)
 
-#File Structure
+###Files & Folders
 - assets: photos including `thumbnail.png`
 - css: styling
 - data

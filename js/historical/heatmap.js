@@ -125,15 +125,15 @@ class Heatmap{
         if (vis.metric == 'CO2eq') {
             // Carbon emissions
             vis.colorScale = d3.scaleSequential()
-                .interpolator(d3.interpolateGreens);
+                .interpolator(d3.interpolateYlGn);
         } else if (vis.metric == 'CO2eq_tn_per_person') {
             // Intensity per capita
             vis.colorScale = d3.scaleSequential()
-                .interpolator(d3.interpolateBlues);
+                .interpolator(d3.interpolateYlGnBu);
         } else {
             // Intensity by GDP
             vis.colorScale = d3.scaleSequential()
-                .interpolator(d3.interpolatePurples);
+                .interpolator(d3.interpolateYlOrBr);
         }
 
         // Set the scale input domains
@@ -308,8 +308,8 @@ class Heatmap{
         // Manually calculate tick values
         vis.xLegendAxis.tickValues([
             extent[0],
-            parseInt(extent[1]/3),
-            parseInt(extent[1]/3*2),
+            Math.round(parseFloat(extent[1]/3)),
+            Math.round(parseFloat(extent[1]/3*2)),
             extent[1]
         ]);
         // Update legend axis
@@ -319,7 +319,6 @@ class Heatmap{
     // Updates the viz based on the year the user scrolls to
     goToStep(stepIndex) {
         let vis = this;
-
         let currSelectedYear = 1990 + stepIndex;
         vis.currSelectedYear = currSelectedYear;
         let className = `.year${currSelectedYear}`;
@@ -327,17 +326,19 @@ class Heatmap{
         vis.chart.selectAll('rect')
             .style('stroke', 'none')
             .style('stroke-width', 0);
-
-        // those years that are selected have a stroke
-        vis.chart.selectAll(className)
-            .style('stroke', '#464141')
-            .style('stroke-width', 2);
-        // Highlight currently selected province (if selected)
-        if (vis.currSelectedProvince){
-            let provinceCode = vis.currSelectedProvince.replace(/\s/g, '');
-            vis.chart.selectAll('#'+provinceCode)
+        // Focus on year if not at overall (i.e. first waypoint)
+        if(stepIndex !=0) {
+            // those years that are selected have a stroke
+            vis.chart.selectAll(className)
                 .style('stroke', '#464141')
                 .style('stroke-width', 2);
+            // Highlight currently selected province (if selected)
+            if (vis.currSelectedProvince) {
+                let provinceCode = vis.currSelectedProvince.replace(/\s/g, '');
+                vis.chart.selectAll('#' + provinceCode)
+                    .style('stroke', '#464141')
+                    .style('stroke-width', 2);
+            }
         }
     }
 }

@@ -23,7 +23,7 @@ class StackedBarChart {
 
     // Specify which sources we want to show
     this.sources = [...new Set(this.data.map(d => d.Source))];
-    this.selectedYear = 2018;
+    this.selectedYear = null;
     this.initVis();
   }
 
@@ -232,18 +232,20 @@ class StackedBarChart {
       });
 
       //  Apply year changes
-    let className = `.year${vis.selectedYear}`;
-    // set opactity of all bars to 0.2
-    vis.chart.selectAll('rect')
-        .style('stroke', 'none')
-        .style('opacity', 0.6);
+    if (vis.selectedYear) {
+      let className = `.year${vis.selectedYear}`;
+      // set opacity of all bars to 0.2
+      vis.chart.selectAll('rect')
+          .style('stroke', 'none')
+          .style('opacity', 0.6);
 
-    // set opacity of the bar we're looking at to 1
-    vis.chart.selectAll(className)
-        .style('stroke', '#464141')
-        .style('stroke-width', 2)
-        .style('opacity', 1);
-    // Update the axes
+      // set opacity of the bar we're looking at to 1
+      vis.chart.selectAll(className)
+          .style('stroke', '#464141')
+          .style('stroke-width', 2)
+          .style('opacity', 1);
+    }
+      // Update the axes
     vis.xAxisG.call(vis.xAxis);
     vis.yAxisG.call(vis.yAxis);
   }
@@ -287,17 +289,24 @@ class StackedBarChart {
 
     let baseYear = 1990;
     vis.selectedYear = baseYear + stepIndex;
-    let className = `.year${baseYear + stepIndex}`;
-    // set opactity of all bars to 0.2
-    vis.chart.selectAll('rect')
-        .style('stroke', 'none')
-        .style('opacity', 0.6);
+    // Reset focus year at start
+    if (stepIndex == 0){
+      vis.chart.selectAll('rect')
+          .style('stroke', 'none')
+          .style('opacity', 1);
+    } else {
+      let className = `.year${baseYear + stepIndex}`;
+      // set opactity of all bars to 0.2
+      vis.chart.selectAll('rect')
+          .style('stroke', 'none')
+          .style('opacity', 0.6);
 
-    // set opacity of the bar we're looking at to 1
-    vis.chart.selectAll(className)
-        .style('stroke', '#464141')
-        .style('stroke-width', 2)
-        .style('opacity', 1);
+      // set opacity of the bar we're looking at to 1
+      vis.chart.selectAll(className)
+          .style('stroke', '#464141')
+          .style('stroke-width', 2)
+          .style('opacity', 1);
+    }
   }
 
 }

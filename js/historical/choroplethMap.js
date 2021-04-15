@@ -68,19 +68,21 @@ class Choropleth{
             .attr('dy', '.35em')
             .attr('y', -20)
             .attr('x', vis.config.legendRectWidth/2);
-
+        // Add legend scale
+        vis.xLegendScale = d3.scaleLinear()
+            .range([0, vis.config.legendWidth]);
         // Add geographical projection
         vis.geoPath = d3.geoPath().projection(vis.config.projection);
         // Create colour scales
         vis.colorScale = null;
         vis.colorScaleCO2eq = d3.scaleSequential()
-            .interpolator(d3.interpolateGreens)
+            .interpolator(d3.interpolateYlGn)
             .domain(d3.extent(vis.data, d => d.CO2eq));
         vis.colorScaleCO2PerCapita = d3.scaleSequential()
-            .interpolator(d3.interpolateBlues)
+            .interpolator(d3.interpolateYlGnBu)
             .domain(d3.extent(vis.data, d => d.CO2eq_tn_per_person));
         vis.colorScaleCO2eqPerMilGDP = d3.scaleSequential()
-            .interpolator(d3.interpolatePurples)
+            .interpolator(d3.interpolateYlOrBr)
             .domain(d3.extent(vis.data, d => d.CO2eq_tn_per_mil_GDP));
         // Update view
         vis.updateVis();
@@ -116,13 +118,15 @@ class Choropleth{
                 }
             }
         });
+        // Find magnitudes for legend ticks
+        vis.xLegendScale.domain(vis.colorScale.domain()).nice();
+        const extent = vis.xLegendScale.domain();
         // Create legend stops
         vis.legendStops = [
-            { color: vis.colorScale(d3.min(metricExtent)), value: d3.min(metricExtent).toFixed(1), offset: '0%'},
-            { color: vis.colorScale(d3.quantile(metricExtent, 0.25)), value: d3.quantile(metricExtent, 0.25).toFixed(1), offset: '25%'},
-            { color: vis.colorScale(d3.quantile(metricExtent, 0.50)), value: d3.quantile(metricExtent, 0.50).toFixed(1), offset: '50%'},
-            { color: vis.colorScale(d3.quantile(metricExtent, 0.75)), value: d3.quantile(metricExtent, 0.55).toFixed(1), offset: '75%'},
-            { color: vis.colorScale(d3.max(metricExtent)), value: d3.max(metricExtent).toFixed(1), offset: '100%'},
+            { color: vis.colorScale(d3.min(metricExtent)), value:  extent[0],offset: '0%'},
+            { color: vis.colorScale(d3.quantile(metricExtent, 0.33)), value: Math.round(parseFloat(extent[1]/3)), offset: '33%'},
+            { color: vis.colorScale(d3.quantile(metricExtent, 0.67)), value: Math.round(parseFloat(extent[1]/3*2)), offset: '67%'},
+            { color: vis.colorScale(d3.max(metricExtent)), value: extent[1], offset: '100%'},
         ];
         vis.renderVis();
     }

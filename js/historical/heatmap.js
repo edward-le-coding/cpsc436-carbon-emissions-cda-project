@@ -138,7 +138,8 @@ class Heatmap{
 
         // Set the scale input domains
         vis.colorScale.domain(d3.extent(vis.data, vis.colorValue));
-        vis.xScale.domain(d3.extent(vis.data, vis.xValue));
+        // Hacky way to extend line out past 2018
+        vis.xScale.domain([d3.min(vis.data, vis.xValue), 1+d3.max(vis.data, vis.xValue)]);
         vis.yScale.domain(vis.groupedData.map(vis.yValue));
 
         let metricExtent = vis.data.map(d => d[vis.metric]);

@@ -3,6 +3,7 @@ const heatmapProvinceDispatcher = d3.dispatch('selectProvince');
 const heatmapYearDispatcher = d3.dispatch('selectYear');
 const stackedBarChartYearDispatcher = d3.dispatch('selectYear');
 const choroplethProvinceDispatcher = d3.dispatch('selectChoroplethProvince');
+const heatmapDeselectProvinceDblClick = d3.dispatch('deselectHeatmapProvince');
 
 const windowWidth = window.innerWidth, windowHeight = window.innerWidth;
 
@@ -66,7 +67,10 @@ Promise.all([
     parentElement: '#heatmap',
     containerHeight: 0.175 * windowHeight,
     containerWidth: 0.85 * windowWidth
-  }, heatmapData, heatmapProvinceDispatcher, heatmapYearDispatcher);
+  }, heatmapData,
+      heatmapProvinceDispatcher,
+      heatmapYearDispatcher,
+      heatmapDeselectProvinceDblClick);
 
 
   // Prepare choropleth data and initalize choropleth
@@ -163,16 +167,8 @@ function updateProvinceViews() {
 
 heatmapProvinceDispatcher.on('selectProvince', selectedProvince => {
   heatmapProvinceDoubleClickCounter = heatmapProvinceDoubleClickCounter + 1;
-  // Update global field selected province
-  if(currSelectedProvince == selectedProvince){
-    if(heatmapProvinceDoubleClickCounter > 1) {
-      currSelectedProvince = null;
-      heatmapProvinceDoubleClickCounter = 0
-      updateProvinceViews();
-      console.log('updatedView');
-    }
-    console.log(heatmapProvinceDoubleClickCounter)
-  } else if (currSelectedProvince != selectedProvince){
+  // Update global field selected province (single click selects year)
+ if (currSelectedProvince != selectedProvince){
     currSelectedProvince = selectedProvince;
     updateProvinceViews();
   }
@@ -186,6 +182,12 @@ choroplethProvinceDispatcher.on('selectChoroplethProvince', selectedProvince =>{
     currSelectedProvince = selectedProvince;
   }
   updateProvinceViews();
+});
+heatmapDeselectProvinceDblClick.on('deselectHeatmapProvince', deselectProvince =>{
+  if (currSelectedProvince == deselectProvince){
+    currSelectedProvince = null;
+    updateProvinceViews();
+  }
 });
 heatmapYearDispatcher.on('selectYear', selectedYear => {
   let stepIndex = selectedYear - 1990;

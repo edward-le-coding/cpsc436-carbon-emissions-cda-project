@@ -23,8 +23,7 @@ class StackedBarChart {
 
     // Specify which sources we want to show
     this.sources = [...new Set(this.data.map(d => d.Source))];
-
-   
+    this.selectedYear = 2018;
     this.initVis();
   }
 
@@ -205,12 +204,6 @@ class StackedBarChart {
                         Emissions:
                         </div>`);
           let label = document.getElementById("tooltip-label");
-          // for (let ent in Object.entries(d.data)) {
-          //   ent = Object.keys(ent);
-          //   console.log(ent);
-          //   let key = ent[0];
-          //   let value = ent[1];
-          //   console.log(key);
           Object.entries(d.data).forEach(([key, value]) => {
             if (key != 'year') {
               label.innerHTML += `<div class="tooltip-label-normal">${key + ": " + Math.round(value)+ ' million tn CO2eq' + "\r\n"}</div>`
@@ -226,7 +219,11 @@ class StackedBarChart {
         // Define "disappearance" of tool tip after mouse moves away from semi-circle
         .on('mouseleave', () => {
           d3.select('#tooltip').style('display', 'none');
-        });
+        })
+          .on('dblclick', (event, d) => {
+            vis.Province = d.Region;
+            vis.choroplethDeselectProvinceDblClick.call('deselectChoroplethProvince', event, vis.currSelectedProvince);
+          });
 
       categoryBar
         .on('click', (event, d) => {
@@ -234,6 +231,18 @@ class StackedBarChart {
           vis.yearDispatcher.call('selectYear', event, selectedYear);
       });
 
+      //  Apply year changes
+    let className = `.year${vis.selectedYear}`;
+    // set opactity of all bars to 0.2
+    vis.chart.selectAll('rect')
+        .style('stroke', 'none')
+        .style('opacity', 0.6);
+
+    // set opacity of the bar we're looking at to 1
+    vis.chart.selectAll(className)
+        .style('stroke', '#464141')
+        .style('stroke-width', 2)
+        .style('opacity', 1);
     // Update the axes
     vis.xAxisG.call(vis.xAxis);
     vis.yAxisG.call(vis.yAxis);
@@ -277,8 +286,8 @@ class StackedBarChart {
     let vis = this;
 
     let baseYear = 1990;
+    vis.selectedYear = baseYear + stepIndex;
     let className = `.year${baseYear + stepIndex}`;
-
     // set opactity of all bars to 0.2
     vis.chart.selectAll('rect')
         .style('stroke', 'none')

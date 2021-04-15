@@ -1,5 +1,5 @@
 class Heatmap{
-    constructor(_config, _data, _provinceDispatcher, _yearDispatcher, _metric) {
+    constructor(_config, _data, _provinceDispatcher, _yearDispatcher, _deselectDispatch, _metric) {
         this.config = {
             parentElement: _config.parentElement,
             containerWidth:  _config.containerWidth, //|| 1200,
@@ -15,6 +15,7 @@ class Heatmap{
         this.metric = _metric || 'CO2eq'
         this.provinceDispatcher = _provinceDispatcher;
         this.yearDispatcher = _yearDispatcher;
+        this.deselectDispatch = _deselectDispatch;
 
         // Define selected province
         this.currSelectedProvince = null;
@@ -207,9 +208,9 @@ class Heatmap{
             .attr('x', d => vis.xScale(vis.xValue(d)))
             .style('stroke', d => {
                 if (d.Region === vis.currSelectedProvince ){
-                    return 'gray';
+                    return '#464141';
                 } else if(vis.currSelectedYear && d.Year == vis.currSelectedYear){
-                    return 'black'
+                    return '#464141'
                 } else {
                     return 'none';
                 }
@@ -260,7 +261,11 @@ class Heatmap{
                 // Encase calls in if conditions to improve performance (only re-render if necessary)
                 vis.provinceDispatcher.call('selectProvince', event, selectedProvince);
                 vis.yearDispatcher.call('selectYear', event, selectedYear);
-            });
+            })
+            .on('dblclick', (event, d) => {
+            vis.currSelectedProvince = d.Region;
+            vis.deselectDispatch.call('deselectHeatmapProvince', event, vis.currSelectedProvince);
+        });
 
         // 2b) Diagonal lines for NA values
         const cellNa = row.merge(rowEnter).selectAll('.h-cell-na')

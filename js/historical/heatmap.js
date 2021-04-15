@@ -5,7 +5,7 @@ class Heatmap{
             containerWidth:  _config.containerWidth, //|| 1200,
             containerHeight: _config.containerHeight, //|| 300,
             tooltipPadding: 15,
-            margin: _config.margin || {top: 60, right: 50, bottom: 20, left: 200},
+            margin: _config.margin || {top: 60, right: 50, bottom: 50, left: 200},
             sortOption: _config.sortOption || 'alphabetically',
             legendWidth: 160,
             legendBarHeight: 10

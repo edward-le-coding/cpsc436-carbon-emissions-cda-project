@@ -46,13 +46,6 @@ Promise.all([
 
 }).catch(error => console.error(error));
 
-/*
- * Todo:
- * - initialize views
- * - filter data
- * - listen to events and update views
- */
-
 d3.select("#historical-toggle").on("change", function(d) {
     timeline.includeHistorical = d3.select("#historical-toggle").property("checked")
     timeline.updateVis();

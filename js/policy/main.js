@@ -40,7 +40,7 @@ Promise.all([
     const policyWindowWidth = window.innerWidth, policWindowHeight = window.innerWidth;
     timeline = new Timeline({
         parentElement: '#timeline',
-        containerHeight: 0.4 * policWindowHeight,
+        containerHeight: 0.35 * policWindowHeight,
         containerWidth: 0.75 * policyWindowWidth
     }, masterPolicyData, canadaHistoricalData)
 

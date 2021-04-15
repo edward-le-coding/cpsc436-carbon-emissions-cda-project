@@ -53,7 +53,7 @@
             Please see <a href="#endPage">Methodology and Sources</a> for a detailed description of the data.
             <br>
             <br>
-            Note 2: This visualization was designed for screens of at least 1920 x 1080 pixels.<br>
+            Note 2: This visualization was designed for desktop screens of at least 1920 x 1080 pixels.<br>
             Screens of different sizes may see different results.
         </div>
         <div id= "landingPageCaption" class="pictureCaption">
@@ -85,6 +85,7 @@
             Pixabay (2013)</a>
         </div>
     </div>
+    <br>
     <div id="historicalVis" class="visPage">
         <div id="historicalGraphicsContainer" class="histVisElem">
             <h1 class="visTitle">Canada's Carbon Emissions (1990-2018)</h1>
@@ -94,7 +95,7 @@
                     <div name="metric-selector" id="metric-selector" class="historicalSelectors">
                         Please select a metric:<br>
                         <input type="radio" id='CO2' name="metric-selector" value="CO2eq" checked>
-                        <label for="CO2" class="CO2eq">Absolute Emissions (total GHG, million tn CO2eq)</label><br>
+                        <label for="CO2" class="CO2eq">Absolute Emissions (million tn CO2eq)</label><br>
                         <input type="radio" id='CO2eq_tn_per_person' name="metric-selector" value="CO2eq_tn_per_person">
                         <label for="CO2eq_tn_per_person" class="CO2eq_tn_per_person">Per Capita Intensity, (tn CO2eq emitted/person)</label></br>
                         <input type="radio" id="CO2eq_tn_per_mil_GDP" name="metric-selector" value="CO2eq_tn_per_mil_GDP">
@@ -108,15 +109,13 @@
                         </select>
                     </div>
                 </div>
-
             </div>
-
             <div id="heatmap"></div>
             <div id="choropleth"></div>
             <div id="stackedBarChart"></div>
-
-
-
+            <a id="histSkipButton" class="button-darkFixedBottomRight" href="#policyLandingPage">
+                Skip to Policy Visualization
+            </a>
         </div>
         <div id="histTimeline" class="histVisElem">
             <div>

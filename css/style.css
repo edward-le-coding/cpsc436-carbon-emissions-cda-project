@@ -148,6 +148,19 @@ h1 {
 .button:hover{
   background-color: #69b16d;
 }
+.button-darkFixedBottomRight{
+  background-color: white;
+  bottom: 20px;
+  right: 16px;
+  border: 1px solid #000000;
+  border-radius: 25px;
+  color: black;
+  padding: 5px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
 .sourcesWriteUp{
   font-size: 10pt;
 }

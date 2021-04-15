@@ -77,7 +77,7 @@ Promise.all([
   choroplethData = heatmapData; // Appears to be the same data I need at the moment
   choropleth = new Choropleth({
     parentElement: '#choropleth',
-    containerHeight: 0.2 * windowHeight,
+    containerHeight: 0.195 * windowHeight,
     containerWidth: 0.4 * windowWidth
     },
       choroplethData,
@@ -89,7 +89,7 @@ Promise.all([
   let province = ['Canada'];
   stackedBarChart = new StackedBarChart({ 
     parentElement: '#stackedBarChart',
-    containerHeight: 0.2 * windowHeight,
+    containerHeight: 0.195 * windowHeight,
     containerWidth: 0.55 * windowWidth},
   barChartData, province, stackedBarChartYearDispatcher);
 

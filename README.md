@@ -11,7 +11,7 @@ Instructor: Tamara Munzner
 ## Screenshot
 ![](assets/Thumbnail.png)
 ## Structure
-- assets: photos
+- assets: photos including `Thumbnail.png`
 - css: styling
 - data
     - historical

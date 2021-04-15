@@ -8,6 +8,9 @@ Instructor: Tamara Munzner
 - Edward Le
 - Melissa Bernstein
 
+## Description
+Our project focuses on exploring the annual trends of Canada’s carbon emissions over time. Our goal is to provide users (i.e. the Canadian public) with the knowledge to understand where Canada has been and where Canada wants to go in reducing carbon emissions and creating a healthier low-carbon future. We provide two main visualizations to allow users to see historical and projected future emissions. 
+
 ## Screenshot
 ![](thumbnail.png)
 ## File Structure Description
@@ -22,7 +25,7 @@ and a stacked bar chart (`stackedBarChart.js`). There are coordinated interactio
 
 The policy visualization is composed of a stacked bachart (`timeline.js`)
 
-#File Structure
+## File Structure
 - assets: photos including `thumbnail.png`
 - css: styling
 - data

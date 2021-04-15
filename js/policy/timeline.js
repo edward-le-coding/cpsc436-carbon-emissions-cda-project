@@ -89,7 +89,22 @@ class Timeline {
         
         // Append y-axis group
         vis.yAxisG = vis.chartArea.append('g')
-            .attr('class', 'axis y-axis') 
+            .attr('class', 'axis y-axis')
+        // Append y-axis title
+        vis.chart.append('text')
+            .attr('class', 'axis-label')
+            .attr('transform', 'rotate(-90)')
+            .attr('x', -vis.config.margin.left)
+            .attr('y', -125)
+            .style('text-anchor', 'middle')
+            .attr('dy', '1em')
+            .text('kt of CO2eq (emitted or reduced)');
+        // Append x-axis title
+        vis.chart.append('text')
+            .attr('class', 'axis-label')
+            .attr('transform', `translate(${vis.config.width/2}, ${vis.config.height + 10})`)
+            .style('text-anchor', 'middle')
+            .text('Year (Start of Policy Implementation or Historical Carbon Emissions)');
 
         vis.updateVis();
     }
@@ -259,8 +274,9 @@ function getTooltipHtml(d) {
     C02estimate = format(C02estimate)
     return `
       <div class="tooltip-title">${d.Name_of_Mitigation_Action}</div>
-      <div>${d.Sector_Affected}, <i>${d.Implementation_Entity}</i>, ${d.Start_year_of_Implementation}</div>
-      <div>${C02estimate} Kt CO<sub>2</sub>eq<div>
+      <div>${d.Sector_Affected}, <i>${d.Implementation_Entity}</i></div>
+      <div>Start Year of Implementation: ${d.Start_year_of_Implementation}</div>
+      <div>Impact at 2030: ${C02estimate} Kt CO<sub>2</sub>eq<div>
       <br>
       <div class="description-text"><b>Description:</b> ${d.Brief_Description}</div>`
   }

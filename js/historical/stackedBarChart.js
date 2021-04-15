@@ -90,13 +90,13 @@ class StackedBarChart {
     // Append y-axis group
     vis.yAxisG = vis.chart.append('g')
         .attr('class', 'axis y-axis');
-
+    // x axis title
     vis.chart.append('text')
         .attr('class', 'axis-label')
         .attr('transform', `translate(${vis.width/2}, ${vis.height + 40})`)
         .style('text-anchor', 'middle')
         .text('Year');
-
+    // Y axis title
     vis.chart.append('text')
         .attr('class', 'axis-label')
         .attr('transform', 'rotate(-90)')
@@ -104,7 +104,7 @@ class StackedBarChart {
         .attr('y', -60)
         .style('text-anchor', 'middle')
         .attr('dy', '1em')
-        .text('mt of CO2 equivalent');
+        .text('mt of CO2eq');
 
     vis.updateVis();
   }

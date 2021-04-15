@@ -62,7 +62,7 @@ Promise.all([
 
    
   // Prepare heatmap data and initialize heatmap
-  heatmapData = masterHistData.filter(d => d.Source == 'Total' &&d.Region != 'Canada') // TODO: remove filtering of Canada
+  heatmapData = masterHistData.filter(d => d.Source == 'Total' &&d.Region != 'Canada')
   heatmap = new Heatmap({
     parentElement: '#heatmap',
     containerHeight: 0.175 * windowHeight,

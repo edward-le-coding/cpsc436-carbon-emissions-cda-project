@@ -9,9 +9,21 @@ Instructor: Tamara Munzner
 - Melissa Bernstein
 
 ## Screenshot
-![](assets/Thumbnail.png)
-## Structure
-- assets: photos including `Thumbnail.png`
+![](thumbnail.png)
+## File Structure Description
+The code is structured along two paths, representing our two visualizations (`historical` and `policy`).
+Each visualization will have its own `main.js` controlling their behvaviours).
+
+Data is stored in the data folder (along `historical` and `policy` lines).
+The javascript files follow a similar correspondence between `historical` and `policy`.
+
+The historical visualization is composed of a heatmap (`heatmap.js`), a choropleth (`choropleth.js`),
+and a stacked bar chart (`stackedBarChart.js`). There are coordinated interactions between all three plots.
+
+The policy visualization is composed of a stacked bachart (`timeline.js`)
+
+#File Structure
+- assets: photos including `thumbnail.png`
 - css: styling
 - data
     - historical

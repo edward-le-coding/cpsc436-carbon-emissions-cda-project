@@ -182,7 +182,7 @@ class Heatmap{
         rowEnter.append('text')
             .attr('class', 'axis-label')
             .attr('text-anchor', 'end')
-            .attr('dy', '0.5rem')
+            .attr('dy', '1em')
             .attr('x', -8)
             .text(vis.yValue);
 

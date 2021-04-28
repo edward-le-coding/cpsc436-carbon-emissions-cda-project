@@ -64,7 +64,7 @@ class Heatmap{
 
         // Legend
         vis.legend = vis.svg.append('g')
-            .attr('transform', `translate(${vis.config.containerWidth - vis.config.legendWidth - vis.config.margin.right},
+            .attr('transform', `translate(${vis.config.containerWidth - vis.config.legendWidth - vis.config.margin.right - 100},
              ${vis.config.margin.top/2})`);
 
         vis.legendColorGradient = vis.legend.append('defs').append('linearGradient')

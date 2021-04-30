@@ -48,7 +48,7 @@
             </svg>
         </a>
         <div id="screenSizeNotice" class="leftCaption">
-            Note 1: CO2eq/CO2e/carbon emissions refer to a standardized system of carbon emissions measurements<br>
+            Note 1: CO<sub>2</sub>eq/CO<sub>2</sub>e/carbon emissions refer to a standardized system of carbon emissions measurements<br>
             where all different types of greenhouse gas emissions are standardized into carbon dioxide equivalents.<br>
             Please see <a href="#endPage">Methodology and Sources</a> for a detailed description of the data.
             <br>
@@ -95,11 +95,11 @@
                     <div name="metric-selector" id="metric-selector" class="historicalSelectors">
                         Please select a metric:<br>
                         <input type="radio" id='CO2' name="metric-selector" value="CO2eq" checked>
-                        <label for="CO2" class="CO2eq">Absolute Emissions (million tn CO2eq)</label><br>
+                        <label for="CO2" class="CO2eq">Absolute Emissions (million tn CO<sub>2</sub>eq)</label><br>
                         <input type="radio" id='CO2eq_tn_per_person' name="metric-selector" value="CO2eq_tn_per_person">
-                        <label for="CO2eq_tn_per_person" class="CO2eq_tn_per_person">Per Capita Intensity, (tn CO2eq emitted/person)</label></br>
+                        <label for="CO2eq_tn_per_person" class="CO2eq_tn_per_person">Per Capita Intensity, (tn CO<sub>2</sub>eq emitted/person)</label></br>
                         <input type="radio" id="CO2eq_tn_per_mil_GDP" name="metric-selector" value="CO2eq_tn_per_mil_GDP">
-                        <label for="CO2eq_tn_per_mil_GDP" class="CO2eq_tn_per_mil_GDP">Economic Intensity, (CO2eq per million $ GDP; 2012 CAD)</label></br>
+                        <label for="CO2eq_tn_per_mil_GDP" class="CO2eq_tn_per_mil_GDP">Economic Intensity, (CO<sub>2</sub>eq per million $ GDP; 2012 CAD)</label></br>
                     </div>
                     <div id="sortSelect">
                         Heatmap: Sort regions
@@ -115,7 +115,7 @@
             <div id="stackedBarChart"></div>
             <a id="histSkipButton" class="button-darkFixedBottomRight" href="#policyLandingPage">
                 Skip to Policy Visualization
-            </a>
+            </a> Note: 1 million tonnes CO<sub>2</sub>eq is worth about <a href="https://www.autolist.com/guides/average-weight-of-car" >538501 cars</a>.
         </div>
         <div id="histTimeline" class="histVisElem">
             <div>
@@ -179,7 +179,8 @@
         <input type="checkbox" id="historical-toggle" name="historical-toggle-name">
         <label for="historical-toggle-name" class="historical-toggle-checkbox">Compare with historical emissions</label>
         <div id="timeline" class="chart"></div>
-        <div>Food for Thought: As of 2019, the government source for this dataset (details available in <a href="#endPage">Methodology and
+        <div> 1 kt CO<sub>2</sub>eq is worth about <a href="https://www.autolist.com/guides/average-weight-of-car" >539 cars</a>.<br>
+            Food for Thought: As of 2019, the government source for this dataset (details available in <a href="#endPage">Methodology and
             Sources</a>) listed 230 carbon emissions reductions/mitigation policies, about 66.5% (153) did not come with estimates
             of carbon impacts</div>
     </div>

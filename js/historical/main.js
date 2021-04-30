@@ -34,7 +34,7 @@ const metricUnits = {
 }
 
 const metricNames = {
-  CO2eq: 'Absolute Emissions (million tn CO2eq)',
+  CO2eq: "Absolute Emissions (million tn CO<sub>2</sub>eq)",
   CO2eq_tn_per_person: 'Emissions Intensity (tn CO2eq emitted/person)',
   CO2eq_tn_per_mil_GDP: 'Emissions Intensity (CO2eq per million $ GDP; 2012 dollars)'
   }

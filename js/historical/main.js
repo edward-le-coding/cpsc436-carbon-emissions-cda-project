@@ -28,15 +28,15 @@ let currSelectedYear = null;
 let heatmapProvinceDoubleClickCounter = 0;
 
 const metricUnits = {
-  CO2eq: 'million tn CO2eq',
-  CO2eq_tn_per_person: 'tn CO2eq/person',
-  CO2eq_tn_per_mil_GDP: 'tn CO2eq/$1 million CAD (2012 CAD)'
+  CO2eq: 'million tn CO₂eq',
+  CO2eq_tn_per_person: 'tn CO₂eq/person',
+  CO2eq_tn_per_mil_GDP: 'tn CO₂eq/$1 million CAD (2012 CAD)'
 }
 
 const metricNames = {
-  CO2eq: "Absolute Emissions (million tn CO<sub>2</sub>eq)",
-  CO2eq_tn_per_person: 'Emissions Intensity (tn CO2eq emitted/person)',
-  CO2eq_tn_per_mil_GDP: 'Emissions Intensity (CO2eq per million $ GDP; 2012 dollars)'
+  CO2eq: "Absolute Emissions (million tn CO₂eq)",
+  CO2eq_tn_per_person: 'Emissions Intensity (tn CO₂eq emitted/person)',
+  CO2eq_tn_per_mil_GDP: 'Emissions Intensity (CO₂eq per million $ GDP; 2012 dollars)'
   }
 Promise.all([
     d3.json('data/canada_provinces.topo.json'),

@@ -104,7 +104,7 @@ class StackedBarChart {
         .attr('y', -60)
         .style('text-anchor', 'middle')
         .attr('dy', '1em')
-        .text('mt of CO2eq');
+        .text('mt of CO₂eq');
 
     vis.updateVis();
   }
@@ -206,7 +206,7 @@ class StackedBarChart {
           let label = document.getElementById("tooltip-label");
           Object.entries(d.data).forEach(([key, value]) => {
             if (key != 'year') {
-              label.innerHTML += `<div class="tooltip-label-normal">${key + ": " + Math.round(value)+ ' million tn CO2eq' + "\r\n"}</div>`
+              label.innerHTML += `<div class="tooltip-label-normal">${key + ": " + Math.round(value)+ ' million tn CO₂eq' + "\r\n"}</div>`
             }
           });
         })
